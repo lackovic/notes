@@ -14,3 +14,10 @@ Run in PowerShell either of the two:
 systeminfo | findstr /B /C:"Domain"
 wmic computersystem get domain
 ```
+
+## Know whether a service is running on a port number
+
+Run in PowerShell:
+```shell
+netstat -an -b | grep <port_number>
+```
