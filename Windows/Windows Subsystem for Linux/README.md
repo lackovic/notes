@@ -25,4 +25,10 @@ Windows Subsystem for Linux 2 (WSL 2) was announced at the Microsoft Build 2019 
 
 ### Install WSL 2
 
-- [Installation Instructions for WSL 2](https://docs.microsoft.com/en-us/windows/wsl/wsl2-install)
+#### Prerequisites
+
+1. [Telemetry data must be enabled](https://github.com/Disassembler0/Win10-Initial-Setup-Script/blob/317c49038941ccea1c74c6838bc1d383a1078341/Win10.psm1#L59-L79)
+1. You must join the [Windows Insider Program](https://insider.windows.com/en-us/) and select the 'Fast' ring
+
+#### Installation Instructions
+- [Microsoft Docs / Install WSL 2](https://docs.microsoft.com/en-us/windows/wsl/wsl2-install)
