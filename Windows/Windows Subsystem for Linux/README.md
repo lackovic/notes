@@ -36,4 +36,9 @@ Windows Subsystem for Linux 2 (WSL 2) was announced at the Microsoft Build 2019 
 - if your computer get stuck at booting, disable the secure boot in the BIOS
 
 #### Installation Instructions
+
 - [Microsoft Docs / Install WSL 2](https://docs.microsoft.com/en-us/windows/wsl/wsl2-install)
+
+#### Known issues
+
+- as of build 19035, tunneling `127.0.0.1` [works only in the `Windows->WSL` direction](https://devblogs.microsoft.com/commandline/whats-new-for-wsl-in-insiders-preview-build-18945/), but not in the `WSL->Windows`
