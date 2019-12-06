@@ -10,3 +10,14 @@ bundle clean --force
 ```
 
 - [Docs](https://bundler.io/man/bundle-clean.1.html)
+
+## Format .erb files in VsCode
+
+Add to your workspace settings:
+```json
+"files.associations": {
+   "*.html.erb": "html"
+}
+```
+
+- [Prettier .erb support request](https://github.com/prettier/plugin-ruby/issues/371)
