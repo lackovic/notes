@@ -3,7 +3,8 @@
 ## Add Format Code as style
 
 1. Create a new script (`Tools > Script Editor`)
-2. Copy the following code into the editor:
+
+1. Copy the following code into the editor:
 
     ```js
     // Add new menu item
@@ -45,8 +46,11 @@
     }
     }
     ```
+
 1. Assign a trigger to run the onOpen function "On open" (`Edit > Current Project's Triggers`)
+
 1. After authorizing the script, reload the original document
+
 1. Use the new menu item to format selected text (`Styles > Format Code`)
 
 [Source](https://webapps.stackexchange.com/a/117682/56505)
