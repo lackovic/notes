@@ -13,7 +13,10 @@ Enable-WindowsOptionalFeature -Online -FeatureName "Microsoft-Windows-Subsystem-
 
 Run in PowerShell:
 ```shell
+# Windows version < 2004
 wsl --list -all
+# Windows version >= 2004
+wsl --list -v
 ```
 
 ## Windows Subsystem for Linux 2 (WSL 2)
