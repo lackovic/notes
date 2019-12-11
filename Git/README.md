@@ -6,6 +6,12 @@
 git branch
 ```
 
+## Get the current branch name
+
+```bash
+git rev-parse --abbrev-ref HEAD
+```
+
 ## Delete local branch
 
 ```bash
