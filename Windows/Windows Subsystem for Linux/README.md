@@ -68,9 +68,9 @@ wsl --set-version <distro> <version>
 
 ### Known issues
 
-As of build 19037:
+As of Windows 10 version 2004 build 19041.1:
 
 - tunneling `127.0.0.1` [works only in the `Windows->WSL` direction](https://devblogs.microsoft.com/commandline/whats-new-for-wsl-in-insiders-preview-build-18945/), but not in the `WSL->Windows` one. Subscribe to [this issue](https://github.com/microsoft/WSL/issues/4619) to know when access to windows services via localhost:port will be implemented in WSL 2.
 
-- **WSL 2 with NTFS is unusably slow**, but with EXT4 is very close to native Linux performance ([source](https://vxlabs.com/2019/12/06/wsl2-io-measurements/))
+- **WSL 2 with NTFS is unusably slow**, but with EXT4 is very close to native Linux performance ([source](https://vxlabs.com/2019/12/06/wsl2-io-measurements/)): in order to benefit of WSL 2 performance boost you need to copy and run your application in WSL2's local filesystem (EXT4 on a Hyper-V VHD) - e.g. `/home/`
 
