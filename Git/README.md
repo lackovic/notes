@@ -90,7 +90,7 @@ After reverting a PR on master (i.e., it was mistakenly merged the first time), 
 ```bash
 # delete local tag '1.2.3'
 git tag -d 1.2.3
-# delete remote tag '1.2.3' (eg, GitHub version too)
+# delete remote tag '1.2.3'
 git push origin :refs/tags/1.2.3
 ```
     
