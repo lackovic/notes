@@ -64,6 +64,15 @@ After reverting a PR on master (i.e., it was mistakenly merged the first time), 
     git checkout master
     git reset --hard origin/master
     ```
+
+## Revert / undo / delete a pushed tag
+
+```bash
+# delete local tag '1.2.3'
+git tag -d 1.2.3
+# delete remote tag '1.2.3' (eg, GitHub version too)
+git push origin :refs/tags/1.2.3
+```
     
 ## Useful aliases
 
