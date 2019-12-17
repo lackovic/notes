@@ -1,5 +1,25 @@
 # git
 
+Table of Contents
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+<!-- Generated with [DocToc](https://github.com/thlorenz/doctoc) -->
+
+- [List local branches](#list-local-branches)
+- [Get the current branch name](#get-the-current-branch-name)
+- [Delete local branch](#delete-local-branch)
+- [Delete the last local commit](#delete-the-last-local-commit)
+- [Undo the last local commit](#undo-the-last-local-commit)
+- [Powershell branch pruning](#powershell-branch-pruning)
+- [Revert a PR merge to master](#revert-a-pr-merge-to-master)
+- [Revert / undo / delete a pushed tag](#revert--undo--delete-a-pushed-tag)
+- [Useful aliases](#useful-aliases)
+- [Resources](#resources)
+- [Tools](#tools)
+- [Good reads](#good-reads)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 ## List local branches
 
 ```bash
