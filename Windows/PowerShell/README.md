@@ -6,13 +6,13 @@ Table of Contents
 <!-- generated with [DocToc](https://github.com/thlorenz/doctoc) -->
 
 - [Know the version](#know-the-version)
+- [List local users, their home directory and occupied space](#list-local-users-their-home-directory-and-occupied-space)
 - [PowerShell Core](#powershell-core)
   - [Install the latest version of PowerShell Core](#install-the-latest-version-of-powershell-core)
   - [Add git integration](#add-git-integration)
   - [Set the default starting directory](#set-the-default-starting-directory)
   - [Enable partial matching of a command with up and down keys](#enable-partial-matching-of-a-command-with-up-and-down-keys)
   - [Have syntax highlighting](#have-syntax-highlighting)
-  - [List local users, their home directory and occupied space](#list-local-users-their-home-directory-and-occupied-space)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -20,6 +20,22 @@ Table of Contents
 
 ```powershell
 $PSVersionTable
+```
+
+## List local users, their home directory and occupied space
+
+Run PowerShell version <= 5.x as *Administrator*:
+
+```powershell
+Get-WmiObject win32_userprofile | % { 
+    try {
+        $out = new-object psobject
+        $out | Add-Member noteproperty Name (New-Object System.Security.Principal.SecurityIdentifier($_.SID)).Translate([System.Security.Principal.NTAccount]).Value
+        $out | Add-Member noteproperty LocalPath $_.LocalPath
+        $out | Add-Member noteproperty FolderSize ("{0:N2}" -f ((Get-ChildItem -Recurse $_.LocalPath | Measure-Object -property length -sum -ErrorAction SilentlyContinue).sum / 1MB) + " MB")
+        $out
+    } catch {}
+} | Format-Table
 ```
 
 ## PowerShell Core
@@ -86,19 +102,3 @@ Install [PsReadLine](https://github.com/PowerShell/PSReadLine) and [PSColor](htt
    ```
 
 3. To customize the colors follow [these instructions](https://github.com/Davlind/PSColor#configuration).
-
-### List local users, their home directory and occupied space
-
-Run PowerShell version <= 5.x as *Administrator*:
-
-```powershell
-Get-WmiObject win32_userprofile | % { 
-    try {
-        $out = new-object psobject
-        $out | Add-Member noteproperty Name (New-Object System.Security.Principal.SecurityIdentifier($_.SID)).Translate([System.Security.Principal.NTAccount]).Value
-        $out | Add-Member noteproperty LocalPath $_.LocalPath
-        $out | Add-Member noteproperty FolderSize ("{0:N2}" -f ((Get-ChildItem -Recurse $_.LocalPath | Measure-Object -property length -sum -ErrorAction SilentlyContinue).sum / 1MB) + " MB")
-        $out
-    } catch {}
-} | Format-Table
-```
