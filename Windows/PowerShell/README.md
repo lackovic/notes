@@ -17,7 +17,7 @@ Table of Contents
 
 ## Know the version
 
-```shell
+```powershell
 $PSVersionTable
 ```
 
@@ -29,7 +29,7 @@ $PSVersionTable
 
 1. Run:
 
-   ```shell
+   ```powershell
    choco install powershell-core
    ```
 
@@ -37,13 +37,13 @@ $PSVersionTable
 
 1. Run:
 
-   ```shell
+   ```powershell
    PowerShellGet\Install-Module posh-git -Scope CurrentUser -AllowPrerelease -Force
    ```
 
 2. Add to your profile (e.g. - `~\Documents\PowerShell\Microsoft.PowerShell_profile.ps1`):
 
-   ```shell
+   ```powershell
    Import-Module posh-git
    ```
 
@@ -51,7 +51,7 @@ $PSVersionTable
 
 Add to your profile (e.g. - `~\Documents\PowerShell\Microsoft.PowerShell_profile.ps1`):
 
-```shell
+```powershell
 Set-Location C:\src
 ```
 
@@ -59,7 +59,7 @@ Set-Location C:\src
 
 Add to your profile (e.g. - `~\Documents\PowerShell\Microsoft.PowerShell_profile.ps1`):
 
-```shell
+```powershell
 Set-PSReadlineKeyHandler -Key UpArrow -Function HistorySearchBackward
 Set-PSReadlineKeyHandler -Key DownArrow -Function HistorySearchForward
 ```
@@ -70,7 +70,7 @@ Install [PsReadLine](https://github.com/PowerShell/PSReadLine) and [PSColor](htt
 
 1. Run:
 
-   ```shell
+   ```powershell
    Install-Module -Name PSReadLine -RequiredVersion 2.0.0-beta5 -AllowPrerelease
    Install-Module PSColor
    ```
@@ -79,7 +79,7 @@ Install [PsReadLine](https://github.com/PowerShell/PSReadLine) and [PSColor](htt
 
 2. Add to your profile (e.g. - `~\Documents\PowerShell\Microsoft.PowerShell_profile.ps1`):
 
-   ```shell
+   ```powershell
    Import-Module PSReadLine
    Import-Module PSColor
    ```
