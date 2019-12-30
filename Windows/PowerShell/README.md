@@ -85,3 +85,19 @@ Install [PsReadLine](https://github.com/PowerShell/PSReadLine) and [PSColor](htt
    ```
 
 3. To customize the colors follow [these instructions](https://github.com/Davlind/PSColor#configuration).
+
+### List local users, their home directory and occupied space
+
+Run PowerShell version <= 5.x as *Administrator*:
+
+```powershell
+Get-WmiObject win32_userprofile | % { 
+    try {
+        $out = new-object psobject
+        $out | Add-Member noteproperty Name (New-Object System.Security.Principal.SecurityIdentifier($_.SID)).Translate([System.Security.Principal.NTAccount]).Value
+        $out | Add-Member noteproperty LocalPath $_.LocalPath
+        $out | Add-Member noteproperty FolderSize ("{0:N2}" -f ((Get-ChildItem -Recurse $_.LocalPath | Measure-Object -property length -sum -ErrorAction SilentlyContinue).sum / 1MB) + " MB")
+        $out
+    } catch {}
+} | Format-Table
+```
