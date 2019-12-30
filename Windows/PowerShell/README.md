@@ -12,6 +12,7 @@ Table of Contents
   - [Set the default starting directory](#set-the-default-starting-directory)
   - [Enable partial matching of a command with up and down keys](#enable-partial-matching-of-a-command-with-up-and-down-keys)
   - [Have syntax highlighting](#have-syntax-highlighting)
+  - [List local users, their home directory and occupied space](#list-local-users-their-home-directory-and-occupied-space)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
