@@ -25,7 +25,7 @@ The Windows Subsystem for Linux (WSL 1) allows to use different Linux distros di
 
 Run in PowerShell:
 
-```shell
+```powershell
 Enable-WindowsOptionalFeature -Online -FeatureName "Microsoft-Windows-Subsystem-Linux"
 ```
 
@@ -33,9 +33,10 @@ Enable-WindowsOptionalFeature -Online -FeatureName "Microsoft-Windows-Subsystem-
 
 Run in PowerShell:
 
-```shell
+```powershell
 # Windows version < 2004
 wsl --list -all
+
 # Windows version >= 2004
 wsl --list -v
 ```
@@ -44,7 +45,7 @@ wsl --list -v
 
 Install [LxRunOffline](https://github.com/DDoSolitary/LxRunOffline) with:
 
-```shell
+```powershell
 choco install lxrunoffline
 ```
 
@@ -97,7 +98,7 @@ Windows Subsystem for Linux 2 (WSL 2) was announced at the Microsoft Build 2019 
 
 ### Switch WSL version
 
-```shell
+```powershell
 wsl --set-version <distro> <version>
 ```
 
