@@ -18,6 +18,10 @@
 ## Access Rails console
 
 ```shell
+# Using your global version of Rails:
+rails c
+
+# Using the local version of Rails defined in your Gemfile:
 bundle exec rails c
 ```
 
