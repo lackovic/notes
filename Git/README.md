@@ -17,6 +17,9 @@ Table of Contents
 - [Resources](#resources)
 - [Tools](#tools)
 - [Good reads](#good-reads)
+- [GitHub](#github)
+  - [Navigate to the first commit in a GitHub repository](#navigate-to-the-first-commit-in-a-github-repository)
+  - [Tools](#tools-1)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -122,9 +125,22 @@ I mostly use the first 4, for the others VsCode is more convenient.
 
 - [git for Windows](https://chocolatey.org/packages/git)
 - [TortoiseGit](https://chocolatey.org/packages/TortoiseGit)
-- [Octo Mate](https://chrome.google.com/webstore/detail/octo-mate/baggcehellihkglakjnmnhpnjmkbmpkf)
 
 ## Good reads
 
 - [How to Write a Git Commit Message](https://chris.beams.io/posts/git-commit/)
 - [Two years of squash merge](https://blog.dnsimple.com/2019/01/two-years-of-squash-merge/)
+
+## GitHub
+
+### Navigate to the first commit in a GitHub repository
+
+1. take a note of the number of commits in the repository (say N)
+1. calculate X = N-36
+1. go to the list of commits
+1. click on the "Older" button at the bottom of the page
+1. replace +Y suffix in the URL with +X
+
+### Tools
+
+- [Octo Mate](https://chrome.google.com/webstore/detail/octo-mate/baggcehellihkglakjnmnhpnjmkbmpkf)
