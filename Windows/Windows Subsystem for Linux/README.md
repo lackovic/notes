@@ -33,23 +33,6 @@ This allows, among other things, to install, uninstall, move, duplicate a distri
 
 Type `lxrunoffline` to see the list of supported actions.
 
-## Install Google Chrome on WSL
-
-Assuming you want to install the stable version:
-
-```shell
-wget -q -O - https://dl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
-wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-sudo dpkg -i google-chrome-stable_current_amd64.deb
-sudo apt -f install
-sudo dpkg -i google-chrome-stable_current_amd64.deb
-```
-
-Other versions:
-
-- [Beta](https://dl.google.com/linux/direct/google-chrome-beta_current_amd64.deb)
-- [Dev (unstable)](https://dl.google.com/linux/direct/google-chrome-unstable_current_amd64.deb)
-
 ## Use chromedriver on WSL
 
 WSL doesn't support GUI applications, and Chrome is especially difficult to get working, even with the headless option. The solution proposed here is to install chromedriver in Windows and run it from WSL.
