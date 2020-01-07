@@ -50,6 +50,23 @@ Other versions:
 - [Beta](https://dl.google.com/linux/direct/google-chrome-beta_current_amd64.deb)
 - [Dev (unstable)](https://dl.google.com/linux/direct/google-chrome-unstable_current_amd64.deb)
 
+## Use chromedriver on WSL
+
+WSL doesn't support GUI applications, and Chrome is especially difficult to get working, even with the headless option. The solution proposed here is to install chromedriver in Windows and run it from WSL.
+
+1. Download the latest [chromedriver_win32.zip](https://sites.google.com/a/chromium.org/chromedriver/)
+1. Extract it in a folder (e.g. - `%USERPROFILE%/bin` in Command Prompt, or `~/bin` in PowerShell)
+1. Add the folder path to your System Environment `PATH` variable
+1. Rename `chromedriver.exe` to `chromedriver`
+
+Now relaunch your terminal to pick up the new environment variables. You can `echo $PATH` to ensure the new path is there. Once you enter WSL if you run `chromedriver` you should see something like this:
+
+```shell
+Starting ChromeDriver 79.0.3945.36 on port 9515
+Only local connections are allowed.
+Please protect ports used by ChromeDriver and related test frameworks to prevent access by malicious code.
+```
+
 ## Windows Subsystem for Linux 2 (WSL 2)
 
 Windows Subsystem for Linux 2 (WSL 2) was announced at the Microsoft Build 2019 conference and is shipped with the Windows 10 Insider Preview Build 18917. WSL 2 architecture is drastically changed and brings increased file system performance and full system call compatibility, uses virtualization technology (based on Hyper-V) and uses a lightweight utility VM on a real Linux kernel.
