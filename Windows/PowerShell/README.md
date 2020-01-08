@@ -6,6 +6,8 @@ Table of Contents
 <!-- generated with [DocToc](https://github.com/thlorenz/doctoc) -->
 
 - [Know the version](#know-the-version)
+- [Get the Windows Update Log](#get-the-windows-update-log)
+- [Get computer information](#get-computer-information)
 - [List local users, their home directory and occupied space](#list-local-users-their-home-directory-and-occupied-space)
 - [PowerShell Core](#powershell-core)
   - [Install the latest version of PowerShell Core](#install-the-latest-version-of-powershell-core)
@@ -20,6 +22,20 @@ Table of Contents
 
 ```powershell
 $PSVersionTable
+```
+
+## Get the Windows Update log
+
+Running the following command will create a `WindowsUpdate.log` file in your Desktop folder:
+
+```powershell
+Get-WindowsUpdateLog
+```
+
+## Get computer information
+
+```powershell
+Get-ComputerInfo
 ```
 
 ## List local users, their home directory and occupied space
