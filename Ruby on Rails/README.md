@@ -21,6 +21,10 @@
 # Using your global version of Rails:
 rails c
 
+# Testing out some code without changing any data:
+# (modifications will be rolled back on exit)
+rails c --sandbox
+
 # Using the local version of Rails defined in your Gemfile:
 bundle exec rails c
 ```
