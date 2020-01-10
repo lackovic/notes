@@ -5,14 +5,19 @@
 ```bash
 # build
 docker-compose build
+
 # start
 docker-compose up -d
+
 # stop
 docker-compose down --remove-orphans
+
 # restart
 docker-compose up -d --force-recreate
+
 # rebuild
 docker-compose down --remove-orphans && docker-compose build && docker-compose up -d
+
 # clean up stale images
 docker system prune
 ```
