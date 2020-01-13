@@ -6,8 +6,11 @@
 <!-- generated with [DocToc](https://github.com/thlorenz/doctoc) -->
 
 - [Introduction](#introduction)
-- [Clean up unused gems in your bundler directory](#clean-up-unused-gems-in-your-bundler-directory)
 - [Testing](#testing)
+- [Gems management](#gems-management)
+  - [Clean up unused gems in your bundler directory](#clean-up-unused-gems-in-your-bundler-directory)
+  - [Know the installed version of a gem](#know-the-installed-version-of-a-gem)
+  - [Change version of an installed gem](#change-version-of-an-installed-gem)
 - [Rails console](#rails-console)
   - [Enter Rails console](#enter-rails-console)
   - [Enable syntax highlighting](#enable-syntax-highlighting)
@@ -25,7 +28,15 @@
 
 **Ruby** is an interpreted scripting object-oriented programming language. **Ruby on Rails** ("RoR") is an open-source framework, written in Ruby, for implementing web applications.
 
-## Clean up unused gems in your bundler directory
+## Testing
+
+```shell
+# Run (focus on) one test only out of a suite of tests
+bundle exec rspec path/file_spec.rb:32
+```
+
+## Gems management
+### Clean up unused gems in your bundler directory
 
 ```shell
 # Print the changes, but do not clean the unused gems.
@@ -37,19 +48,26 @@ bundle clean --force
 
 - [Docs](https://bundler.io/man/bundle-clean.1.html)
 
-## Testing
-
-```shell
-# Run (focus on) one test only out of a suite of tests
-bundle exec rspec path/file_spec.rb:32
-```
-
-## Know the installed version of a gem
+### Know the installed version of a gem
 
 For example, to know the version of bundler installed run:
 ```shell
 gem list --local | grep bundler
 ```
+
+### Change version of an installed gem
+
+1. Install the new version (e.g. `1.17.3`) with:
+
+   ```shell
+   gem install bundler --version '1.17.3'
+   ```
+
+1. uninstall the previously existing version with:
+
+   ```shell
+   gem uninstall bundler
+   ```
 
 ## Rails console
 
