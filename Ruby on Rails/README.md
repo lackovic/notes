@@ -6,6 +6,7 @@
 <!-- generated with [DocToc](https://github.com/thlorenz/doctoc) -->
 
 - [Introduction](#introduction)
+- [Debugging](#debugging)
 - [Testing](#testing)
 - [Gems management](#gems-management)
   - [Clean up unused gems in your bundler directory](#clean-up-unused-gems-in-your-bundler-directory)
@@ -28,6 +29,14 @@
 ## Introduction
 
 **Ruby** is an interpreted scripting object-oriented programming language. **Ruby on Rails** ("RoR") is an open-source framework, written in Ruby, for implementing web applications.
+
+## Debugging
+
+1. Insert `binding.pry` before the line you want the execution to be paused
+1. Run your app or test
+1. The execution will pause where you inserted the binding and will give you a rails console.
+
+- See [Debugging With Pry](https://learn.co/lessons/debugging-with-pry)
 
 ## Testing
 
