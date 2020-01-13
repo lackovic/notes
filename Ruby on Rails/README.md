@@ -7,12 +7,14 @@
 
 - [Introduction](#introduction)
 - [Clean up unused gems in your bundler directory](#clean-up-unused-gems-in-your-bundler-directory)
-- [Format .erb files in VsCode](#format-erb-files-in-vscode)
 - [Testing](#testing)
 - [Rails console](#rails-console)
   - [Enter Rails console](#enter-rails-console)
   - [Enable syntax highlighting](#enable-syntax-highlighting)
   - [CRUD database operations](#crud-database-operations)
+- [Visual Studio Code](#visual-studio-code)
+  - [Recommended extensions](#recommended-extensions)
+  - [Format .erb files in VsCode](#format-erb-files-in-vscode)
 - [RubyMine](#rubymine)
   - [Install a theme from a jar file](#install-a-theme-from-a-jar-file)
   - [Select a theme](#select-a-theme)
@@ -34,19 +36,6 @@ bundle clean --force
 ```
 
 - [Docs](https://bundler.io/man/bundle-clean.1.html)
-
-
-## Format .erb files in VsCode
-
-This is not a good solution but it is the best I could find.
-Add to your workspace settings:
-```json
-"files.associations": {
-   "*.html.erb": "html"
-}
-```
-
-- [Prettier .erb support request](https://github.com/prettier/plugin-ruby/issues/371)
 
 ## Testing
 
@@ -108,6 +97,18 @@ User.destroy_all(age: 49)
 - [endwise](https://marketplace.visualstudio.com/items?itemName=kaiwood.endwise)
 - [Ruby Solargraph](https://marketplace.visualstudio.com/items?itemName=castwide.solargraph) (`gem install solargraph` required)
 - [Gem Lens](https://marketplace.visualstudio.com/items?itemName=ninoseki.vscode-gem-lens)
+
+### Format .erb files in VsCode
+
+This is not a good solution but it is the best I could find.
+Add to your workspace settings:
+```json
+"files.associations": {
+   "*.html.erb": "html"
+}
+```
+
+- [Prettier .erb support request](https://github.com/prettier/plugin-ruby/issues/371)
 
 ## RubyMine
 
