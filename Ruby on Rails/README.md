@@ -9,6 +9,7 @@
 - [Testing](#testing)
 - [Gems management](#gems-management)
   - [Clean up unused gems in your bundler directory](#clean-up-unused-gems-in-your-bundler-directory)
+  - [Display information about the RubyGems environment](#display-information-about-the-rubygems-environment)
   - [Know the installed version of a gem](#know-the-installed-version-of-a-gem)
   - [Change version of an installed gem](#change-version-of-an-installed-gem)
 - [Rails console](#rails-console)
@@ -36,6 +37,7 @@ bundle exec rspec path/file_spec.rb:32
 ```
 
 ## Gems management
+
 ### Clean up unused gems in your bundler directory
 
 ```shell
@@ -47,6 +49,12 @@ bundle clean --force
 ```
 
 - [Docs](https://bundler.io/man/bundle-clean.1.html)
+
+### Display information about the RubyGems environment
+
+```shell
+gem env
+```
 
 ### Know the installed version of a gem
 
