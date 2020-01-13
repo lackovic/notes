@@ -101,6 +101,14 @@ User.destroy_all(age: 49)
 
 - [Docs](https://www.rubydoc.info/docs/rails/4.1.7/ActiveRecord/Relation)
 
+## Visual Studio Code
+
+### Recommended extensions
+
+- [endwise](https://marketplace.visualstudio.com/items?itemName=kaiwood.endwise)
+- [Ruby Solargraph](https://marketplace.visualstudio.com/items?itemName=castwide.solargraph) (`gem install solargraph` required)
+- [Gem Lens](https://marketplace.visualstudio.com/items?itemName=ninoseki.vscode-gem-lens)
+
 ## RubyMine
 
 ### Install a theme from a jar file
