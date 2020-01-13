@@ -44,6 +44,13 @@ bundle clean --force
 bundle exec rspec path/file_spec.rb:32
 ```
 
+## Know the installed version of a gem
+
+For example, to know the version of bundler installed run:
+```shell
+gem list --local | grep bundler
+```
+
 ## Rails console
 
 ### Enter Rails console
