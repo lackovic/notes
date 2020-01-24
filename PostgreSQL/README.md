@@ -117,3 +117,7 @@ You have two options:
 pg_dump -F t -f dump.bin database-name
 pg_dump -F t -p dump.sql database-name
 ```
+
+## External resources
+
+* [PostgreSQL cheatsheet](https://gist.github.com/Kartones/dd3ff5ec5ea238d4c546)
