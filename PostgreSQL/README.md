@@ -18,6 +18,7 @@
 - [Dump data from a specific user of specific tables from a database](#dump-data-from-a-specific-user-of-specific-tables-from-a-database)
 - [Exit from PostgreSQL CLI](#exit-from-postgresql-cli)
 - [See your database schema in dbdiagram.io](#see-your-database-schema-in-dbdiagramio)
+- [External resources](#external-resources)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
