@@ -8,6 +8,7 @@
 - [Introduction](#introduction)
 - [Debugging](#debugging)
 - [Testing](#testing)
+- [Generate your database diagram from Rails schema](#generate-your-database-diagram-from-rails-schema)
 - [Gems management](#gems-management)
   - [Clean up unused gems in your bundler directory](#clean-up-unused-gems-in-your-bundler-directory)
   - [Display information about the RubyGems environment](#display-information-about-the-rubygems-environment)
@@ -44,6 +45,12 @@
 # Run (focus on) one test only out of a suite of tests
 bundle exec rspec path/file_spec.rb:32
 ```
+
+## Generate your database diagram from Rails schema
+
+1. Open [dbdiagram.io](https://dbdiagram.io/)
+1. Click Import → From Rails (schema.rb)
+1. Paste (or upload) your schema.rb
 
 ## Gems management
 
