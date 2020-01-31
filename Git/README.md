@@ -62,6 +62,13 @@ Removes all your local branches whose remote has been already merged:
 $remote=git branch -r; git branch --merged | %{$_.Trim()} | ?{-not ($remote -like '*' + $_) } | %{git branch -D "$_"}
 ```
 
+## Set your branch to exactly match the remote branch
+
+```shell
+git fetch origin
+git reset --hard origin/master
+```
+
 ## Revert a PR merge to master
 
 After reverting a PR on master (i.e., it was mistakenly merged the first time), to produce a clean history for the second attempt at a PR:
