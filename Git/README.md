@@ -69,6 +69,16 @@ git fetch origin
 git reset --hard origin/master
 ```
 
+## Revert a PR merge and delete its commits from master history
+
+Warning! This operation is potentially harmful, it will delete also all the merges of other PRs done in between:
+
+```shell
+git reset --hard <COMMIT_SHA>
+git status
+git push -f origin master
+```
+
 ## Revert a PR merge to master
 
 After reverting a PR on master (i.e., it was mistakenly merged the first time), to produce a clean history for the second attempt at a PR:
