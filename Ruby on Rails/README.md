@@ -24,6 +24,7 @@
 - [RubyMine](#rubymine)
   - [Install a theme from a jar file](#install-a-theme-from-a-jar-file)
   - [Select a theme](#select-a-theme)
+  - [Shortcuts](#shortcuts)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -168,3 +169,11 @@ File → Settings → Plugins → Marketplace → Three dots → Install plugin 
 ### Select a theme
 
 File → Settings → Appearance & Behavior → Appearance → Theme
+
+### Shortcuts
+
+Key|Command|Notes
+---|-------|----------
+`Ctrl+Shift+A` | Find action | *Enables you to search for commands and settings across all menus and tools (similarly to VsCode "Show all commands" - Ctrl+Shift+P)*
+`Shift Shift` | Search for a target by name (Search everywhere) | *Find any item in the project or outside of it by its name: files, actions, classes, symbols, settings, and UI elements. (similar - but more powerful - than VsCode "Go to File..., Quick Open" - Ctrl+P)*
+`Ctrl+Shift+F` | Find in path | *Search for a text string within a project*
