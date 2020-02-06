@@ -18,6 +18,7 @@
 - [Dump data from a specific user of specific tables from a database](#dump-data-from-a-specific-user-of-specific-tables-from-a-database)
 - [Exit from PostgreSQL CLI](#exit-from-postgresql-cli)
 - [See your database schema in dbdiagram.io](#see-your-database-schema-in-dbdiagramio)
+- [Set a default database to connect to](#set-a-default-database-to-connect-to)
 - [External resources](#external-resources)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
@@ -117,6 +118,14 @@ You have two options:
 ```
 pg_dump -F t -f dump.bin database-name
 pg_dump -F t -p dump.sql database-name
+```
+
+## Set a default database to connect to
+
+In your `~/.bashrc` or similar:
+
+```sh
+export PGDATABASE=my-database
 ```
 
 ## External resources
