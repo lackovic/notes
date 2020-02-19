@@ -15,6 +15,7 @@ Table of Contents
 - [Revert a PR merge and delete its commits from master history](#revert-a-pr-merge-and-delete-its-commits-from-master-history)
 - [Revert a PR merge to master](#revert-a-pr-merge-to-master)
 - [Revert / undo / delete a pushed tag](#revert--undo--delete-a-pushed-tag)
+- [Persist the passphrase through restarts](#persist-the-passphrase-through-restarts)
 - [Useful aliases](#useful-aliases)
 - [Resources](#resources)
 - [Tools](#tools)
@@ -123,6 +124,14 @@ After reverting a PR on master (i.e., it was mistakenly merged the first time), 
 git tag -d 1.2.3
 # delete remote tag '1.2.3'
 git push origin :refs/tags/1.2.3
+```
+
+## Persist the passphrase through restarts
+
+Store the passphrase in your keychain with the `-K` option (`-k` for Ubuntu) when adding the identity:
+
+```sh
+ssh-add -K ~/.ssh/id_rsa
 ```
     
 ## Useful aliases
