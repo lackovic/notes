@@ -177,3 +177,6 @@ Key|Command|Notes
 `Ctrl+Shift+A` | Find action | *Enables you to search for commands and settings across all menus and tools (similarly to VsCode "Show all commands" - Ctrl+Shift+P)*
 `Shift Shift` | Search for a target by name (Search everywhere) | *Find any item in the project or outside of it by its name: files, actions, classes, symbols, settings, and UI elements. (similar - but more powerful - than VsCode "Go to File..., Quick Open" - Ctrl+P)*
 `Ctrl+Shift+F` | Find in path | *Search for a text string within a project*
+`Ctrl+E` | Open Recent files | 
+`Ctrl+Shift+E` | Open Recent Edited files | 
+`Ctrl+F12` | Locate a code element | *Open the structure view popup allowing to jump to the desired element*
