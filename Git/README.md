@@ -11,14 +11,18 @@ Table of Contents
 - [Delete the last local commit](#delete-the-last-local-commit)
 - [Undo the last local commit](#undo-the-last-local-commit)
 - [Powershell branch pruning](#powershell-branch-pruning)
+- [Set your branch to exactly match the remote branch](#set-your-branch-to-exactly-match-the-remote-branch)
+- [Revert a PR merge and delete its commits from master history](#revert-a-pr-merge-and-delete-its-commits-from-master-history)
 - [Revert a PR merge to master](#revert-a-pr-merge-to-master)
 - [Revert / undo / delete a pushed tag](#revert--undo--delete-a-pushed-tag)
+- [Persist the passphrase through restarts](#persist-the-passphrase-through-restarts)
 - [Useful aliases](#useful-aliases)
 - [Resources](#resources)
 - [Tools](#tools)
 - [Good reads](#good-reads)
 - [GitHub](#github)
   - [Navigate to the first commit in a GitHub repository](#navigate-to-the-first-commit-in-a-github-repository)
+  - [Change base branch](#change-base-branch)
   - [Tools](#tools-1)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
@@ -83,12 +87,20 @@ git push -f origin master
 
 After reverting a PR on master (i.e., it was mistakenly merged the first time), to produce a clean history for the second attempt at a PR:
 
+1. Temporarily move master (so that subsequent Cebaschange base branch
+
+
+
 1. Temporarily move master (so that subsequent rebase commits are not dropped by Git)
     
     ```bash
     git checkout master
     git revert --mainline 1 <PR_SHA>
     ```
+
+1. Cebaschange base branch
+
+
 
 1. Rebase to reattach old commits to latest master
 
@@ -112,6 +124,14 @@ After reverting a PR on master (i.e., it was mistakenly merged the first time), 
 git tag -d 1.2.3
 # delete remote tag '1.2.3'
 git push origin :refs/tags/1.2.3
+```
+
+## Persist the passphrase through restarts
+
+Store the passphrase in your keychain with the `-K` option (`-k` for Ubuntu) when adding the identity:
+
+```sh
+ssh-add -K ~/.ssh/id_rsa
 ```
     
 ## Useful aliases
@@ -157,6 +177,10 @@ I mostly use the first 4, for the others VsCode is more convenient.
 1. go to the list of commits
 1. click on the "Older" button at the bottom of the page
 1. replace +Y suffix in the URL with +X
+
+### Change base branch
+
+- [Changing the base branch of a pull request](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/changing-the-base-branch-of-a-pull-request)
 
 ### Tools
 
