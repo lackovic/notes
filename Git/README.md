@@ -10,12 +10,15 @@ Table of Contents
 - [Delete local branch](#delete-local-branch)
 - [Delete the last local commit](#delete-the-last-local-commit)
 - [Undo the last local commit](#undo-the-last-local-commit)
+- [Remove/delete local untracked files](#removedelete-local-untracked-files)
 - [Powershell branch pruning](#powershell-branch-pruning)
 - [Set your branch to exactly match the remote branch](#set-your-branch-to-exactly-match-the-remote-branch)
 - [Revert a PR merge and delete its commits from master history](#revert-a-pr-merge-and-delete-its-commits-from-master-history)
 - [Revert a PR merge to master](#revert-a-pr-merge-to-master)
 - [Revert / undo / delete a pushed tag](#revert--undo--delete-a-pushed-tag)
 - [Persist the passphrase through restarts](#persist-the-passphrase-through-restarts)
+  - [On *nix systems](#on-nix-systems)
+  - [On Windows](#on-windows)
 - [Useful aliases](#useful-aliases)
 - [Resources](#resources)
 - [Tools](#tools)
@@ -56,6 +59,16 @@ git reset --hard HEAD~1
 
 ```bash
 git reset HEAD~1
+```
+
+## Remove/delete local untracked files
+
+```bash
+# Run this command first to check which files will be removed:
+git clean -n
+
+# When you are sure you want to remove then run:
+git clean -f -d
 ```
 
 ## Powershell branch pruning
