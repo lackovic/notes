@@ -128,12 +128,27 @@ git push origin :refs/tags/1.2.3
 
 ## Persist the passphrase through restarts
 
+### On *nix systems
+
 Store the passphrase in your keychain with the `-K` option (`-k` for Ubuntu) when adding the identity:
 
 ```sh
 ssh-add -K ~/.ssh/id_rsa
 ```
-    
+
+### On Windows
+
+```sh
+# 1. Install OpenSSH Client:
+Get-WindowsCapability -Online | Where-Object { $_.Name -like "OpenSSH.Client*" } | Add-WindowsCapability -Online | Out-Null
+
+# 2. Set the service "OpenSSH Authentication Agent" to start automatically:
+Get-Service ssh-agent | Set-Service -StartupType Automatic -PassThru | Start-Service
+
+# 3. Add the private key
+ssh-add C:\Users\YourUsername\.ssh\id_rsa
+```
+
 ## Useful aliases
 
 Add the following lines under `[alias]` in your `\.gitconfig` file:
