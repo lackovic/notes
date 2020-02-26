@@ -1,6 +1,12 @@
 # Google Docs
 
-## Add Format Code as style
+## Format text as code
+
+### Use an add-on
+
+- [Code Blocks](https://gsuite.google.com/marketplace/app/code_blocks/100740430168)
+
+### Add a style
 
 1. Create a new script (`Tools > Script Editor`)
 
