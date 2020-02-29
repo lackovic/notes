@@ -6,8 +6,9 @@ Table of Contents
 <!-- generated with [DocToc](https://github.com/thlorenz/doctoc) -->
 
 - [Know the version](#know-the-version)
-- [Get the Windows Update Log](#get-the-windows-update-log)
+- [Get the Windows Update log](#get-the-windows-update-log)
 - [Get computer information](#get-computer-information)
+- [Registry keys CRUD operations](#registry-keys-crud-operations)
 - [List local users, their home directory and occupied space](#list-local-users-their-home-directory-and-occupied-space)
 - [PowerShell Core](#powershell-core)
   - [Install the latest version of PowerShell Core](#install-the-latest-version-of-powershell-core)
@@ -36,6 +37,24 @@ Get-WindowsUpdateLog
 
 ```powershell
 Get-ComputerInfo
+```
+
+## Registry keys CRUD operations
+
+```powershell
+# To read a registry key:
+Get-ItemProperty -Path Registry::HKEY_CLASSES_ROOT\Test\One\Two\Three
+
+# To create or update a registry key default value:
+Set-ItemProperty -Path Registry::HKEY_CLASSES_ROOT\Test\One\Two\Three -Name '(Default)' -Value 'NewValue'
+
+# To append something to an existing registry key default value:
+$MyRegKey = Get-ItemProperty -Path Registry::HKEY_CLASSES_ROOT\Test\One\Two\Three
+$NewValue = $MyRegKey.'(Default)' + 'Something'
+Set-ItemProperty -Path Registry::HKEY_CLASSES_ROOT\Test\One\Two\Three -Name '(Default)' -Value $NewValue
+
+# To delete a registry key and all its subkeys:
+Remove-ItemProperty -Path Registry::HKEY_CLASSES_ROOT\Test\One\Two\Three -Recurse 
 ```
 
 ## List local users, their home directory and occupied space
