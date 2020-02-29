@@ -16,6 +16,7 @@ Table of Contents
   - [Set the default starting directory](#set-the-default-starting-directory)
   - [Enable partial matching of a command with up and down keys](#enable-partial-matching-of-a-command-with-up-and-down-keys)
   - [Have syntax highlighting](#have-syntax-highlighting)
+  - [Run PowerShell Core as Administrator in a Windows Terminal tab](#run-powershell-core-as-administrator-in-a-windows-terminal-tab)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -137,3 +138,23 @@ Install [PsReadLine](https://github.com/PowerShell/PSReadLine) and [PSColor](htt
    ```
 
 3. To customize the colors follow [these instructions](https://github.com/Davlind/PSColor#configuration).
+
+### Run PowerShell Core as Administrator in a Windows Terminal tab
+
+   ```powershell
+   # Install gsudo:
+   choco install gsudo -y
+   # Update the current session with environment variables changes:
+   refreshenv
+   # Generate a GUID:
+   [guid]::NewGuid()
+   # Add a new profile in Windows Terminal settings:
+   {
+      "guid": "{new-guid-generated-above}",
+      "hidden": false,
+      "name": "PowerShell Core Admin",
+      "commandline": "gsudo.exe pwsh"
+   }
+   ```
+
+- [Source](https://github.com/microsoft/terminal/issues/632#issuecomment-582782751)
