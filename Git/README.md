@@ -24,6 +24,7 @@ Table of Contents
 - [Tools](#tools)
 - [Good reads](#good-reads)
 - [GitHub](#github)
+  - [Merging an upstream repository into your fork](#merging-an-upstream-repository-into-your-fork)
   - [Navigate to the first commit in a GitHub repository](#navigate-to-the-first-commit-in-a-github-repository)
   - [Change base branch](#change-base-branch)
   - [Tools](#tools-1)
@@ -197,6 +198,14 @@ I mostly use the first 4, for the others VsCode is more convenient.
 - [Two years of squash merge](https://blog.dnsimple.com/2019/01/two-years-of-squash-merge/)
 
 ## GitHub
+
+### Merging an upstream repository into your fork
+
+```powershell
+git pull https://github.com/ORIGINAL_OWNER/ORIGINAL_REPOSITORY.git BRANCH_NAME
+```
+
+- [Source](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/merging-an-upstream-repository-into-your-fork)
 
 ### Navigate to the first commit in a GitHub repository
 
