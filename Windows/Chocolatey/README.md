@@ -2,6 +2,22 @@
 
 [Chocolatey](https://chocolatey.org/) is a package manager for Windows.
 
-## Creating Automatic Packages
+## Installs a list of packages in bulk
 
-The starting point for creating an automatic package is the [Chocolatey Automatic Package Updater Module (aka AU) GitHub page](https://github.com/majkinetor/au). Some useful documentation can be found in its [wiki](https://github.com/majkinetor/au/wiki).
+```powershell
+cinst .\packages.config -y
+```
+
+See [`.\packages.config`](packages.config) for reference.
+
+## Update all installed software
+
+```powershell
+cup all -y
+```
+
+## List installed software
+
+```powershell
+clist -l
+```
