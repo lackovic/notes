@@ -26,14 +26,14 @@
         "colorScheme": "FrontEndDelightAdmin"
       },
       {
-        "name": "My server",
+        "name": "SSH Remote Server",
         "commandline": "ssh user@my.server.net",
         "guid": "{f0331b16-e554-4f1c-8454-46bd6c4c26a1}",
         "icon": "ms-appdata:///roaming/ssh.png",
         "colorScheme": "Novel"
       },
       {
-        "name": "WSL",
+        "name": "WSL Ubuntu-18.04",
         "source": "Windows.Terminal.Wsl",
         "guid": "{fc31c99d-f92f-4fa6-b54a-06b76ddcdb85}",
         "icon": "ms-appdata:///roaming/ubuntu.png",
