@@ -8,6 +8,7 @@ The Windows Subsystem for Linux (WSL 1) allows to use different Linux distros di
 <!-- generated with [DocToc](https://github.com/thlorenz/doctoc) -->
 
 - [Enable WSL](#enable-wsl)
+- [Install your Linux distribution of choice](#install-your-linux-distribution-of-choice)
 - [See your distros and their WSL versions](#see-your-distros-and-their-wsl-versions)
 - [Manage multiple distributions](#manage-multiple-distributions)
 - [Use chromedriver on WSL](#use-chromedriver-on-wsl)
@@ -27,6 +28,16 @@ Run in PowerShell:
 
 ```powershell
 Enable-WindowsOptionalFeature -Online -FeatureName "Microsoft-Windows-Subsystem-Linux"
+```
+
+## Install your Linux distribution of choice
+
+Pick [from this list](https://chocolatey.org/packages?q=%22wsl-%22) the Linux distribution of choice and install it with Chocolatey.
+
+Example:
+
+```powershell
+choco install wsl-ubuntu-1804
 ```
 
 ## See your distros and their WSL versions
