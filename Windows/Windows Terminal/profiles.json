@@ -13,38 +13,38 @@
     },
     "list": [
       {
-        "guid": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
-        "hidden": false,
         "name": "PowerShell Core",
         "source": "Windows.Terminal.PowershellCore",
+        "guid": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
         "colorScheme": "FrontEndDelight"
       },
       {
-        "guid": "{d6c12eb7-19b2-4e5a-bf70-f7f934fd79c8}",
-        "hidden": false,
         "name": "PowerShell Core Admin",
         "commandline": "gsudo.exe pwsh",
+        "guid": "{d6c12eb7-19b2-4e5a-bf70-f7f934fd79c8}",
         "colorScheme": "FrontEndDelightAdmin"
       },
       {
-        // Make changes here to the powershell.exe profile
-        "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
+        "name": "My server",
+        "commandline": "ssh user@my.server.net",
+        "guid": "{f0331b16-e554-4f1c-8454-46bd6c4c26a1}",
+        "colorScheme": "Novel"
+      },
+      {
+        "name": "WSL",
+        "source": "Windows.Terminal.Wsl",
+        "guid": "{fc31c99d-f92f-4fa6-b54a-06b76ddcdb85}",
+        "colorScheme": "Ubuntu"
+      },
+      {
         "name": "PowerShell",
         "commandline": "powershell.exe",
-        "hidden": false
+        "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}"
       },
       {
-        // Make changes here to the cmd.exe profile
-        "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
         "name": "Command Prompt",
         "commandline": "cmd.exe",
-        "hidden": false
-      },
-      {
-        "guid": "{b453ae62-4e3d-5e58-b989-0a998ec441b8}",
-        "hidden": true,
-        "name": "Azure Cloud Shell",
-        "source": "Windows.Terminal.Azure"
+        "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}"
       }
     ]
   },
@@ -94,7 +94,7 @@
       "brightPurple": "#e75e4f",
       "brightCyan": "#4fbce6",
       "brightWhite": "#8c735b",
-      "background": "#1d1515",
+      "background": "#221818",
       "foreground": "#adadad"
     },
     {
@@ -118,6 +118,28 @@
       "brightWhite": "#ffffff",
       "background": "#dfdbc3",
       "foreground": "#3b2322"
+    },
+    {
+      "name": "Ubuntu",
+
+      "black": "#2e3436",
+      "red": "#cc0000",
+      "green": "#4e9a06",
+      "yellow": "#c4a000",
+      "blue": "#3465a4",
+      "purple": "#75507b",
+      "cyan": "#06989a",
+      "white": "#d3d7cf",
+      "brightBlack": "#555753",
+      "brightRed": "#ef2929",
+      "brightGreen": "#8ae234",
+      "brightYellow": "#fce94f",
+      "brightBlue": "#729fcf",
+      "brightPurple": "#ad7fa8",
+      "brightCyan": "#34e2e2",
+      "brightWhite": "#eeeeec",
+      "background": "#300a24",
+      "foreground": "#eeeeec"
     }
   ],
 

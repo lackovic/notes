@@ -10,7 +10,7 @@ choco install microsoft-windows-terminal
 
 ## Configuration
 
-See [`.\profiles.json`](profiles.json) for examples on how to set profile defaults and color schemes.
+See [`.\profiles.json`](profiles.json) for examples on how to set WSL and ssh profiles, profile defaults and color schemes.
 
 ## Run PowerShell Core as Administrator in a Windows Terminal tab
 
