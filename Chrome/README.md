@@ -15,4 +15,8 @@ Run the code in the following files in your DevTools console:
 Set-ItemProperty -Path Registry::HKEY_LOCAL_MACHINE\Software\Policies\Google\Chrome -Name 'DiskCacheDir' -Value 'C:\Temp\Chrome'
 ```
 
+This will move Chrome cache folder to `C:\Temp\Chrome` system-wide, for every user and regardless where Chrome is started from (shortcut or command line).
+
+Default value: `%LOCALAPPDATA%\Google\Chrome\User Data\Default\Cache`
+
 - [Source](http://www.chromium.org/administrators/policy-list-3#DiskCacheDir)
