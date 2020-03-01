@@ -22,18 +22,21 @@
         "name": "PowerShell Core Admin",
         "commandline": "gsudo.exe pwsh",
         "guid": "{d6c12eb7-19b2-4e5a-bf70-f7f934fd79c8}",
+        "icon": "ms-appdata:///roaming/core.png",
         "colorScheme": "FrontEndDelightAdmin"
       },
       {
         "name": "My server",
         "commandline": "ssh user@my.server.net",
         "guid": "{f0331b16-e554-4f1c-8454-46bd6c4c26a1}",
+        "icon": "ms-appdata:///roaming/ssh.png",
         "colorScheme": "Novel"
       },
       {
         "name": "WSL",
         "source": "Windows.Terminal.Wsl",
         "guid": "{fc31c99d-f92f-4fa6-b54a-06b76ddcdb85}",
+        "icon": "ms-appdata:///roaming/ubuntu.png",
         "colorScheme": "Ubuntu"
       },
       {
@@ -140,6 +143,30 @@
       "brightWhite": "#eeeeec",
       "background": "#300a24",
       "foreground": "#eeeeec"
+    },
+    {
+      "name": "UbuntuLegit",
+
+      "foreground": "#EEEEEE",
+      "background": "#2C001E",
+      "colors": [
+        "#4E9A06",
+        "#CC0000",
+        "#300A24",
+        "#C4A000",
+        "#3465A4",
+        "#75507B",
+        "#06989A",
+        "#D3D7CF",
+        "#555753",
+        "#EF2929",
+        "#8AE234",
+        "#FCE94F",
+        "#729FCF",
+        "#AD7FA8",
+        "#34E2E2",
+        "#EEEEEE"
+      ]
     }
   ],
 
