@@ -19,6 +19,7 @@
 - [Exit from PostgreSQL CLI](#exit-from-postgresql-cli)
 - [See your database schema in dbdiagram.io](#see-your-database-schema-in-dbdiagramio)
 - [Set a default database to connect to](#set-a-default-database-to-connect-to)
+- [Restart PostgresQL](#restart-postgresql)
 - [External resources](#external-resources)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
@@ -126,6 +127,12 @@ In your `~/.bashrc` or similar:
 
 ```sh
 export PGDATABASE=my-database
+```
+
+## Restart PostgresQL
+
+```sh
+/etc/init.d/postgresql restart
 ```
 
 ## External resources
