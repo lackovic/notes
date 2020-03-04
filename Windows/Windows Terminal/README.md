@@ -4,6 +4,14 @@ Windows Terminal is a terminal application for users of command-line tools and s
 
 ![Image description](https://raw.githubusercontent.com/lackovic/notes/master/Windows/Windows%20Terminal/img/windows-terminal-640.png)
 
+## Benefits
+
+- You have all your environments a click or shortcut away, without having to type or remember anything: e.g. `ssh user@ip` or `wsl -d distribution_name`, etc;
+
+- the different theme/color setup makes you more aware of the environment where you are working on, thus reducing the risk of making unwanted operations in the wrong environment: e.g. with Ubuntu colors you are in an Ubuntu server, with a red background you are in production, etc;
+
+- being the configuration in one JSON file, you only need to set it up once and then you can reuse it with little modifications for all your machines.
+
 ## Installation
 
 ```powershell
