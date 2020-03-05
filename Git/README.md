@@ -144,9 +144,14 @@ git push origin :refs/tags/1.2.3
 
 ### On *nix systems
 
-Store the passphrase in your keychain with the `-K` option (`-k` for Ubuntu) when adding the identity:
-
 ```sh
+# Append to ~/.bashrc
+eval `ssh-agent -s`
+
+# Run
+source ~/.bashrc
+
+# Store the passphrase in your keychain with the `-K` option (`-k` for Ubuntu):
 ssh-add -K ~/.ssh/id_rsa
 ```
 
