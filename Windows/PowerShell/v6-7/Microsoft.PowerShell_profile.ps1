@@ -1,3 +1,6 @@
+# File location = %USERPROFILE%\Documents\PowerShell\
+# https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_profiles?view=powershell-7
+
 Import-Module posh-git
 
 Import-Module PSReadLine
@@ -9,6 +12,12 @@ $global:PSColor.File.Code.Pattern = '\.(java|c|cpp|cs|js|jsx|ts|tsx|css|html)$'
 $global:PSColor.File.Text.Pattern = '\.(txt|cfg|conf|ini|csv|log|config|xml|yml|md|markdown|json)$'
 
 Set-Location C:\src
+
+function prompt {            
+    "$(Get-Date -Format "yyyy/MM/dd HH:mm.ss") $(get-location) > "
+}
+
+Set-PSReadlineKeyHandler -Key ctrl+d -Function ViExit
 
 # ssh aliases
 
