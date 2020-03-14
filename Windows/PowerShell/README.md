@@ -10,6 +10,7 @@ Table of Contents
 - [Get computer information](#get-computer-information)
 - [Registry keys CRUD operations](#registry-keys-crud-operations)
 - [List local users, their home directory and occupied space](#list-local-users-their-home-directory-and-occupied-space)
+- [Add a timestamp to your prompt](#add-a-timestamp-to-your-prompt)
 - [PowerShell Core](#powershell-core)
   - [Install the latest version of PowerShell Core](#install-the-latest-version-of-powershell-core)
   - [Add git integration](#add-git-integration)
@@ -72,6 +73,19 @@ Get-WmiObject win32_userprofile | % {
     } catch {}
 } | Format-Table
 ```
+
+## Add a timestamp to your prompt
+
+Add the following function to your PowerShell profile:
+
+```powershell
+function prompt {            
+    "$(Get-Date -Format "yyyy/MM/dd HH:mm.ss") $(get-location) > "
+}
+``` 
+
+- [About Profiles](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_profiles?view=powershell-7)
+- [Get-Date documentation](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/get-date?view=powershell-7)
 
 ## PowerShell Core
 
