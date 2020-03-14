@@ -12,6 +12,7 @@ Table of Contents
 - [List local users, their home directory and occupied space](#list-local-users-their-home-directory-and-occupied-space)
 - [Get hardware info](#get-hardware-info)
 - [Add a timestamp to your prompt](#add-a-timestamp-to-your-prompt)
+- [Use CTRL + D to exit Powershell console](#use-ctrl--d-to-exit-powershell-console)
 - [PowerShell Core](#powershell-core)
   - [Install the latest version of PowerShell Core](#install-the-latest-version-of-powershell-core)
   - [Add git integration](#add-git-integration)
@@ -111,10 +112,18 @@ Add the following function to your PowerShell profile:
 function prompt {            
     "$(Get-Date -Format "yyyy/MM/dd HH:mm.ss") $(get-location) > "
 }
-``` 
+```
 
 - [About Profiles](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_profiles?view=powershell-7)
 - [Get-Date documentation](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/get-date?view=powershell-7)
+
+## Use CTRL + D to exit Powershell console
+
+Add the following line to your PowerShell profile:
+
+```powershell
+Set-PSReadlineKeyHandler -Key ctrl+d -Function ViExit
+``` 
 
 ## PowerShell Core
 
