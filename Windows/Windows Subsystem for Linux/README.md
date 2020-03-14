@@ -8,6 +8,7 @@ The Windows Subsystem for Linux (WSL 1) allows to use different Linux distros di
 <!-- generated with [DocToc](https://github.com/thlorenz/doctoc) -->
 
 - [Enable WSL](#enable-wsl)
+- [Install your Linux distribution of choice](#install-your-linux-distribution-of-choice)
 - [See your distros and their WSL versions](#see-your-distros-and-their-wsl-versions)
 - [Manage multiple distributions](#manage-multiple-distributions)
 - [Use chromedriver on WSL](#use-chromedriver-on-wsl)
@@ -27,6 +28,16 @@ Run in PowerShell:
 
 ```powershell
 Enable-WindowsOptionalFeature -Online -FeatureName "Microsoft-Windows-Subsystem-Linux"
+```
+
+## Install your Linux distribution of choice
+
+Pick [from this list](https://chocolatey.org/packages?q=%22wsl-%22) the Linux distribution of choice and install it with Chocolatey.
+
+Example:
+
+```powershell
+choco install wsl-ubuntu-1804
 ```
 
 ## See your distros and their WSL versions
@@ -84,7 +95,7 @@ Windows Subsystem for Linux 2 (WSL 2) was announced at the Microsoft Build 2019 
 
 1. [Telemetry data must be enabled](https://github.com/Disassembler0/Win10-Initial-Setup-Script/blob/317c49038941ccea1c74c6838bc1d383a1078341/Win10.psm1#L59-L79)
 
-1. You must join the [Windows Insider Program](https://insider.windows.com/en-us/) and select the 'Fast' ring
+1. You must join the [Windows Insider Program](https://insider.windows.com/en-us/) and select the 'Slow' or 'Fast' ring
 
 #####  Windows Insider Program troubleshooting
 

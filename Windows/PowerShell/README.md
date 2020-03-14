@@ -10,6 +10,7 @@ Table of Contents
 - [Get computer information](#get-computer-information)
 - [Registry keys CRUD operations](#registry-keys-crud-operations)
 - [List local users, their home directory and occupied space](#list-local-users-their-home-directory-and-occupied-space)
+- [Get hardware info](#get-hardware-info)
 - [Add a timestamp to your prompt](#add-a-timestamp-to-your-prompt)
 - [PowerShell Core](#powershell-core)
   - [Install the latest version of PowerShell Core](#install-the-latest-version-of-powershell-core)
@@ -72,6 +73,34 @@ Get-WmiObject win32_userprofile | % {
         $out
     } catch {}
 } | Format-Table
+```
+
+## Get hardware info
+
+```powershell
+# Computer brand and model
+Get-CimInstance Win32_ComputerSystem | Format-List Manufacturer, Model
+
+# Motherboard
+Get-CimInstance Win32_Baseboard | Format-List Manufacturer, SerialNumber, Version, Product
+
+# BIOS
+Get-CimInstance Win32_BIOS | Format-List Manufacturer, Version, ReleaseDate, SMBIOSBIOSVersion, SMBIOSMajorVersion, SMBIOSMinorVersion, SystemBiosMajorVersion, SystemBiosMinorVersion
+
+# CPU
+Get-CimInstance Win32_Processor | Format-List DeviceID, LoadPercentage, MaxClockSpeed, ProcessorType, SocketDesignation, Description, Name, CurrentClockSpeed, Manufacturer, NumberOfCores, NumberOfEnabledCore, NumberOfLogicalProcessors, ProcessorId, ThreadCount
+
+# Graphic card
+Get-CimInstance Win32_VideoController | Format-List AdapterCompatibility, Caption, Description, Name, PNPDeviceID, VideoModeDescription, VideoProcessor
+
+# Drives
+Get-CimInstance Win32_LogicalDisk | Format-List DeviceID, Caption, Name, FreeSpace, Size, Compressed, FileSystem, VolumeName, VolumeSerialNumber
+
+# RAM
+Get-CimInstance Win32_PhysicalMemory | Format-List Manufacturer, PartNumber, SerialNumber, Tag, BankLabel, Capacity, Speed, ConfiguredClockSpeed, DeviceLocator
+
+# Operating System
+Get-CimInstance Win32_OperatingSystem | Format-List Name, InstallDate, LastBootUpTime, NumberOfUsers, Version, BuildNumber, SerialNumber
 ```
 
 ## Add a timestamp to your prompt

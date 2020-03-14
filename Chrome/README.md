@@ -12,9 +12,13 @@ Run the code in the following files in your DevTools console:
 ## Change Google Chrome cache folder
 
 ```powershell
-$MyRegKey = Get-ItemProperty -Path Registry::HKEY_CLASSES_ROOT\ChromeHTML\shell\open\command
-$NewValue = $MyRegKey.'(Default)' + ' --disk-cache-dir="C:\Temp\Chrome"'
-Set-ItemProperty -Path Registry::HKEY_CLASSES_ROOT\ChromeHTML\shell\open\command -Name '(Default)' -Value $NewValue
+$Path = "Registry::HKEY_LOCAL_MACHINE\Software\Policies\Google\Chrome"
+if (-not (Test-Path $Path)) { New-item -Path $Path -Force }
+Set-ItemProperty -Path $Path -Name 'DiskCacheDir' -Value 'C:\Temp\Chrome'
 ```
 
-Default value on my machine = `"C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" -- "%1"`
+This will move Chrome cache folder to `C:\Temp\Chrome` system-wide, for every user and regardless where Chrome is started from (shortcut or command line).
+
+Default value: `%LOCALAPPDATA%\Google\Chrome\User Data\Default\Cache`
+
+- [Source](http://www.chromium.org/administrators/policy-list-3#DiskCacheDir)
