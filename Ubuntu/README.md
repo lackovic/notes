@@ -26,3 +26,14 @@ sudo apt-get install python-pygments
 # Add an alias to your ~/.bashrc
 alias dog='pygmentize -g'
 ```
+
+## Human readable files list in terminal
+
+```sh
+# Add an alias to your ~/.bashrc
+alias dir='ls -lhp --color --group-directories-first'
+```
+
+`-l` = use a long listing format
+`-h` = print sizes like 1K, 234M, 2G, etc.
+`-p` = append `/` indicator to directories
