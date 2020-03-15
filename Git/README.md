@@ -38,10 +38,17 @@ git branch
 git rev-parse --abbrev-ref HEAD
 
 # Delete local branch
-git branch -d branch-name
+git branch -d local-branch-name
 
-### Reset your local branch
+# Reset your local branch
 git fetch origin && git reset --hard && git clean -f -d
+
+# Clone remote branch locally
+   # with modern Git (>= 1.6.6)
+   git fetch && git checkout remote-branch-name
+   
+   # with old Git (< 1.6.6)
+   git fetch && git checkout -b remote-branch-name HEAD
 ```
 
 ## Powershell branch pruning
