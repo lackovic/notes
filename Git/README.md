@@ -5,14 +5,11 @@ Table of Contents
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 <!-- Generated with [DocToc](https://github.com/thlorenz/doctoc) -->
 
-- [List local branches](#list-local-branches)
-- [Get the current branch name](#get-the-current-branch-name)
-- [Delete local branch](#delete-local-branch)
+- [Branch operations](#branch-operations)
+- [Powershell branch pruning](#powershell-branch-pruning)
 - [Delete the last local commit](#delete-the-last-local-commit)
 - [Undo the last local commit](#undo-the-last-local-commit)
 - [Remove/delete local untracked files](#removedelete-local-untracked-files)
-- [Powershell branch pruning](#powershell-branch-pruning)
-- [Set your branch to exactly match the remote branch](#set-your-branch-to-exactly-match-the-remote-branch)
 - [Revert a PR merge and delete its commits from master history](#revert-a-pr-merge-and-delete-its-commits-from-master-history)
 - [Revert a PR merge to master](#revert-a-pr-merge-to-master)
 - [Revert / undo / delete a pushed tag](#revert--undo--delete-a-pushed-tag)
@@ -31,24 +28,29 @@ Table of Contents
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
-## List local branches
+## Branch operations
 
-```bash
+```sh
+# List local branches
 git branch
-```
 
-## Get the current branch name
-
-```bash
+# Get the current branch name
 git rev-parse --abbrev-ref HEAD
+
+# Delete local branch
+git branch -d branch-name
+
+### Reset your local branch
+git fetch origin && git reset --hard && git clean -f -d
 ```
 
-## Delete local branch
+## Powershell branch pruning
 
-```bash
-git branch -d NameOfTheBranch
+Removes all your local branches whose remote has been already merged:
+
+```ps
+$remote=git branch -r; git branch --merged | %{$_.Trim()} | ?{-not ($remote -like '*' + $_) } | %{git branch -D "$_"}
 ```
-
 
 ## Delete the last local commit
 
@@ -70,21 +72,6 @@ git clean -n
 
 # When you are sure you want to remove then run:
 git clean -f -d
-```
-
-## Powershell branch pruning
-
-Removes all your local branches whose remote has been already merged:
-
-```ps
-$remote=git branch -r; git branch --merged | %{$_.Trim()} | ?{-not ($remote -like '*' + $_) } | %{git branch -D "$_"}
-```
-
-## Set your branch to exactly match the remote branch
-
-```shell
-git fetch origin
-git reset --hard origin/master
 ```
 
 ## Revert a PR merge and delete its commits from master history
