@@ -12,6 +12,7 @@ Table of Contents
 - [Get hardware info](#get-hardware-info)
 - [Add a timestamp to your prompt](#add-a-timestamp-to-your-prompt)
 - [Use CTRL + D to exit Powershell console](#use-ctrl--d-to-exit-powershell-console)
+- [List only file names in the current directory](#list-only-file-names-in-the-current-directory)
 - [PowerShell Core](#powershell-core)
   - [Install the latest version of PowerShell Core](#install-the-latest-version-of-powershell-core)
   - [Add git integration](#add-git-integration)
@@ -116,6 +117,12 @@ Add the following line to your PowerShell profile:
 
 ```powershell
 Set-PSReadlineKeyHandler -Key ctrl+d -Function ViExit
+``` 
+
+## List only file names in the current directory
+
+```powershell
+dir | Select-Object Name
 ``` 
 
 ## PowerShell Core
