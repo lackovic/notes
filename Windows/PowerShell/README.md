@@ -7,7 +7,6 @@ Table of Contents
 
 - [Know the version](#know-the-version)
 - [Get the Windows Update log](#get-the-windows-update-log)
-- [Get computer information](#get-computer-information)
 - [Registry keys CRUD operations](#registry-keys-crud-operations)
 - [List local users, their home directory and occupied space](#list-local-users-their-home-directory-and-occupied-space)
 - [Get hardware info](#get-hardware-info)
@@ -34,12 +33,6 @@ Running the following command will create a `WindowsUpdate.log` file in your Des
 
 ```powershell
 Get-WindowsUpdateLog
-```
-
-## Get computer information
-
-```powershell
-Get-ComputerInfo
 ```
 
 ## Registry keys CRUD operations
