@@ -103,13 +103,19 @@ Get-CimInstance Win32_OperatingSystem | Format-List Name, InstallDate, LastBootU
 Add the following function to your PowerShell profile:
 
 ```powershell
+# If you don't have posh-git, use:
 function prompt {            
     "$(Get-Date -Format "yyyy/MM/dd HH:mm.ss") $(get-location) > "
 }
+
+# If you have posh-git, use:
+$GitPromptSettings.DefaultPromptPrefix.Text = '$(Get-Date -f "yyyy/MM/dd HH:mm.ss") '
+$GitPromptSettings.DefaultPromptPrefix.ForegroundColor = [ConsoleColor]::Magenta
 ```
 
 - [About Profiles](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_profiles?view=powershell-7)
 - [Get-Date documentation](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/get-date?view=powershell-7)
+- [Customizing Your PowerShell Prompt with posh-git](https://github.com/dahlbyk/posh-git/wiki/Customizing-Your-PowerShell-Prompt)
 
 ## Use CTRL + D to exit Powershell console
 

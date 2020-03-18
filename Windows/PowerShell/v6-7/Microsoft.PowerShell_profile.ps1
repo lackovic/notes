@@ -2,6 +2,8 @@
 # https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_profiles?view=powershell-7
 
 Import-Module posh-git
+$GitPromptSettings.DefaultPromptPrefix.Text = '$(Get-Date -f "yyyy/MM/dd HH:mm.ss") '
+$GitPromptSettings.DefaultPromptPrefix.ForegroundColor = [ConsoleColor]::Magenta
 
 Import-Module PSReadLine
 Set-PSReadlineKeyHandler -Key UpArrow -Function HistorySearchBackward
@@ -12,10 +14,6 @@ $global:PSColor.File.Code.Pattern = '\.(java|c|cpp|cs|js|jsx|ts|tsx|css|html)$'
 $global:PSColor.File.Text.Pattern = '\.(txt|cfg|conf|ini|csv|log|config|xml|yml|md|markdown|json)$'
 
 Set-Location C:\src
-
-function prompt {            
-    "$(Get-Date -Format "yyyy/MM/dd HH:mm.ss") $(get-location) > "
-}
 
 Set-PSReadlineKeyHandler -Key ctrl+d -Function ViExit
 
