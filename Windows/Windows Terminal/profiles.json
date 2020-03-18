@@ -172,5 +172,15 @@
 
   // Add any keybinding overrides to this array.
   // To unbind a default keybinding, set the command to "unbound"
-  "keybindings": []
+  "keybindings": [
+    {
+      "keys": ["ctrl+shift+d"],
+      "command": {
+        "action": "splitPane",
+        "split": "auto",
+        "splitMode": "duplicate"
+      }
+    },
+    { "command": "find", "keys": ["ctrl+shift+f"] }
+  ]
 }
