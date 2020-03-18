@@ -188,6 +188,7 @@ I mostly use the first 4, for the others VsCode is more convenient.
 ## Resources
 
 - [git-tips](https://github.com/git-tips/tips)
+- [Githug](https://github.com/Gazler/githug)
 
 ## Tools
 
