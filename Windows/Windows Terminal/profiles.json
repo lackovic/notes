@@ -181,6 +181,7 @@
         "splitMode": "duplicate"
       }
     },
+    { "command": "closePane", "keys": ["ctrl+shift+w"] },
     { "command": "find", "keys": ["ctrl+shift+f"] }
   ]
 }
