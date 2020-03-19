@@ -49,6 +49,9 @@ git fetch origin && git reset --hard && git clean -f -d
    
    # with old Git (< 1.6.6)
    git fetch && git checkout -b remote-branch-name HEAD
+
+# Merge master into the current branch
+git pull origin master
 ```
 
 ## Powershell branch pruning
@@ -185,6 +188,7 @@ I mostly use the first 4, for the others VsCode is more convenient.
 ## Resources
 
 - [git-tips](https://github.com/git-tips/tips)
+- [Githug](https://github.com/Gazler/githug)
 
 ## Tools
 
