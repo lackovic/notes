@@ -6,9 +6,8 @@ Table of Contents
 <!-- Generated with [DocToc](https://github.com/thlorenz/doctoc) -->
 
 - [Branch operations](#branch-operations)
+- [Commits operations](#commits-operations)
 - [Powershell branch pruning](#powershell-branch-pruning)
-- [Delete the last local commit](#delete-the-last-local-commit)
-- [Undo the last local commit](#undo-the-last-local-commit)
 - [Remove/delete local untracked files](#removedelete-local-untracked-files)
 - [Revert a PR merge and delete its commits from master history](#revert-a-pr-merge-and-delete-its-commits-from-master-history)
 - [Revert a PR merge to master](#revert-a-pr-merge-to-master)
@@ -54,24 +53,28 @@ git fetch origin && git reset --hard && git clean -f -d
 git pull origin master
 ```
 
+## Commits operations
+
+```sh
+# Undo the last local (not pushed) commit, keeping the changes
+git reset HEAD~1
+
+# Delete the last local (not pushed) commit and all uncommited changes
+git reset --hard HEAD~1
+
+# Undo an old commit, keeping all commits that came after that one
+git revert <COMMIT_SHA>
+
+# Restore your project to an old commit, undoing/deleting all the commits that came afterwards
+git reset --hard <COMMIT_SHA>
+```
+
 ## Powershell branch pruning
 
 Removes all your local branches whose remote has been already merged:
 
 ```ps
 $remote=git branch -r; git branch --merged | %{$_.Trim()} | ?{-not ($remote -like '*' + $_) } | %{git branch -D "$_"}
-```
-
-## Delete the last local commit
-
-```bash
-git reset --hard HEAD~1
-```
-
-## Undo the last local commit
-
-```bash
-git reset HEAD~1
 ```
 
 ## Remove/delete local untracked files
