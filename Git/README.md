@@ -198,10 +198,11 @@ I mostly use the first 4, for the others VsCode is more convenient.
 - [git for Windows](https://chocolatey.org/packages/git)
 - [TortoiseGit](https://chocolatey.org/packages/TortoiseGit)
 
-## Good reads
+## Documentation
 
 - [How to Write a Git Commit Message](https://chris.beams.io/posts/git-commit/)
 - [Two years of squash merge](https://blog.dnsimple.com/2019/01/two-years-of-squash-merge/)
+- [Semantic Commit Messages](https://gist.github.com/joshbuchea/6f47e86d2510bce28f8e7f42ae84c716)
 
 ## GitHub
 
