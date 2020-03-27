@@ -5,12 +5,19 @@ _Table of Contents_
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 <!-- generated with [DocToc](https://github.com/thlorenz/doctoc) -->
 
+- [Know the installed version](#know-the-installed-version)
 - [Show the git branch name in terminal (like posh-git)](#show-the-git-branch-name-in-terminal-like-posh-git)
 - [Colorize Your Cat Output](#colorize-your-cat-output)
 - [Human readable files list in terminal](#human-readable-files-list-in-terminal)
 - [Copy files from Ubuntu to Windows](#copy-files-from-ubuntu-to-windows)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
+## Know the installed version
+
+```sh
+lsb_release -a
+```
 
 ## Show the git branch name in terminal (like posh-git)
 
