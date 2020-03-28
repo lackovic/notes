@@ -25,6 +25,9 @@
   - [Recommended extensions](#recommended-extensions)
   - [Format .erb files in VsCode](#format-erb-files-in-vscode)
 - [RubyMine](#rubymine)
+  - [Windows](#windows)
+    - [Installation](#installation)
+    - [Setup](#setup)
   - [Favorite plugins](#favorite-plugins)
   - [Install a theme from a jar file](#install-a-theme-from-a-jar-file)
   - [Select a theme](#select-a-theme)
@@ -197,6 +200,25 @@ Add to your workspace settings:
 - [Prettier .erb support request](https://github.com/prettier/plugin-ruby/issues/371)
 
 ## RubyMine
+
+### Windows
+
+#### Installation
+
+The easiest way to install it is with Chocolatey:
+
+```powershell
+choco install rubymine -y
+```
+
+#### Setup
+
+1. Install Ruby with Chocolatey, choosing from the [available versions](https://chocolatey.org/packages/ruby#versionhistory)
+
+1. Run `ridk install` and choose option (3) when asked (_MSYS2 and MINGW development toolchain_)
+
+1. Run `bundle install` in your project directory (if some of the gems installation fails, try commenting them out from your `Gemfile`)
+
 
 ### Favorite plugins
 
