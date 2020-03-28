@@ -10,9 +10,11 @@
 - [Testing](#testing)
 - [Generate your database diagram from Rails schema](#generate-your-database-diagram-from-rails-schema)
 - [Gems management](#gems-management)
+  - [List installed gems](#list-installed-gems)
+  - [Know the version of an installed gem](#know-the-version-of-an-installed-gem)
   - [Clean up unused gems in your bundler directory](#clean-up-unused-gems-in-your-bundler-directory)
+  - [Uninstall all Ruby gems](#uninstall-all-ruby-gems)
   - [Display information about the RubyGems environment](#display-information-about-the-rubygems-environment)
-  - [Know the installed version of a gem](#know-the-installed-version-of-a-gem)
   - [Change version of an installed gem](#change-version-of-an-installed-gem)
 - [Rails console](#rails-console)
   - [Enter Rails console](#enter-rails-console)
@@ -56,9 +58,21 @@ bundle exec rspec path/file_spec.rb:32
 
 ## Gems management
 
+### List installed gems
+
+```sh
+gem list --local
+```
+
+### Know the version of an installed gem
+
+```sh
+gem list --local | grep your-gem-name
+```
+
 ### Clean up unused gems in your bundler directory
 
-```shell
+```sh
 # Print the changes, but do not clean the unused gems.
 bundle clean --dry-run
 
@@ -68,30 +82,33 @@ bundle clean --force
 
 - [Docs](https://bundler.io/man/bundle-clean.1.html)
 
-### Display information about the RubyGems environment
+### Uninstall all Ruby gems
 
-```shell
-gem env
+```sh
+# Make sure you upgrade your Rubygems:
+gem update --system
+
+# Uninstall all gems:
+gem uninstall --all
 ```
 
-### Know the installed version of a gem
+### Display information about the RubyGems environment
 
-For example, to know the version of bundler installed run:
-```shell
-gem list --local | grep bundler
+```sh
+gem env
 ```
 
 ### Change version of an installed gem
 
 1. Install the new version (e.g. `1.17.3`) with:
 
-   ```shell
-   gem install bundler --version '1.17.3'
+   ```sh
+   gem install bundler:1.17.3
    ```
 
 1. uninstall the previously existing version with:
 
-   ```shell
+   ```sh
    gem uninstall bundler
    ```
 
