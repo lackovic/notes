@@ -25,6 +25,7 @@
   - [Recommended extensions](#recommended-extensions)
   - [Format .erb files in VsCode](#format-erb-files-in-vscode)
 - [RubyMine](#rubymine)
+  - [Favorite plugins](#favorite-plugins)
   - [Install a theme from a jar file](#install-a-theme-from-a-jar-file)
   - [Select a theme](#select-a-theme)
   - [Shortcuts](#shortcuts)
@@ -196,6 +197,12 @@ Add to your workspace settings:
 - [Prettier .erb support request](https://github.com/prettier/plugin-ruby/issues/371)
 
 ## RubyMine
+
+### Favorite plugins
+
+- [VS Code Keymap](https://plugins.jetbrains.com/plugin/12062-vs-code-keymap)
+
+- [Visual Studio Code Dark Plus Theme](https://plugins.jetbrains.com/plugin/12255-visual-studio-code-dark-plus-theme)
 
 ### Install a theme from a jar file
 
