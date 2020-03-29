@@ -175,18 +175,17 @@ Add the following lines under `[alias]` in your `\.gitconfig` file:
 ```
   delete-last-commit = reset --hard HEAD~1
   undo-last-commit = git reset HEAD~1
+  stage-all-and-commit = add . && git commit -m
+  
   list-local-branches = branch
   delete-local-branch = branch -d
+  new-branch = checkout master && git pull && checkout -b
 
   log-pretty = log --oneline --graph --decorate
-  stage-all-and-commit = add . && git commit -m
-  new-branch = checkout master && git pull && checkout -b
   go-to-master = checkout master && git pull
 ```
 
 git supports autocompletion with TAB so there is no need for abbreviations.
-
-I mostly use the first 4, for the others VsCode is more convenient.
 
 ## Resources
 
