@@ -18,7 +18,6 @@ Table of Contents
 - [Useful aliases](#useful-aliases)
 - [Resources](#resources)
 - [Tools](#tools)
-- [Good reads](#good-reads)
 - [GitHub](#github)
   - [Merging an upstream repository into your fork](#merging-an-upstream-repository-into-your-fork)
   - [Navigate to the first commit in a GitHub repository](#navigate-to-the-first-commit-in-a-github-repository)
@@ -191,17 +190,13 @@ git supports autocompletion with TAB so there is no need for abbreviations.
 
 - [git-tips](https://github.com/git-tips/tips)
 - [Githug](https://github.com/Gazler/githug)
+- [How to Write a Git Commit Message](https://chris.beams.io/posts/git-commit/)
+- [Semantic Commit Messages](https://gist.github.com/joshbuchea/6f47e86d2510bce28f8e7f42ae84c716)
 
 ## Tools
 
 - [git for Windows](https://chocolatey.org/packages/git)
 - [TortoiseGit](https://chocolatey.org/packages/TortoiseGit)
-
-## Documentation
-
-- [How to Write a Git Commit Message](https://chris.beams.io/posts/git-commit/)
-- [Two years of squash merge](https://blog.dnsimple.com/2019/01/two-years-of-squash-merge/)
-- [Semantic Commit Messages](https://gist.github.com/joshbuchea/6f47e86d2510bce28f8e7f42ae84c716)
 
 ## GitHub
 
