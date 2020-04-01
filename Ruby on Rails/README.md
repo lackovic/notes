@@ -21,6 +21,7 @@
   - [Enable syntax highlighting](#enable-syntax-highlighting)
   - [CRUD database operations](#crud-database-operations)
 - [Integer types in migrations](#integer-types-in-migrations)
+- [Resources](#resources)
 - [Visual Studio Code](#visual-studio-code)
   - [Recommended extensions](#recommended-extensions)
   - [Format .erb files in VsCode](#format-erb-files-in-vscode)
@@ -178,6 +179,11 @@ end
 ``` 
 
 - [Source](https://gist.github.com/icyleaf/9089250)
+
+## Resources
+
+- [The Ruby Style Guide](https://github.com/rubocop-hq/ruby-style-guide)
+- [Ruby Style Guide](https://github.com/github/rubocop-github/blob/master/STYLEGUIDE.md)
 
 ## Visual Studio Code
 
