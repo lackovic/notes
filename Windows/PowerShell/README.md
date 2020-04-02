@@ -11,7 +11,9 @@ Table of Contents
 - [List local users, their home directory and occupied space](#list-local-users-their-home-directory-and-occupied-space)
 - [Get hardware info](#get-hardware-info)
 - [Add a timestamp to your prompt](#add-a-timestamp-to-your-prompt)
-- [Use CTRL + D to exit Powershell console](#use-ctrl--d-to-exit-powershell-console)
+- [Shortcuts](#shortcuts)
+  - [Quickly open PowerShell as Administrator](#quickly-open-powershell-as-administrator)
+  - [Use CTRL + D to exit PowerShell console](#use-ctrl--d-to-exit-powershell-console)
 - [List only file names in the current directory](#list-only-file-names-in-the-current-directory)
 - [PowerShell Core](#powershell-core)
   - [Install the latest version of PowerShell Core](#install-the-latest-version-of-powershell-core)
@@ -117,7 +119,13 @@ $GitPromptSettings.DefaultPromptPrefix.ForegroundColor = [ConsoleColor]::Magenta
 - [Get-Date documentation](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/get-date?view=powershell-7)
 - [Customizing Your PowerShell Prompt with posh-git](https://github.com/dahlbyk/posh-git/wiki/Customizing-Your-PowerShell-Prompt)
 
-## Use CTRL + D to exit Powershell console
+## Shortcuts
+
+### Quickly open PowerShell as Administrator
+
+`Ctrl`+`X` `A`
+
+### Use CTRL + D to exit PowerShell console
 
 Add the following line to your PowerShell profile:
 
