@@ -29,6 +29,7 @@
   - [Windows](#windows)
     - [Installation](#installation)
     - [Setup](#setup)
+  - [Find files which contain two words](#find-files-which-contain-two-words)
   - [Favorite plugins](#favorite-plugins)
   - [Install a theme from a jar file](#install-a-theme-from-a-jar-file)
   - [Select a theme](#select-a-theme)
@@ -225,6 +226,14 @@ choco install rubymine -y
 
 1. Run `bundle install` in your project directory (if some of the gems installation fails, try commenting them out from your `Gemfile`)
 
+
+### Find files which contain two words
+
+In _Find in Path_  select _Regex_ and type:
+
+```js
+(word1)[\s\S]*(word2)|\2[\s\S]*\1 
+```
 
 ### Favorite plugins
 
