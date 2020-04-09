@@ -4,19 +4,11 @@
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 **Contents**
 
-- [Know the installed version](#know-the-installed-version)
-- [Login in as admin user](#login-in-as-admin-user)
-- [List of databases](#list-of-databases)
-- [Connect to a database](#connect-to-a-database)
-- [List all tables in the current database](#list-all-tables-in-the-current-database)
-- [List just the columns names of a table](#list-just-the-columns-names-of-a-table)
-- [List the columns details of a table](#list-the-columns-details-of-a-table)
-- [List all users](#list-all-users)
+- [Basic psql commands](#basic-psql-commands)
+- [Basic commands for psql interactive terminal](#basic-commands-for-psql-interactive-terminal)
+- [Basic SQL queries](#basic-sql-queries)
 - [Use empty password for postgres user on Windows](#use-empty-password-for-postgres-user-on-windows)
-- [Change password for a user](#change-password-for-a-user)
-- [Clear all the data from a database](#clear-all-the-data-from-a-database)
 - [Dump data from a specific user of specific tables from a database](#dump-data-from-a-specific-user-of-specific-tables-from-a-database)
-- [Exit from PostgreSQL CLI](#exit-from-postgresql-cli)
 - [See your database schema in dbdiagram.io](#see-your-database-schema-in-dbdiagramio)
 - [Set a default database to connect to](#set-a-default-database-to-connect-to)
 - [Restart PostgresQL](#restart-postgresql)
@@ -24,59 +16,61 @@
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
-## Know the installed version
+## Basic psql commands
 
-```bash
-psql --version
+```sh
+# Output version information
+psql -V
+
+# Connect to a host database as user
+psql -h <host> -d <db_name> -U <user>
+# default host = /var/run/postgresql
 ```
 
-## Login in as admin user
+## Basic commands for psql interactive terminal
 
-```bash
-psql -U postgres
-```
-
-## List of databases
-
-```bash
+```sh
+# List of databases
 \l
-```
 
-## Connect to a database
-
-```bash
+# Connect to a database
 \c database_name
-```
 
-## List all tables in the current database
-
-```bash
+# List all tables in the current database
 \dt
+
+# List the columns details of a table
+\d+ table_name
+
+# List all users
+\du
+
+## Change the password for a user
+\password username
+
+## Exit from PostgreSQL CLI
+\q
 ```
 
-## List just the columns names of a table
+## Basic SQL queries
 
 ```sql
+-- List just the columns names of a table
 SELECT * FROM table_name WHERE FALSE;
-```
 
-## List the columns details of a table
+-- Specify a number of records to return
+SELECT * FROM table_name LIMIT <number>;
 
-```bash
-\d+ table_name
-```
-
-## List all users
-
-```bash
-\du
+-- Clear all the data from a database
+DROP DATABASE "db_name";
+CREATE DATABASE "db_name";
 ```
 
 ## Use empty password for postgres user on Windows
 
 Edit your `C:\Program Files\PostgreSQL\10\data\pg_hba.conf` and
 replace the IPv4 and IPv6 local connections with:
-```bash
+```sh
 # TYPE  DATABASE        USER            ADDRESS                 METHOD
 
 # IPv4 local connections:
@@ -85,29 +79,10 @@ host    all             all             127.0.0.1/32            trust
 host    all             all             ::1/128                 trust
 ```
 
-## Change password for a user
-
-```bash
-\password username
-```
-
-## Clear all the data from a database
-
-```sql
-DROP DATABASE "db-name";
-CREATE DATABASE "db-name";
-```
-
 ## Dump data from a specific user of specific tables from a database
 
-```bash
+```sh
 pg_dump -U username -t table1 -t table2 -t table3 -O --column-inserts --data-only database_name
-```
-
-## Exit from PostgreSQL CLI
-
-```bash
-\q
 ```
 
 ## See your database schema in dbdiagram.io
