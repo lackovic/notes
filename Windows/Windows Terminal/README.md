@@ -29,6 +29,10 @@ See [`.\profiles.json`](profiles.json) for examples on how to set:
 - [color schemes](https://github.com/lackovic/notes/blob/a69ac7066798699f53ac56c8344896b29ccf2ba2/Windows/Windows%20Terminal/profiles.json#L58-L171)
 - [key bindings](https://github.com/lackovic/notes/blob/92592a68a8baaf81ddb8dab83a513086529443be/Windows/Windows%20Terminal/profiles.json#L175-L186)
 
+Place your icon files in `%LOCALAPPDATA%\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\RoamingState`.
+
+Some sample icons che be found in the [icons](./icons/) folder.
+
 ## Run PowerShell Core as Administrator in a Windows Terminal tab
 
 ```powershell
