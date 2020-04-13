@@ -64,6 +64,9 @@ SELECT * FROM table_name LIMIT <number>;
 -- Clear all the data from a database
 DROP DATABASE "db_name";
 CREATE DATABASE "db_name";
+
+-- List columns with indexes for a table
+SELECT * FROM pg_indexes WHERE tablename = 'mytable';
 ```
 
 ## Use empty password for postgres user on Windows
