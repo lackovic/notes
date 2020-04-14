@@ -62,6 +62,7 @@
 - [Sort lines](https://marketplace.visualstudio.com/items?itemName=Tyriar.sort-lines)
 - [Surround](https://marketplace.visualstudio.com/items?itemName=yatki.vscode-surround)
 - [Text Marker (Highlighter)](https://marketplace.visualstudio.com/items?itemName=ryu1kn.text-marker)
+- [Selected Lines Count](https://marketplace.visualstudio.com/items?itemName=gurumukhi.selected-lines-count)
 
 ### Useful Extensions
 
