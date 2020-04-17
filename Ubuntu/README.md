@@ -6,6 +6,7 @@ _Table of Contents_
 <!-- generated with [DocToc](https://github.com/thlorenz/doctoc) -->
 
 - [Get your operating system information](#get-your-operating-system-information)
+- [Get your hardware information](#get-your-hardware-information)
 - [Show the git branch name in terminal (like posh-git)](#show-the-git-branch-name-in-terminal-like-posh-git)
 - [Colorize Your Cat Output](#colorize-your-cat-output)
 - [Human readable files list in terminal](#human-readable-files-list-in-terminal)
@@ -18,6 +19,12 @@ _Table of Contents_
 
 ```sh
 cat /etc/os-release
+```
+
+## Get your hardware information
+
+```sh
+lshw -short
 ```
 
 ## Show the git branch name in terminal (like posh-git)
