@@ -1,4 +1,4 @@
-# Ubuntu
+# Linux
 
 _Table of Contents_
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
@@ -10,7 +10,7 @@ _Table of Contents_
 - [Show the git branch name in terminal (like posh-git)](#show-the-git-branch-name-in-terminal-like-posh-git)
 - [Colorize Your Cat Output](#colorize-your-cat-output)
 - [Human readable files list in terminal](#human-readable-files-list-in-terminal)
-- [Copy files from Ubuntu to Windows](#copy-files-from-ubuntu-to-windows)
+- [Copy files from Linux to Windows](#copy-files-from-linux-to-windows)
 - [Find all files containing a string](#find-all-files-containing-a-string)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
@@ -67,16 +67,16 @@ alias dir='ls -lhp --color --group-directories-first'
 
 `-p` = append `/` indicator to directories
 
-## Copy files from Ubuntu to Windows
+## Copy files from Linux to Windows
 
-- Install `openssh-server` and `net-tools` on Ubuntu (with `apt`).
+- Install `openssh-server` and `net-tools` on Linux
 
-- Intall `Putty` on Windows (with [Chocolatey](https://chocolatey.org/packages/putty)).
+- Intall `Putty` on Windows (with [Chocolatey](https://chocolatey.org/packages/putty))
 
 ```sh
-# Assuming 192.168.10.12 is your Ubuntu IP address,
+# Assuming 192.168.10.12 is your Linux IP address,
 # write the following command in a shell on Windows:
-pscp user@192.168.10.12:/source/path/on/ubuntu/* c:\Destination\Path\On\Windows
+pscp user@192.168.10.12:/source/path/on/linux/* c:\Destination\Path\On\Windows
 ```
 
 ## Find all files containing a string
