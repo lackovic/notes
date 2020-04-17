@@ -5,7 +5,7 @@ _Table of Contents_
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 <!-- generated with [DocToc](https://github.com/thlorenz/doctoc) -->
 
-- [Know the installed version](#know-the-installed-version)
+- [Get your operating system information](#get-your-operating-system-information)
 - [Show the git branch name in terminal (like posh-git)](#show-the-git-branch-name-in-terminal-like-posh-git)
 - [Colorize Your Cat Output](#colorize-your-cat-output)
 - [Human readable files list in terminal](#human-readable-files-list-in-terminal)
@@ -14,10 +14,10 @@ _Table of Contents_
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
-## Know the installed version
+## Get your operating system information
 
 ```sh
-lsb_release -a
+cat /etc/os-release
 ```
 
 ## Show the git branch name in terminal (like posh-git)
@@ -55,7 +55,9 @@ alias dir='ls -lhp --color --group-directories-first'
 ```
 
 `-l` = use a long listing format
+
 `-h` = print sizes like 1K, 234M, 2G, etc.
+
 `-p` = append `/` indicator to directories
 
 ## Copy files from Ubuntu to Windows
@@ -72,10 +74,13 @@ pscp user@192.168.10.12:/source/path/on/ubuntu/* c:\Destination\Path\On\Windows
 
 ## Find all files containing a string
 
-```
+```sh
 grep -Ril "string" .
 ``` 
 `R` = recursive
+
 `i` = ignore case
+
 `l` = show the file name, not the result itself
+
 `.` = starting from the current directory
