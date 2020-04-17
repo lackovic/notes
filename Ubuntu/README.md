@@ -10,6 +10,7 @@ _Table of Contents_
 - [Colorize Your Cat Output](#colorize-your-cat-output)
 - [Human readable files list in terminal](#human-readable-files-list-in-terminal)
 - [Copy files from Ubuntu to Windows](#copy-files-from-ubuntu-to-windows)
+- [Find all files containing a string](#find-all-files-containing-a-string)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -68,3 +69,13 @@ alias dir='ls -lhp --color --group-directories-first'
 # write the following command in a shell on Windows:
 pscp user@192.168.10.12:/source/path/on/ubuntu/* c:\Destination\Path\On\Windows
 ```
+
+## Find all files containing a string
+
+```
+grep -Ril "string" .
+``` 
+`R` = recursive
+`i` = ignore case
+`l` = show the file name, not the result itself
+`.` = starting from the current directory
