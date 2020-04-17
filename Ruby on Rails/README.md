@@ -20,7 +20,7 @@
   - [Enter Rails console](#enter-rails-console)
   - [Enable syntax highlighting](#enable-syntax-highlighting)
   - [CRUD database operations](#crud-database-operations)
-- [Integer types in migrations](#integer-types-in-migrations)
+- [Migrations data types](#migrations-data-types)
 - [Resources](#resources)
 - [Visual Studio Code](#visual-studio-code)
   - [Recommended extensions](#recommended-extensions)
@@ -29,7 +29,6 @@
   - [Windows](#windows)
     - [Installation](#installation)
     - [Setup](#setup)
-  - [Find files which contain two words](#find-files-which-contain-two-words)
   - [Favorite plugins](#favorite-plugins)
   - [Install a theme from a jar file](#install-a-theme-from-a-jar-file)
   - [Select a theme](#select-a-theme)
@@ -164,18 +163,25 @@ User.destroy_all(age: 49)
 
 - [Docs](https://www.rubydoc.info/docs/rails/4.1.7/ActiveRecord/Relation)
 
-## Integer types in migrations
+## Migrations data types
 
 ```rb
 create_table 'example' do |t|
-  t.integer :int                 # int (4 bytes, max 2,147,483,647)
-  t.integer :int1, :limit => 1   # tinyint (1 byte, -128 to 127)
-  t.integer :int2, :limit => 2   # smallint (2 bytes, max 32,767)
-  t.integer :int3, :limit => 3   # mediumint (3 bytes, max 8,388,607)
-  t.integer :int4, :limit => 4   # int (4 bytes)
-  t.integer :int5, :limit => 5   # bigint (8 bytes, max 9,223,372,036,854,775,807)
-  t.integer :int8, :limit => 8   # bigint (8 bytes)
-  t.integer :int11, :limit => 11 # int (4 bytes)
+  t.integer :int                  # int (4 bytes, max 2,147,483,647)
+  t.integer :int1,  limit: 1   # tinyint (1 byte, -128 to 127)
+  t.integer :int2,  limit: 2   # smallint (2 bytes, max 32,767)
+  t.integer :int3,  limit: 3   # mediumint (3 bytes, max 8,388,607)
+  t.integer :int4,  limit: 4   # int (4 bytes)
+  t.integer :int5,  limit: 5   # bigint (8 bytes, max 9,223,372,036,854,775,807)
+  t.integer :int8,  limit: 8   # bigint (8 bytes)
+  t.integer :int11, limit: 11  # int (4 bytes)
+
+  t.timestamp    :my_date         # timestamp without time zone
+  t.timestamptz  :my_other_date   # timestamp with time zone
+
+  t.string       :str,                 # character varying(255)
+  t.string       :str, length: 255     # character varying(512)
+  t.string       :str, length: 1024    # character varying(1024)
 end
 ``` 
 
@@ -226,14 +232,6 @@ choco install rubymine -y
 
 1. Run `bundle install` in your project directory (if some of the gems installation fails, try commenting them out from your `Gemfile`)
 
-
-### Find files which contain two words
-
-In _Find in Path_  select _Regex_ and type:
-
-```js
-(word1)[\s\S]*(word2)|\2[\s\S]*\1 
-```
 
 ### Favorite plugins
 
