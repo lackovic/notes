@@ -19,6 +19,7 @@ Table of Contents
 - [Resources](#resources)
 - [Tools](#tools)
 - [GitHub](#github)
+  - [Find the most active forks of a repository](#find-the-most-active-forks-of-a-repository)
   - [Merging an upstream repository into your fork](#merging-an-upstream-repository-into-your-fork)
   - [Navigate to the first commit in a GitHub repository](#navigate-to-the-first-commit-in-a-github-repository)
   - [Change base branch](#change-base-branch)
@@ -199,6 +200,10 @@ git supports autocompletion with TAB so there is no need for abbreviations.
 - [TortoiseGit](https://chocolatey.org/packages/TortoiseGit)
 
 ## GitHub
+
+### Find the most active forks of a repository
+
+- [active-forks](https://techgaun.github.io/active-forks/index.html)
 
 ### Merging an upstream repository into your fork
 
