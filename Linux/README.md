@@ -12,6 +12,7 @@ _Table of Contents_
 - [Human readable files list in terminal](#human-readable-files-list-in-terminal)
 - [Copy files from Linux to Windows](#copy-files-from-linux-to-windows)
 - [Find all files containing a string](#find-all-files-containing-a-string)
+- [Check running processes](#check-running-processes)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -91,3 +92,12 @@ grep -Ril "string" .
 `l` = show the file name, not the result itself
 
 `.` = starting from the current directory
+
+## Check running processes
+
+```sh
+ps aux | grep procName
+pgrep -f procName
+top
+htop
+``` 
