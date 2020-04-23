@@ -20,14 +20,14 @@ choco install microsoft-windows-terminal
 
 ## Configuration
 
-See [`.\profiles.json`](profiles.json) for examples on how to set:
+See [`.\settings.json`](settings.json) for examples on how to set:
 
-- [WSL profiles](https://github.com/lackovic/notes/blob/a69ac7066798699f53ac56c8344896b29ccf2ba2/Windows/Windows%20Terminal/profiles.json#L35-L41)
-- [SSH profiles](https://github.com/lackovic/notes/blob/a69ac7066798699f53ac56c8344896b29ccf2ba2/Windows/Windows%20Terminal/profiles.json#L28-L34)
-- [profile defaults](https://github.com/lackovic/notes/blob/a69ac7066798699f53ac56c8344896b29ccf2ba2/Windows/Windows%20Terminal/profiles.json#L10-L13)
-- [custom icons](https://github.com/lackovic/notes/blob/a69ac7066798699f53ac56c8344896b29ccf2ba2/Windows/Windows%20Terminal/profiles.json#L25) - you also need to put a 32x32 PNG in `%LOCALAPPDATA%\packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\RoamingState`
-- [color schemes](https://github.com/lackovic/notes/blob/a69ac7066798699f53ac56c8344896b29ccf2ba2/Windows/Windows%20Terminal/profiles.json#L58-L171)
-- [key bindings](https://github.com/lackovic/notes/blob/92592a68a8baaf81ddb8dab83a513086529443be/Windows/Windows%20Terminal/profiles.json#L175-L186)
+- [WSL profiles](https://github.com/lackovic/notes/blob/a69ac7066798699f53ac56c8344896b29ccf2ba2/Windows/Windows%20Terminal/settings.json#L35-L41)
+- [SSH profiles](https://github.com/lackovic/notes/blob/a69ac7066798699f53ac56c8344896b29ccf2ba2/Windows/Windows%20Terminal/settings.json#L28-L34)
+- [profile defaults](https://github.com/lackovic/notes/blob/a69ac7066798699f53ac56c8344896b29ccf2ba2/Windows/Windows%20Terminal/settings.json#L10-L13)
+- [custom icons](https://github.com/lackovic/notes/blob/a69ac7066798699f53ac56c8344896b29ccf2ba2/Windows/Windows%20Terminal/settings.json#L25) - you also need to put a 32x32 PNG in `%LOCALAPPDATA%\packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\RoamingState`
+- [color schemes](https://github.com/lackovic/notes/blob/a69ac7066798699f53ac56c8344896b29ccf2ba2/Windows/Windows%20Terminal/settings.json#L58-L171)
+- [key bindings](https://github.com/lackovic/notes/blob/92592a68a8baaf81ddb8dab83a513086529443be/Windows/Windows%20Terminal/settings.json#L175-L186)
 
 Place your icon files in `%LOCALAPPDATA%\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\RoamingState`.
 
