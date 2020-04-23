@@ -29,6 +29,7 @@
   - [Windows](#windows)
     - [Installation](#installation)
     - [Setup](#setup)
+  - [Find in path regex](#find-in-path-regex)
   - [Favorite plugins](#favorite-plugins)
   - [Install a theme from a jar file](#install-a-theme-from-a-jar-file)
   - [Select a theme](#select-a-theme)
@@ -232,6 +233,16 @@ choco install rubymine -y
 
 1. Run `bundle install` in your project directory (if some of the gems installation fails, try commenting them out from your `Gemfile`)
 
+
+### Find in path regex
+
+```sh
+# Find files which contain two strings on any line
+(string1)[\s\S]*(string2)|\2[\s\S]*\1
+
+# Find files which contain two strings on the same line
+\Qstring1\E.*\Qstring2\E
+```
 
 ### Favorite plugins
 
