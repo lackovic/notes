@@ -23,6 +23,7 @@ Table of Contents
   - [Merging an upstream repository into your fork](#merging-an-upstream-repository-into-your-fork)
   - [Navigate to the first commit in a GitHub repository](#navigate-to-the-first-commit-in-a-github-repository)
   - [Change base branch](#change-base-branch)
+  - [Resurrect a PR displaying unknown repository after the fork was deleted](#resurrect-a-pr-displaying-unknown-repository-after-the-fork-was-deleted)
   - [Tools](#tools-1)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
@@ -224,6 +225,18 @@ git pull https://github.com/ORIGINAL_OWNER/ORIGINAL_REPOSITORY.git BRANCH_NAME
 ### Change base branch
 
 - [Changing the base branch of a pull request](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/changing-the-base-branch-of-a-pull-request)
+
+### Resurrect a PR displaying unknown repository after the fork was deleted
+
+```sh
+git fetch origin refs/pull/123/head:foo
+``` 
+
+Substitute (if necessary) `origin` for the remote pointing at the target repo, `123` for the PR number, and `foo` for the name of the local branch you want created to point to the head of the PR.
+
+Then you can simply `git checkout foo`, close the stale PR, and resubmit a new one which supersedes it.
+
+Sources: [this](https://github.com/isaacs/github/issues/168#issuecomment-374201226) and [this](https://gist.github.com/piscisaureus/3342247).
 
 ### Tools
 
