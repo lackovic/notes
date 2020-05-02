@@ -13,6 +13,7 @@ _Table of Contents_
 - [Copy files from Linux to Windows](#copy-files-from-linux-to-windows)
 - [Find all files containing a string](#find-all-files-containing-a-string)
 - [Check running processes](#check-running-processes)
+- [Favorite bash aliases](#favorite-bash-aliases)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -100,4 +101,13 @@ ps aux | grep procName
 pgrep -f procName
 top
 htop
+``` 
+
+## Favorite bash aliases
+
+```sh
+alias dog='pygmentize -O console256 -g'
+alias dir='ls -lhp --color --group-directories-first'
+alias gts='git status'
+alias grs=' git reset --hard && git clean -f -d'
 ``` 
