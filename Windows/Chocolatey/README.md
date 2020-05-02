@@ -2,7 +2,7 @@
 
 [Chocolatey](https://chocolatey.org/) is a package manager for Windows.
 
-## Installs a list of packages in bulk
+## Install a list of packages in bulk
 
 ```powershell
 cinst .\packages.config -y
@@ -21,3 +21,11 @@ cup all -y
 ```powershell
 clist -l
 ```
+
+## Pin a package to suppress upgrades
+
+```powershell
+choco pin add -n=ruby
+```
+
+- [Source](https://superuser.com/a/972614/54747)
