@@ -68,6 +68,9 @@ git revert <COMMIT_SHA>
 
 # Restore your project to an old commit, undoing/deleting all the commits that came afterwards
 git reset --hard <COMMIT_SHA>
+
+# Commit all changes
+git commit -a
 ```
 
 ## Powershell branch pruning
