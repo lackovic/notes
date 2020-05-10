@@ -12,7 +12,8 @@ _Table of Contents_
 - [Human readable files list in terminal](#human-readable-files-list-in-terminal)
 - [Copy files from Linux to Windows](#copy-files-from-linux-to-windows)
 - [Find all files containing a string](#find-all-files-containing-a-string)
-- [Check running processes](#check-running-processes)
+- [List running processes](#list-running-processes)
+- [Services commands](#services-commands)
 - [Favorite bash aliases](#favorite-bash-aliases)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
@@ -96,7 +97,7 @@ grep -Ril "string" .
 
 `.` = starting from the current directory
 
-## Check running processes
+## List running processes
 
 ```sh
 ps aux | grep procName
@@ -105,11 +106,22 @@ top
 htop
 ``` 
 
+## Services commands
+
+```sh
+# List running services
+ls /etc/init.d
+
+# Stop a running service
+sudo -u root bash
+/etc/init.d/my-service stop
+``` 
+
 ## Favorite bash aliases
 
 ```sh
 alias dog='pygmentize -O console256 -g'
 alias dir='ls -lhp --color --group-directories-first'
 alias gts='git status'
-alias grs=' git reset --hard && git clean -f -d'
+alias grs='git reset --hard && git clean -f -d'
 ``` 
