@@ -21,6 +21,8 @@ _Table of Contents_
 
 ```sh
 cat /etc/os-release
+# or
+lsb_release -a
 ```
 
 ## Get your hardware information
