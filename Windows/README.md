@@ -10,6 +10,7 @@
 - [Know the domain](#know-the-domain)
 - [Know whether a service is running on a port number](#know-whether-a-service-is-running-on-a-port-number)
 - [Create a EXT4 partition](#create-a-ext4-partition)
+- [Change the screenshots default save location](#change-the-screenshots-default-save-location)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -44,3 +45,9 @@ choco install partitionwizard ext2fsd -y
 
 Use MiniTool Partition Wizard to create a EXT4 partition.
 [Ext2Fsd](http://www.ext2fsd.com/) adds EXT4 support to Windows.
+
+## Change the screenshots default save location
+
+1. Right click on `%USERPROFILE%\Pictures\Screenshots\`
+
+1. Properties > Location
