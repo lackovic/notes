@@ -33,6 +33,7 @@
   - [Favorite plugins](#favorite-plugins)
   - [Install a theme from a jar file](#install-a-theme-from-a-jar-file)
   - [Select a theme](#select-a-theme)
+  - [Navigate back and forward using mouse buttons clicks](#navigate-back-and-forth-using-mouse-buttons-clicks)
   - [Shortcuts](#shortcuts)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
@@ -257,6 +258,10 @@ File → Settings → Plugins → Marketplace → Three dots → Install plugin 
 ### Select a theme
 
 File → Settings → Appearance & Behavior → Appearance → Theme
+
+### Navigate back and forward using mouse buttons clicks
+
+Settings > Keymap > Navigate > Back | Forward > right click > Add mouse shortcut
 
 ### Shortcuts
 
