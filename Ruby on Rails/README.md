@@ -229,7 +229,7 @@ choco install rubymine -y
 
 1. Install Ruby with Chocolatey, choosing from the [available versions](https://chocolatey.org/packages/ruby#versionhistory)
 
-1. Run `ridk install` and choose option (3) when asked (_MSYS2 and MINGW development toolchain_)
+1. Run `ridk install` and choose options 1, 2 and 3 when asked
 
 1. Run `bundle install` in your project directory (if some of the gems installation fails, try commenting them out from your `Gemfile`)
 
