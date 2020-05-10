@@ -189,11 +189,11 @@ Install [PsReadLine](https://github.com/PowerShell/PSReadLine) and [PSColor](htt
 1. Run:
 
    ```powershell
-   Install-Module -Name PSReadLine -RequiredVersion 2.0.0-beta5 -AllowPrerelease
+   Install-Module -Name PSReadLine -RequiredVersion 2.0.1
    Install-Module PSColor
    ```
 
-   Note: the [latest beta](https://github.com/PowerShell/PSReadLine/releases) of PSReadLine is needed due to [this bug](https://github.com/PowerShell/PSReadLine/issues/854).
+   Note: PSReadLine `2.0.1` is needed because the current [preinstalled version 2.0.0](https://github.com/PowerShell/PSReadLine/releases) of suffers from [this bug](https://github.com/PowerShell/PSReadLine/issues/854).
 
 2. Add to your profile (e.g. - `~\Documents\PowerShell\Microsoft.PowerShell_profile.ps1`):
 
