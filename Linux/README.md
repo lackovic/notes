@@ -112,9 +112,13 @@ htop
 # List running services
 ls /etc/init.d
 
-# Stop a running service
+# Start/stop a service
 sudo -u root bash
-/etc/init.d/my-service stop
+/etc/init.d/<my-service> start/stop
+# if you don't find there, check
+/var/spool/cron/*
+# if not there, check:
+/etc/monit.d/*
 ``` 
 
 ## Favorite bash aliases
