@@ -33,7 +33,7 @@
   - [Favorite plugins](#favorite-plugins)
   - [Install a theme from a jar file](#install-a-theme-from-a-jar-file)
   - [Select a theme](#select-a-theme)
-  - [Navigate back and forward using mouse buttons clicks](#navigate-back-and-forth-using-mouse-buttons-clicks)
+  - [Navigate back and forward using mouse buttons clicks](#navigate-back-and-forward-using-mouse-buttons-clicks)
   - [Shortcuts](#shortcuts)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
