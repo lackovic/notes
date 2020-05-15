@@ -11,6 +11,7 @@
 - [Know whether a service is running on a port number](#know-whether-a-service-is-running-on-a-port-number)
 - [Create a EXT4 partition](#create-a-ext4-partition)
 - [Change the screenshots default save location](#change-the-screenshots-default-save-location)
+- [Create your own custom keyboard layout](#create-your-own-custom-keyboard-layout)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -51,3 +52,7 @@ Use MiniTool Partition Wizard to create a EXT4 partition.
 1. Right click on `%USERPROFILE%\Pictures\Screenshots\`
 
 1. Properties > Location
+
+## Create your own custom keyboard layout
+
+- [Microsoft Keyboard Layout Creator](https://www.microsoft.com/en-us/download/details.aspx?id=22339)
