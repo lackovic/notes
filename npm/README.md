@@ -2,13 +2,15 @@
 
 ## Installation
 
-Use [nvm (Node Version Manager)](https://github.com/coreybutler/nvm-windows) to install npm:
+The best way to install npm is through _nvm (Node Version Manager)_.
+
+On linux, follow [these instructions](https://github.com/nvm-sh/nvm#install--update-script).
+
+On Windows, [install it with Chocolatey](https://chocolatey.org/packages/nvm).
+
+After you have `nvm` installed you can install the latest version of `npm` with:
 
 ```powershell
-# 1. Install nvm
-choco install nvm
-
-# 2. Install the latest version of npm
 nvm install latest
 ```
 
