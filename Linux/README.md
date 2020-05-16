@@ -11,6 +11,7 @@ _Table of Contents_
 - [Colorize your cat output](#colorize-your-cat-output)
 - [Display line numbers in your cat output](#display-line-numbers-in-your-cat-output)
 - [Display line numbers in VIM](#display-line-numbers-in-vim)
+- [Print a file from line to line](#print-a-file-from-line-to-line)
 - [Human readable files list in terminal](#human-readable-files-list-in-terminal)
 - [Copy files from Linux to Windows](#copy-files-from-linux-to-windows)
 - [Find all files containing a string](#find-all-files-containing-a-string)
@@ -75,6 +76,12 @@ cat -n <file-path>
 - enter `set number`
 
 If you want to be displayed by default, append `set number` to your `~/.vimrc`.
+
+## Print a file from line to line
+
+```sh
+sed -n 10,20p <file-path>
+```
 
 ## Human readable files list in terminal
 
