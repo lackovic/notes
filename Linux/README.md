@@ -15,6 +15,7 @@ _Table of Contents_
 - [Find all files containing a string](#find-all-files-containing-a-string)
 - [List running processes](#list-running-processes)
 - [Services commands](#services-commands)
+- [Validate shell scripts](#validate-shell-scripts)
 - [Favorite bash aliases](#favorite-bash-aliases)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
@@ -127,6 +128,10 @@ sudo -u root bash
 # if not there, check:
 /etc/monit.d/*
 ``` 
+
+## Validate shell scripts
+
+- [ShellCheck](https://www.shellcheck.net/)
 
 ## Favorite bash aliases
 
