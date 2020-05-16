@@ -8,7 +8,8 @@ _Table of Contents_
 - [Get your operating system information](#get-your-operating-system-information)
 - [Get your hardware information](#get-your-hardware-information)
 - [Show the git branch name in terminal (like posh-git)](#show-the-git-branch-name-in-terminal-like-posh-git)
-- [Colorize Your Cat Output](#colorize-your-cat-output)
+- [Colorize your cat output](#colorize-your-cat-output)
+- [Display line numbers in your cat output](#display-line-numbers-in-your-cat-output)
 - [Human readable files list in terminal](#human-readable-files-list-in-terminal)
 - [Copy files from Linux to Windows](#copy-files-from-linux-to-windows)
 - [Find all files containing a string](#find-all-files-containing-a-string)
@@ -50,13 +51,19 @@ unset color_prompt force_color_prompt
 
 - [Source](https://askubuntu.com/questions/730754/how-do-i-show-the-git-branch-with-colours-in-bash-prompt)
 
-## Colorize Your Cat Output
+## Colorize your cat output
 
 ```sh
 sudo apt-get install python-pygments
 
 # Add an alias to your ~/.bashrc
 alias dog='pygmentize -g'
+```
+
+## Display line numbers in your cat output
+
+```sh
+cat -n <file-path>
 ```
 
 ## Human readable files list in terminal
