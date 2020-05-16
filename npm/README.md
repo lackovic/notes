@@ -20,9 +20,19 @@ nvm install latest
 npm prune
 ```
 
+## Upgrade your dependencies to the latest versions
+
+```powershell
+npm install -g npm-check-updates
+ncu
+ncu -u
+```
+
+See:
+- [npm-check-updates](https://www.npmjs.com/package/npm-check-updates)
+
 ## How to keep your dependencies up to date
 
-- [npm-check-updates](https://www.npmjs.com/package/npm-check-updates)
 - [npm-outdated](https://docs.npmjs.com/cli/outdated.html)
 - [npm-update](https://docs.npmjs.com/cli/update.html)
 - [npm-check](https://www.npmjs.com/package/npm-check)
