@@ -14,6 +14,12 @@ After you have `nvm` installed you can install the latest version of `npm` with:
 nvm install latest
 ```
 
+## Remove modules not listed in package.json
+
+```powershell
+npm prune
+```
+
 ## How to keep your dependencies up to date
 
 - [npm-check-updates](https://www.npmjs.com/package/npm-check-updates)
