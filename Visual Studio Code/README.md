@@ -14,17 +14,18 @@
 
 ### Shortcuts
 
-| Key                       | Command                           | Notes                                                                        |
-| ------------------------- | --------------------------------- | ---------------------------------------------------------------------------- |
-| `Ctrl+Shift+P`            | Show All Commands                 | _Probably the most important shortcut of all, I still often forget about it_ |
+| Key                       | Command                           |
+| ------------------------- | --------------------------------- |
+| `Ctrl+Shift+P`            | Show All Commands                 |
 | `Ctrl+P`                  | Go to File..., Quick Open         |
-| `Ctrl+Shift+O`            | Go to Symbol...                   | _Jumps to variable/function in current file_                                 |
-| `Shift+Enter`             | Go to position...                 | _Jumps to a position in the current file (needs the *jumpy* extension)_      |
-| `Ctrl+K Z`                | Toggle Zen Mode                   |
-| `Ctrl+K M`                | Change Language Mode              | _Select language for the current file_                                       |
-| `Ctrl+K O`                | Show Opened File in New Window    | _Open the current file in a new window_                                      |
+| `Ctrl+Shift+O`            | Go to Symbol...                   |
+| `Ctrl+K M`                | Change Language Mode              |
+| `Ctrl+K O`                | Show Opened File in New Window    |
 | `Ctrl+Shift+P dupl Enter` | Duplicate workspace in New Window |
-| `Shift+Alt+Down`          | Copy Line Down                    | _Duplicate selection down_                                                   |
+| `Shift+Alt+Down`          | Copy Line Down                    |
+| `Ctrl+Shift+N`            | New Window                        |
+| `Ctrl+R`                  | Open recent folder                |
+| `Ctrl+.`                  | Show the quickfix menu            |
 
 [All shortcuts](https://code.visualstudio.com/docs/getstarted/keybindings)
 
