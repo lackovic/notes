@@ -1,18 +1,19 @@
 # Visual Studio Code
 
-## Useful Typescript workspace settings
+## Useful workspace settings
 
 ```js
 // Use relative path for auto-imports
+"files.exclude": { ".vscode": true },
+
+// Use relative path for Typescript auto-imports
 "typescript.preferences.importModuleSpecifier": "relative"
 
-// Use single quotes in auto-imports
+// Use single quotes in Typescript auto-imports
 "typescript.preferences.quoteStyle": "single"
 ```
 
-## Favorite shortcuts, settings and extensions
-
-### Shortcuts
+## Favorite shortcuts
 
 | Key                       | Command                           |
 | ------------------------- | --------------------------------- |
@@ -29,7 +30,7 @@
 
 [All shortcuts](https://code.visualstudio.com/docs/getstarted/keybindings)
 
-### User settings
+## Favorite user settings
 
 ```js
 {
@@ -50,17 +51,7 @@
 }
 ```
 
-### Workspace settings
-
-```js
-{
-    "files.exclude": {
-        ".vscode": true
-    },
-}
-```
-
-### Top Extensions
+## Top Extensions
 
 - [Better Comments](https://marketplace.visualstudio.com/items?itemName=aaron-bond.better-comments)
 - [Bracket Pair Colorizer](https://marketplace.visualstudio.com/items?itemName=CoenraadS.bracket-pair-colorizer)
@@ -75,7 +66,7 @@
 - [Text Marker (Highlighter)](https://marketplace.visualstudio.com/items?itemName=ryu1kn.text-marker)
 - [Selected Lines Count](https://marketplace.visualstudio.com/items?itemName=gurumukhi.selected-lines-count)
 
-### Useful Extensions
+## Useful Extensions
 
 - [Bookmarks](https://marketplace.visualstudio.com/items?itemName=alefragnani.Bookmarks)
 - [EditorConfig](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig)
