@@ -1,5 +1,15 @@
 # Visual Studio Code
 
+## Useful Typescript workspace settings
+
+```js
+// Use relative path for auto-imports
+"typescript.preferences.importModuleSpecifier": "relative"
+
+// Use single quotes in auto-imports
+"typescript.preferences.quoteStyle": "single"
+```
+
 ## Favorite shortcuts, settings and extensions
 
 ### Shortcuts
