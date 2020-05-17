@@ -3,7 +3,7 @@
 ## Useful workspace settings
 
 ```js
-// Use relative path for auto-imports
+// Hide VsCode configuration files from sidebar explorer
 "files.exclude": { ".vscode": true },
 
 // Use relative path for Typescript auto-imports
@@ -11,6 +11,9 @@
 
 // Use single quotes in Typescript auto-imports
 "typescript.preferences.quoteStyle": "single"
+
+// Automatically update TypeScript import paths on file rename/move
+"typescript.updateImportsOnFileMove.enabled": "always"
 ```
 
 ## Favorite shortcuts
@@ -45,6 +48,7 @@
   "explorer.confirmDelete": false,
   "explorer.confirmDragAndDrop": false,
   "files.autoSave": "onWindowChange",
+  "window.titleSeparator": " > ",
   "window.zoomLevel": 0,
   "workbench.settings.useSplitJSON": true,
   "workbench.settings.editor": "json"
