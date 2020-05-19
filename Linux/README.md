@@ -111,15 +111,17 @@ pscp user@192.168.10.12:/source/path/on/linux/* c:\Destination\Path\On\Windows
 ## Find all files containing a string
 
 ```sh
-grep -Ril "string" .
+grep -Rin "string" .
 ``` 
 `R` = recursive
 
 `i` = ignore case
 
-`l` = show the file name, not the result itself
+`n` = show the line number and content
 
 `.` = starting from the current directory
+
+Use `l` instead of `n` to show the file name only.
 
 ## List running processes
 
