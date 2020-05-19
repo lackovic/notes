@@ -7,6 +7,7 @@ Table of Contents
 
 - [Branch operations](#branch-operations)
 - [Commits operations](#commits-operations)
+- [Stash operations](#stash-operations)
 - [Powershell branch pruning](#powershell-branch-pruning)
 - [Remove/delete local untracked files](#removedelete-local-untracked-files)
 - [Revert a PR merge and delete its commits from master history](#revert-a-pr-merge-and-delete-its-commits-from-master-history)
@@ -71,6 +72,27 @@ git reset --hard <COMMIT_SHA>
 
 # Commit all changes
 git commit -a
+```
+
+## Stash operations
+
+```sh
+# View a summary of your last stash
+git stash show
+
+# Pass the -p option (or --patch) to view the full diff
+git stash show -p
+
+# View your untracked files in your last stash
+git show stash^3
+
+# Copy your last stash to a file
+git stash show -p > patchfile
+git show stash^3 > untracked
+
+# Put a patch file to the stash
+git apply patchfile
+git apply untracked
 ```
 
 ## Powershell branch pruning
