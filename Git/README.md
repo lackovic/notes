@@ -77,6 +77,9 @@ git commit -a
 ## Stash operations
 
 ```sh
+# Stash your changes and untracked files
+git stash -u
+
 # View a summary of your last stash
 git stash show
 
@@ -87,12 +90,12 @@ git stash show -p
 git show stash^3
 
 # Copy your last stash to a file
-git stash show -p > patchfile
-git show stash^3 > untracked
+git stash show -p > modifiedfile
+git show stash^3 > untrackedfile
 
 # Put a patch file to the stash
-git apply patchfile
-git apply untracked
+git apply modifiedfile
+git apply untrackedfile
 ```
 
 ## Powershell branch pruning
