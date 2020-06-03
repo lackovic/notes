@@ -10,6 +10,7 @@ The Windows Subsystem for Linux (WSL 1) allows to use different Linux distros di
 - [Enable WSL](#enable-wsl)
 - [Install your Linux distribution of choice](#install-your-linux-distribution-of-choice)
 - [Run WSL with a non-admin account](#run-wsl-with-a-non-admin-account)
+- [Set a default user other than root](#use-a-default-user-other-than-root)
 - [See your distros and their WSL versions](#see-your-distros-and-their-wsl-versions)
 - [Manage multiple distributions](#manage-multiple-distributions)
 - [Use chromedriver on WSL](#use-chromedriver-on-wsl)
@@ -52,6 +53,20 @@ Will get rid of the _Access Denied_ error:
 - Users: allow full control
 
 - Press OK (it will take a few tens of seconds) and OK again
+
+## Set a default user other than root
+
+- enter your WSL distro
+
+- `sudo adduser username` 
+
+- `usermod -aG sudo username` 
+
+- exit your WSL distro
+
+- navigate to `C:\ProgramData\chocolatey\lib\wsl-ubuntu-1804\tools\unzipped` (replace `wsl-ubuntu-1804` with the distribution you have installed)
+
+- `.\ubuntu1804.exe config --default-user username` (replace `ubuntu1804` with the equivalent of the distribution you have installed)
 
 ## See your distros and their WSL versions
 
