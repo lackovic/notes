@@ -9,6 +9,7 @@ The Windows Subsystem for Linux (WSL 1) allows to use different Linux distros di
 
 - [Enable WSL](#enable-wsl)
 - [Install your Linux distribution of choice](#install-your-linux-distribution-of-choice)
+- [Run WSL with a non-admin account](#run-wsl-with-a-non-admin-account)
 - [See your distros and their WSL versions](#see-your-distros-and-their-wsl-versions)
 - [Manage multiple distributions](#manage-multiple-distributions)
 - [Use chromedriver on WSL](#use-chromedriver-on-wsl)
@@ -34,11 +35,23 @@ Enable-WindowsOptionalFeature -Online -FeatureName "Microsoft-Windows-Subsystem-
 
 Pick [from this list](https://chocolatey.org/packages?q=%22wsl-%22) the Linux distribution of choice and install it with Chocolatey.
 
-Example:
+For example:
 
 ```powershell
 choco install wsl-ubuntu-1804
 ```
+
+## Run WSL with a non-admin account
+
+Will get rid of the _Access Denied_ error:
+
+- Right click on the folder `C:\ProgramData\chocolatey\lib\wsl-ubuntu-1804\tools\unzipped` (replace `wsl-ubuntu-1804` with the distribution you have installed)
+
+- Properties > Security > Edit
+
+- Users: allow full control
+
+- Press OK (it will take a few tens of seconds) and OK again
 
 ## See your distros and their WSL versions
 
