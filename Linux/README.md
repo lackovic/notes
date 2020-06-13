@@ -7,6 +7,7 @@ _Table of Contents_
 
 - [Get your operating system information](#get-your-operating-system-information)
 - [Get your hardware information](#get-your-hardware-information)
+- [Remove the green background color from the directory listing](#remove-the-green-background-color-from-the-directory-listing)
 - [Show the git branch name in terminal (like posh-git)](#show-the-git-branch-name-in-terminal-like-posh-git)
 - [Colorize your cat output](#colorize-your-cat-output)
 - [Display line numbers in your cat output](#display-line-numbers-in-your-cat-output)
@@ -35,6 +36,20 @@ lsb_release -a
 ```sh
 lshw -short
 ```
+
+## Remove the green background color from the directory listing
+
+```sh
+dircolors -p > ~/.dircolors
+vim ~/.dircolors
+# Remove ;41 ;42 ;43 ;44 from the lines beginning with
+# SETUID, SETGID, CAPABILITY, STICKY_OTHER_WRITABLE, OTHER_WRITABLE and STICKY
+vim ~/.bashrc
+# Append the following line
+eval 'dircolors ~/.dircolors' > /dev/null
+``` 
+
+- [Source](https://unix.stackexchange.com/questions/94498/what-causes-this-green-background-in-ls-output) 
 
 ## Show the git branch name in terminal (like posh-git)
 
