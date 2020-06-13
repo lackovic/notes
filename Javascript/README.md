@@ -9,12 +9,16 @@ _Table of Contents_
 - [Frameworks and Libraries](#frameworks-and-libraries)
   - [AngularJS](#angularjs)
 - [NodeJS](#nodejs)
+  - [Installation (nvm)](#installation-nvm)
   - [The Event Loop](#the-event-loop)
   - [The Worker Pool (aka the Thread Pool)](#the-worker-pool-aka-the-thread-pool)
   - [Scaling](#scaling)
   - [REPL](#repl)
-  - [NPM](#npm)
   - [Conferences videos](#conferences-videos)
+  - [Node Package Manager (npm)](#node-package-manager-npm)
+    - [Remove modules not listed in package.json](#remove-modules-not-listed-in-packagejson)
+    - [Upgrade your dependencies to the latest versions](#upgrade-your-dependencies-to-the-latest-versions)
+    - [How to keep your dependencies up to date](#how-to-keep-your-dependencies-up-to-date)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -71,6 +75,14 @@ The areas where it’s perfect to use Node.js are:
 Node.js is not suitable for heavy applications involving more of CPU usage.
 
 Node.js uses an _event-driven architecture_: it has an _Event Loop_ for orchestration and a _Worker Pool_ for expensive tasks.
+
+### Installation (nvm)
+
+The best way to install Node.js is through _nvm (Node Version Manager)_.
+
+On linux, follow [these instructions](https://github.com/nvm-sh/nvm#install--update-script).
+
+On Windows, [install it with Chocolatey](https://chocolatey.org/packages/nvm).
 
 ### The Event Loop
 
@@ -135,3 +147,28 @@ The _Node Package Manager_ provides the following two main functionalities:
 - command line utility to install packages, do version management and dependency management of Node.js packages.
 
 NPM comes bundled along with Node.js installable.
+
+#### Remove modules not listed in package.json
+
+```powershell
+npm prune
+```
+
+#### Upgrade your dependencies to the latest versions
+
+```powershell
+npm install -g npm-check-updates
+ncu
+ncu -u
+```
+
+See:
+- [npm-check-updates](https://www.npmjs.com/package/npm-check-updates)
+
+#### How to keep your dependencies up to date
+
+- [npm-outdated](https://docs.npmjs.com/cli/outdated.html)
+- [npm-update](https://docs.npmjs.com/cli/update.html)
+- [npm-check](https://www.npmjs.com/package/npm-check)
+- [Validating dependencies in the project with npm-check and depcheck](https://medium.com/@wlodarczyk_j/validating-dependencies-in-the-project-with-npm-check-and-depcheck-20e83345fc1f)
+- [Semantic versioning](https://semver.org/)
