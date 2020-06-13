@@ -1,5 +1,23 @@
 # Javascript
 
+## Promises
+
+A promise is an object that may produce a single value some time in the future: either a resolved value, or a reason that it’s not resolved (e.g., a network error occurred). A promise may be in one of 3 possible states:
+
+- fulfilled
+- rejected
+- pending
+
+Promise users can attach callbacks to handle the fulfilled value or the reason for rejection. Promises are eager, meaning that a promise will start doing whatever task you give it as soon as the promise constructor is invoked.
+
+A chain of promises without a catch at the end can potentially hide an issue by making errors failing silently. If you have to debug a big codebase, you can use the `unhandledRejection` hook to find all unhandled Promise rejections:
+
+```js
+process.on('unhandledRejection', (err) => {
+  console.log(err)
+})
+```
+
 ## Frameworks and Libraries
 
 A framework owns the main() function, it performs some function like managing a collection of windows on the screen, it can run even without customization. The framework defines the overall nature of the program, while your code provides specific customizations.
