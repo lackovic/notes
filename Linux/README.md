@@ -18,6 +18,7 @@ _Table of Contents_
 - [Find all files containing a string](#find-all-files-containing-a-string)
 - [List running processes](#list-running-processes)
 - [Services commands](#services-commands)
+- [CLI Tools](#cli-tools)
 - [Validate shell scripts](#validate-shell-scripts)
 - [Favorite bash aliases](#favorite-bash-aliases)
 
@@ -161,6 +162,10 @@ sudo -u root bash
 # if not there, check:
 /etc/monit.d/*
 ``` 
+
+## CLI Tools
+
+- [Witowski Favorite CLI Tools](https://switowski.com/blog/favorite-cli-tools)
 
 ## Validate shell scripts
 
