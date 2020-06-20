@@ -7,7 +7,7 @@ function Test-IsWhatsAppImage($file) {
 }
 
 function Test-IsWhatsAppVideo($file) {
-    return $file.BaseName.StartsWith("VID-") -and $file.Extension.equals(".mp4")
+    return $file.BaseName.StartsWith("VID-") -and ($file.Extension.equals(".mp4") -or $file.Extension.equals(".mov") -or $file.Extension.equals(".3gp"))
 }
 
 function Test-IsWhatsAppMediaFile($file) {
