@@ -34,7 +34,9 @@ Enable-WindowsOptionalFeature -Online -FeatureName "Microsoft-Windows-Subsystem-
 
 ## Install your Linux distribution of choice
 
-Pick [from this list](https://chocolatey.org/packages?q=%22wsl-%22) the Linux distribution of choice and install it with Chocolatey.
+For Arch you can use [yuk7/ArchWSL](https://github.com/yuk7/ArchWSL).
+
+For other distrubutions you can pick [from this list](https://chocolatey.org/packages?q=%22wsl-%22) and install it with Chocolatey.
 
 For example:
 
