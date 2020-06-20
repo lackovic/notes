@@ -10,15 +10,15 @@ The Windows Subsystem for Linux (WSL 1) allows to use different Linux distros di
 - [Enable WSL](#enable-wsl)
 - [Install your Linux distribution of choice](#install-your-linux-distribution-of-choice)
 - [Run WSL with a non-admin account](#run-wsl-with-a-non-admin-account)
-- [Set a default user other than root](#use-a-default-user-other-than-root)
+- [Set a default user other than root](#set-a-default-user-other-than-root)
 - [See your distros and their WSL versions](#see-your-distros-and-their-wsl-versions)
 - [Manage multiple distributions](#manage-multiple-distributions)
 - [Use chromedriver on WSL](#use-chromedriver-on-wsl)
 - [Windows Subsystem for Linux 2 (WSL 2)](#windows-subsystem-for-linux-2-wsl-2)
   - [Install WSL 2](#install-wsl-2)
     - [Prerequisites](#prerequisites)
-      - [Windows Insider Program troubleshooting](#windows-insider-program-troubleshooting)
     - [Installation Instructions](#installation-instructions)
+    - [Troubleshooting](#troubleshooting)
   - [Switch WSL version](#switch-wsl-version)
   - [Known issues](#known-issues)
 
@@ -121,13 +121,21 @@ Windows Subsystem for Linux 2 (WSL 2) was announced at the Microsoft Build 2019 
 
 #### Prerequisites
 
-1. You must have Windows 10 version `2004` installed (you can force the update from [here](https://www.microsoft.com/en-us/software-download/windows10))
+- You must have Windows 10 version `2004` or above installed (you can force the update from [here](https://www.microsoft.com/en-us/software-download/windows10))
 
 #### Installation Instructions
 
 - [Microsoft Docs / Install WSL 2](https://docs.microsoft.com/en-us/windows/wsl/wsl2-install)
 
 #### Troubleshooting
+
+- if you are gettin the error "WSL 2 requires an update to its kernel component" then:
+
+   - download the latest WSL2 Linux kernel from [here](https://docs.microsoft.com/en-us/windows/wsl/wsl2-kernel)
+
+   - right click on the `wsl_update_x64.msi` file and select _Uninstall_
+
+   - right click on the `wsl_update_x64.msi` file and select _Install_
 
 - if you are having an issue with Docker asking for a password, follow [these instructions](https://github.com/docker/for-win/issues/616#issuecomment-528390516) to fix it.
 
