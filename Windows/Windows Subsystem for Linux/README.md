@@ -34,7 +34,7 @@ Enable-WindowsOptionalFeature -Online -FeatureName "Microsoft-Windows-Subsystem-
 
 ## Install your Linux distribution of choice
 
-For Arch you can use [yuk7/ArchWSL](https://github.com/yuk7/ArchWSL).
+For Arch you can use [yuk7/ArchWSL](https://github.com/yuk7/ArchWSL) (don't forget to follow the [setup steps](https://github.com/yuk7/ArchWSL/wiki/How-to-Setup#setting-for-arch), especially the commands for keyring initialization, which are necessary to use `pacman`).
 
 For other distrubutions you can pick [from this list](https://chocolatey.org/packages?q=%22wsl-%22) and install it with Chocolatey.
 
