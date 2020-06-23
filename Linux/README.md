@@ -21,6 +21,9 @@ _Table of Contents_
 - [CLI Tools](#cli-tools)
 - [Validate shell scripts](#validate-shell-scripts)
 - [Favorite bash aliases](#favorite-bash-aliases)
+- [Arch](#arch)
+  - [Update the system](#update-the-system)
+  - [Search for a package](#search-for-a-package)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -179,3 +182,26 @@ alias dir='ls -lhp --color --group-directories-first'
 alias gts='git status'
 alias grs='git reset --hard && git clean -f -d'
 ``` 
+
+## Arch
+
+### Update the system
+
+```sh
+sudo pacman -Syu
+``` 
+
+- `S` = Synchronize packages. Packages are installed directly from the remote repositories, including all dependencies required to run the packages
+- `y` = Download a fresh copy of the master package database from the server(s) defined in pacman.conf
+- `u` = Upgrades all packages that are out-of-date
+
+### Search for a package
+
+To search for example for _OpenJDK_, run:
+
+```sh
+sudo pacman -Ss OpenJDK
+``` 
+
+- `S` = Synchronize packages. Packages are installed directly from the remote repositories, including all dependencies required to run the packages
+- `s` = Search each package in the sync databases for names or descriptions that match regexp
