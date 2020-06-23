@@ -111,7 +111,7 @@ Only local connections are allowed.
 Please protect ports used by ChromeDriver and related test frameworks to prevent access by malicious code.
 ```
 
-## Windows Subsystem for Linux 2 (WSL 2)
+## WSL 2
 
 Windows Subsystem for Linux 2 (WSL 2) was announced at the Microsoft Build 2019 conference and is shipped with the Windows 10 Insider Preview Build 18917. WSL 2 architecture is drastically changed and brings increased file system performance and full system call compatibility, uses virtualization technology (based on Hyper-V) and uses a lightweight utility VM on a real Linux kernel.
 
@@ -119,7 +119,7 @@ Windows Subsystem for Linux 2 (WSL 2) was announced at the Microsoft Build 2019 
 
 - [Microsoft WSL 2 Docs](https://docs.microsoft.com/en-us/windows/wsl/wsl2-index)
 
-### Install WSL 2
+### Installation
 
 #### Prerequisites
 
@@ -133,7 +133,7 @@ Windows Subsystem for Linux 2 (WSL 2) was announced at the Microsoft Build 2019 
 
 - if you are gettin the error "WSL 2 requires an update to its kernel component" then:
 
-   - download the latest WSL2 Linux kernel from [here](https://docs.microsoft.com/en-us/windows/wsl/wsl2-kernel)
+   - download the [Linux kernel update package](https://docs.microsoft.com/en-us/windows/wsl/wsl2-kernel)
 
    - right click on the `wsl_update_x64.msi` file and select _Uninstall_
 
@@ -148,6 +148,10 @@ Windows Subsystem for Linux 2 (WSL 2) was announced at the Microsoft Build 2019 
 ```powershell
 wsl --set-version <distro> <version>
 ```
+
+### Install Docker on WSL 2
+
+- [Docker Desktop WSL 2 backend](https://docs.docker.com/docker-for-windows/wsl/)
 
 ### Known issues
 
