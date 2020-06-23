@@ -1,6 +1,7 @@
 # Linux
 
 _Table of Contents_
+
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 <!-- generated with [DocToc](https://github.com/thlorenz/doctoc) -->
@@ -49,9 +50,9 @@ vim ~/.dircolors
 vim ~/.bashrc
 # Append the following line
 eval 'dircolors ~/.dircolors' > /dev/null
-``` 
+```
 
-- [Source](https://unix.stackexchange.com/questions/94498/what-causes-this-green-background-in-ls-output) 
+- [Source](https://unix.stackexchange.com/questions/94498/what-causes-this-green-background-in-ls-output)
 
 ## Show the git branch name in terminal (like posh-git)
 
@@ -121,7 +122,8 @@ pscp user@192.168.10.12:/source/path/on/linux/* c:\Destination\Path\On\Windows
 
 ```sh
 grep -Rin "string" .
-``` 
+```
+
 `R` = recursive
 
 `i` = ignore case
@@ -139,7 +141,7 @@ ps aux | grep procName
 pgrep -f procName
 top
 htop
-``` 
+```
 
 ## Services commands
 
@@ -154,7 +156,7 @@ sudo -u root bash
 /var/spool/cron/*
 # if not there, check:
 /etc/monit.d/*
-``` 
+```
 
 ## CLI Tools
 
@@ -170,7 +172,7 @@ sudo -u root bash
 
 ```sh
 sudo pacman -Syu
-``` 
+```
 
 - `S` = Synchronize packages. Packages are installed directly from the remote repositories, including all dependencies required to run the packages
 - `y` = Download a fresh copy of the master package database from the server(s) defined in pacman.conf
@@ -182,7 +184,7 @@ To search for example for _OpenJDK_, run:
 
 ```sh
 sudo pacman -Ss OpenJDK
-``` 
+```
 
 - `S` = Synchronize packages. Packages are installed directly from the remote repositories, including all dependencies required to run the packages
 - `s` = Search each package in the sync databases for names or descriptions that match regexp
@@ -190,6 +192,7 @@ sudo pacman -Ss OpenJDK
 ### Install Java through SDKMAN on Arch
 
 ```
-sudo pacman -S which unzip zip 
+sudo pacman -S which unzip zip
 ```
+
 source "/root/.sdkman/bin/sdkman-init.sh"
