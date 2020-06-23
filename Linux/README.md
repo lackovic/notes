@@ -19,7 +19,6 @@ _Table of Contents_
 - [Services commands](#services-commands)
 - [CLI Tools](#cli-tools)
 - [Validate shell scripts](#validate-shell-scripts)
-- [Favorite bash aliases](#favorite-bash-aliases)
 - [Arch](#arch)
   - [Update the system](#update-the-system)
   - [Search for a package](#search-for-a-package)
@@ -165,15 +164,6 @@ sudo -u root bash
 
 - [ShellCheck](https://www.shellcheck.net/)
 
-## Favorite bash aliases
-
-```sh
-alias dog='pygmentize -O console256 -g'
-alias dir='ls -lhp --color --group-directories-first'
-alias gts='git status'
-alias grs='git reset --hard && git clean -f -d'
-``` 
-
 ## Arch
 
 ### Update the system
@@ -196,3 +186,10 @@ sudo pacman -Ss OpenJDK
 
 - `S` = Synchronize packages. Packages are installed directly from the remote repositories, including all dependencies required to run the packages
 - `s` = Search each package in the sync databases for names or descriptions that match regexp
+
+### Install Java through SDKMAN on Arch
+
+```
+sudo pacman -S which unzip zip 
+```
+source "/root/.sdkman/bin/sdkman-init.sh"
