@@ -21,6 +21,7 @@ The Windows Subsystem for Linux (WSL 1) allows to use different Linux distros di
     - [Troubleshooting](#troubleshooting)
   - [Switch WSL version](#switch-wsl-version)
   - [Install Docker on WSL 2](#install-docker-on-wsl-2)
+  - [Install IntelliJ Idea on WSL 2](#install-intellij-idea-on-wsl-2)
   - [Known issues](#known-issues)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
@@ -153,6 +154,35 @@ wsl --set-version <distro> <version>
 ### Install Docker on WSL 2
 
 - [Docker Desktop WSL 2 backend](https://docs.docker.com/docker-for-windows/wsl/)
+
+### Install IntelliJ Idea on WSL 2
+
+1. [Install VcXsrv with Chocolatey](https://chocolatey.org/packages/vcxsrv)
+
+1. Install IntelliJ Idea inside WSL 2 with your package manager (for example in Arch Linux `sudo pacman -S intellij-idea-community-edition`)
+
+1. Append to your `~/.bashrc`:
+
+   ```sh
+   export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2}'):0
+   export LIBGL_ALWAYS_INDIRECT=1
+   ```
+
+   and then run `source ~/.bashrc`
+
+1. Open XLaunch with the following settings:
+
+   - Display number = 0
+   - Start no client
+   - Disable access control
+
+1. In WSL 2 run `idea`
+
+Sources: 
+
+- [wsl2-tutorial](https://github.com/QMonkey/wsl-tutorial/blob/master/README.wsl2.md)
+- [What's the easiest way to run GUI apps on Windows Subsystem for Linux as of 2018?](https://askubuntu.com/questions/993225/whats-the-easiest-way-to-run-gui-apps-on-windows-subsystem-for-linux-as-of-2018)
+- [Developing "in" Windows Subsystem for Linux](https://intellij-support.jetbrains.com/hc/en-us/community/posts/360004275400-Developing-in-Windows-Subsystem-for-Linux)
 
 ### Known issues
 
