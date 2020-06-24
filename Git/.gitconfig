@@ -5,6 +5,8 @@
   list-local-branches = branch
   delete-local-branch = branch -d
   new-branch = checkout master && git pull && checkout -b
+  prune-branches = "!git branch --merged | grep -v "\\*" | xargs -n 1 git branch -d"
 
   log-pretty = log --oneline --graph --decorate
   go-to-master = checkout master && git pull
+  
