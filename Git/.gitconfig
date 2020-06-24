@@ -1,5 +1,5 @@
   delete-last-commit = reset --hard HEAD~1
-  undo-last-commit = git reset HEAD~1
+  undo-last-commit = reset HEAD~1
   stage-all-and-commit = add . && git commit -m
   
   list-local-branches = branch
