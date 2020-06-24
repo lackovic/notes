@@ -14,12 +14,13 @@ The Windows Subsystem for Linux (WSL 1) allows to use different Linux distros di
 - [See your distros and their WSL versions](#see-your-distros-and-their-wsl-versions)
 - [Manage multiple distributions](#manage-multiple-distributions)
 - [Use chromedriver on WSL](#use-chromedriver-on-wsl)
-- [Windows Subsystem for Linux 2 (WSL 2)](#windows-subsystem-for-linux-2-wsl-2)
-  - [Install WSL 2](#install-wsl-2)
+- [WSL 2](#wsl-2)
+  - [Installation](#installation)
     - [Prerequisites](#prerequisites)
     - [Installation Instructions](#installation-instructions)
     - [Troubleshooting](#troubleshooting)
   - [Switch WSL version](#switch-wsl-version)
+  - [Install Docker on WSL 2](#install-docker-on-wsl-2)
   - [Known issues](#known-issues)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
