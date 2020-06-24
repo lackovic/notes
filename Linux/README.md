@@ -9,11 +9,8 @@ _Table of Contents_
 - [Get your operating system information](#get-your-operating-system-information)
 - [Get your hardware information](#get-your-hardware-information)
 - [Remove the green background color from the directory listing](#remove-the-green-background-color-from-the-directory-listing)
-- [Show the git branch name in terminal (like posh-git)](#show-the-git-branch-name-in-terminal-like-posh-git)
-- [Colorize your cat output](#colorize-your-cat-output)
 - [Display line numbers in your cat output](#display-line-numbers-in-your-cat-output)
 - [Print a file from line to line](#print-a-file-from-line-to-line)
-- [Human readable files list in terminal](#human-readable-files-list-in-terminal)
 - [Copy files from Linux to Windows](#copy-files-from-linux-to-windows)
 - [Find all files containing a string](#find-all-files-containing-a-string)
 - [List running processes](#list-running-processes)
@@ -54,33 +51,6 @@ eval 'dircolors ~/.dircolors' > /dev/null
 
 - [Source](https://unix.stackexchange.com/questions/94498/what-causes-this-green-background-in-ls-output)
 
-## Show the git branch name in terminal (like posh-git)
-
-```sh
-force_color_prompt=yes
-color_prompt=yes
-parse_git_branch() {
-  git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
-}
-if [ "$color_prompt" = yes ]; then
-  PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[01;31m\]$(parse_git_branch)\[\033[00m\]\$ '
-else
-  PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w$(parse_git_branch)\$ '
-fi
-unset color_prompt force_color_prompt
-```
-
-- [Source](https://askubuntu.com/questions/730754/how-do-i-show-the-git-branch-with-colours-in-bash-prompt)
-
-## Colorize your cat output
-
-```sh
-sudo apt-get install python-pygments
-
-# Add an alias to your ~/.bashrc
-alias dog='pygmentize -g'
-```
-
 ## Display line numbers in your cat output
 
 ```sh
@@ -92,19 +62,6 @@ cat -n <file-path>
 ```sh
 sed -n 10,20p <file-path>
 ```
-
-## Human readable files list in terminal
-
-```sh
-# Add an alias to your ~/.bashrc
-alias dir='ls -lhp --color --group-directories-first'
-```
-
-`-l` = use a long listing format
-
-`-h` = print sizes like 1K, 234M, 2G, etc.
-
-`-p` = append `/` indicator to directories
 
 ## Copy files from Linux to Windows
 
