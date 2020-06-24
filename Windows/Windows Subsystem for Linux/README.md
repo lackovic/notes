@@ -21,7 +21,7 @@ The Windows Subsystem for Linux (WSL 1) allows to use different Linux distros di
     - [Troubleshooting](#troubleshooting)
   - [Switch WSL version](#switch-wsl-version)
   - [Install Docker on WSL 2](#install-docker-on-wsl-2)
-  - [Install IntelliJ Idea on WSL 2](#install-intellij-idea-on-wsl-2)
+  - [Run a Linux GUI application in WSL 2](#run-a-linux-gui-application-in-wsl-2)
   - [Known issues](#known-issues)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
@@ -157,28 +157,33 @@ wsl --set-version <distro> <version>
 
 - [Docker Desktop WSL 2 backend](https://docs.docker.com/docker-for-windows/wsl/)
 
-### Install IntelliJ Idea on WSL 2
+### Run a Linux GUI application in WSL 2
 
-1. [Install VcXsrv with Chocolatey](https://chocolatey.org/packages/vcxsrv)
+1. On Windows:
 
-1. Install IntelliJ Idea inside WSL 2 with your package manager (for example in Arch Linux `sudo pacman -S intellij-idea-community-edition`)
+   1. [Install _VcXsrv_ with Chocolatey](https://chocolatey.org/packages/vcxsrv)
 
-1. Append to your `~/.bashrc`:
+   1. Open _XLaunch_ with the following settings:
 
-   ```sh
-   export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2}'):0
-   export LIBGL_ALWAYS_INDIRECT=1
-   ```
+      - Multiple Windows
+      - Display number = 0
+      - Start no client
+      - Disable access control
 
-   and then run `source ~/.bashrc`
+1. On WSL:
 
-1. Open XLaunch with the following settings:
+   1. Append to your `~/.bashrc`:
 
-   - Display number = 0
-   - Start no client
-   - Disable access control
+      ```sh
+      export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2}'):0
+      export LIBGL_ALWAYS_INDIRECT=1
+      ```
 
-1. In WSL 2 run `idea`
+      and then run `source ~/.bashrc`
+
+   1. Run the command to start your GUI application
+
+If you are getting the error `xrdb: Can't open display` try [this solution](https://github.com/QMonkey/wsl-tutorial/issues/11#issuecomment-648959819).
 
 Sources: 
 
