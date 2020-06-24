@@ -1,0 +1,10 @@
+  delete-last-commit = reset --hard HEAD~1
+  undo-last-commit = git reset HEAD~1
+  stage-all-and-commit = add . && git commit -m
+  
+  list-local-branches = branch
+  delete-local-branch = branch -d
+  new-branch = checkout master && git pull && checkout -b
+
+  log-pretty = log --oneline --graph --decorate
+  go-to-master = checkout master && git pull

@@ -16,7 +16,6 @@ Table of Contents
 - [Persist the passphrase through restarts](#persist-the-passphrase-through-restarts)
   - [On *nix systems](#on-nix-systems)
   - [On Windows](#on-windows)
-- [Useful aliases](#useful-aliases)
 - [Resources](#resources)
 - [Tools](#tools)
 - [GitHub](#github)
@@ -196,25 +195,6 @@ Get-Service ssh-agent | Set-Service -StartupType Automatic -PassThru | Start-Ser
 # 3. Add the private key
 ssh-add C:\Users\YourUsername\.ssh\id_rsa
 ```
-
-## Useful aliases
-
-Add the following lines under `[alias]` in your `\.gitconfig` file:
-
-```
-  delete-last-commit = reset --hard HEAD~1
-  undo-last-commit = git reset HEAD~1
-  stage-all-and-commit = add . && git commit -m
-  
-  list-local-branches = branch
-  delete-local-branch = branch -d
-  new-branch = checkout master && git pull && checkout -b
-
-  log-pretty = log --oneline --graph --decorate
-  go-to-master = checkout master && git pull
-```
-
-git supports autocompletion with TAB so there is no need for abbreviations.
 
 ## Resources
 
