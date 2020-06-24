@@ -8,7 +8,6 @@ Table of Contents
 - [Branch operations](#branch-operations)
 - [Commits operations](#commits-operations)
 - [Stash operations](#stash-operations)
-- [Powershell branch pruning](#powershell-branch-pruning)
 - [Remove/delete local untracked files](#removedelete-local-untracked-files)
 - [Revert a PR merge and delete its commits from master history](#revert-a-pr-merge-and-delete-its-commits-from-master-history)
 - [Revert a PR merge to master](#revert-a-pr-merge-to-master)
@@ -95,14 +94,6 @@ git show stash^3 > untrackedfile
 # Put a patch file to the stash
 git apply modifiedfile
 git apply untrackedfile
-```
-
-## Powershell branch pruning
-
-Removes all your local branches whose remote has been already merged:
-
-```ps
-$remote=git branch -r; git branch --merged | %{$_.Trim()} | ?{-not ($remote -like '*' + $_) } | %{git branch -D "$_"}
 ```
 
 ## Remove/delete local untracked files
