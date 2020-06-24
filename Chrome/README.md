@@ -7,7 +7,7 @@ Run the code in the following files in your DevTools console:
 - to export to a JSON file: [`export.js`](export.js)
 - to import from a JSON file: [`import.js`](import.js)
 
-* Source: https://superuser.com/questions/280694/how-can-i-share-my-google-chrome-search-engine-entries
+* [Source](https://superuser.com/a/1458616/54747)
 
 ## Change Google Chrome cache folder
 
