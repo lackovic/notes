@@ -121,6 +121,8 @@ Windows Subsystem for Linux 2 (WSL 2) was announced at the Microsoft Build 2019 
 
 - [Microsoft WSL 2 Docs](https://docs.microsoft.com/en-us/windows/wsl/wsl2-index)
 
+- [Linux GUI applications in the Windows Subsystem for Linux (WSL) survey](https://forms.office.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbRzbKcfZyZQ9Drbxd4NOp_ZBUOFZVQ1A2UUlWRzBNMUtPOFFVVkRQWTNRQS4u)
+
 ### Installation
 
 #### Prerequisites
