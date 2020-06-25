@@ -2,10 +2,12 @@
 
 ## Export/import search engines
 
-Run the code in the following files in your DevTools console:
+1. Enter [`chrome://settings/searchEngines`](chrome://settings/searchEngines) in the address bar of Chrome to
 
-- to export to a JSON file: [`export.js`](export.js)
-- to import from a JSON file: [`import.js`](import.js)
+1. Run the code in the following files in your DevTools console:
+
+   - to export to a JSON file: [`export.js`](export.js)
+   - to import from a JSON file: [`import.js`](import.js)
 
 * [Source](https://superuser.com/a/1458616/54747)
 
