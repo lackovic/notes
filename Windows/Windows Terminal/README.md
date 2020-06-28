@@ -55,3 +55,7 @@ refreshenv
 ```
 
 - [Source](https://github.com/microsoft/terminal/issues/632#issuecomment-582782751)
+
+## File explorer integration
+
+You can right click on a folder in File Explorer and select _Open in Windows Terminal_. See [Windows Terminal Preview 1.1 Release](https://devblogs.microsoft.com/commandline/windows-terminal-preview-1-1-release/).

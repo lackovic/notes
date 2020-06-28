@@ -13,7 +13,8 @@ Import-Module PSColor
 $global:PSColor.File.Code.Pattern = '\.(java|c|cpp|cs|js|jsx|ts|tsx|css|html)$'
 $global:PSColor.File.Text.Pattern = '\.(txt|cfg|conf|ini|csv|log|config|xml|yml|md|markdown|json)$'
 
-Set-Location C:\src
+# Sets starting location (conflicts with File Explorer integration)
+# Set-Location C:\src
 
 Set-PSReadlineKeyHandler -Key ctrl+d -Function ViExit
 
