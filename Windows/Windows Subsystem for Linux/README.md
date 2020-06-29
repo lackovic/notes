@@ -191,6 +191,8 @@ wsl --set-version <distro> <version>
 
    1. Run the command to start your GUI application
 
+Some applications (like _IntelliJ IDEA_) require a desktop environment (like `xfce4`) to be installed as well.
+
 If you are getting the error `xrdb: Can't open display` try other solutions on [this issue](https://github.com/QMonkey/wsl-tutorial/issues/11#issuecomment-650833026).
 
 Sources: 
