@@ -13,15 +13,7 @@ Import-Module PSColor
 $global:PSColor.File.Code.Pattern = '\.(java|c|cpp|cs|js|jsx|ts|tsx|css|html)$'
 $global:PSColor.File.Text.Pattern = '\.(txt|cfg|conf|ini|csv|log|config|xml|yml|md|markdown|json)$'
 
-# Sets starting location (conflicts with File Explorer integration)
-# Set-Location C:\src
-
 Set-PSReadlineKeyHandler -Key ctrl+d -Function ViExit
-
-# ssh aliases
-
-Function connectToServer1 { ssh deploy@192.168.0.186 }
-Set-Alias -Name ubuntu -Value connectToServer1
 
 # Docker aliases
 function Start-Docker { docker-compose up -d }
