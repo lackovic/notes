@@ -163,6 +163,14 @@ wsl --set-version <distro> <version>
 
    1. [Install _VcXsrv_ with Chocolatey](https://chocolatey.org/packages/vcxsrv)
 
+   1. Control Panel\System and Security\Windows Defender Firewall\Allowed apps
+
+      - Select _VcXsrv windows xserver_
+
+      - Check both Private and Public checkboxes
+
+      - Press _OK_ at the bottom of the window
+
    1. Open _XLaunch_ with the following settings:
 
       - Multiple Windows
@@ -183,7 +191,7 @@ wsl --set-version <distro> <version>
 
    1. Run the command to start your GUI application
 
-If you are getting the error `xrdb: Can't open display` try [this solution](https://github.com/QMonkey/wsl-tutorial/issues/11#issuecomment-648959819).
+If you are getting the error `xrdb: Can't open display` try other solutions on [this issue](https://github.com/QMonkey/wsl-tutorial/issues/11#issuecomment-650833026).
 
 Sources: 
 
