@@ -148,8 +148,22 @@ sudo pacman -Ss OpenJDK
 
 ### Install Java through SDKMAN on Arch
 
-```
-sudo pacman -S which unzip zip
-```
+1. Install the prerequisites:
 
-source "/root/.sdkman/bin/sdkman-init.sh"
+   ```sh
+   sudo pacman -Sy which unzip zip
+   ```
+
+1. Follow the [installation instructions](https://sdkman.io/install).
+
+1. To see the list of available Java versions: it
+
+   ```sh
+   sdk list java
+   ```
+
+1. To install a particular version of Java run:
+
+   ```sh
+   sdk install java <identifier>
+   ```
