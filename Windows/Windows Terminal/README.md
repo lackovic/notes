@@ -1,6 +1,6 @@
 # Windows Terminal
 
-Windows Terminal is a terminal application for users of command-line tools and shells like Command Prompt, PowerShell, and WSL, which provides multiple tab support as well as theming and customization.
+[Windows Terminal](https://docs.microsoft.com/en-us/windows/terminal/) is a terminal application for users of command-line tools and shells like Command Prompt, PowerShell, and WSL, which provides multiple tab support as well as theming and customization.
 
 ![Image description](https://raw.githubusercontent.com/lackovic/notes/master/Windows/Windows%20Terminal/img/windows-terminal-640.png)
 
@@ -14,10 +14,12 @@ Windows Terminal is a terminal application for users of command-line tools and s
 
 ## Installation
 
-Note: starting from Windows 10 version 2004 Windows Terminal is included in the system under the name _Windows Terminal Preview_. For older versions of Windows, you can install it with:
-
 ```powershell
+# latest stable
 choco install microsoft-windows-terminal
+
+# pre-release (or Preview version)
+choco install microsoft-windows-terminal --pre
 ```
 
 ## Configuration
