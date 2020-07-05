@@ -24,10 +24,16 @@ docker system prune
 
 ## List running containers
 
-```bash
+```sh
+# formerly "docker ps"
 docker container ls
+
+# show all containers, also the not running ones
+docker container ls -a
+
+# show only id, image, name and status of all containers
+docker container ls -a --format "table {{.ID}}\t{{.Image}}\t{{.Names}}\t{{.Status}}"
 ```
-(formerly `docker ps`)
 
 ## List of images
 
