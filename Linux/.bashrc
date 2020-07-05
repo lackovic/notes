@@ -11,6 +11,13 @@ alias lsh='ls -lhpa --color --group-directories-first'
 # Make grep ignore case and highlight matching string
 alias grep="grep --ignore-case --color"
 
+# Avoid duplicates
+HISTCONTROL=ignoredups:erasedups
+# When the shell exits, append to the history file instead of overwriting it
+shopt -s histappend
+# After each command, append to the history file and reread it
+PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND$'\n'}history -a; history -c; history -r"
+
 # Begin in your home directory
 cd ~
 
