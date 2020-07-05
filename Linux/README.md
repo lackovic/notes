@@ -16,10 +16,13 @@ _Table of Contents_
 - [List running processes](#list-running-processes)
 - [Services commands](#services-commands)
 - [CLI Tools](#cli-tools)
-- [Validate shell scripts](#validate-shell-scripts)
+- [Shell scripts](#shell-scripts)
+  - [Validation](#validation)
+  - [Debugging](#debugging)
 - [Arch](#arch)
   - [Update the system](#update-the-system)
   - [Search for a package](#search-for-a-package)
+  - [Install Java through SDKMAN on Arch](#install-java-through-sdkman-on-arch)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -119,9 +122,24 @@ sudo -u root bash
 
 - [Witowski Favorite CLI Tools](https://switowski.com/blog/favorite-cli-tools)
 
-## Validate shell scripts
+## Shell scripts
+
+### Validation
 
 - [ShellCheck](https://www.shellcheck.net/)
+
+### Debugging
+
+Prepend the following to your script:
+
+```sh
+# Exit immediately if a command exits with a non-zero status
+set -e
+
+# Print the last failed command, line number and exit code
+trap 'prev_cmd=$curr_cmd; prev_ln=$curr_ln; curr_cmd=$BASH_COMMAND; curr_ln=${LINENO}' DEBUG
+trap 'echo -e $"\n   ERROR in ${BASH_SOURCE}:$prev_ln >>> $prev_cmd <<< FAILED with EXIT CODE $?\n"' EXIT
+```
 
 ## Arch
 
