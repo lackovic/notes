@@ -8,6 +8,9 @@ alias dog='pygmentize -O console256 -g'
 # -a = hidden files/directories
 alias lsh='ls -lhpa --color --group-directories-first'
 
+# Make grep ignore case and highlight matching string
+alias grep="grep --ignore-case --color"
+
 # Begin in your home directory
 cd ~
 
