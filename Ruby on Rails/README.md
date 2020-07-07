@@ -34,6 +34,7 @@
   - [Install a theme from a jar file](#install-a-theme-from-a-jar-file)
   - [Select a theme](#select-a-theme)
   - [Navigate back and forward using mouse buttons clicks](#navigate-back-and-forward-using-mouse-buttons-clicks)
+  - [Enable mouse scroll zooming](#enable-mouse-scroll-zooming)
   - [Shortcuts](#shortcuts)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
@@ -262,6 +263,10 @@ File → Settings → Appearance & Behavior → Appearance → Theme
 ### Navigate back and forward using mouse buttons clicks
 
 Settings > Keymap > Navigate > Back | Forward > right click > Add mouse shortcut
+
+### Enable mouse scroll zooming
+
+Settings > Editor > General > Change font size with Ctrl+Mouse Wheel
 
 ### Shortcuts
 
