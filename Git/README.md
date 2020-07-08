@@ -12,6 +12,7 @@ Table of Contents
 - [Revert a PR merge and delete its commits from master history](#revert-a-pr-merge-and-delete-its-commits-from-master-history)
 - [Revert a PR merge to master](#revert-a-pr-merge-to-master)
 - [Revert / undo / delete a pushed tag](#revert--undo--delete-a-pushed-tag)
+- [Find the most contributing developers in a repository](#find-the-most-contributing-developers-in-a-repository)
 - [Persist the passphrase through restarts](#persist-the-passphrase-through-restarts)
   - [On *nix systems](#on-nix-systems)
   - [On Windows](#on-windows)
@@ -158,6 +159,14 @@ git tag -d 1.2.3
 # delete remote tag '1.2.3'
 git push origin :refs/tags/1.2.3
 ```
+
+## Find the most contributing developers in a repository
+
+With [git-guilt](https://bitbucket.org/tpettersen/git-guilt/src/master/) you can display the people who added and subtracted the most lines in a repository (e.g. over the last 3 years):
+
+```
+git-guilt `git log --until="3 years ago" --format="%H" -n 1` HEAD 
+``` 
 
 ## Persist the passphrase through restarts
 
