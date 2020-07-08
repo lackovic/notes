@@ -121,20 +121,12 @@ git push -f origin master
 
 After reverting a PR on master (i.e., it was mistakenly merged the first time), to produce a clean history for the second attempt at a PR:
 
-1. Temporarily move master (so that subsequent Cebaschange base branch
-
-
-
 1. Temporarily move master (so that subsequent rebase commits are not dropped by Git)
     
     ```bash
     git checkout master
     git revert --mainline 1 <PR_SHA>
     ```
-
-1. Cebaschange base branch
-
-
 
 1. Rebase to reattach old commits to latest master
 
