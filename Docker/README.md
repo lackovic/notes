@@ -1,50 +1,41 @@
 # Docker
 
-## List running containers
+## Basic operations
 
 ```sh
-# formerly "docker ps"
+## List running containers (formerly "docker ps")
 docker container ls
 
-# show all containers, also the not running ones
+# List all containers, running and stopped
 docker container ls -a
 
-# show only id, image, name and status of all containers
+# Show only id, image, name and status of all containers
 docker container ls -a --format "table {{.ID}}\t{{.Image}}\t{{.Names}}\t{{.Status}}"
-```
 
-## List of images
-
-```bash
+# List images
 docker image ls
-```
 
-## Follow the logs of a running container
+# Follow the logs of a running container
+docker logs -f <container_name>
 
-```bash
-docker logs -f container_name
-```
+# Enter and open a shell in a running container
+docker exec -it <container_name> bash
 
-## Enter and open a command line in a running container
-
-```bash
-docker exec -it container_name bash
-```
-
-## Print a list of the environment variables of a running container
-
-```bash
-docker exec -it container_name env
+# Print a list of the environment variables of a running container
+docker exec -it <container_name> env
 ```
 
 ## Check if docker is running
 
 Run:
-```bash
+
+```sh
 docker version
 ```
+
 If docker **is running** you will see:
-```bash
+
+```sh
 Client: Docker Engine - Community
  Version:           ...
  [omitted]
@@ -54,8 +45,10 @@ Server: Docker Engine - Community
   Version:          ...
  [omitted]
 ```
+
 If docker **is not running** you will see:
-```bash
+
+```sh
 Client: Docker Engine - Community
  Version:           ...
  [omitted]
@@ -77,7 +70,7 @@ Some of the advantages include:
 
 ### Basic operations
 
-```bash
+```sh
 # build
 docker-compose build
 
