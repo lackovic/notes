@@ -25,7 +25,7 @@ docker exec -it <container_name> bash
 docker exec -it <container_name> env
 ```
 
-## Check if docker is running
+## Check if Docker Engine is running
 
 Run:
 
