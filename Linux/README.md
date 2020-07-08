@@ -19,10 +19,11 @@ _Table of Contents_
 - [Shell scripts](#shell-scripts)
   - [Validation](#validation)
   - [Debugging](#debugging)
-- [Arch](#arch)
+- [Arch Linux](#arch-linux)
   - [Update the system](#update-the-system)
   - [Search for a package](#search-for-a-package)
-  - [Install Java through SDKMAN on Arch](#install-java-through-sdkman-on-arch)
+  - [Install AUR (Arch User Repository) packages](#install-aur-arch-user-repository-packages)
+  - [Install Java through SDKMAN](#install-java-through-sdkman)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -141,7 +142,7 @@ trap 'prev_cmd=$curr_cmd; prev_ln=$curr_ln; curr_cmd=$BASH_COMMAND; curr_ln=${LI
 trap 'echo -e $"\n   ERROR in ${BASH_SOURCE}:$prev_ln >>> $prev_cmd <<< FAILED with EXIT CODE $?\n"' EXIT
 ```
 
-## Arch
+## Arch Linux
 
 ### Update the system
 
@@ -164,7 +165,39 @@ sudo pacman -Ss OpenJDK
 - `S` = Synchronize packages. Packages are installed directly from the remote repositories, including all dependencies required to run the packages
 - `s` = Search each package in the sync databases for names or descriptions that match regexp
 
-### Install Java through SDKMAN on Arch
+### Install AUR (Arch User Repository) packages
+
+For WSL2 see [this issue](https://github.com/yuk7/ArchWSL/issues/142).
+
+1. Install the prerequisites:
+
+   ```sh
+   pacman -S --needed base-devel
+   ```
+
+1. Install Yay as AUR helper:
+
+   ```sh
+   git clone https://aur.archlinux.org/yay.git
+   cd yay/
+   makepkg -si
+   ```
+
+1. Install the package of your choice with:
+
+   ```sh
+   yay -S <package-name>
+   ```
+
+Resources:
+
+- [AUR packages search](https://aur.archlinux.org/packages/)
+
+- [AUR wiki](https://wiki.archlinux.org/index.php/Arch_User_Repository)
+
+- [AUR helpers](https://wiki.archlinux.org/index.php/AUR_helpers)
+
+### Install Java through SDKMAN
 
 1. Install the prerequisites:
 
