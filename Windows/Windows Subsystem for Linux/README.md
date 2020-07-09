@@ -22,6 +22,7 @@ The Windows Subsystem for Linux (WSL 1) allows to use different Linux distros di
   - [Switch WSL version](#switch-wsl-version)
   - [Install Docker on WSL 2](#install-docker-on-wsl-2)
   - [Run a Linux GUI application in WSL 2](#run-a-linux-gui-application-in-wsl-2)
+  - [Install IntelliJ IDEA Ultimate on ArchWSL in WSL 2](#install-intellij-idea-ultimate-on-archwsl-in-wsl-2)
   - [Known issues](#known-issues)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
@@ -200,6 +201,27 @@ Sources:
 - [wsl2-tutorial](https://github.com/QMonkey/wsl-tutorial/blob/master/README.wsl2.md)
 - [What's the easiest way to run GUI apps on Windows Subsystem for Linux as of 2018?](https://askubuntu.com/questions/993225/whats-the-easiest-way-to-run-gui-apps-on-windows-subsystem-for-linux-as-of-2018)
 - [Developing "in" Windows Subsystem for Linux](https://intellij-support.jetbrains.com/hc/en-us/community/posts/360004275400-Developing-in-Windows-Subsystem-for-Linux)
+
+### Install IntelliJ IDEA Ultimate on ArchWSL in WSL 2
+
+Assuming you have [yay](../../Linux/README.md#install-aur-arch-user-repository-packages) installed:
+
+```sh
+yay -S snapd genie-systemd
+genie -s
+sudo systemctl enable --now snapd.socket
+sudo ln -s /var/lib/snapd/snap /snap
+# log out and back in again to ensure snap's paths are updated correctly
+genie -s
+sudo snap install intellij-idea-ultimate --classic
+```
+
+Run with:
+
+```sh
+genie -s
+intellij-idea-ultimate
+```
 
 ### Known issues
 
