@@ -192,7 +192,7 @@ wsl --set-version <distro> <version>
 
    1. Run the command to start your GUI application
 
-Some applications (like _IntelliJ IDEA_) require a desktop environment (like `xfce4`) to be installed as well.
+Some applications may require a desktop environment (like _Xfce_, _Gnome_ or _KDE_) or a window manager (like _Blackbox_ or _Fluxbox_) to run properly.
 
 If you are getting the error `xrdb: Can't open display` try other solutions on [this issue](https://github.com/QMonkey/wsl-tutorial/issues/11#issuecomment-650833026).
 
@@ -204,7 +204,11 @@ Sources:
 
 ### Install IntelliJ IDEA Ultimate on ArchWSL in WSL 2
 
-Assuming you have [yay](../../Linux/README.md#install-aur-arch-user-repository-packages) installed:
+Prerequisites:
+
+- [yay](../../Linux/README.md#install-aur-arch-user-repository-packages)
+
+- A desktop environment (like _Xfce_, _Gnome_ or _KDE_) or a window manager (like _Blackbox_ or _Fluxbox_)
 
 ```sh
 yay -S snapd genie-systemd
