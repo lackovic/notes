@@ -6,6 +6,7 @@ Table of Contents
 <!-- Generated with [DocToc](https://github.com/thlorenz/doctoc) -->
 
 - [Branch operations](#branch-operations)
+  - [Merge remote changes to your local changes](#merge-remote-changes-to-your-local-changes)
 - [Commits operations](#commits-operations)
 - [Stash operations](#stash-operations)
 - [Remove/delete local untracked files](#removedelete-local-untracked-files)
@@ -54,6 +55,33 @@ git fetch origin && git reset --hard && git clean -f -d
 # Merge master into the current branch
 git pull origin master
 ```
+
+### Merge remote changes to your local changes
+
+When working in a busy branch, with more than one contributor, you usually synchronize your code by pulling after every commit or so, possibly several times a day. By using simply `git pull` you are actually issuing `git fetch` + `git merge` commands, which will result with an extra merge commit in your history.
+
+To keep the repository clean use _rebase_:
+
+- terminal: `git pull --rebase`
+
+- Visual Studio Code > : Source Control Manager (SCM) > _Pull (Rebase)_
+
+- IntelliJ IDEA > _Rebase current onto selected_ (master)
+
+or add an alias to your `~/.gitconfig`, for example:
+
+```sh
+[alias]
+    update = pull --rebase
+```
+
+or set rebase as the default using:
+
+```sh
+git config branch.autosetuprebase always 
+```
+
+using `git pull --no-rebase` when you want to use merge instead.
 
 ## Commits operations
 
