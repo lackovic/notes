@@ -34,3 +34,7 @@ else
   PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w$(parse_git_branch)\$ '
 fi
 unset color_prompt force_color_prompt
+
+# Uncomment one of the following lines to enable git aliases auto completion
+# source /etc/bash_completion.d/git
+# source /usr/share/bash-completion/completions/git

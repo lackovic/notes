@@ -13,6 +13,7 @@ Table of Contents
 - [Revert a PR merge to master](#revert-a-pr-merge-to-master)
 - [Revert / undo / delete a pushed tag](#revert--undo--delete-a-pushed-tag)
 - [Find the most contributing developers in a repository](#find-the-most-contributing-developers-in-a-repository)
+- [Enable git bash aliases auto completion](#enable-git-bash-aliases-auto-completion)
 - [Persist the passphrase through restarts](#persist-the-passphrase-through-restarts)
   - [On *nix systems](#on-nix-systems)
   - [On Windows](#on-windows)
@@ -159,6 +160,16 @@ With [git-guilt](https://bitbucket.org/tpettersen/git-guilt/src/master/) you can
 ```
 git-guilt `git log --until="3 years ago" --format="%H" -n 1` HEAD 
 ``` 
+
+## Enable git bash aliases auto completion
+
+On most distributions, git completion script is installed when you install git. You just need to add this line to your `~/.bashrc`:
+
+```sh
+source /etc/bash_completion.d/git
+# or (in ArchLinux for example)
+source /usr/share/bash-completion/completions/git
+```
 
 ## Persist the passphrase through restarts
 
