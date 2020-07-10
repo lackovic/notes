@@ -158,6 +158,8 @@ wsl --set-version <distro> <version>
 
 - [Docker Desktop WSL 2 backend](https://docs.docker.com/docker-for-windows/wsl/)
 
+- [Using Remote Containers in WSL 2](https://code.visualstudio.com/blogs/2020/07/01/containers-wsl)
+
 ### Run a Linux GUI application in WSL 2
 
 1. On Windows:
