@@ -206,11 +206,7 @@ Sources:
 
 ### Install IntelliJ IDEA Ultimate on ArchWSL in WSL 2
 
-Prerequisites:
-
-- [yay](../../Linux/README.md#install-aur-arch-user-repository-packages)
-
-- A desktop environment (like _Xfce_, _Gnome_ or _KDE_) or a window manager (like _Blackbox_ or _Fluxbox_)
+Install [yay](../../Linux/README.md#install-aur-arch-user-repository-packages) and then run:
 
 ```sh
 yay -S snapd genie-systemd
