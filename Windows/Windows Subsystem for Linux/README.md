@@ -186,7 +186,7 @@ wsl --set-version <distro> <version>
    1. Append to your `~/.bashrc`:
 
       ```sh
-      export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2}'):0
+      export DISPLAY=${DISPLAY:-$(grep -Po '(?<=nameserver ).*' /etc/resolv.conf):0}
       export LIBGL_ALWAYS_INDIRECT=1
       ```
 
