@@ -78,11 +78,37 @@ Node.js uses an _event-driven architecture_: it has an _Event Loop_ for orchestr
 
 ### Installation (nvm)
 
-The best way to install Node.js is through _nvm (Node Version Manager)_.
+The best way to install Node.js is through [nvm (Node Version Manager)](https://github.com/nvm-sh/nvm): _nvm_ is useful when working on various projects that have different minimum required Node.js versions by making it easy to upgrade to new or to switch between existing versions of Node.js.
 
-On linux, follow [these instructions](https://github.com/nvm-sh/nvm#install--update-script).
+On Linux:
+
+1. follow [these instructions](https://github.com/nvm-sh/nvm#install--update-script)
+
+1. [automatically call `nvm use` in a directory with a `.nvmrc` file](https://github.com/nvm-sh/nvm#automatically-call-nvm-use)
 
 On Windows, [install it with Chocolatey](https://chocolatey.org/packages/nvm).
+
+Some useful commands:
+
+```sh
+# List installed versions
+nvm ls
+
+# List remote versions available for install, only show LTS (long-term support) versions
+nvm ls-remote --lts
+
+# Download and install a <version>, uses .nvmrc if available
+nvm install <version>
+
+# Modify PATH to use <version>, uses .nvmrc if available
+nvm use <version>
+
+# Display currently activated version of Node
+nvm current
+
+# Upgrade to the latest working npm on the given node version
+nvm install-latest-npm
+```
 
 ### The Event Loop
 
