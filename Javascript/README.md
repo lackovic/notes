@@ -106,6 +106,9 @@ nvm use <version>
 # Display currently activated version of Node
 nvm current
 
+# Generate a .nvmrc file with the Node version currently used
+node -v > .nvmrc
+
 # Upgrade to the latest working npm on the given node version
 nvm install-latest-npm
 ```
