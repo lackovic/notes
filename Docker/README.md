@@ -15,6 +15,15 @@ docker container ls -a --format "table {{.ID}}\t{{.Image}}\t{{.Names}}\t{{.Statu
 # List images
 docker image ls
 
+# List dangling images
+docker images -f dangling=true
+
+# Remove dangling images
+docker image prune
+
+# Remove dangling and unused images
+docker image prune -a
+
 # Follow the logs of a running container
 docker logs -f <container_name>
 
