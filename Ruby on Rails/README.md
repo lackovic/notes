@@ -278,3 +278,4 @@ Key|Command|Notes
 `Ctrl+E` | Open Recent files | 
 `Ctrl+Shift+E` | Open Recent Edited files | 
 `Ctrl+F12` | Locate a code element | *Open the structure view popup allowing to jump to the desired element*
+`Ctrl+Alt+Shift+N` | Navigate to symbol in project (class, method, etc) |
