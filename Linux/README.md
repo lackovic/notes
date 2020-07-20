@@ -12,6 +12,7 @@ _Table of Contents_
 - [Display line numbers in your cat output](#display-line-numbers-in-your-cat-output)
 - [Print a file from line to line](#print-a-file-from-line-to-line)
 - [Copy files from Linux to Windows](#copy-files-from-linux-to-windows)
+- [Find files by name and show all their properties](#find-files-by-name-and-show-all-their-properties)
 - [Find all files containing a string](#find-all-files-containing-a-string)
 - [List running processes](#list-running-processes)
 - [Services commands](#services-commands)
@@ -77,6 +78,12 @@ sed -n 10,20p <file-path>
 # Assuming 192.168.10.12 is your Linux IP address,
 # write the following command in a shell on Windows:
 pscp user@192.168.10.12:/source/path/on/linux/* c:\Destination\Path\On\Windows
+```
+
+## Find files by name and show all their properties
+
+```sh
+find . -name <file_name_or_pattern> | xargs ls -lhpa --color --group-directories-first
 ```
 
 ## Find all files containing a string
