@@ -1,5 +1,24 @@
 # Java
 
+_Table of Contents_
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+<!-- generated with [DocToc](https://github.com/thlorenz/doctoc) -->
+
+- [Gradle](#gradle)
+  - [Basic commands](#basic-commands)
+  - [Plugins](#plugins)
+- [IntelliJ IDEA](#intellij-idea)
+  - [Find in path regex](#find-in-path-regex)
+  - [Favorite plugins](#favorite-plugins)
+  - [Settings](#settings)
+    - [Navigate back and forward using mouse buttons clicks](#navigate-back-and-forward-using-mouse-buttons-clicks)
+    - [Enable changing the font size with the mouse wheel](#enable-changing-the-font-size-with-the-mouse-wheel)
+    - [Prevent IDEA from automatically close opened files](#prevent-idea-from-automatically-close-opened-files)
+  - [Shortcuts](#shortcuts)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 ## Gradle
 
 ### Basic commands
@@ -45,13 +64,19 @@ The `plugins {}` block must be a top level statement in the buildscript and cann
 
 - [Visual Studio Code Dark Plus Theme](https://plugins.jetbrains.com/plugin/12255-visual-studio-code-dark-plus-theme)
 
-### Navigate back and forward using mouse buttons clicks
+### Settings
 
-Settings > Keymap > Navigate > Back | Forward > right click > Add mouse shortcut
+#### Navigate back and forward using mouse buttons clicks
 
-### Enable mouse scroll zooming
+Keymap > Navigate > Back | Forward > right click > Add mouse shortcut
 
-Settings > Editor > General > Change font size with Ctrl+Mouse Wheel
+#### Enable changing the font size with the mouse wheel
+
+Editor > General > Change font size with Ctrl+Mouse Wheel
+
+#### Prevent IDEA from automatically close opened files
+
+Editor > General > Editor Tabs > Tab limit = 100
 
 ### Shortcuts
 
