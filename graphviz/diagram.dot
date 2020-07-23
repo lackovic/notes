@@ -1,0 +1,85 @@
+// https://www.graphviz.org/
+// dot -Tpng diagram.dot > diagram.png
+
+digraph architecture {
+    graph [ compound=true, nodesep=1 ]
+    node [ color=lightblue2, style="filled,rounded", shape=box ]
+
+    subgraph cluster0 {
+        label="Users"
+        fontcolor="dimgray"
+        color=silver
+        style=dotted
+        customer [ label=<<i>Customer</i>>, color="/gnbu3/1" ]
+        customer_support_employee [ label=<<i>Customer support employee</i>>, color="/gnbu3/1" ]
+        marketing_employee [ label=<<i>Marketing/sales employee</i>>, color="/gnbu3/1" ]
+    }
+
+    customer -> mobile_app, desktop_app, web_app [ color=blue ]
+    customer_support_employee -> backoffice [ color=blue ]
+    marketing_employee -> crm, backoffice [ color=blue ]
+
+    subgraph cluster1 {
+        label="Frontends"
+        fontcolor="dimgray"
+        color=silver
+        style=dotted
+        mobile_app [ label=<<i>Mobile app</i>>, color="/gnbu3/2" ]
+        web_app [ label=<<i>Web app</i>>, color="/gnbu3/2" ]
+        
+        subgraph cluster5 {
+            label=""
+            color=none
+            backoffice [ label=<<i>Backoffice</i>>, color="/gnbu3/2" ]
+            desktop_app [ label=<<i>Desktop app</i>>, color="/gnbu3/2" ]
+        }
+        
+        crm [ label=<<i>CRM</i>>, color=lightgreen, color="/gnbu3/3" ]
+    }
+
+    mobile_app -> service1
+    web_app -> service2
+    backoffice -> service3, service4
+    desktop_app -> service3
+
+    subgraph cluster2 {
+        label = "Backends"
+        fontcolor="dimgray"
+        color=silver
+        style=dotted
+        service1 [ label="service-1", fontname = "consolas", color="/gnbu3/2" ]
+        service2 [ label="service-2", fontname = "consolas", color="/gnbu3/2" ]
+        service3 [ label="service-3", fontname = "consolas", color="/gnbu3/2" ]
+        service4 [ label="service-4", fontname = "consolas", color="/gnbu3/2" ]
+
+        subgraph {
+            service5 [ label="service-5", fontname = "consolas", color="/gnbu3/3" ]
+            service6 [ label="service-6", fontname = "consolas", color="/gnbu3/3" ]
+            service7 [ label="service-7", fontname = "consolas", color="/gnbu3/3" ]
+        }
+        service6 -> service7 [ color=orange ]
+        service5 -> service7 [ color=orange ]
+        service7 -> crm
+    }
+
+    service1 -> service5, service3
+    service2 -> service5, service3
+    service3 -> service5, service6 [ color=red ]
+    service4 -> service5 [ color=red ]
+
+    subgraph cluster_legend {
+        node [ style=invis, width=0, height=0 ]
+        label="Legend"
+        fontcolor="dimgray"
+        color=silver
+        { rank=same; u1 -> u2 [ label="Use", color=blue ] }
+        { rank=same; r1 -> r2 [ label="REST", color=black ] }
+        { rank=same; a1 -> a2 [ label="ActiveMQ", color=red ] }
+        { rank=same; l1 -> l2 [ label="Embedded library", color=orange ] }
+        service7 -> u1 [ style=invis ]
+        service7 -> r1 [ style=invis ]
+        service7 -> a1 [ style=invis ]
+        service7 -> l1 [ style=invis ]
+    }
+
+}
