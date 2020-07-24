@@ -8,6 +8,7 @@ _Table of Contents_
 - [Gradle](#gradle)
   - [Basic commands](#basic-commands)
   - [Plugins](#plugins)
+  - [Set console=rich by default](#set-consolerich-by-default)
 - [IntelliJ IDEA](#intellij-idea)
   - [Find in path regex](#find-in-path-regex)
   - [Favorite plugins](#favorite-plugins)
@@ -45,6 +46,14 @@ plugins {
 ```
 
 The `plugins {}` block must be a top level statement in the buildscript and cannot be nested inside another construct.
+
+### Set console=rich by default
+
+Both in _Gradle_ and _Gradle Wrapper_, add the following line to your `./gradle.properties`:
+
+```
+org.gradle.console=rich
+```
 
 ## IntelliJ IDEA
 
