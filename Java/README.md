@@ -9,6 +9,7 @@ _Table of Contents_
   - [Basic commands](#basic-commands)
   - [Plugins](#plugins)
   - [Set console=rich by default](#set-consolerich-by-default)
+  - [Print the full stacktrace when logging test exceptions](#print-the-full-stacktrace-when-logging-test-exceptions)
 - [IntelliJ IDEA](#intellij-idea)
   - [Find in path regex](#find-in-path-regex)
   - [Favorite plugins](#favorite-plugins)
@@ -53,6 +54,16 @@ Both in _Gradle_ and _Gradle Wrapper_, add the following line to your `./gradle.
 
 ```
 org.gradle.console=rich
+```
+
+### Print the full stacktrace when logging tests exceptions
+
+Add the following block to your `./build.gradle`:
+
+```groovy
+test {
+    testLogging.exceptionFormat = 'full'
+}
 ```
 
 ## IntelliJ IDEA
