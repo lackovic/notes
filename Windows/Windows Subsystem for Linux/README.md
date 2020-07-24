@@ -162,6 +162,8 @@ wsl --set-version <distro> <version>
 
 ### Run a Linux GUI application in WSL 2
 
+Setup:
+
 1. On Windows:
 
    1. [Install _VcXsrv_ with Chocolatey](https://chocolatey.org/packages/vcxsrv)
@@ -174,12 +176,19 @@ wsl --set-version <distro> <version>
 
       - Press _OK_ at the bottom of the window
 
-   1. Open _XLaunch_ with the following settings:
+   1. Create a new shortcut (add it to  `%AppData%\Microsoft\Windows\Start Menu\Programs\Startup` if you want to make XLaunch automatically run at startup):
 
-      - Multiple Windows
-      - Display number = 0
-      - Start no client
-      - Disable access control
+      - Right click on the folder > New > Shortcut
+      - Enter the location of your VcxSrv executable (typically `%PROGRAMFILES%\VcXsrv\vcxsrv.exe :0 -multiwindow -clipboard -wgl`)
+      - Right click on the shortcut > Properties
+      - Append ` :0 -multiwindow -clipboard -wgl` to the _Target_ field
+
+      The _XLaunch_ configuration should be:
+
+         - Multiple Windows
+         - Display number = 0
+         - Start no client
+         - Disable access control
 
 1. On WSL:
 
@@ -192,7 +201,11 @@ wsl --set-version <distro> <version>
 
       and then run `source ~/.bashrc`
 
-   1. Run the command to start your GUI application
+When you want to run a GUI application in WSL 2 you need to:
+
+1. On Windows: run _XLaunch_ with the shortcut created about
+
+1. On WSL: run the command to start your GUI application.
 
 Some applications may require a desktop environment (like _Xfce_, _Gnome_ or _KDE_) or a window manager (like _Blackbox_ or _Fluxbox_) to run properly.
 
