@@ -176,12 +176,7 @@ Setup:
 
       - Press _OK_ at the bottom of the window
 
-   1. Create a new shortcut (add it to  `%AppData%\Microsoft\Windows\Start Menu\Programs\Startup` if you want to make XLaunch automatically run at startup):
-
-      - Right click on the folder > New > Shortcut
-      - Enter the location of your VcxSrv executable (typically `%PROGRAMFILES%\VcXsrv\vcxsrv.exe :0 -multiwindow -clipboard -wgl`)
-      - Right click on the shortcut > Properties
-      - Append ` :0 -multiwindow -clipboard -wgl` to the _Target_ field
+   1. Download [`config.xlaunch`](./config.xlaunch) to your file system (save it in `%AppData%\Microsoft\Windows\Start Menu\Programs\Startup` if you want to make XLaunch automatically run at startup) and double click on it to run XLaunch
 
       The _XLaunch_ configuration should be:
 
