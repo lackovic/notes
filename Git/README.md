@@ -124,6 +124,9 @@ git show stash^3 > untrackedfile
 # Put a patch file to the stash
 git apply modifiedfile
 git apply untrackedfile
+
+# Stash without removing the changes
+git stash store $(git stash create) -m "Stash commit message"
 ```
 
 ## Remove/delete local untracked files

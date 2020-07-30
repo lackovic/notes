@@ -3,6 +3,7 @@
     undo-last-commit = reset HEAD~1
     stage-all-and-commit = add . && git commit -m
     reset-and-clean = reset --hard && git clean -f -d
+    stash-keep = "!git stash store $(git stash create)"
 
     list-local-branches = branch
     delete-local-branch = branch -d
