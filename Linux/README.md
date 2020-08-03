@@ -124,6 +124,9 @@ sudo -u root bash
 /var/spool/cron/*
 # if not there, check:
 /etc/monit.d/*
+
+# List services listening to ports
+sudo netstat -tulpn | grep LISTEN
 ```
 
 ## CLI Tools
