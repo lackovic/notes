@@ -170,6 +170,13 @@ Setup:
 
    1. [Install _VcXsrv_ with Chocolatey](https://chocolatey.org/packages/vcxsrv)
 
+   1. In the folder `%PROGRAMFILES%\VcXsrv`:
+      
+      - right click on `vcxsrv.exe`
+      - Properties > Compatibility > Change high DPI settings
+      - Check _Override high DPI scaling behavior_
+      - Select _Application_
+
    1. Control Panel\System and Security\Windows Defender Firewall\Allowed apps
 
       - Select _VcXsrv windows xserver_
