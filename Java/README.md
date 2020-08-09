@@ -5,11 +5,12 @@ _Table of Contents_
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 <!-- generated with [DocToc](https://github.com/thlorenz/doctoc) -->
 
+- [Spring](#spring)
 - [Gradle](#gradle)
   - [Basic commands](#basic-commands)
   - [Plugins](#plugins)
   - [Set console=rich by default](#set-consolerich-by-default)
-  - [Print the full stacktrace when logging test exceptions](#print-the-full-stacktrace-when-logging-test-exceptions)
+  - [Print the full stacktrace when logging tests exceptions](#print-the-full-stacktrace-when-logging-tests-exceptions)
 - [IntelliJ IDEA](#intellij-idea)
   - [Find in path regex](#find-in-path-regex)
   - [Favorite plugins](#favorite-plugins)
@@ -20,6 +21,10 @@ _Table of Contents_
   - [Shortcuts](#shortcuts)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
+## Spring
+
+- [Write parameterized tests with autowiring dependency injection in Spring Boot 1](https://stackoverflow.com/a/63168806/334569)
 
 ## Gradle
 
