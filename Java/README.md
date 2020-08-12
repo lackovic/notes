@@ -6,6 +6,8 @@ _Table of Contents_
 <!-- generated with [DocToc](https://github.com/thlorenz/doctoc) -->
 
 - [Spring](#spring)
+- [Lombok](#lombok)
+  - [Create private constructor](#create-private-constructor)
 - [Gradle](#gradle)
   - [Basic commands](#basic-commands)
   - [Plugins](#plugins)
@@ -25,6 +27,14 @@ _Table of Contents_
 ## Spring
 
 - [Write parameterized tests with autowiring dependency injection in Spring Boot 1](https://stackoverflow.com/a/63168806/334569)
+
+## Lombok
+
+### Create private constructor
+
+```java
+@NoArgsConstructor(access = AccessLevel.PRIVATE)
+```
 
 ## Gradle
 
