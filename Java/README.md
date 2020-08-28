@@ -14,6 +14,7 @@ _Table of Contents_
   - [Set console=rich by default](#set-consolerich-by-default)
   - [Print the full stacktrace when logging tests exceptions](#print-the-full-stacktrace-when-logging-tests-exceptions)
 - [IntelliJ IDEA](#intellij-idea)
+  - [Install on Linux](#install-on-linux)
   - [Find in path regex](#find-in-path-regex)
   - [Favorite plugins](#favorite-plugins)
   - [Settings](#settings)
@@ -82,6 +83,22 @@ test {
 ```
 
 ## IntelliJ IDEA
+
+### Install on Linux
+
+[Install as a snap package](https://www.jetbrains.com/help/idea/installation-guide.html#snap) to have your installation always up to date.
+
+Alternatively, install manually with the following steps:
+
+1. Download [IntelliJ IDEA](https://www.jetbrains.com/idea/download/#section=linux)
+
+1. Unpack the `tar.gz` file to an empty directory using the following command:
+
+   ```sh
+   tar -xzf idea-2020.2.1.tar.gz
+   ```
+
+1. Run `bin/idea.sh`
 
 ### Find in path regex
 
