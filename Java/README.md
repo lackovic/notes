@@ -53,6 +53,9 @@ gradle test --tests SomeTestClass
 
 # Executes only one specific test method
 gradle test --tests SomeTestClass.specificMethod
+
+# Stop immediately after the first failing test
+gradle test --fail-fast
 ```
 
 ### Plugins
