@@ -50,6 +50,9 @@ gradle -i build
 
 # Executes only the tests in SomeTestClass
 gradle test --tests SomeTestClass
+
+# Executes only one specific test method
+gradle test --tests SomeTestClass.specificMethod
 ```
 
 ### Plugins
