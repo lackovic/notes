@@ -12,6 +12,9 @@ docker container ls -a
 # Show only id, image, name and status of all containers
 docker container ls -a --format "table {{.ID}}\t{{.Image}}\t{{.Names}}\t{{.Status}}"
 
+# Check whether one specific container is running
+docker container ls -a --format "table {{.Names}}\t{{.Status}}" | grep container_name
+
 # Stop all running containers
 docker stop $(docker ps -q)
 
