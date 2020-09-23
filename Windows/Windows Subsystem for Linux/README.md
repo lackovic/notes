@@ -165,6 +165,15 @@ Only local connections are allowed.
 Please protect ports used by ChromeDriver and related test frameworks to prevent access by malicious code.
 ```
 
+## Link Windows's Chrome and chromedriver to WSL through symlinks
+
+Make Windows’s Chrome browser and the chromedriver accessible from WSL, through symlinks.
+
+1. Create a file as google-chrome in `/usr/bin` and link it to the Chrome browser on Windows. `ln -s '/mnt/c/Program Files (x86)/Google/Chrome/Application/chrome.exe' /usr/bin/google-chrome`
+2. Create a file as chromedriver in `/usr/bin` and link it to the chromedriver in Windows. `ln -s /mnt/c/{YourChromedriverPathInWindows} /usr/bin/chromedriver`
+
+Note: The location of Chrome browser and chromedriver will be different on your system. Check and substitute the right paths when using above commands. You may need to run as a root user for this to work. And make sure your chrome browser version compatible with downloaded chromedriver.
+
 ## Useful links
 
 - [Microsoft WSL 2 Docs](https://docs.microsoft.com/en-us/windows/wsl/wsl2-index)
