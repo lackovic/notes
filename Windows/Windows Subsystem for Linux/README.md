@@ -15,7 +15,7 @@ WSL2 compared to WSL1 brings increased file system performance, full system call
   - [On Ubuntu](#on-ubuntu)
   - [On ArchWSL](#on-archwsl)
 - [Manage multiple distributions](#manage-multiple-distributions)
-- [Use chromedriver on WSL](#use-chromedriver-on-wsl)
+- [Use chromedriver in WSL](#use-chromedriver-in-wsl)
 - [Useful links](#useful-links)
 - [Troubleshooting](#troubleshooting)
   - [WSL2 requires an update to its kernel component](#wsl2-requires-an-update-to-its-kernel-component)
@@ -148,16 +148,17 @@ This allows, among other things, to install, uninstall, move, duplicate a distri
 
 Type `lxrunoffline` to see the list of supported actions.
 
-## Use chromedriver on WSL
+## Use chromedriver in WSL
 
 WSL doesn't support GUI applications, and Chrome is especially difficult to get working, even with the headless option. The solution proposed here is to install chromedriver in Windows and run it from WSL.
 
-1. Download the latest [chromedriver_win32.zip](https://sites.google.com/a/chromium.org/chromedriver/)
+1. Download the latest [chromedriver_win32.zip](https://sites.google.com/a/chromium.org/chromedriver/) (make sure your Chrome browser version is compatible with the downloaded chromedriver)
 1. Extract it in a folder (e.g. - `%USERPROFILE%/bin` in Command Prompt, or `~/bin` in PowerShell)
 1. Add the folder path to your System Environment `PATH` variable
 1. Rename `chromedriver.exe` to `chromedriver`
-
-Now relaunch your terminal to pick up the new environment variables. You can `echo $PATH` to ensure the new path is there. Once you enter WSL if you run `chromedriver` you should see something like this:
+1. Relaunch your terminal to pick up the new environment variables
+1. Run `echo $PATH` to ensure the new path is there
+1. Run `chromedriver` in WSL, you should see something like this:
 
 ```sh
 Starting ChromeDriver 79.0.3945.36 on port 9515
@@ -165,14 +166,14 @@ Only local connections are allowed.
 Please protect ports used by ChromeDriver and related test frameworks to prevent access by malicious code.
 ```
 
-## Link Windows's Chrome and chromedriver to WSL through symlinks
+If you still can't access chromedriver and Chrome in WSL, you can try to make them accessible from WSL through symlinks:
 
-Make Windows’s Chrome browser and the chromedriver accessible from WSL, through symlinks.
+```sh
+ln -s '/mnt/c/<YourChromePathInWindows>/chrome.exe' /usr/bin/google-chrome
+ln -s '/mnt/c/<YourChromedriverPathInWindows>' /usr/bin/chromedriver
+```
 
-1. Create a file as google-chrome in `/usr/bin` and link it to the Chrome browser on Windows. `ln -s '/mnt/c/Program Files (x86)/Google/Chrome/Application/chrome.exe' /usr/bin/google-chrome`
-2. Create a file as chromedriver in `/usr/bin` and link it to the chromedriver in Windows. `ln -s /mnt/c/{YourChromedriverPathInWindows} /usr/bin/chromedriver`
-
-Note: The location of Chrome browser and chromedriver will be different on your system. Check and substitute the right paths when using above commands. You may need to run as a root user for this to work. And make sure your chrome browser version compatible with downloaded chromedriver.
+Replace the placeholders with the correct paths in your system.
 
 ## Useful links
 
