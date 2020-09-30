@@ -25,6 +25,15 @@ Default value: `%LOCALAPPDATA%\Google\Chrome\User Data\Default\Cache`
 
 - [Source](http://www.chromium.org/administrators/policy-list-3#DiskCacheDir)
 
+## Install Chrome in Ubuntu
+
+```sh
+wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add - 
+sudo sh -c 'echo "deb https://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list'
+sudo apt-get update
+sudo apt-get install google-chrome-stable
+```
+
 ## Must have extensions
 
 - [I don't care about cookies](https://chrome.google.com/webstore/detail/i-dont-care-about-cookies/fihnjjcciajhdojfnbdddfaoknhalnja)
