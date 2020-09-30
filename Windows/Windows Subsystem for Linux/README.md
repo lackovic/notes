@@ -15,7 +15,7 @@ WSL2 compared to WSL1 brings increased file system performance, full system call
   - [On Ubuntu](#on-ubuntu)
   - [On ArchWSL](#on-archwsl)
 - [Manage multiple distributions](#manage-multiple-distributions)
-- [Use chromedriver in WSL](#use-chromedriver-in-wsl)
+- [Use ChromeDriver in WSL](#use-chromedriver-in-wsl)
 - [Useful links](#useful-links)
 - [Troubleshooting](#troubleshooting)
   - [WSL2 requires an update to its kernel component](#wsl2-requires-an-update-to-its-kernel-component)
@@ -148,9 +148,11 @@ This allows, among other things, to install, uninstall, move, duplicate a distri
 
 Type `lxrunoffline` to see the list of supported actions.
 
-## Use chromedriver in WSL
+## Use ChromeDriver in WSL
 
-WSL doesn't support GUI applications, and Chrome is especially difficult to get working, even with the headless option. The solution proposed here is to install chromedriver in Windows and run it from WSL.
+One solution is to install Chrome in WSL2 and [run it as Linux GUI application](#run-linux-gui-applications), as explained above. See the [Chrome README](../../Chrome/README.md) for how to install Chrome in Ubuntu WSL2.
+
+Another solution is to install ChromeDriver in Windows and run it from WSL:
 
 1. Download the latest [chromedriver_win32.zip](https://sites.google.com/a/chromium.org/chromedriver/) (make sure your Chrome browser version is compatible with the downloaded chromedriver)
 1. Extract it in a folder (e.g. - `%USERPROFILE%/bin` in Command Prompt, or `~/bin` in PowerShell)
