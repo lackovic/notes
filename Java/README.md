@@ -13,6 +13,9 @@ _Table of Contents_
   - [Plugins](#plugins)
   - [Set console=rich by default](#set-consolerich-by-default)
   - [Print the full stacktrace when logging tests exceptions](#print-the-full-stacktrace-when-logging-tests-exceptions)
+- [SDKMAN](#sdkman)
+  - [Set up a specific Java version for a project](#set-up-a-specific-java-version-for-a-project)
+  - [Switch Java version automatically when you cd into a directory](#switch-java-version-automatically-when-you-cd-into-a-directory)
 - [IntelliJ IDEA](#intellij-idea)
   - [Install on Linux](#install-on-linux)
   - [Find in path regex](#find-in-path-regex)
@@ -86,6 +89,32 @@ Add the following block to your `./build.gradle`:
 test {
     testLogging.exceptionFormat = 'full'
 }
+```
+
+## SDKMAN
+
+SDKMAN allows to install multiple versions of Java and conveniently switch between them.
+
+### Set up a specific Java version for a project
+
+1. cd into the base directory of your project
+
+1. use SDKMAN to switch to the desired Java version
+
+1. run `sdk env init` (this will generate a `.sdkmanrc` file in the current directory, pre-populated with the Java version in use)
+
+From now on when you enter your project base directory you can switch to the chosen Java version by simply running:
+
+```sh
+$ sdk env
+```
+
+### Switch Java version automatically when you cd into a directory
+
+Set the folling in your `~/.sdkman/etc/config`:
+
+```sh
+sdkman_auto_env=true 
 ```
 
 ## IntelliJ IDEA
