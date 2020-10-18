@@ -20,7 +20,11 @@
 
 Run in PowerShell:
 ```powershell
+# Displays the version in a window 
 winver
+
+# Displays the version in the terminal
+systeminfo | findstr /B /C:"OS Name" /C:"OS Version"
 ```
 
 ## Know the domain
