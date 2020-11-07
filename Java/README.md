@@ -31,6 +31,7 @@ _Table of Contents_
 ## Spring
 
 - [Write parameterized tests with autowiring dependency injection in Spring Boot 1](https://stackoverflow.com/a/63168806/334569)
+- [Setting a TTL for @Cacheable](https://stackoverflow.com/a/44203099/334569)
 
 ## Lombok
 
