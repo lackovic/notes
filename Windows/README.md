@@ -94,4 +94,4 @@ Cipher goes through the following steps:
 
 - [Tron fights for the User](https://www.reddit.com/r/TronScript/wiki/index): Reddit community initiative to debloat Windows
 
-- [Windows-10-Sophia-Script](https://github.com/farag2/Windows-10-Sophia-Script:) Script to setup Windows 10 LTSC/1903/1909/2004/2009.
+- [Windows-10-Sophia-Script](https://github.com/farag2/Windows-10-Sophia-Script): Script to setup Windows 10 LTSC/1903/1909/2004/2009.
