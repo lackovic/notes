@@ -14,6 +14,7 @@ WSL2 compared to WSL1 brings increased file system performance, full system call
 - [Install IntelliJ IDEA](#install-intellij-idea)
   - [On Ubuntu](#on-ubuntu)
   - [On ArchWSL](#on-archwsl)
+- [Backup - export/import distributions](#backup---exportimport-distributions)
 - [Manage multiple distributions](#manage-multiple-distributions)
 - [Use ChromeDriver/Chrome in WSL](#use-chromedriverchrome-in-wsl)
   - [Option 1: run Chrome as GUI applicationi in WSL2](#option-1-run-chrome-as-gui-applicationi-in-wsl2)
@@ -139,6 +140,24 @@ Run with:
 genie -s
 intellij-idea-ultimate
 ```
+
+## Backup - export/import distributions
+
+Very good for keeping a backup copy and recover it in case you mess up your distribution, but also for occasions like formatting the computer or moving to a new one! Once stripped off private credentials it can even passed over to a new colleague who has just joined your project to speed up the onboarding.
+
+```sh
+# List your distributions
+wsl --list -v
+
+# Save your distribution to a local file (this operation can take several minutes)
+wsl --export Ubuntu-20.04 ./Ubuntu-20.04.tar
+
+# Import a distribution from a local file
+mkdir ~/AppData/Local/Ubuntu-20.04
+wsl --import Ubuntu-20.04 ~/AppData/Local/Ubuntu-20.04 ./Ubuntu-20.04.tar --version 2
+```
+
+- [Source](https://www.hanselman.com/blog/easily-move-wsl-distributions-between-windows-10-machines-with-import-and-export)
 
 ## Manage multiple distributions
 
