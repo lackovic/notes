@@ -67,6 +67,11 @@ CREATE DATABASE "db_name";
 
 -- List columns with indexes for a table
 SELECT * FROM pg_indexes WHERE tablename = 'mytable';
+
+-- List columns names, types and nullability for a table
+SELECT column_name, data_type, is_nullable
+FROM information_schema.columns
+WHERE table_name = 'mytable';
 ```
 
 ## Use empty password for postgres user on Windows
