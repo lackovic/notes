@@ -8,8 +8,10 @@ _Table of Contents_
 - [Spring](#spring)
 - [Lombok](#lombok)
   - [Create private constructor](#create-private-constructor)
-- [Gradle](#gradle)
+- [Maven](#maven)
   - [Basic commands](#basic-commands)
+- [Gradle](#gradle)
+  - [Basic commands](#basic-commands-1)
   - [Plugins](#plugins)
   - [Set console=rich by default](#set-consolerich-by-default)
   - [Print the full stacktrace when logging tests exceptions](#print-the-full-stacktrace-when-logging-tests-exceptions)
@@ -42,6 +44,21 @@ _Table of Contents_
 ```java
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
 ```
+
+## Maven
+
+### Basic commands
+
+```sh
+# Display available updates
+mvn versions:display-dependency-updates
+
+# Execute only the tests in SomeTestClass
+mvn test -Dtest=SomeTestClass
+
+# Stop immediately after the first failing test
+mvn test -Dsurefire.skipAfterFailureCount=1
+``` 
 
 ## Gradle
 
