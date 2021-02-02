@@ -19,6 +19,7 @@ _Table of Contents_
 - [IntelliJ IDEA](#intellij-idea)
   - [Install on Linux](#install-on-linux)
   - [Find in path regex](#find-in-path-regex)
+  - [Object to JSON in debugger](#object-to-json-in-debugger)
   - [Favorite plugins](#favorite-plugins)
   - [Settings](#settings)
     - [Navigate back and forward using mouse buttons clicks](#navigate-back-and-forward-using-mouse-buttons-clicks)
@@ -145,6 +146,10 @@ Alternatively, install manually with the following steps:
 # Find files which contain two strings on the same line
 \Qstring1\E.*\Qstring2\E
 ```
+
+### Object to JSON in debugger
+
+- [Get object as JSON in IntelliJ Idea from debugger](https://stackoverflow.com/a/60189764/334569)
 
 ### Favorite plugins
 
