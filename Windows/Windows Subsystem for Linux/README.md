@@ -18,6 +18,7 @@ WSL2 compared to WSL1 brings increased file system performance, full system call
 - [Use ChromeDriver in WSL](#use-chromedriver-in-wsl)
 - [Useful links](#useful-links)
 - [Troubleshooting](#troubleshooting)
+  - [Time not synced](#time-not-synced)
   - [WSL2 requires an update to its kernel component](#wsl2-requires-an-update-to-its-kernel-component)
   - [Docker asking for a password](#docker-asking-for-a-password)
   - [The computer gets stuck at booting](#the-computer-gets-stuck-at-booting)
@@ -186,6 +187,20 @@ Replace the placeholders with the correct paths in your system.
 - [wsl2-hacks](https://github.com/shayne/wsl2-hacks)
 
 ## Troubleshooting
+
+### Time not synced
+
+Manual solution: run `sudo hwclock -s` or `sudo ntpdate time.windows.com` (more accurate) after you reboot or resume from sleep/hibernate;
+
+Automatic solution: apply this workaround which uses _Windows Events_ to trigger the clock sync via `hwclock` on resume from sleep.
+
+See the following issues on GitHub:
+
+- Jun 2019: [Time not synced in WSL2 - causing TLS issues](https://github.com/microsoft/WSL/issues/4149) - closed
+
+- Jun 2019: [system date is not same with windows (WSL 2)](https://github.com/microsoft/WSL/issues/4245) - closed
+
+- Jun 2020: [WSL2 date incorrect after waking from sleep](https://github.com/microsoft/WSL/issues/5324) - open
 
 ### WSL2 requires an update to its kernel component
 
