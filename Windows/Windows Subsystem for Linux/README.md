@@ -15,7 +15,10 @@ WSL2 compared to WSL1 brings increased file system performance, full system call
   - [On Ubuntu](#on-ubuntu)
   - [On ArchWSL](#on-archwsl)
 - [Manage multiple distributions](#manage-multiple-distributions)
-- [Use ChromeDriver in WSL](#use-chromedriver-in-wsl)
+- [Use ChromeDriver/Chrome in WSL](#use-chromedriverchrome-in-wsl)
+  - [Option 1: run Chrome as GUI applicationi in WSL2](#option-1-run-chrome-as-gui-applicationi-in-wsl2)
+  - [Option 2: use chromedriver from Windows](#option-2-use-chromedriver-from-windows)
+  - [Option 3: use an alias in WSL to reference to Chrome in Windows](#option-3-use-an-alias-in-wsl-to-reference-to-chrome-in-windows)
 - [Useful links](#useful-links)
 - [Troubleshooting](#troubleshooting)
   - [Time not synced](#time-not-synced)
@@ -149,9 +152,13 @@ This allows, among other things, to install, uninstall, move, duplicate a distri
 
 Type `lxrunoffline` to see the list of supported actions.
 
-## Use ChromeDriver in WSL
+## Use ChromeDriver/Chrome in WSL
 
-One solution is to install Chrome in WSL2 and [run it as Linux GUI application](#run-linux-gui-applications), as explained above. See the [Chrome README](../../Chrome/README.md) for how to install Chrome in Ubuntu WSL2.
+### Option 1: run Chrome as GUI applicationi in WSL2
+
+Install Chrome in WSL2 and [run it as Linux GUI application](#run-linux-gui-applications), as explained above. See the [Chrome README](../../Chrome/README.md) for how to install Chrome in Ubuntu WSL2.
+
+### Option 2: use chromedriver from Windows
 
 Another solution is to install ChromeDriver in Windows and run it from WSL:
 
@@ -177,6 +184,14 @@ ln -s '/mnt/c/<YourChromedriverPathInWindows>' /usr/bin/chromedriver
 ```
 
 Replace the placeholders with the correct paths in your system.
+
+### Option 3: use an alias in WSL to reference to Chrome in Windows
+
+Add the following alias to your `~/.profile` (or `~/.bash_aliases` or `~/.bash_rc`):
+
+```sh
+alias chrome="powershell.exe -Command start chrome"
+```
 
 ## Useful links
 

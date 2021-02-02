@@ -1,5 +1,20 @@
 # Docker
 
+_Table of Contents_
+
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+<!-- generated with [DocToc](https://github.com/thlorenz/doctoc) -->
+
+- [Basic operations](#basic-operations)
+- [Customize containers list](#customize-containers-list)
+- [Check if Docker Engine is running](#check-if-docker-engine-is-running)
+- [Docker compose](#docker-compose)
+  - [Basic operations](#basic-operations-1)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
+
 ## Basic operations
 
 ```sh
@@ -9,11 +24,8 @@ docker container ls
 # List all containers, running and stopped
 docker container ls -a
 
-# Show only id, image, name and status of all containers
-docker container ls -a --format "table {{.ID}}\t{{.Image}}\t{{.Names}}\t{{.Status}}"
-
 # Check whether one specific container is running
-docker container ls -a --format "table {{.Names}}\t{{.Status}}" | grep container_name
+docker container ls -a | grep container_name
 
 # Stop all running containers
 docker stop $(docker ps -q)
@@ -39,6 +51,24 @@ docker exec -it <container_name> bash
 # Print a list of the environment variables of a running container
 docker exec -it <container_name> env
 ```
+
+## Customize containers list
+
+Show only id, image, name and status of all containers:
+
+```sh
+docker container ls -a --format "table {{ .ID }}\t{{ .Image }}\t{{ .Names }}\t{{ .Status }}"
+```
+
+Specify your custom format in the ~/.docker/config.json file to use it as a default;
+
+```sh
+{
+  "psFormat": "table {{ .ID }}\\t{{ .Names }}\t{{ .Status }}"
+}
+```
+
+- [Source](https://github.com/moby/moby/issues/7477)
 
 ## Check if Docker Engine is running
 

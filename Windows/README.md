@@ -13,6 +13,7 @@
 - [Change the screenshots default save location](#change-the-screenshots-default-save-location)
 - [Create your own custom keyboard layout](#create-your-own-custom-keyboard-layout)
 - [Wipe all the deleted data / free space on a drive](#wipe-all-the-deleted-data--free-space-on-a-drive)
+- [Scripts for automation of routine tasks and bloatware removal](#scripts-for-automation-of-routine-tasks-and-bloatware-removal)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -80,3 +81,17 @@ Cipher goes through the following steps:
 1. deletes the second file, creates a third file filled with random numbers, making it grow until the hard drive fills up again
 
 1. deletes the third file and returns you to the prompt
+
+## Scripts for automation of routine tasks and bloatware removal
+
+- [Win10-Initial-Setup-Script](https://github.com/Disassembler0/Win10-Initial-Setup-Script): PowerShell script for automation of routine tasks done after fresh installations of Windows 10 / Server 2016 / Server 2019
+
+- [Windows10Debloater](https://github.com/Sycnex/Windows10Debloater): script to remove Windows 10 bloatware
+
+- [win10script](https://github.com/ChrisTitusTech/win10script): this is the Ultimate Windows 10 Script from a creation from multiple debloat scripts and gists from github
+
+- [Debloat-Windows-10](https://github.com/W4RH4WK/Debloat-Windows-10): a collection of Scripts which disable / remove Windows 10 Features and Apps
+
+- [Tron fights for the User](https://www.reddit.com/r/TronScript/wiki/index): Reddit community initiative to debloat Windows
+
+- [Windows-10-Sophia-Script](https://github.com/farag2/Windows-10-Sophia-Script): Script to setup Windows 10 LTSC/1903/1909/2004/2009.
