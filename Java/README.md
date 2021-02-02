@@ -16,6 +16,7 @@ _Table of Contents_
 - [SDKMAN](#sdkman)
   - [Set up a specific Java version for a project](#set-up-a-specific-java-version-for-a-project)
   - [Switch Java version automatically when you cd into a directory](#switch-java-version-automatically-when-you-cd-into-a-directory)
+- [Flyway](#flyway)
 - [IntelliJ IDEA](#intellij-idea)
   - [Install on Linux](#install-on-linux)
   - [Find in path regex](#find-in-path-regex)
@@ -118,6 +119,44 @@ Set the folling in your `~/.sdkman/etc/config`:
 ```sh
 sdkman_auto_env=true 
 ```
+
+## Flyway
+
+_Flyway_ is an open-source database migration tool: it is based around just 7 basic commands: `migrate`, `clean`, `info`, `validate`, `undo`, `baseline` and `repair`.
+
+Migrations files names must comply with [Flyway naming pattern](https://flywaydb.org/documentation/concepts/migrations.html#naming).
+
+To check that flyway is configured correctly and to see the list of pending migrations run:
+
+```sh
+flyway info
+```
+
+To run the pending migrations run:
+
+```sh
+flyway migrate
+```
+
+Rolling back/undo migrations is availble only for _Flyway Pro_ or _Enterprise Edition_. To roll back with the _Community Edition_ you need to:
+
+- locally:
+
+   1. run `flyway clean`
+
+   1. move the migrations you want to roll back out of `flyway.locations`
+
+   1. run `flyway migrate`
+
+   1. move the migrations you rolled back in `flyway.locations`
+
+- staging/production:
+
+   1. write migrations which revert the changes made in the migrations you want to roll back
+
+   1. commit, push and deploy the migrations
+
+For furthern info check the [Flyway documentation](https://flywaydb.org/documentation/).
 
 ## IntelliJ IDEA
 
