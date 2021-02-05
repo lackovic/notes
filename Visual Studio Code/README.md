@@ -50,6 +50,7 @@
   "files.autoSave": "onWindowChange",
   "window.titleSeparator": " > ",
   "window.zoomLevel": 0,
+  "workbench.editor.wrapTabs": true,
   "workbench.settings.useSplitJSON": true,
   "workbench.settings.editor": "json"
 }
