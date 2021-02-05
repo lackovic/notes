@@ -14,6 +14,7 @@ WSL2 compared to WSL1 brings increased file system performance, full system call
 - [Install IntelliJ IDEA](#install-intellij-idea)
   - [On Ubuntu](#on-ubuntu)
   - [On ArchWSL](#on-archwsl)
+- [Backup - export/import distributions](#backup---exportimport-distributions)
 - [Manage multiple distributions](#manage-multiple-distributions)
 - [Use ChromeDriver/Chrome in WSL](#use-chromedriverchrome-in-wsl)
   - [Option 1: run Chrome as GUI applicationi in WSL2](#option-1-run-chrome-as-gui-applicationi-in-wsl2)
@@ -21,6 +22,7 @@ WSL2 compared to WSL1 brings increased file system performance, full system call
   - [Option 3: use an alias in WSL to reference to Chrome in Windows](#option-3-use-an-alias-in-wsl-to-reference-to-chrome-in-windows)
 - [Useful links](#useful-links)
 - [Troubleshooting](#troubleshooting)
+  - [Time not synced](#time-not-synced)
   - [WSL2 requires an update to its kernel component](#wsl2-requires-an-update-to-its-kernel-component)
   - [Docker asking for a password](#docker-asking-for-a-password)
   - [The computer gets stuck at booting](#the-computer-gets-stuck-at-booting)
@@ -139,6 +141,24 @@ genie -s
 intellij-idea-ultimate
 ```
 
+## Backup - export/import distributions
+
+Very good for keeping a backup copy and recover it in case you mess up your distribution, but also for occasions like formatting the computer or moving to a new one! Once stripped off private credentials it can even passed over to a new colleague who has just joined your project to speed up the onboarding.
+
+```sh
+# List your distributions
+wsl --list -v
+
+# Save your distribution to a local file (this operation can take several minutes)
+wsl --export Ubuntu-20.04 ./Ubuntu-20.04.tar
+
+# Import a distribution from a local file
+mkdir ~/AppData/Local/Ubuntu-20.04
+wsl --import Ubuntu-20.04 ~/AppData/Local/Ubuntu-20.04 ./Ubuntu-20.04.tar --version 2
+```
+
+- [Source](https://www.hanselman.com/blog/easily-move-wsl-distributions-between-windows-10-machines-with-import-and-export)
+
 ## Manage multiple distributions
 
 Install [LxRunOffline](https://github.com/DDoSolitary/LxRunOffline) with:
@@ -201,6 +221,20 @@ alias chrome="powershell.exe -Command start chrome"
 - [wsl2-hacks](https://github.com/shayne/wsl2-hacks)
 
 ## Troubleshooting
+
+### Time not synced
+
+Manual solution: run `sudo hwclock -s` or `sudo ntpdate time.windows.com` (more accurate) after you reboot or resume from sleep/hibernate;
+
+Automatic solution: apply this workaround which uses _Windows Events_ to trigger the clock sync via `hwclock` on resume from sleep.
+
+See the following issues on GitHub:
+
+- Jun 2019: [Time not synced in WSL2 - causing TLS issues](https://github.com/microsoft/WSL/issues/4149) - closed
+
+- Jun 2019: [system date is not same with windows (WSL 2)](https://github.com/microsoft/WSL/issues/4245) - closed
+
+- Jun 2020: [WSL2 date incorrect after waking from sleep](https://github.com/microsoft/WSL/issues/5324) - open
 
 ### WSL2 requires an update to its kernel component
 

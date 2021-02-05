@@ -8,17 +8,21 @@ _Table of Contents_
 - [Spring](#spring)
 - [Lombok](#lombok)
   - [Create private constructor](#create-private-constructor)
-- [Gradle](#gradle)
+- [Maven](#maven)
   - [Basic commands](#basic-commands)
+- [Gradle](#gradle)
+  - [Basic commands](#basic-commands-1)
   - [Plugins](#plugins)
   - [Set console=rich by default](#set-consolerich-by-default)
   - [Print the full stacktrace when logging tests exceptions](#print-the-full-stacktrace-when-logging-tests-exceptions)
 - [SDKMAN](#sdkman)
   - [Set up a specific Java version for a project](#set-up-a-specific-java-version-for-a-project)
   - [Switch Java version automatically when you cd into a directory](#switch-java-version-automatically-when-you-cd-into-a-directory)
+- [Flyway](#flyway)
 - [IntelliJ IDEA](#intellij-idea)
   - [Install on Linux](#install-on-linux)
   - [Find in path regex](#find-in-path-regex)
+  - [Object to JSON in debugger](#object-to-json-in-debugger)
   - [Favorite plugins](#favorite-plugins)
   - [Settings](#settings)
     - [Navigate back and forward using mouse buttons clicks](#navigate-back-and-forward-using-mouse-buttons-clicks)
@@ -40,6 +44,21 @@ _Table of Contents_
 ```java
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
 ```
+
+## Maven
+
+### Basic commands
+
+```sh
+# Display available updates
+mvn versions:display-dependency-updates
+
+# Execute only the tests in SomeTestClass
+mvn test -Dtest=SomeTestClass
+
+# Stop immediately after the first failing test
+mvn test -Dsurefire.skipAfterFailureCount=1
+``` 
 
 ## Gradle
 
@@ -118,6 +137,44 @@ Set the folling in your `~/.sdkman/etc/config`:
 sdkman_auto_env=true 
 ```
 
+## Flyway
+
+_Flyway_ is an open-source database migration tool: it is based around just 7 basic commands: `migrate`, `clean`, `info`, `validate`, `undo`, `baseline` and `repair`.
+
+Migrations files names must comply with [Flyway naming pattern](https://flywaydb.org/documentation/concepts/migrations.html#naming).
+
+To check that flyway is configured correctly and to see the list of pending migrations run:
+
+```sh
+flyway info
+```
+
+To run the pending migrations run:
+
+```sh
+flyway migrate
+```
+
+Rolling back/undo migrations is availble only for _Flyway Pro_ or _Enterprise Edition_. To roll back with the _Community Edition_ you need to:
+
+- locally:
+
+   1. run `flyway clean`
+
+   1. move the migrations you want to roll back out of `flyway.locations`
+
+   1. run `flyway migrate`
+
+   1. move the migrations you rolled back in `flyway.locations`
+
+- staging/production:
+
+   1. write migrations which revert the changes made in the migrations you want to roll back
+
+   1. commit, push and deploy the migrations
+
+For furthern info check the [Flyway documentation](https://flywaydb.org/documentation/).
+
 ## IntelliJ IDEA
 
 ### Install on Linux
@@ -145,6 +202,10 @@ Alternatively, install manually with the following steps:
 # Find files which contain two strings on the same line
 \Qstring1\E.*\Qstring2\E
 ```
+
+### Object to JSON in debugger
+
+- [Get object as JSON in IntelliJ Idea from debugger](https://stackoverflow.com/a/60189764/334569)
 
 ### Favorite plugins
 
