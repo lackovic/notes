@@ -11,6 +11,9 @@ alias lsh='ls -lhpa --color --group-directories-first'
 # Make grep ignore case and highlight matching string
 alias grep="grep --ignore-case --color"
 
+# Identify a zombie process
+alias zombie="ps axo stat,ppid,pid,comm | grep -w defunct"
+
 # Avoid duplicates
 HISTCONTROL=ignoredups:erasedups
 # When the shell exits, append to the history file instead of overwriting it
