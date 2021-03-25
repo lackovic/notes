@@ -50,6 +50,7 @@
   "files.autoSave": "onWindowChange",
   "window.titleSeparator": " > ",
   "window.zoomLevel": 0,
+  "workbench.editor.wrapTabs": true,
   "workbench.settings.useSplitJSON": true,
   "workbench.settings.editor": "json"
 }
@@ -64,7 +65,6 @@
 - [markdownlint](https://marketplace.visualstudio.com/items?itemName=DavidAnson.vscode-markdownlint)
 - [Partial Diff](https://marketplace.visualstudio.com/items?itemName=ryu1kn.partial-diff)
 - [Prettier - Code formatter](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
-- [Settings Sync](https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync)
 - [Sort lines](https://marketplace.visualstudio.com/items?itemName=Tyriar.sort-lines)
 - [Surround](https://marketplace.visualstudio.com/items?itemName=yatki.vscode-surround)
 - [Text Marker (Highlighter)](https://marketplace.visualstudio.com/items?itemName=ryu1kn.text-marker)
