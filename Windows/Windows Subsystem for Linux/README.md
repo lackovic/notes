@@ -91,7 +91,6 @@ Setup:
 
       ```sh
       export DISPLAY=${DISPLAY:-$(grep -Po '(?<=nameserver ).*' /etc/resolv.conf):0}
-      export LIBGL_ALWAYS_INDIRECT=1
       ```
 
       and then close and open another terminal window or run `source ~/.profile` (only needed once).
