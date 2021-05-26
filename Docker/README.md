@@ -133,4 +133,11 @@ docker-compose down --remove-orphans && docker-compose build && docker-compose u
 
 # clean up stale images
 docker system prune
+
+# prevent containers to start automatically
+docker update --restart=no $(docker container ls -a -q)
+
+# make one container start automatically
+docker update --restart=always container_name
 ```
+- [Restart policies (--restart)](https://docs.docker.com/engine/reference/run/#restart-policies---restart)
