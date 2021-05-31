@@ -127,6 +127,9 @@ git apply untrackedfile
 
 # Stash without removing the changes
 git stash store $(git stash create) -m "Stash commit message"
+
+# Stash a single file
+git stash push path/to/file --keep-index
 ```
 
 ## Remove/delete local untracked files
