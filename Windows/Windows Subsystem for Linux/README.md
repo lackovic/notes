@@ -186,6 +186,7 @@ Another solution is to install ChromeDriver in Windows and run it from WSL:
 1. Rename `chromedriver.exe` to `chromedriver`
 1. Relaunch your terminal to pick up the new environment variables
 1. Run `echo $PATH` to ensure the new path is there
+1. In Windows, create a user environment variable named `WSLENV`, with the the value `TMP/p:TEMP/p` (see [this comment](https://gist.github.com/danwhitston/5cea26ae0861ce1520695cff3c2c3315#gistcomment-3764225))
 1. Run `chromedriver` in WSL, you should see something like this:
 
 ```sh
