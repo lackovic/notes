@@ -48,7 +48,7 @@
   "explorer.confirmDelete": false,
   "explorer.confirmDragAndDrop": false,
   "files.autoSave": "onWindowChange",
-  "window.titleSeparator": " > ",
+  "window.title": "${rootName}",
   "window.zoomLevel": 0,
   "workbench.editor.wrapTabs": true,
   "workbench.settings.useSplitJSON": true,
