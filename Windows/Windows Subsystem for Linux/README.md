@@ -220,6 +220,10 @@ alias chrome="powershell.exe -Command start chrome"
 
 - [wsl2-hacks](https://github.com/shayne/wsl2-hacks)
 
+- [cpu benchmark of WSL2 vs Pop OS/Ubuntu 19.10](https://www.linkedin.com/pulse/cpu-benchmark-wsl2-vs-pop-osubuntu-1910-souradeep-chakrabarti/)
+
+- [WSL vs WSL 2 – performance](https://howto.lintel.in/wsl-vs-wsl-2-performance/)
+
 ## Troubleshooting
 
 ### Time not synced
