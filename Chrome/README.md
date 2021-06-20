@@ -11,6 +11,10 @@
 
 * [Source](https://superuser.com/a/1458616/54747)
 
+## Disable notifications from all sites
+
+Settings > Site Settings > Notifications > Sites can ask to send notifications = OFF
+
 ## Change Google Chrome cache folder
 
 ```powershell
