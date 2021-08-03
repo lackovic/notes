@@ -22,6 +22,12 @@ cup all -y
 clist -l
 ```
 
+## Install a specific version
+
+```powershell
+choco install bulkrenameutility --version=3.4.0.0 -y
+```
+
 ## Pin a package to suppress upgrades
 
 ```powershell
