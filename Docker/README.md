@@ -50,6 +50,10 @@ docker exec -it <container_name> bash
 
 # Print a list of the environment variables of a running container
 docker exec -it <container_name> env
+
+# Inspect an image (use /bin/sh for alpine images)
+docker image pull <image_name>
+docker run -t -i <image_id> /bin/bash
 ```
 
 ## Customize containers list
