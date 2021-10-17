@@ -1,0 +1,50 @@
+# Install Android Debug Bridge (adb) https://developer.android.com/studio/command-line/adb
+# Install the Universal ADB Drivers https://adb.clockworkmod.com/
+# Run in PowerShell: Get-Content .\uninstall-s21-bloatware | adb shell
+
+# Bixby
+pm uninstall --user 0 com.samsung.android.bixby.service
+pm uninstall --user 0 com.samsung.android.app.routines
+pm uninstall --user 0 com.samsung.android.visionintelligence
+pm uninstall --user 0 com.samsung.android.bixby.agent
+pm uninstall --user 0 com.samsung.android.bixby.agent.dummy
+pm uninstall --user 0 com.samsung.android.bixbyvision.framework
+pm uninstall --user 0 com.samsung.android.bixby.wakeup
+
+# AR Zone
+pm uninstall --user 0 com.samsung.android.ardrawing
+pm uninstall --user 0 com.samsung.android.aremoji
+pm uninstall --user 0 com.samsung.android.aremojieditor
+pm uninstall --user 0 com.sec.android.mimage.avatarstickers
+pm uninstall --user 0 com.samsung.android.arzone
+pm uninstall --user 0 com.samsung.android.livestickers
+
+# Samsung Calendar: redundant, use Google Calendar
+pm uninstall --user 0 com.samsung.android.calendar
+
+# Samsung Contacts: redundant, use Google Contacts
+pm uninstall --user 0 com.samsung.android.app.contacts
+
+# Samsung Pass Autofill
+pm uninstall --user 0 com.samsung.android.samsungpassautofill
+
+# Samsung Group Sharing
+pm uninstall --user 0 com.samsung.android.mobileservice
+
+# Samsung Kids
+pm uninstall --user 0 com.samsung.android.kidsinstaller
+
+# Dictionary
+pm uninstall --user 0 com.diotek.sec.lookup.dictionary
+
+# upday
+pm uninstall --user 0 de.axelspringer.yana.zeropage
+
+# Android Auto
+pm uninstall --user 0 com.google.android.projection.gearhead
+
+# Microsoft OneDrive
+pm uninstall --user 0 com.microsoft.skydrive
+
+# Netflix
+pm uninstall --user 0 com.netflix.mediaclient
