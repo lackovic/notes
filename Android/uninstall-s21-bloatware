@@ -25,14 +25,18 @@ pm uninstall --user 0 com.samsung.android.calendar
 # Samsung Contacts: redundant, use Google Contacts
 pm uninstall --user 0 com.samsung.android.app.contacts
 
-# Samsung Pass Autofill
+# Samsung Pass Autofill and Framework
 pm uninstall --user 0 com.samsung.android.samsungpassautofill
+pm uninstall --user 0 com.samsung.android.samsungpass
 
 # Samsung Group Sharing
 pm uninstall --user 0 com.samsung.android.mobileservice
 
 # Samsung Kids
 pm uninstall --user 0 com.samsung.android.kidsinstaller
+
+# Samsung Cloud
+pm uninstall --user 0 com.samsung.android.scloud
 
 # Dictionary
 pm uninstall --user 0 com.diotek.sec.lookup.dictionary
@@ -48,3 +52,29 @@ pm uninstall --user 0 com.microsoft.skydrive
 
 # Netflix
 pm uninstall --user 0 com.netflix.mediaclient
+
+# Talkback
+pm uninstall --user 0 com.samsung.android.accessibility.talkback
+
+# Voice Assistant
+# Samsung Gallery
+# Clock
+# Game Launcher
+# Samsung Keyboard
+# Samsung Checkout
+# Samsung Capture
+# Samsung Visit In
+# Samsung Create movie
+# Samsung Video Editor
+# Samsung GameOptimizingService
+# Samsung Game Booster
+# Samsung Customizaion Service
+
+# Samsung Link to Windows Service
+# Samsung Sticker Center
+# Samsung Media and Devices
+# Samsung Keyboard Content Center
+# Samsung SmartThings Framework
+# Samsung Private Share
+# Samsung Link sharing
+# Samsung TTS
