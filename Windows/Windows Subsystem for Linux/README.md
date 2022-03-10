@@ -33,7 +33,7 @@ WSL2 compared to WSL1 brings increased file system performance, full system call
 
 ## Installation
 
-Follow the [Microsoft Installation Guide for WSL2](https://docs.microsoft.com/en-us/windows/wsl/wsl2-install).
+Follow the [Microsoft Installation Guide for WSL2](https://docs.microsoft.com/en-us/windows/wsl/install).
 
 ## Basic Commands
 
