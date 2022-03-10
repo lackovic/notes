@@ -14,6 +14,9 @@ alias grep="grep --ignore-case --color"
 # Identify a zombie process
 alias zombie="ps axo stat,ppid,pid,comm | grep -w defunct"
 
+# Run IntelliJ IDEA in a detached background process
+alias idea="setsid /home/marco/intellij/bin/idea.sh . &>/dev/null"
+
 # Avoid duplicates
 HISTCONTROL=ignoredups:erasedups
 # When the shell exits, append to the history file instead of overwriting it
