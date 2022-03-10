@@ -6,7 +6,7 @@ alias dog='pygmentize -O console256 -g'
 # -h = print sizes like 1K, 234M, 2G, etc.
 # -p = append `/` indicator to directories
 # -a = hidden files/directories
-alias lsh='ls -lhpa --color --group-directories-first'
+alias dir='ls -lhpA --color --group-directories-first'
 
 # Make grep ignore case and highlight matching string
 alias grep="grep --ignore-case --color"
