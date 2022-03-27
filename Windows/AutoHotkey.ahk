@@ -26,8 +26,13 @@
 
 ; --- Local apps --------------------------------------------------------------
 
-; Ctrl+Alt+K = launches KeePass
-^!k::Run "C:\Program Files\KeePass Password Safe 2\KeePass.exe"
+; Ctrl+Alt+K = launches or brings to front KeePass
+^!k::
+IfWinExist, KeePass
+WinActivate
+else
+Run "C:\Program Files\KeePass Password Safe 2\KeePass.exe"
+return
 
 ; --- File Explorer -----------------------------------------------------------
 
