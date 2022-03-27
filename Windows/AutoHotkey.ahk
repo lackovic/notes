@@ -1,6 +1,9 @@
 ﻿; AutoHotkey is a scripting language for Microsoft Windows which provides
 ; keyboard shortcuts that allows users to automate repetitive tasks.
 ;
+; Hotkey Modifier Symbols
+; https://www.autohotkey.com/docs/Hotkeys.htm#Symbols
+;
 ; 1. Install it with Chocolatey: cinst autohotkey -y
 ; 2. Copy this file (AutoHotkey.ahk) to %UserProfile%\Documents
 ; 3. Create a shortcut to AutoHotkey in shell:startup
@@ -60,3 +63,13 @@ return
     ; Hibernate:
     ;DllCall("PowrProf\SetSuspendState", "int", 1, "int", 0, "int", 0)
     Return
+
+; --- Typography ------------------------------------------------------------------
+
+; Don't work with nordic layouts
+; See https://stackoverflow.com/questions/71635253/how-to-send-tilde-or-backtick-in-autohotkey-using-a-nordic-keyboard-layout
+<^>!,:: Send, ~
+<^>!.:: Send, ``
+
+; Produces a long dash — (in some keyboard layouts)
+<^>!-:: Send, {U+2014}
