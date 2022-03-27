@@ -71,10 +71,6 @@ return
 
 ; --- Typography ------------------------------------------------------------------
 
-; Don't work with nordic layouts
-; See https://stackoverflow.com/questions/71635253/how-to-send-tilde-or-backtick-in-autohotkey-using-a-nordic-keyboard-layout
-<^>!,:: Send, ~
-<^>!.:: Send, ``
-
-; Produces a long dash — (in some keyboard layouts)
-<^>!-:: Send, {U+2014}
+<^>!,:: Send, {Text}~  ; , VK=BC SC=033 ~={U+223C}
+<^>!.:: Send, {Text}`` ; . VK=BE SC=034 `={U+0060}
+<^>!-:: Send, {Text}—  ; , VK=BD SC=035 —={U+2014}
