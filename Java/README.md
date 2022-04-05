@@ -240,3 +240,7 @@ Key|Command|Notes
 `Ctrl+N` | Navigate to class |
 `Ctrl+Shift+N` | Navigate to file by file name |
 `Ctrl+Alt+Shift+N` | Navigate to symbol in project (class, method, etc) |
+
+### Useful links
+
+- [KAFKA explained in a children’s book](https://www.gentlydownthe.stream/)
