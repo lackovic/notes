@@ -111,6 +111,10 @@ test {
 }
 ```
 
+### Upgrade all dependencies to their latest version
+
+Use [Gradle Use Latest Versions Plugin ](https://github.com/patrikerdes/gradle-use-latest-versions-plugin).
+
 ## SDKMAN
 
 SDKMAN allows to install multiple versions of Java and conveniently switch between them.
