@@ -13,7 +13,9 @@ Table of Contents
 - [Revert a PR merge and delete its commits from master history](#revert-a-pr-merge-and-delete-its-commits-from-master-history)
 - [Revert a PR merge to master](#revert-a-pr-merge-to-master)
 - [Revert / undo / delete a pushed tag](#revert--undo--delete-a-pushed-tag)
-- [Find the most contributing developers in a repository](#find-the-most-contributing-developers-in-a-repository)
+- [Revision history](#revision-history)
+  - [Find who added and subtracted the most lines in a repository](#find-who-added-and-subtracted-the-most-lines-in-a-repository)
+  - [Display the history of changes of the lines containing a specific string](#display-the-history-of-changes-of-the-lines-containing-a-specific-string)
 - [Enable git bash aliases auto completion](#enable-git-bash-aliases-auto-completion)
 - [Persist the passphrase through restarts](#persist-the-passphrase-through-restarts)
   - [On *nix systems](#on-nix-systems)
@@ -187,13 +189,21 @@ git tag -d 1.2.3
 git push origin :refs/tags/1.2.3
 ```
 
-## Find the most contributing developers in a repository
+## Revision history
 
-With [git-guilt](https://bitbucket.org/tpettersen/git-guilt/src/master/) you can display the people who added and subtracted the most lines in a repository (e.g. over the last 3 years):
+### Find who added and subtracted the most lines in a repository
+
+With [git-guilt](https://bitbucket.org/tpettersen/git-guilt/src/master/):
 
 ```
 git-guilt `git log --until="3 years ago" --format="%H" -n 1` HEAD 
-``` 
+```
+
+### Display the history of changes of the lines containing a specific string
+
+```
+git log -S "specific string" --patch --reverse
+```
 
 ## Enable git bash aliases auto completion
 
