@@ -15,6 +15,7 @@ _Table of Contents_
 - [Find files by name and show all their properties](#find-files-by-name-and-show-all-their-properties)
 - [Find all files containing a string](#find-all-files-containing-a-string)
 - [List running processes](#list-running-processes)
+- [Use an empty password for a user](#use-an-empty-password-for-a-user)
 - [Services commands](#services-commands)
 - [CLI Tools](#cli-tools)
 - [Shell scripts](#shell-scripts)
@@ -109,6 +110,12 @@ ps aux | grep procName
 pgrep -f procName
 top
 htop
+```
+
+## Use an empty password for a user
+
+```sh
+sudo passwd -d username
 ```
 
 ## Services commands
