@@ -44,3 +44,6 @@ unset color_prompt force_color_prompt
 # Uncomment one of the following lines to enable git aliases auto completion
 # source /etc/bash_completion.d/git
 # source /usr/share/bash-completion/completions/git
+
+# Update system time, install updates, set Docker containers to not autorestart
+alias update='sudo ntpdate time.windows.com; sudo apt update; sudo apt upgrade -y; sudo apt autoremove -y; sdk update; docker update --restart=no $(docker container ls -a -q)'
