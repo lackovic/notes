@@ -1,8 +1,8 @@
-# <project_name>
+# `<project_name>`
 
 <project_name> is a <utility/tool/service/application> that allows <target_audience> to do <action/task>.
 
-<Additional line of information text about what the project does, should be around 2 or 3 sentences.>
+_Additional line of information text about what the project does, should be up to 3 sentences._
 
 _Table of Contents_
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
@@ -11,38 +11,48 @@ _Table of Contents_
 
 - [Tech stack](#tech-stack)
 - [Prerequisites](#prerequisites)
-- [Setup](#installation)
+- [Setup](#setup)
 - [Running](#running)
 - [Testing](#testing)
+- [Contributing](#contributing)
 - [Deploying](#deploying)
+- [Monitoring](#monitoring)
 - [Troubleshooting](#troubleshooting)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 ## Tech stack
 
-<List all the frameworks, libraries and tools used by this project>
+_List all the frameworks, libraries and tools used by this project_
 
 ## Prerequisites
 
-<List all the software tools and their versions required to set up and run this project>
+_List all the software tools and their versions required to set up and run this project_
 
 ## Setup
 
-<Explain how to set up this project locally for the first time>
+_Explain how to set up this project locally for the first time_
 
 ## Running
 
-<Explain how to run this project locally each time>
+_Explain how to run this project locally each time_
 
 ## Testing
 
-<Explain how the tests are structured, which ones should be run locally and how>
+_Explain how the tests are structured, which ones should be run locally and how_
+
+## Contributing
+
+_Explain how to contribute to this repository, conventions, guidelines and code review process_
 
 ## Deploying
 
-<Explain how to deploy to staging and to production>
+_Explain how to deploy to staging and to production_
+
+## Monitoring
+
+_List the possible ways to monitor the health status of this project_
 
 ## Troubleshooting
 
-<List here all the problems found by any developer while working on this project and their solutions, each one in a different subsection>
+_List here all the problems found by any developer while working on this project and their solutions, each one in a different subsection_
