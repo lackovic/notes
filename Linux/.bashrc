@@ -47,3 +47,6 @@ unset color_prompt force_color_prompt
 
 # Update system time, install updates, set Docker containers to not autorestart
 alias update='sudo ntpdate time.windows.com; sudo apt update; sudo apt upgrade -y; sudo apt autoremove -y; sdk update; docker update --restart=no $(docker container ls -a -q)'
+
+# Prefix prompt with timestamp
+PROMPT_COMMAND='echo -n "$(date +%H:%M:%S) "'
