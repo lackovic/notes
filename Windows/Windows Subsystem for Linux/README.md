@@ -33,7 +33,17 @@ WSL2 compared to WSL1 brings increased file system performance, full system call
 
 ## Installation
 
-Follow the [Microsoft Installation Guide for WSL2](https://docs.microsoft.com/en-us/windows/wsl/install).
+1. In **Turn Windows features on or off** dialog, ensure the followings are enabled:
+
+   - Hyper-V
+
+   - Windows Hypervisor Platform
+
+   - Windows Subsystem for Linux
+
+   - Virtual Machine Platform
+
+1. Install [Ubuntu 22.04.1 LTS](https://apps.microsoft.com/store/detail/ubuntu-22041-lts/9PN20MSR04DW)
 
 ## Basic Commands
 
