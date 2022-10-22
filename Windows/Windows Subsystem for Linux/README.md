@@ -13,7 +13,8 @@ WSL2 compared to WSL1 brings increased file system performance, full system call
 - [Docker](#docker)
 - [Run Linux GUI applications](#run-linux-gui-applications)
 - [Install IntelliJ IDEA](#install-intellij-idea)
-  - [On Ubuntu](#on-ubuntu)
+  - [Windows 11](#windows-11)
+  - [Windows 10](#windows-10)
   - [On ArchWSL](#on-archwsl)
 - [Backup - export/import distributions](#backup---exportimport-distributions)
 - [Manage multiple distributions](#manage-multiple-distributions)
@@ -50,31 +51,31 @@ WSL2 compared to WSL1 brings increased file system performance, full system call
 
 1. if Linux has been installed with only the `root` user then in WSL run:
 
-   ```
+   ```sh
    sudo adduser <username> 
    ```
 
 1. set an empty password for your WSL user with the following command:
 
-   ```
+   ```sh
    sudo passwd -d <username>
    ```
 
 1. Grant root privileges to your user:
 
-   ```
+   ```sh
    visudo
    ```
 
    Append after `#User privilege specification`, right below `root`:
 
-   ```
+   ```sh
    <username> ALL=(ALL:ALL)ALL
    ```
 
 1. in PowerShell run:
 
-   ```
+   ```powershell
    ubuntu2204.exe config --default-user <username>
    ```
    (secure access to your WSL shell is already protected by your Windows password)
@@ -159,11 +160,34 @@ Sources:
 
 ## Install IntelliJ IDEA
 
-### On Ubuntu
+### Windows 11
 
-1. Download the [`tar.gz` file for Linux](https://www.jetbrains.com/idea/download/#section=linux) and extract in `/opt/intellij/`
+1. Install [Windows Subsystem for Linux Preview](https://apps.microsoft.com/store/detail/windows-subsystem-for-linux-preview/9P9TQF7MRM4R)
 
-1. Run `/opt/intellij/bin/idea.sh`
+1. Append the following lines to you `/etc/wsl.conf`
+
+   ```sh
+   [boot]
+   systemd=true 
+   ```
+
+1. In PowerShell run `wsl --shutdown`
+
+1. In WSL run `snap list` and `snap services` to verify snap works
+
+1. install the latest Java version with [SDKMAN](https://sdkman.io/) (e.g. `sdk install java 17.0.4.1-sem`)
+
+1. Install IntelliJ IDEA with `sudo snap install intellij-idea-ultimate --classic`
+
+1. Run IntelliJ IDEA with `intellij-idea-ultimate`
+
+### Windows 10
+
+In WSL:
+
+1. Download the [`tar.gz` file for Linux](https://www.jetbrains.com/idea/download/#section=linux) and extract it in your home directory `~`
+
+1. Run `~/intellij/bin/idea.sh`
 
 ### On ArchWSL
 
