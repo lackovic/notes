@@ -8,6 +8,7 @@ WSL2 compared to WSL1 brings increased file system performance, full system call
 <!-- generated with [DocToc](https://github.com/thlorenz/doctoc) -->
 
 - [Installation](#installation)
+- [Configuration](#configuration)
 - [Basic Commands](#basic-commands)
 - [Docker](#docker)
 - [Run Linux GUI applications](#run-linux-gui-applications)
@@ -44,6 +45,41 @@ WSL2 compared to WSL1 brings increased file system performance, full system call
    - Virtual Machine Platform
 
 1. Install [Ubuntu 22.04.1 LTS](https://apps.microsoft.com/store/detail/ubuntu-22041-lts/9PN20MSR04DW)
+
+## Configuration
+
+1. if Linux has been installed with only the `root` user then in WSL run:
+
+   ```
+   sudo adduser <username> 
+   ```
+
+1. set an empty password for your WSL user with the following command:
+
+   ```
+   sudo passwd -d <username>
+   ```
+
+1. Grant root privileges to your user:
+
+   ```
+   visudo
+   ```
+
+   Append after `#User privilege specification`, right below `root`:
+
+   ```
+   <username> ALL=(ALL:ALL)ALL
+   ```
+
+1. in PowerShell run:
+
+   ```
+   ubuntu2204.exe config --default-user <username>
+   ```
+   (secure access to your WSL shell is already protected by your Windows password)
+
+1. In Windows > _Virus and threat protection_ > _Manage settings_ > _Add or remove exclusions_: add an exclusion to `Ubuntu-22.04 (\wsl.localhost)`
 
 ## Basic Commands
 
