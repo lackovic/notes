@@ -106,7 +106,7 @@ Setup:
 
 1. On Windows:
 
-   1. [Install _VcXsrv_ with Chocolatey](https://chocolatey.org/packages/vcxsrv)
+   1. [Install _VcXsrv_ with winget](https://winget.run/pkg/marha/VcXsrv)
 
    1. In the folder `%PROGRAMFILES%\VcXsrv`:
       
