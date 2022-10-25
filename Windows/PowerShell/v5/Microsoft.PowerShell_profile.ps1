@@ -18,7 +18,7 @@ $global:PSColor.File.Text.Pattern = '\.(txt|cfg|conf|ini|csv|log|config|xml|yml|
 Import-Module posh-git
 
 # Prefix each prompt with date and time with posh-git
-$GitPromptSettings.DefaultPromptPrefix.Text = '$(Get-Date -f "dd\/MM\/yyyy HH:mm:ss") '
+$GitPromptSettings.DefaultPromptPrefix.Text = '$(Get-Date -f "HH:mm:ss") '
 $GitPromptSettings.DefaultPromptPrefix.ForegroundColor = [ConsoleColor]::Magenta
 
 # Prefix each prompt with date and time without posh-git
