@@ -16,6 +16,7 @@ Table of Contents
 - [Revision history](#revision-history)
   - [Find who added and subtracted the most lines in a repository](#find-who-added-and-subtracted-the-most-lines-in-a-repository)
   - [Display the history of changes of the lines containing a specific string](#display-the-history-of-changes-of-the-lines-containing-a-specific-string)
+  - [Display a compact list of commits](#display-a-compact-list-of-commits)
 - [Enable git bash aliases auto completion](#enable-git-bash-aliases-auto-completion)
 - [Persist the passphrase through restarts](#persist-the-passphrase-through-restarts)
   - [On *nix systems](#on-nix-systems)
@@ -203,6 +204,18 @@ git-guilt `git log --until="3 years ago" --format="%H" -n 1` HEAD
 
 ```
 git log -S "specific string" --patch --reverse
+```
+
+### Display a compact list of commits
+
+```
+git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+```
+
+Or add it as `lg` alias:
+
+```
+git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 ```
 
 ## Enable git bash aliases auto completion
