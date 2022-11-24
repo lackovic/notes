@@ -14,6 +14,7 @@
 - [Create your own custom keyboard layout](#create-your-own-custom-keyboard-layout)
 - [Wipe all the deleted data / free space on a drive](#wipe-all-the-deleted-data--free-space-on-a-drive)
 - [Scripts for automation of routine tasks and bloatware removal](#scripts-for-automation-of-routine-tasks-and-bloatware-removal)
+- [Disable Web Results in Windows 11 Start or Search Menu](#disable-web-results-in-windows-11-start-or-search-menu)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -95,3 +96,13 @@ Cipher goes through the following steps:
 - [Tron fights for the User](https://www.reddit.com/r/TronScript/wiki/index): Reddit community initiative to debloat Windows
 
 - [Windows-10-Sophia-Script](https://github.com/farag2/Windows-10-Sophia-Script): Script to setup Windows 10 LTSC/1903/1909/2004/2009.
+
+## Disable Web Results in Windows 11 Start or Search Menu
+
+- Run `gpedit.msc`
+
+- User Configuration > Administrative Templates > Windows Components > File Explorer
+
+- Enable `Turn off display of recent search entries in the File Explorer search box`
+
+- Reboot
