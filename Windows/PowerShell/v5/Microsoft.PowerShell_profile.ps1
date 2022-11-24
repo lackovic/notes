@@ -28,3 +28,6 @@ $GitPromptSettings.DefaultPromptPrefix.ForegroundColor = [ConsoleColor]::Magenta
 
 # Set default folder
 Set-Location C:\src
+
+# Setup to use fnm https://github.com/Schniz/fnm#shell-setup
+fnm env --use-on-cd | Out-String | Invoke-Expression
