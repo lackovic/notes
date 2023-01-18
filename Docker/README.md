@@ -51,6 +51,9 @@ docker exec -it <container_name> bash
 # Print a list of the environment variables of a running container
 docker exec -it <container_name> env
 
+# Run a SQL query in a Postgres container
+docker exec container-name bash -c 'psql -d database-name -U username --command "select * from users;"'
+
 # Inspect an image (use /bin/sh for alpine images)
 docker image pull <image_name>
 docker run -t -i <image_id> /bin/bash
@@ -58,18 +61,21 @@ docker run -t -i <image_id> /bin/bash
 
 ## Customize containers list
 
-Show only id, image, name and status of all containers:
-
 ```sh
+# Show id, image, name and status of all containers
 docker container ls -a --format "table {{ .ID }}\t{{ .Image }}\t{{ .Names }}\t{{ .Status }}"
+
+# Show name, status and ports of all containers
+docker container ls -a --format "table {{ .Names }}\t{{ .Status }}\t{{ .Ports }}"
+
+# Filter containers by name
+docker container ls -f name=container-name
 ```
 
-Specify your custom format in the ~/.docker/config.json file to use it as a default;
+Set a format to use it as a default in your `~/.docker/config.json`:
 
-```sh
-{
-  "psFormat": "table {{ .ID }}\\t{{ .Names }}\t{{ .Status }}"
-}
+```js
+{ "psFormat": "table {{ .Names }}\t{{ .Status }}\t{{ .Ports }}" }
 ```
 
 - [Source](https://github.com/moby/moby/issues/7477)
