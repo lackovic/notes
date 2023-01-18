@@ -1,8 +1,23 @@
+
 # Windows Terminal
 
 [Windows Terminal](https://docs.microsoft.com/en-us/windows/terminal/) is a terminal application for users of command-line tools and shells like Command Prompt, PowerShell, and WSL, which provides multiple tab support as well as theming and customization.
 
 ![Image description](https://raw.githubusercontent.com/lackovic/notes/master/Windows/Windows%20Terminal/img/windows-terminal-640.png)
+
+
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+_Table of Contents_
+
+- [Benefits](#benefits)
+- [Installation](#installation)
+- [Configuration](#configuration)
+- [Run PowerShell Core as Administrator in a Windows Terminal tab](#run-powershell-core-as-administrator-in-a-windows-terminal-tab)
+- [File explorer integration](#file-explorer-integration)
+- [Enable Ctrl+F4 for closing the current tab/pane](#enable-ctrlf4-for-closing-the-current-tabpane)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 ## Benefits
 
@@ -63,3 +78,11 @@ refreshenv
 ## File explorer integration
 
 You can right click on a folder in File Explorer and select _Open in Windows Terminal_. See [Windows Terminal Preview 1.1 Release](https://devblogs.microsoft.com/commandline/windows-terminal-preview-1-1-release/).
+
+## Enable Ctrl+F4 for closing the current tab/pane
+
+Add the following to the `actions` array of your `settings.json`:
+
+```js
+{ "command": "closePane", "keys": "ctrl+f4" }
+```
