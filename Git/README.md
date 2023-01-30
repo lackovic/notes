@@ -45,6 +45,9 @@ git rev-parse --abbrev-ref HEAD
 # Delete local branch
 git branch -d local-branch-name
 
+# Delete all local branches except master or main
+git branch | grep -v "master" | grep -v "main" | xargs git branch -D
+
 # Reset your local branch
 git fetch origin && git reset --hard && git clean -f -d
 
