@@ -30,6 +30,7 @@ Table of Contents
   - [Change base branch](#change-base-branch)
   - [Resurrect a PR displaying unknown repository after the fork was deleted](#resurrect-a-pr-displaying-unknown-repository-after-the-fork-was-deleted)
   - [Tools](#tools-1)
+  - [Show commits between two dates](#show-commits-between-two-dates)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -312,3 +313,12 @@ Sources: [this](https://github.com/isaacs/github/issues/168#issuecomment-3742012
 ### Tools
 
 - [Octo Mate](https://chrome.google.com/webstore/detail/octo-mate/baggcehellihkglakjnmnhpnjmkbmpkf)
+
+### Show commits between two dates
+
+Append `?since=2018-05-31&until=2018-07-01`.
+
+Example:
+```
+https://github.com/github/linguist/commits/master?since=2018-05-31&until=2018-07-01
+``` 
