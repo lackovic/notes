@@ -298,9 +298,23 @@ alias chrome="powershell.exe -Command start chrome"
 
 ### Time not synced
 
-Manual solution: run `sudo hwclock -s` or `sudo ntpdate time.windows.com` (more accurate) after you reboot or resume from sleep/hibernate;
+Maybe fixed by enabling systemd. See:
 
-Automatic solution: apply this workaround which uses _Windows Events_ to trigger the clock sync via `hwclock` on resume from sleep.
+- https://github.com/microsoft/WSL/issues/8204#issuecomment-1429164579
+
+- https://github.com/microsoft/WSL/issues/5324#issuecomment-1451150152
+
+Manual solution: run `sudo hwclock -s` (syncs with world time) or `sudo ntpdate time.windows.com` (syncs with world time) after you reboot or resume from sleep/hibernate;
+
+Automatic solution: append the following lines to your `~/.profile`.
+
+```sh
+# WSL specific (date issue)
+uname_out=$(uname -a)
+if echo $uname_out | grep -a "Microsoft"; then
+    sudo hwclock -s
+fi
+``` 
 
 See the following issues on GitHub:
 
