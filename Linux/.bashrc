@@ -51,5 +51,5 @@ alias update='sudo ntpdate time.windows.com; sudo apt update; sudo apt upgrade -
 # Colorize ip output
 alias ip='ip -c'
 
-# Prefix prompt with timestamp
-PROMPT_COMMAND=${PROMPT_COMMAND:+"$PROMPT_COMMAND;"}'echo -n "$(date +%H:%M:%S) "'
+# Prefix prompt with timestamp (had some issues with it need to be revisited)
+# PROMPT_COMMAND=${PROMPT_COMMAND:+"$PROMPT_COMMAND;"}'echo -n "$(date +%H:%M:%S) "'
