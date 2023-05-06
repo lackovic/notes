@@ -16,6 +16,7 @@ _Table of Contents_
 - [Run PowerShell Core as Administrator in a Windows Terminal tab](#run-powershell-core-as-administrator-in-a-windows-terminal-tab)
 - [File explorer integration](#file-explorer-integration)
 - [Enable Ctrl+F4 for closing the current tab/pane](#enable-ctrlf4-for-closing-the-current-tabpane)
+- [Useful shortcuts](#useful-shortcuts)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -86,3 +87,13 @@ Add the following to the `actions` array of your `settings.json`:
 ```js
 { "command": "closePane", "keys": "ctrl+f4" }
 ```
+
+## Useful shortcuts
+
+- `Ctrl`+`Shift`+`n`, where `n` is a number: opens the n-th terminal type in a new tab (e.g. `1` for PowerShell, `2` for Ubuntu, etc).
+
+- `Ctrl`+`Shift`+`w`: closes the current tab.
+
+- `Ctrl`+`Shift`+`t`: opens a new tab with the same terminal type as the current tab.
+
+- `Alt`+`Shift`+`d`: splits the current pane horizontally or vertically (same terminal type).
