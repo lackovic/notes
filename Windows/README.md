@@ -15,6 +15,8 @@
 - [Wipe all the deleted data / free space on a drive](#wipe-all-the-deleted-data--free-space-on-a-drive)
 - [Scripts for automation of routine tasks and bloatware removal](#scripts-for-automation-of-routine-tasks-and-bloatware-removal)
 - [Disable Web Results in Windows 11 Start or Search Menu](#disable-web-results-in-windows-11-start-or-search-menu)
+- [See the command history across all PowerShell sessions](#see-the-command-history-across-all-powershell-sessions)
+- [Lock a BitLocker encrypted drive from the command line](#lock-a-bitlocker-encrypted-drive-from-the-command-line)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -106,3 +108,15 @@ Cipher goes through the following steps:
 - Enable `Turn off display of recent search entries in the File Explorer search box`
 
 - Reboot
+
+## See the command history across all PowerShell sessions
+
+```powershell
+cat (Get-PSReadlineOption).HistorySavePath
+``` 
+
+## Lock a BitLocker encrypted drive from the command line
+
+```powershell
+manage-bde.exe -lock e:
+``` 
