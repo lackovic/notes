@@ -17,6 +17,7 @@
 - [Disable Web Results in Windows 11 Start or Search Menu](#disable-web-results-in-windows-11-start-or-search-menu)
 - [See the command history across all PowerShell sessions](#see-the-command-history-across-all-powershell-sessions)
 - [Lock a BitLocker encrypted drive from the command line](#lock-a-bitlocker-encrypted-drive-from-the-command-line)
+- [Uninstall Xbox apps](#uninstall-xbox-apps)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -120,3 +121,15 @@ cat (Get-PSReadlineOption).HistorySavePath
 ```powershell
 manage-bde.exe -lock e:
 ``` 
+
+## Uninstall Xbox apps
+
+To uninstall all Xbox apps (for example Xbox, XboxGameOverlay, XboxGamingOverlay, XboxIdentityProvider and XboxSpeechToTextOverlay) from the current user and from all users run the following commands in a powershell console as Administrator:
+
+```powershell
+# List all Xbox apps
+dism /Online /Get-ProvisionedAppxPackages | Select-String PackageName | Select-String xbox
+
+# Uninstall all Xbox apps
+Get-ProvisionedAppxPackage -Online | Where-Object { $_.PackageName -match “xbox”} | ForEach-Object { Remove-ProvisionedAppxPackage -Online -AllUsers -PackageName $_.PackageName }
+```
