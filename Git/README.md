@@ -31,6 +31,7 @@ Table of Contents
   - [Resurrect a PR displaying unknown repository after the fork was deleted](#resurrect-a-pr-displaying-unknown-repository-after-the-fork-was-deleted)
   - [Tools](#tools-1)
   - [Show commits between two dates](#show-commits-between-two-dates)
+  - [GitHub Learning Lab](#github-learning-lab)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -322,3 +323,11 @@ Example:
 ```
 https://github.com/github/linguist/commits/master?since=2018-05-31&until=2018-07-01
 ``` 
+
+Source: [this](https://stackoverflow.com/a/42472394/1422096).
+
+### GitHub Learning Lab
+
+Learn how to use GitHub with interactive courses designed for beginners and experts:
+
+- https://skills.github.com/
