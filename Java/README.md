@@ -22,7 +22,7 @@ _Table of Contents_
 - [Flyway](#flyway)
 - [IntelliJ IDEA](#intellij-idea)
   - [Install on Linux](#install-on-linux)
-  - [Find in path regex](#find-in-path-regex)
+  - [Find in files regexes](#find-in-files-regexes)
   - [Object to JSON in debugger](#object-to-json-in-debugger)
   - [Favorite plugins](#favorite-plugins)
   - [Settings](#settings)
@@ -199,7 +199,7 @@ Alternatively, install manually with the following steps:
 
 1. Run `bin/idea.sh`
 
-### Find in path regex
+### Find in files regexes
 
 ```sh
 # Find files which contain two strings on any line
@@ -207,6 +207,9 @@ Alternatively, install manually with the following steps:
 
 # Find files which contain two strings on the same line
 \Qstring1\E.*\Qstring2\E
+
+# Find in files excluding packages and imports statements
+^(?!import|package).*wordToSearch
 ```
 
 ### Object to JSON in debugger
