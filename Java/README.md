@@ -15,6 +15,7 @@ _Table of Contents_
   - [Plugins](#plugins)
   - [Set console=rich by default](#set-consolerich-by-default)
   - [Print the full stacktrace when logging tests exceptions](#print-the-full-stacktrace-when-logging-tests-exceptions)
+  - [Upgrade all dependencies to their latest version](#upgrade-all-dependencies-to-their-latest-version)
 - [SDKMAN](#sdkman)
   - [Set up a specific Java version for a project](#set-up-a-specific-java-version-for-a-project)
   - [Switch Java version automatically when you cd into a directory](#switch-java-version-automatically-when-you-cd-into-a-directory)
@@ -29,6 +30,7 @@ _Table of Contents_
     - [Enable changing the font size with the mouse wheel](#enable-changing-the-font-size-with-the-mouse-wheel)
     - [Prevent IDEA from automatically close opened files](#prevent-idea-from-automatically-close-opened-files)
   - [Shortcuts](#shortcuts)
+  - [Useful links](#useful-links)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
