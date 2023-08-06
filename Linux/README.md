@@ -21,6 +21,8 @@ _Table of Contents_
 - [Shell scripts](#shell-scripts)
   - [Validation](#validation)
   - [Debugging](#debugging)
+- [Presentations from command line](#presentations-from-command-line)
+- [Set your terminal default editor](#set-your-terminal-default-editor)
 - [Set vim as default editor](#set-vim-as-default-editor)
 - [Install the latest version of Neovim on Ubuntu](#install-the-latest-version-of-neovim-on-ubuntu)
 - [Arch Linux](#arch-linux)
@@ -161,7 +163,13 @@ trap 'prev_cmd=$curr_cmd; prev_ln=$curr_ln; curr_cmd=$BASH_COMMAND; curr_ln=${LI
 trap 'echo -e $"\n   ERROR in ${BASH_SOURCE}:$prev_ln >>> $prev_cmd <<< FAILED with EXIT CODE $?\n"' EXIT
 ```
 
-## Set vim as default editor
+## Presentations from command line
+
+- [mdp](https://github.com/visit1985/mdp)
+- [tpp](https://synflood.at/tpp.html)
+- [sent](https://tools.suckless.org/sent/)
+
+## Set your terminal default editor
 
 ```sh
 sudo update-alternatives --config editor
