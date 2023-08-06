@@ -23,8 +23,10 @@ _Table of Contents_
   - [Debugging](#debugging)
 - [Presentations from command line](#presentations-from-command-line)
 - [Set your terminal default editor](#set-your-terminal-default-editor)
-- [Set vim as default editor](#set-vim-as-default-editor)
-- [Install the latest version of Neovim on Ubuntu](#install-the-latest-version-of-neovim-on-ubuntu)
+- [Neovim](#neovim)
+  - [Install the latest version on Ubuntu](#install-the-latest-version-on-ubuntu)
+  - [First setup](#first-setup)
+  - [Learning resources](#learning-resources)
 - [Arch Linux](#arch-linux)
   - [Update the system](#update-the-system)
   - [Search for a package](#search-for-a-package)
@@ -175,11 +177,32 @@ trap 'echo -e $"\n   ERROR in ${BASH_SOURCE}:$prev_ln >>> $prev_cmd <<< FAILED w
 sudo update-alternatives --config editor
 ```
 
-## Install the latest version of Neovim on Ubuntu
+## Neovim
+
+Neovim is a cross-platform fork of Vim with code highlighting, syntax checking, code completion, inlay hints, type hints, a built-in debugger, a terminal emulator, a file manager, a markdown previewer, a git client and much more. It has better defaults than Vim, for example `autoindent` and `hlsearch` (highlight all matches). It has been the most loved editor in the Stack Overflow Developer Survey for the last 2 years ([source](https://survey.stackoverflow.co/2022#integrated-development-environment)).
+
+### Install the latest version on Ubuntu
 
 ```sh
 sudo snap install nvim --classic
 ```
+
+### First setup
+
+```sh
+sudo apt install gcc
+mkdir -p ~/.config/nvim
+git clone https://github.com/nvim-lua/kickstart.nvim.git ~/.config/nvim
+nvim
+```
+
+### Learning resources
+
+- Type `vimtutor` in your terminal and follow the instructions.
+- [Vim Adventures](https://vim-adventures.com/)
+- [Vim Cheat Sheet](https://devhints.io/vim)
+- [ThePrimeagen: Vim As Your Editor](https://www.youtube.com/watch?v=X6AR2RMB5tE&list=PLm323Lc7iSW_wuxqmKx_xxNtJC_hJbQ7R&pp=iAQB)
+- [ThePrimeagen: Vim Life](https://www.youtube.com/watch?v=y6VJBeZEDZU&list=PLm323Lc7iSW9CtibHhhQErDh167XfL4EU&pp=iAQB)
 
 ## Arch Linux
 
