@@ -15,12 +15,14 @@ _Table of Contents_
 - [Find files by name and show all their properties](#find-files-by-name-and-show-all-their-properties)
 - [Find all files containing a string](#find-all-files-containing-a-string)
 - [List running processes](#list-running-processes)
-- [Use an empty password for a user](#use-an-empty-password-for-a-user)
+- [Set an empty password for a user](#set-an-empty-password-for-a-user)
 - [Services commands](#services-commands)
 - [CLI Tools](#cli-tools)
 - [Shell scripts](#shell-scripts)
   - [Validation](#validation)
   - [Debugging](#debugging)
+- [Set vim as default editor](#set-vim-as-default-editor)
+- [Install the latest version of Neovim on Ubuntu](#install-the-latest-version-of-neovim-on-ubuntu)
 - [Arch Linux](#arch-linux)
   - [Update the system](#update-the-system)
   - [Search for a package](#search-for-a-package)
@@ -112,7 +114,7 @@ top
 htop
 ```
 
-## Use an empty password for a user
+## Set an empty password for a user
 
 ```sh
 sudo passwd -d username
@@ -157,6 +159,18 @@ set -e
 # Print the last failed command, line number and exit code
 trap 'prev_cmd=$curr_cmd; prev_ln=$curr_ln; curr_cmd=$BASH_COMMAND; curr_ln=${LINENO}' DEBUG
 trap 'echo -e $"\n   ERROR in ${BASH_SOURCE}:$prev_ln >>> $prev_cmd <<< FAILED with EXIT CODE $?\n"' EXIT
+```
+
+## Set vim as default editor
+
+```sh
+sudo update-alternatives --config editor
+```
+
+## Install the latest version of Neovim on Ubuntu
+
+```sh
+sudo snap install nvim --classic
 ```
 
 ## Arch Linux
