@@ -60,11 +60,24 @@ WSL2 compared to WSL1 brings increased file system performance, full system call
    ```sh
    sudo passwd -d <username>
    ```
+   (secure access to your WSL shell is already protected by your Windows password)
 
-1. Grant root privileges to your user:
+1. install all the updates:
 
    ```sh
-   visudo
+   sudo apt update; sudo apt upgrade -y; sudo apt autoremove -y; sudo snap refresh
+   ```
+
+1. set your favorite editor as default editor:
+
+   ```sh
+   sudo update-alternatives --config editor
+   ```
+
+1. grant root privileges to your user:
+
+   ```sh
+   sudo visudo
    ```
 
    Append after `#User privilege specification`, right below `root`:
@@ -73,14 +86,14 @@ WSL2 compared to WSL1 brings increased file system performance, full system call
    <username> ALL=(ALL:ALL)ALL
    ```
 
-1. in PowerShell run:
+1. if Linux was installed with only the `root` user then in PowerShell run:
 
    ```powershell
    ubuntu2204.exe config --default-user <username>
    ```
    (secure access to your WSL shell is already protected by your Windows password)
 
-1. In Windows > _Virus and threat protection_ > _Manage settings_ > _Add or remove exclusions_: add an exclusion to `Ubuntu-22.04 (\wsl.localhost)`
+1. In Windows > _Virus and threat protection_ > _Manage settings_ > _Add or remove exclusions_: add an exclusion to the folder `\\wsl.localhost\Ubuntu`
 
 ## Basic Commands
 
