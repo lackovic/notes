@@ -9,7 +9,11 @@ _Table of Contents_
 - [Frameworks and Libraries](#frameworks-and-libraries)
   - [AngularJS](#angularjs)
 - [NodeJS](#nodejs)
-  - [Installation (nvm)](#installation-nvm)
+  - [Installation](#installation)
+    - [Fast Node Manager (fnm)](#fast-node-manager-fnm)
+      - [Fix node version not being changed automatically on directory change](#fix-node-version-not-being-changed-automatically-on-directory-change)
+      - [Fix the "Can't create the symlink for multishells" error](#fix-the-cant-create-the-symlink-for-multishells-error)
+    - [Node Version Manager (nvm)](#node-version-manager-nvm)
   - [The Event Loop](#the-event-loop)
   - [The Worker Pool (aka the Thread Pool)](#the-worker-pool-aka-the-thread-pool)
   - [Scaling](#scaling)
@@ -76,9 +80,47 @@ Node.js is not suitable for heavy applications involving more of CPU usage.
 
 Node.js uses an _event-driven architecture_: it has an _Event Loop_ for orchestration and a _Worker Pool_ for expensive tasks.
 
-### Installation (nvm)
+### Installation
 
-The best way to install Node.js is through [nvm (Node Version Manager)](https://github.com/nvm-sh/nvm): _nvm_ is useful when working on various projects that have different minimum required Node.js versions by making it easy to upgrade to new or to switch between existing versions of Node.js.
+The best way to install Node.js is through a node version manager: it is especially useful when working on various projects that have different Node.js versions requirements by making it easy to upgrade to new versions or to automatically switch between existing versions of Node.js when changing directory.
+
+#### Fast Node Manager (fnm)
+
+The best node version manager is [fnm (Fast Node Manager)](https://github.com/Schniz/fnm). When compared to `nvm`, `fnm` is much faster, has a smaller footprint and it's cross-platform.
+
+##### Fix node version not being changed automatically on directory change
+
+In your .bashrc, replace:
+
+```sh
+eval "$(fnm env)"
+```
+
+with:
+
+```sh
+eval "$(fnm env --use-on-cd)"
+```
+
+##### Fix the "Can't create the symlink for multishells" error
+
+When you open a shell you get the following error:
+
+```sh
+error: Can't create the symlink for multishells at "/run/user/1000/fnm_multishells/2354_1691420468557". Maybe there are some issues with permissions for the directory? Permission denied (os error 13)
+```
+
+To fix it, run the following command:
+
+```sh
+sudo chown -R $(whoami) /run/user/1000/
+```
+
+[Related GitHub issue](https://github.com/Schniz/fnm/issues/938).
+
+#### Node Version Manager (nvm)
+
+An alternative way to install Node.js is through [nvm (Node Version Manager)](https://github.com/nvm-sh/nvm).
 
 On Linux:
 
