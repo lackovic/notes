@@ -91,7 +91,7 @@ Get-CimInstance Win32_Processor | Format-List DeviceID, LoadPercentage, MaxClock
 Get-CimInstance Win32_VideoController | Format-List AdapterCompatibility, Caption, Description, Name, PNPDeviceID, VideoModeDescription, VideoProcessor
 
 # Drives
-Get-CimInstance Win32_LogicalDisk | Format-List DeviceID, Caption, Name, FreeSpace, Size, Compressed, FileSystem, VolumeName, VolumeSerialNumber
+wmic diskdrive get model,serialnumber,size,mediaType1
 
 # RAM
 Get-CimInstance Win32_PhysicalMemory | Format-List Manufacturer, PartNumber, SerialNumber, Tag, BankLabel, Capacity, Speed, ConfiguredClockSpeed, DeviceLocator
