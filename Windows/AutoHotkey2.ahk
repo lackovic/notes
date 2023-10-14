@@ -85,3 +85,7 @@ F4::
 ; Associates Alt Gr + - with — (- VK=BD SC=035 —={U+2014})
 <^>!-::Send {Text}—
 
+; Replaces § with ~
++SC02B::~
+; Replaces ç with `
++SC027::`
