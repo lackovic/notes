@@ -17,12 +17,12 @@
 ; Ctrl+Alt+M = opens Google Maps in a new window of Chrome
 ; Ctrl+Alt+T = opens Google Translate in a new window of Chrome
 
-^!c::Run("Chrome.exe `"https://calendar.google.com/`" `" --new-window `"")
-^!d::Run("Chrome.exe `"https://drive.google.com/`" `" --new-window `"")
-^!g::Run("Chrome.exe `"https://mail.google.com/`" `" --new-window   `"")
-^!m::Run("Chrome.exe `"https://www.google.ee/maps/`" `" --new-window `"")
-^!j::Run("Chrome.exe `"https://keep.google.com/`" `" --new-window `"")
-^!t::Run("Chrome.exe `"https://translate.google.com/`" `" --new-window `"")
+^!c::Run Chrome.exe `"https://calendar.google.com/`" `" --new-window `"
+^!d::Run Chrome.exe `"https://drive.google.com/`" `" --new-window `"
+^!g::Run Chrome.exe `"https://mail.google.com/`" `" --new-window   `"
+^!m::Run Chrome.exe `"https://www.google.ee/maps/`" `" --new-window `"
+^!j::Run Chrome.exe `"https://keep.google.com/`" `" --new-window `"
+^!t::Run Chrome.exe `"https://translate.google.com/`" `" --new-window `"
 
 ; --- Local apps --------------------------------------------------------------
 
@@ -30,9 +30,9 @@
 ^!k::
 {
     if WinExist("KeePass")
-        WinActivate()
+        WinActivate
     else
-        Run("`"C:\Program Files (x86)\KeePass2x\KeePass.exe`"")
+        Run "C:\Program Files (x86)\KeePass Password Safe 2\KeePass.exe"
     return
 }
 
@@ -41,8 +41,8 @@
 ; F4 = sets view to details and all columns to fit width
 F4::
 {
-    Send("{LCtrl down}{LShift down}6{LCtrl up}{LShift up}")
-    Send("{LCtrl down}{NumpadAdd}{LCtrl up}")
+    Send "{LCtrl down}{LShift down}6{LCtrl up}{LShift up}"
+    Send "{LCtrl down}{NumpadAdd}{LCtrl up}"
     return
 }
 
@@ -76,6 +76,12 @@ F4::
 
 ; --- Typography ------------------------------------------------------------------
 
-<^>!,::Send("{Text}~")  ; , VK=BC SC=033 ~={U+223C}
-<^>!.::Send("{Text}``") ; . VK=BE SC=034 `={U+0060}
-<^>!-::Send("{Text}—")  ; , VK=BD SC=035 —={U+2014}
+; Associates Alt Gr + , with ~ (, VK=BC SC=033 ~={U+223C})
+<^>!,::Send {Text}~
+
+; Associates Alt Gr + . with ` (. VK=BE SC=034 `={U+0060})
+<^>!.::Send {Text}`
+
+; Associates Alt Gr + - with — (- VK=BD SC=035 —={U+2014})
+<^>!-::Send {Text}—
+
