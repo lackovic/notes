@@ -11,6 +11,7 @@ _Table of Contents_
 - [Remove frozen parts](#remove-frozen-parts)
 - [Remove frozen parts without the audio](#remove-frozen-parts-without-the-audio)
 - [Concatenate video files](#concatenate-video-files)
+- [Extract the audio from a video](#extract-the-audio-from-a-video)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -63,3 +64,9 @@ ffmpeg -f concat -safe 0 -i mylist.txt -c copy output.mp4
 ```
 
 - [Source](https://stackoverflow.com/questions/7333232/how-to-concatenate-two-mp4-files-using-ffmpeg)
+
+## Extract the audio from a video
+
+```sh
+ffmpeg -i sample.mp4 -q:a 0 -map a sample.mp3
+```
