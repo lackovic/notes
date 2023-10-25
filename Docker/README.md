@@ -11,6 +11,7 @@ _Table of Contents_
 - [Check if Docker Engine is running](#check-if-docker-engine-is-running)
 - [Docker compose](#docker-compose)
   - [Basic operations](#basic-operations-1)
+- [Useful links](#useful-links)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -151,3 +152,7 @@ docker update --restart=no $(docker container ls -a -q)
 docker update --restart=always container_name
 ```
 - [Restart policies (--restart)](https://docs.docker.com/engine/reference/run/#restart-policies---restart)
+
+## Useful links
+
+- [Slim](https://github.com/slimtoolkit/slim)
