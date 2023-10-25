@@ -26,7 +26,10 @@ _Table of Contents_
 - [Neovim](#neovim)
   - [Install the latest version on Ubuntu](#install-the-latest-version-on-ubuntu)
   - [First setup](#first-setup)
+  - [Usesul commands](#usesul-commands)
   - [Learning resources](#learning-resources)
+  - [Troubleshooting](#troubleshooting)
+  - [Must have plugins](#must-have-plugins)
 - [Arch Linux](#arch-linux)
   - [Update the system](#update-the-system)
   - [Search for a package](#search-for-a-package)
@@ -193,16 +196,50 @@ sudo snap install nvim --classic
 sudo apt install gcc
 mkdir -p ~/.config/nvim
 git clone https://github.com/nvim-lua/kickstart.nvim.git ~/.config/nvim
+echo "vim.wo.relativenumber = true" >> ~/.config/nvim/init.lua  
 nvim
 ```
+
+### Usesul commands
+
+- Jump back to previous location `Ctrl`+`o`
+- Jump forward to next location `Ctrl`+`i`
+- Undo/Redo `u`/`Ctrl`+`r`
+- Copy current line `yy`
+- Paste line from clipboard `p`
+- Delete current line `dd`
+- Show hidden files in file explorer `i`
+- Jump the next/previous word `w`/`b`
+- Select text (Visual) `v`
+- Format current selected text `gq` (comes from plugin?)
+- Change current word `cw`
+- Brings up the dashboard `Space`+`;`
+- Create a new empty file 
+- Toggle terminal `Ctrl`+`\`
+- Copy the entire file to the clipboard `ggyG`
 
 ### Learning resources
 
 - Type `vimtutor` in your terminal and follow the instructions.
 - [Vim Adventures](https://vim-adventures.com/)
 - [Vim Cheat Sheet](https://devhints.io/vim)
-- [ThePrimeagen: Vim As Your Editor](https://www.youtube.com/watch?v=X6AR2RMB5tE&list=PLm323Lc7iSW_wuxqmKx_xxNtJC_hJbQ7R&pp=iAQB)
-- [ThePrimeagen: Vim Life](https://www.youtube.com/watch?v=y6VJBeZEDZU&list=PLm323Lc7iSW9CtibHhhQErDh167XfL4EU&pp=iAQB)
+- [The Primeagen: Vim As Your Editor](https://www.youtube.com/watch?v=X6AR2RMB5tE&list=PLm323Lc7iSW_wuxqmKx_xxNtJC_hJbQ7R&pp=iAQB)
+- [The Primeagen: Vim Life](https://www.youtube.com/watch?v=y6VJBeZEDZU&list=PLm323Lc7iSW9CtibHhhQErDh167XfL4EU&pp=iAQB)
+
+### Troubleshooting
+
+When running `:checkhealth` I get a lot of errors like:
+```
+invalid node type at position 242 for language arduino
+```
+See [this gist](https://gist.github.com/lackovic/1916b5cc0ca22496ea3061f4ae3b5aff).
+
+If you run `:echo nvim_get_runtime_file('parser', v:true)` and you get two parsers then you need to remove one of the two
+
+### Must have plugins
+
+- [tpope/vim-surround](https://github.com/tpope/vim-surround)
+- [phaazon/hop.nvim](https://github.com/phaazon/hop.nvim)
 
 ## Arch Linux
 
