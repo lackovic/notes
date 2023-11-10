@@ -317,6 +317,8 @@ Maybe fixed by enabling systemd. See:
 
 - https://github.com/microsoft/WSL/issues/5324#issuecomment-1451150152
 
+- https://github.com/microsoft/WSL/issues/8204#issuecomment-1338334154
+
 Manual solution: run `sudo hwclock -s` (syncs with world time) or `sudo ntpdate time.windows.com` (syncs with world time) after you reboot or resume from sleep/hibernate;
 
 Automatic solution: append the following lines to your `~/.profile`.
