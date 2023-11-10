@@ -1,5 +1,19 @@
 # Chrome
 
+_Table of Contents_
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+<!-- generated with [DocToc](https://github.com/thlorenz/doctoc)* -->
+
+- [Export/import search engines](#exportimport-search-engines)
+- [Disable notifications from all sites](#disable-notifications-from-all-sites)
+- [Change Google Chrome cache folder](#change-google-chrome-cache-folder)
+- [Install Chrome in Ubuntu](#install-chrome-in-ubuntu)
+- [Must have extensions](#must-have-extensions)
+- [Useful extensions](#useful-extensions)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 ## Export/import search engines
 
 1. Enter [`chrome://settings/searchEngines`](chrome://settings/searchEngines) in the address bar of Chrome to
