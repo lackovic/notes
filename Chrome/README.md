@@ -9,6 +9,7 @@ _Table of Contents_
 - [Disable notifications from all sites](#disable-notifications-from-all-sites)
 - [Change Google Chrome cache folder](#change-google-chrome-cache-folder)
 - [Install Chrome in Ubuntu](#install-chrome-in-ubuntu)
+- [Set the Material You theme](#set-the-material-you-theme)
 - [Must have extensions](#must-have-extensions)
 - [Useful extensions](#useful-extensions)
 
@@ -51,6 +52,29 @@ sudo sh -c 'echo "deb https://dl.google.com/linux/chrome/deb/ stable main" >> /e
 sudo apt-get update
 sudo apt-get install google-chrome-stable
 ```
+
+## Set the Material You theme
+
+1. three-dot menu in the top-right corner > _Help_ > _About Google Chrome_;
+
+1. verify you have at version 116.0.5845.179/.180 or higher;
+
+1. paste `chrome://flags` in the address bar and press Enter;
+
+1. search for _Chrome Refresh_ 
+
+1. enable both the following flags:
+   
+   ```
+   chrome://flags/#chrome-refresh-2023
+   chrome://flags/#chrome-webui-refresh-2023
+   ```
+
+1. click on _Relaunch_ at the bottom.
+
+See also:
+
+- [Chrome gets a fresh look and new features for its 15th birthday](https://blog.google/products/chrome/google-chrome-new-features-redesign-2023/)
 
 ## Must have extensions
 
