@@ -17,8 +17,10 @@
 - [Lock a BitLocker encrypted drive from the command line](#lock-a-bitlocker-encrypted-drive-from-the-command-line)
 - [Automation and bloatware removal](#automation-and-bloatware-removal)
   - [Install Windows without 3rd party bloatware](#install-windows-without-3rd-party-bloatware)
+  - [Things to do right after a Windows 11 installation](#things-to-do-right-after-a-windows-11-installation)
   - [Disable Web Results in Windows 11 Start or Search Menu](#disable-web-results-in-windows-11-start-or-search-menu)
   - [Uninstall Xbox apps](#uninstall-xbox-apps)
+  - [Use classic context menu in File Explorer in Windows 11](#use-classic-context-menu-in-file-explorer-in-windows-11)
   - [Scripts for automation of routine tasks and bloatware removal](#scripts-for-automation-of-routine-tasks-and-bloatware-removal)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
@@ -108,6 +110,28 @@ manage-bde.exe -lock e:
 
 1. After installation, open Windows Settings > _Time & Language & Region_ > _Country or region_: set the country you actually are located in.
 
+### Things to do right after a Windows 11 installation
+
+1. Run Windows Update and reboot until there are no more updates available
+1. Windows Update: select _Get the latest updates as soon as they're available_
+1. Notifications & actions:
+   - Notifications: off
+   - Additional settings: disable all
+1. Personalization > Taskbar:
+   - disable search, task view, widgets and Chat
+   - Taskbar behaviors > Taskbar alignment: Left
+1. Edit power plan > Power Options > Choose what the power buttons do > Change settings that are currently unavailable: select _Hibernate_
+1. File Explorer > View:
+   - select _File name extensions_
+   - Options > View: select _Expand to open folder_ and _Show all folders_
+1. Change system sounds > Sounds > Sound Schemes: _No Sounds_
+1. Install your motherboard drivers (chipset, audio, LAN, etc.)
+1. Install your GPU drivers
+1. Disable Web Results in Windows 11 Start or Search Menu (see instructions below)
+1. Uninstall Xbox apps (see instructions below)
+1. Use classic context menu in File Explorer (see instructions below)
+1. Run one or more of the scripts for automation of routine tasks and bloatware removal listed below
+
 ### Disable Web Results in Windows 11 Start or Search Menu
 
 - Run `gpedit.msc`
@@ -128,6 +152,12 @@ dism /Online /Get-ProvisionedAppxPackages | Select-String PackageName | Select-S
 
 # Uninstall all Xbox apps
 Get-ProvisionedAppxPackage -Online | Where-Object { $_.PackageName -match “xbox”} | ForEach-Object { Remove-ProvisionedAppxPackage -Online -AllUsers -PackageName $_.PackageName }
+```
+
+### Use classic context menu in File Explorer in Windows 11
+
+```powershell
+reg add "HKCU\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}\InprocServer32" /f /ve
 ```
 
 ### Scripts for automation of routine tasks and bloatware removal
