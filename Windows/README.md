@@ -15,6 +15,7 @@
 - [Wipe all the deleted data / free space on a drive](#wipe-all-the-deleted-data--free-space-on-a-drive)
 - [See the command history across all PowerShell sessions](#see-the-command-history-across-all-powershell-sessions)
 - [Lock a BitLocker encrypted drive from the command line](#lock-a-bitlocker-encrypted-drive-from-the-command-line)
+- [Autostarting programs locations](#autostarting-programs-locations)
 - [Automation and bloatware removal](#automation-and-bloatware-removal)
   - [Install Windows without 3rd party bloatware](#install-windows-without-3rd-party-bloatware)
   - [Things to do right after a Windows 11 installation](#things-to-do-right-after-a-windows-11-installation)
@@ -100,7 +101,19 @@ cat (Get-PSReadlineOption).HistorySavePath
 
 ```powershell
 manage-bde.exe -lock e:
-``` 
+```
+
+## Autostarting programs locations
+
+- Task Manager > Startup apps
+
+- Registry Editor:
+
+   - `Computer\HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Run`
+
+   - `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Run`
+
+- Task Scheduler > Task Scheduler Library
 
 ## Automation and bloatware removal
 
