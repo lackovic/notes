@@ -13,12 +13,13 @@
 - [Change the screenshots default save location](#change-the-screenshots-default-save-location)
 - [Create your own custom keyboard layout](#create-your-own-custom-keyboard-layout)
 - [Wipe all the deleted data / free space on a drive](#wipe-all-the-deleted-data--free-space-on-a-drive)
-- [Scripts for automation of routine tasks and bloatware removal](#scripts-for-automation-of-routine-tasks-and-bloatware-removal)
-- [Install Windows without 3rd party bloatware](#install-windows-without-3rd-party-bloatware)
-- [Disable Web Results in Windows 11 Start or Search Menu](#disable-web-results-in-windows-11-start-or-search-menu)
 - [See the command history across all PowerShell sessions](#see-the-command-history-across-all-powershell-sessions)
 - [Lock a BitLocker encrypted drive from the command line](#lock-a-bitlocker-encrypted-drive-from-the-command-line)
-- [Uninstall Xbox apps](#uninstall-xbox-apps)
+- [Automation and bloatware removal](#automation-and-bloatware-removal)
+  - [Install Windows without 3rd party bloatware](#install-windows-without-3rd-party-bloatware)
+  - [Disable Web Results in Windows 11 Start or Search Menu](#disable-web-results-in-windows-11-start-or-search-menu)
+  - [Uninstall Xbox apps](#uninstall-xbox-apps)
+  - [Scripts for automation of routine tasks and bloatware removal](#scripts-for-automation-of-routine-tasks-and-bloatware-removal)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -87,7 +88,49 @@ Cipher goes through the following steps:
 
 1. deletes the third file and returns you to the prompt
 
-## Scripts for automation of routine tasks and bloatware removal
+## See the command history across all PowerShell sessions
+
+```powershell
+cat (Get-PSReadlineOption).HistorySavePath
+``` 
+
+## Lock a BitLocker encrypted drive from the command line
+
+```powershell
+manage-bde.exe -lock e:
+``` 
+
+## Automation and bloatware removal
+
+### Install Windows without 3rd party bloatware
+
+Selecting "English (World)" as the Time & Currency format at the initial install [Source](https://twitter.com/thiojoe/status/1686565269907636224)
+
+After installation open Windows Settings > Time & Language & Region > Country or region: set the country you actually are located in.
+
+### Disable Web Results in Windows 11 Start or Search Menu
+
+- Run `gpedit.msc`
+
+- User Configuration > Administrative Templates > Windows Components > File Explorer
+
+- Enable `Turn off display of recent search entries in the File Explorer search box`
+
+- Reboot
+
+### Uninstall Xbox apps
+
+To uninstall all Xbox apps (for example Xbox, XboxGameOverlay, XboxGamingOverlay, XboxIdentityProvider and XboxSpeechToTextOverlay) from the current user and from all users run the following commands in a powershell console as Administrator:
+
+```powershell
+# List all Xbox apps
+dism /Online /Get-ProvisionedAppxPackages | Select-String PackageName | Select-String xbox
+
+# Uninstall all Xbox apps
+Get-ProvisionedAppxPackage -Online | Where-Object { $_.PackageName -match “xbox”} | ForEach-Object { Remove-ProvisionedAppxPackage -Online -AllUsers -PackageName $_.PackageName }
+```
+
+### Scripts for automation of routine tasks and bloatware removal
 
 - [topics/windows-11-debloat](https://github.com/topics/windows-11-debloat)
 
@@ -106,43 +149,3 @@ Cipher goes through the following steps:
 - [Sycnex/Windows10Debloater](https://github.com/Sycnex/Windows10Debloater) (discontinued since Sep 21, 2023)
 
 - [ChrisTitusTech/win10script](https://github.com/ChrisTitusTech/win10script) (discontinued since Sep 8, 2022)
-
-## Install Windows without 3rd party bloatware
-
-Selecting "English (World)" as the Time & Currency format at the initial install [Source](https://twitter.com/thiojoe/status/1686565269907636224)
-
-After installation open Windows Settings > Time & Language & Region > Country or region: set the country you actually are located in.
-
-## Disable Web Results in Windows 11 Start or Search Menu
-
-- Run `gpedit.msc`
-
-- User Configuration > Administrative Templates > Windows Components > File Explorer
-
-- Enable `Turn off display of recent search entries in the File Explorer search box`
-
-- Reboot
-
-## See the command history across all PowerShell sessions
-
-```powershell
-cat (Get-PSReadlineOption).HistorySavePath
-``` 
-
-## Lock a BitLocker encrypted drive from the command line
-
-```powershell
-manage-bde.exe -lock e:
-``` 
-
-## Uninstall Xbox apps
-
-To uninstall all Xbox apps (for example Xbox, XboxGameOverlay, XboxGamingOverlay, XboxIdentityProvider and XboxSpeechToTextOverlay) from the current user and from all users run the following commands in a powershell console as Administrator:
-
-```powershell
-# List all Xbox apps
-dism /Online /Get-ProvisionedAppxPackages | Select-String PackageName | Select-String xbox
-
-# Uninstall all Xbox apps
-Get-ProvisionedAppxPackage -Online | Where-Object { $_.PackageName -match “xbox”} | ForEach-Object { Remove-ProvisionedAppxPackage -Online -AllUsers -PackageName $_.PackageName }
-```
