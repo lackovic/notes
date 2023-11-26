@@ -104,9 +104,9 @@ manage-bde.exe -lock e:
 
 ### Install Windows without 3rd party bloatware
 
-Selecting "English (World)" as the Time & Currency format at the initial install [Source](https://twitter.com/thiojoe/status/1686565269907636224)
+1. At the initial install, select "_English (World)_" as the _Time & Currency format_ [Source](https://twitter.com/thiojoe/status/1686565269907636224)
 
-After installation open Windows Settings > Time & Language & Region > Country or region: set the country you actually are located in.
+1. After installation, open Windows Settings > _Time & Language & Region_ > _Country or region_: set the country you actually are located in.
 
 ### Disable Web Results in Windows 11 Start or Search Menu
 
