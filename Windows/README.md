@@ -136,6 +136,8 @@ Get-ProvisionedAppxPackage -Online | Where-Object { $_.PackageName -match “xbo
 
 - [builtbybel/BloatyNosy](https://github.com/builtbybel/BloatyNosy)
 
+- [builtbybel/JunkCtrl](https://github.com/builtbybel/JunkCtrl)
+
 - [W4RH4WK/Debloat-Windows-10](https://github.com/W4RH4WK/Debloat-Windows-10)
 
 - [LeDragoX/Win-Debloat-Tools](https://github.com/LeDragoX/Win-Debloat-Tools)
