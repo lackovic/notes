@@ -88,17 +88,23 @@ Cipher goes through the following steps:
 
 ## Scripts for automation of routine tasks and bloatware removal
 
-- [Win10-Initial-Setup-Script](https://github.com/Disassembler0/Win10-Initial-Setup-Script): PowerShell script for automation of routine tasks done after fresh installations of Windows 10 / Server 2016 / Server 2019
+- [topics/windows-11-debloat](https://github.com/topics/windows-11-debloat)
 
-- [Windows10Debloater](https://github.com/Sycnex/Windows10Debloater): script to remove Windows 10 bloatware
+- [builtbybel/BloatyNosy](https://github.com/builtbybel/BloatyNosy)
 
-- [win10script](https://github.com/ChrisTitusTech/win10script): this is the Ultimate Windows 10 Script from a creation from multiple debloat scripts and gists from github
+- [W4RH4WK/Debloat-Windows-10](https://github.com/W4RH4WK/Debloat-Windows-10)
 
-- [Debloat-Windows-10](https://github.com/W4RH4WK/Debloat-Windows-10): a collection of Scripts which disable / remove Windows 10 Features and Apps
+- [LeDragoX/Win-Debloat-Tools](https://github.com/LeDragoX/Win-Debloat-Tools)
 
-- [Tron fights for the User](https://www.reddit.com/r/TronScript/wiki/index): Reddit community initiative to debloat Windows
+- [Tron fights for the User](https://www.reddit.com/r/TronScript/wiki/index)
 
-- [Windows-10-Sophia-Script](https://github.com/farag2/Windows-10-Sophia-Script): Script to setup Windows 10 LTSC/1903/1909/2004/2009.
+- [farag2/Windows-10-Sophia-Script](https://github.com/farag2/Windows-10-Sophia-Script)
+
+- [Disassembler0/Win10-Initial-Setup-Script](https://github.com/Disassembler0/Win10-Initial-Setup-Script) (discontinued since May 28, 2021)
+
+- [Sycnex/Windows10Debloater](https://github.com/Sycnex/Windows10Debloater) (discontinued since Sep 21, 2023)
+
+- [ChrisTitusTech/win10script](https://github.com/ChrisTitusTech/win10script) (discontinued since Sep 8, 2022)
 
 ## Disable Web Results in Windows 11 Start or Search Menu
 
