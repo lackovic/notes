@@ -14,6 +14,7 @@
 - [Create your own custom keyboard layout](#create-your-own-custom-keyboard-layout)
 - [Wipe all the deleted data / free space on a drive](#wipe-all-the-deleted-data--free-space-on-a-drive)
 - [Scripts for automation of routine tasks and bloatware removal](#scripts-for-automation-of-routine-tasks-and-bloatware-removal)
+- [Install Windows without 3rd party bloatware](#install-windows-without-3rd-party-bloatware)
 - [Disable Web Results in Windows 11 Start or Search Menu](#disable-web-results-in-windows-11-start-or-search-menu)
 - [See the command history across all PowerShell sessions](#see-the-command-history-across-all-powershell-sessions)
 - [Lock a BitLocker encrypted drive from the command line](#lock-a-bitlocker-encrypted-drive-from-the-command-line)
@@ -105,6 +106,12 @@ Cipher goes through the following steps:
 - [Sycnex/Windows10Debloater](https://github.com/Sycnex/Windows10Debloater) (discontinued since Sep 21, 2023)
 
 - [ChrisTitusTech/win10script](https://github.com/ChrisTitusTech/win10script) (discontinued since Sep 8, 2022)
+
+## Install Windows without 3rd party bloatware
+
+Selecting "English (World)" as the Time & Currency format at the initial install [Source](https://twitter.com/thiojoe/status/1686565269907636224)
+
+After installation open Windows Settings > Time & Language & Region > Country or region: set the country you actually are located in.
 
 ## Disable Web Results in Windows 11 Start or Search Menu
 
