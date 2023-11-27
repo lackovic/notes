@@ -82,6 +82,8 @@ See also:
 
 - [Don't add custom search engines](https://chrome.google.com/webstore/detail/dont-add-custom-search-en/dnodlcololidkjgbpeoleabmkocdhacc?hl=en)
 
+- [History Blocker by Site](https://chromewebstore.google.com/detail/history-blocker-by-site/keamekimefemnbgegbfkdkmbomaahfai?pli=1) (see [this](https://superuser.com/questions/1684345/delete-translate-google-com-from-chrome-history))
+
 - [Pop up blocker for Chrome - Poper Blocker](https://chrome.google.com/webstore/detail/pop-up-blocker-for-chrome/bkkbcggnhapdmkeljlodobbkopceiche?hl=en)
 
 - [uBlacklist](https://chrome.google.com/webstore/detail/ublacklist/pncfbmialoiaghdehhbnbhkkgmjanfhe) in conjuction with [ublacklist-stackoverflow-translation](https://github.com/arosh/ublacklist-stackoverflow-translation)
