@@ -25,8 +25,11 @@ _Table of Contents_
 - [Set your terminal default editor](#set-your-terminal-default-editor)
 - [Neovim](#neovim)
   - [Install the latest version on Ubuntu](#install-the-latest-version-on-ubuntu)
-  - [First setup](#first-setup)
-  - [Usesul commands](#usesul-commands)
+  - [Setup](#setup)
+    - [Using NvChad](#using-nvchad)
+      - [NvChad useful commands](#nvchad-useful-commands)
+    - [Using kickstart](#using-kickstart)
+  - [Vim usesul commands](#vim-usesul-commands)
   - [Learning resources](#learning-resources)
   - [Troubleshooting](#troubleshooting)
   - [Must have plugins](#must-have-plugins)
@@ -199,7 +202,34 @@ source ~/.bashrc
 ./bob use stable
 ```
 
-### First setup
+### Setup
+
+#### Using NvChad
+
+Set one of the [Nerd Fonts](https://www.nerdfonts.com/font-downloads) as your terminal font, then run:
+
+```sh
+rm -rf ~/.local/share/nvim/
+rm -rf ~/.config/nvim
+git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1 && nvim
+```
+
+##### NvChad useful commands
+
+- Change theme with `space t h`
+- Install a syntax highlighter with `:TSInstall <language>`
+- Display the file tree with `Ctrl`+`n`
+- Mark a file with `m`
+- Create, rename, copy and paste a file with `a`, `r`, `c` and `p`
+- Open the find file meny with `space f f`
+- Search in the opened files names with `space f b`
+- Search in the current file with `spaf s`
+- Toggle the line numbers with `space n`
+- Toggle the relative line numbers with `space r n`
+- Cycle through the tabs (aka buffers) with `tab` and `shift tab`
+- Close the current tab with `space x`
+
+#### Using kickstart
 
 ```sh
 sudo apt install gcc
@@ -209,7 +239,7 @@ echo "vim.wo.relativenumber = true" >> ~/.config/nvim/init.lua
 nvim
 ```
 
-### Usesul commands
+### Vim usesul commands
 
 - Jump back to previous location `Ctrl`+`o`
 - Jump forward to next location `Ctrl`+`i`
@@ -217,14 +247,10 @@ nvim
 - Copy current line `yy`
 - Paste line from clipboard `p`
 - Delete current line `dd`
-- Show hidden files in file explorer `i`
 - Jump the next/previous word `w`/`b`
 - Select text (Visual) `v`
 - Format current selected text `gq` (comes from plugin?)
 - Change current word `cw`
-- Brings up the dashboard `Space`+`;`
-- Create a new empty file 
-- Toggle terminal `Ctrl`+`\`
 - Copy the entire file to the clipboard `ggyG`
 
 ### Learning resources
