@@ -196,6 +196,7 @@ chmod +x bob
 echo "export PATH=\"/home/<username>/.local/share/bob/nvim-bin:\$PATH\"" >> ~/.bashrc
 source ~/.bashrc
 ./bob install stable
+./bob use stable
 ```
 
 ### First setup
