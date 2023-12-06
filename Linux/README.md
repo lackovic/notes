@@ -186,8 +186,16 @@ Neovim is a cross-platform fork of Vim with code highlighting, syntax checking, 
 
 ### Install the latest version on Ubuntu
 
+Use [bob](https://github.com/MordechaiHadad/bob/releases). Example:
+
 ```sh
-sudo snap install nvim --classic
+wget https://github.com/MordechaiHadad/bob/releases/download/v2.7.0/bob-linux-x86_64.zip
+unzip bob-linux-x86_64.zip
+cd bob-linux-x86_64/
+chmod +x bob
+echo "export PATH=\"/home/<username>/.local/share/bob/nvim-bin:\$PATH\"" >> ~/.bashrc
+source ~/.bashrc
+./bob install stable
 ```
 
 ### First setup
