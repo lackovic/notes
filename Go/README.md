@@ -42,7 +42,9 @@ The following notes are based on the current version of Go, which is [1.20.4](ht
 - [Structs](#structs)
 - [Generics (WIP)](#generics-wip)
 - [Fuzzing (WIP)](#fuzzing-wip)
+- [Testing (WIP)](#testing-wip)
 - [Naming conventions](#naming-conventions)
+- [IDEs](#ides)
 - [External resources](#external-resources)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
