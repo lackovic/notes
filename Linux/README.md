@@ -23,6 +23,7 @@ _Table of Contents_
   - [Debugging](#debugging)
 - [Presentations from command line](#presentations-from-command-line)
 - [Set your terminal default editor](#set-your-terminal-default-editor)
+- [cd to the previous directory](#cd-to-the-previous-directory)
 - [Neovim](#neovim)
   - [Install the latest version on Ubuntu](#install-the-latest-version-on-ubuntu)
   - [Setup](#setup)
@@ -183,6 +184,12 @@ trap 'echo -e $"\n   ERROR in ${BASH_SOURCE}:$prev_ln >>> $prev_cmd <<< FAILED w
 sudo update-alternatives --config editor
 ```
 
+## cd to the previous directory
+
+```sh
+cd -
+```
+
 ## Neovim
 
 Neovim is a cross-platform fork of Vim with code highlighting, syntax checking, code completion, inlay hints, type hints, a built-in debugger, a terminal emulator, a file manager, a markdown previewer, a git client and much more. It has better defaults than Vim, for example `autoindent` and `hlsearch` (highlight all matches). It has been the most loved editor in the Stack Overflow Developer Survey for the last 2 years ([source](https://survey.stackoverflow.co/2022#integrated-development-environment)).
@@ -220,7 +227,7 @@ git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1 && nvim
 - Install a syntax highlighter with `:TSInstall <language>`
 - Display the file tree with `Ctrl`+`n`
 - Mark a file with `m`
-- Create, rename, copy and paste a file with `a`, `r`, `c` and `p`
+- Create, rename, copy and paste a file with `a`, `r`, `c` and `p` (creating a folder is done by following the name with the slash `/`)
 - Open the find file meny with `space f f`
 - Search in the opened files names with `space f b`
 - Search in the current file with `spaf s`
