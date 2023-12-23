@@ -45,7 +45,7 @@ The following notes are based on the current version of Go, which is [1.20.4](ht
 - [Testing (WIP)](#testing-wip)
 - [Naming conventions](#naming-conventions)
 - [IDEs](#ides)
-- [External resources](#external-resources)
+- [Resources](#resources)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -309,7 +309,7 @@ According to [Go Developer Survey 2022 Q2 Results](https://go.dev/blog/survey202
 2. GoLand (used by 34% of respondents)
 3. Vim/Neovim (used by 14% of respondents)
 
-## External resources
+## Resources
 
 - [Go by Example](https://gobyexample.com/)
 - [A Tour of Go](https://tour.golang.org/welcome/1)
@@ -323,3 +323,5 @@ According to [Go Developer Survey 2022 Q2 Results](https://go.dev/blog/survey202
 - [Go tutorial on GoLangByExample](https://golangbyexample.com/)
 - [The Go Blog](https://go.dev/blog/)
 - [Go on Twitter](https://twitter.com/golang)
+- [Go Proverbs](https://go-proverbs.github.io/)
+- [Practical Go Lessons](https://www.practical-go-lessons.com/)
