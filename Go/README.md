@@ -306,7 +306,7 @@ func TestSomething(t *testing.T) {
 
 According to [Go Developer Survey 2022 Q2 Results](https://go.dev/blog/survey2022-q2-results), the 3 most popular IDEs for Go are:
 
-1. Visual Studio Code (used by 45% of respondents)
+1. [Visual Studio Code]{https://code.visualstudio.com/docs/languages/go} (used by 45% of respondents)
 2. GoLand (used by 34% of respondents)
 3. Vim/Neovim (used by 14% of respondents)
 
