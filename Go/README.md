@@ -46,6 +46,7 @@ The following notes are based on the current version of Go, which is [1.20.4](ht
 - [Naming conventions](#naming-conventions)
 - [IDEs](#ides)
 - [Resources](#resources)
+  - [YouTube channels and playlists](#youtube-channels-and-playlists)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -325,3 +326,18 @@ According to [Go Developer Survey 2022 Q2 Results](https://go.dev/blog/survey202
 - [Go on Twitter](https://twitter.com/golang)
 - [Go Proverbs](https://go-proverbs.github.io/)
 - [Practical Go Lessons](https://www.practical-go-lessons.com/)
+
+### YouTube channels and playlists
+
+- [Go Class, by Matt Holiday](https://www.youtube.com/playlist?list=PLoILbKo9rG3skRCj37Kn5Zj803hhiuRK6)
+- [Gopher Academy](https://www.youtube.com/channel/UCx9QVEApa5BKLw9r8cnOFEA)
+- [Anthony GG](https://www.youtube.com/@anthonygg_/videos)
+- [Building Microservices with Go, by Nic Jackson](https://youtube.com/playlist?list=PLmD8u-IFdreyh6EUfevBcbiuCKzFk0EW_)
+- [Mario Carrion](https://www.youtube.com/@MarioCarrion/videos)
+- [Rob Pike's talks](https://www.youtube.com/results?search_query=Rob+Pike%27s+talks)
+- [Golang University 101 - Learn Golang](https://www.youtube.com/watch?v=rFejpH_tAHM&list=PLEcwzBXTPUE9V1o8mZdC9tNnRZaTgI-1P&index=1)
+- [Golang University 201 - Intermediate Golang](https://www.youtube.com/watch?v=yeetIgNeIkc&list=PLEcwzBXTPUE_5m_JaMXmGEFgduH8EsuTs)
+- [Golang University 301 - Master Golang](https://www.youtube.com/playlist?list=PLEcwzBXTPUE8KvXRFmmfPEUmKoy9LfmAf)
+- [The Go Programming Language](https://www.youtube.com/@golang/videos)
+- [TutorialEdge](https://www.youtube.com/@Tutorialedge/videos)
+- [Ardan Labs](https://www.youtube.com/@ardanlabs/video)
