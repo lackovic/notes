@@ -21,6 +21,7 @@
   - [Disable Web Results in Windows 11 Start or Search Menu](#disable-web-results-in-windows-11-start-or-search-menu)
   - [Use classic context menu in File Explorer in Windows 11](#use-classic-context-menu-in-file-explorer-in-windows-11)
   - [Things to do right after a Windows 11 installation](#things-to-do-right-after-a-windows-11-installation)
+  - [Customize File Explorer (permanently disable files grouping)](#customize-file-explorer-permanently-disable-files-grouping)
   - [Disable magnifier](#disable-magnifier)
   - [Disable computer wake up on key press or mouse movement](#disable-computer-wake-up-on-key-press-or-mouse-movement)
   - [Uninstall Xbox apps](#uninstall-xbox-apps)
@@ -158,6 +159,9 @@ reg add "HKCU\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}\Inpr
 1. Install your GPU drivers
 1. File Explorer > View:
    - Options > View: select _Expand to open folder_ and _Show all folders_
+1. Apply all the changes described in the following sections.
+
+### Customize File Explorer (permanently disable files grouping)
 
 Use [WinSetView](https://lesferch.github.io/WinSetView/) to apply the following changes:
 
@@ -177,8 +181,6 @@ Global (details) columns:
 - Date modified
 - Type
 - Group by: (None)
-
-Finally, apply all the changes described in the following sections.
 
 ### Disable magnifier
 
