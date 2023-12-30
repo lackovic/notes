@@ -126,6 +126,7 @@ manage-bde.exe -lock e:
 ### Things to do right after a Windows 11 installation
 
 1. Run Windows Update and reboot until there are no more updates available
+1. Run `winget source update` to update `winget` to its latest version (see https://github.com/microsoft/winget-cli/issues/3832)
 1. Windows Update: select _Get the latest updates as soon as they're available_
 1. Notifications & actions:
    - Notifications: off
