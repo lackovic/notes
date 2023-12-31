@@ -121,7 +121,14 @@ manage-bde.exe -lock e:
 
 ## Install the latest Windows release with all the latest updates included
 
-- [UUP dump](https://uupdump.net/)
+1. Download the image creation script from [UUP dump](https://uupdump.net/)
+
+1. Set `CustomList=1` in `ConvertConfig.ini` in order to avoid including Windows bloatware (like Outlook, Teams, Xbox, etc) in the installation image.
+
+1. Run `uup_download_windows.cmd`
+
+The process will take a while: it takes 35 minutes on a beafy desktop computer with a 150 Mbps bandwidth. Once it's done, you'll find the ISO image (~6 GB)
+in the folder where you ran the script.
 
 ## Automation and bloatware removal
 
