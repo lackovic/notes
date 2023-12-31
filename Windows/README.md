@@ -16,6 +16,7 @@
 - [See the command history across all PowerShell sessions](#see-the-command-history-across-all-powershell-sessions)
 - [Lock a BitLocker encrypted drive from the command line](#lock-a-bitlocker-encrypted-drive-from-the-command-line)
 - [Autostarting programs locations](#autostarting-programs-locations)
+- [Install the latest Windows release with all the latest updates included](#install-the-latest-windows-release-with-all-the-latest-updates-included)
 - [Automation and bloatware removal](#automation-and-bloatware-removal)
   - [Install Windows without 3rd party bloatware](#install-windows-without-3rd-party-bloatware)
   - [Disable Web Results in Windows 11 Start or Search Menu](#disable-web-results-in-windows-11-start-or-search-menu)
@@ -117,6 +118,10 @@ manage-bde.exe -lock e:
    - `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Run`
 
 - Task Scheduler > Task Scheduler Library
+
+## Install the latest Windows release with all the latest updates included
+
+- [UUP dump](https://uupdump.net/)
 
 ## Automation and bloatware removal
 
