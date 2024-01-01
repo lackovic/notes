@@ -182,7 +182,6 @@ Options:
 - Show file extensions
 - Classic context menu in Windows 11
 - No Internet in Windows search
-- Disable folder thumbnails
 - Make All Folders Generic (Advanced interface)
 
 Global (details) columns:
