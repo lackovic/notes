@@ -1,5 +1,19 @@
 # Visual Studio Code
 
+_Table of Contents_
+
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+<!-- generated with [DocToc](https://github.com/thlorenz/doctoc) -->
+
+- [Useful workspace settings](#useful-workspace-settings)
+- [Favorite shortcuts](#favorite-shortcuts)
+- [Favorite user settings](#favorite-user-settings)
+- [Top Extensions](#top-extensions)
+- [Useful Extensions](#useful-extensions)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 ## Useful workspace settings
 
 ```js
@@ -69,6 +83,7 @@
 - [Surround](https://marketplace.visualstudio.com/items?itemName=yatki.vscode-surround)
 - [Text Marker (Highlighter)](https://marketplace.visualstudio.com/items?itemName=ryu1kn.text-marker)
 - [Selected Lines Count](https://marketplace.visualstudio.com/items?itemName=gurumukhi.selected-lines-count)
+- [Rewrap](https://marketplace.visualstudio.com/items?itemName=stkb.rewrap)
 
 ## Useful Extensions
 
