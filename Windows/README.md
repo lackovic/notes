@@ -17,6 +17,7 @@
 - [Lock a BitLocker encrypted drive from the command line](#lock-a-bitlocker-encrypted-drive-from-the-command-line)
 - [Autostarting programs locations](#autostarting-programs-locations)
 - [Install the latest Windows release with all the latest updates included](#install-the-latest-windows-release-with-all-the-latest-updates-included)
+- [Get rid of US language in Windows 11](#get-rid-of-us-language-in-windows-11)
 - [Automation and bloatware removal](#automation-and-bloatware-removal)
   - [Install Windows without 3rd party bloatware](#install-windows-without-3rd-party-bloatware)
   - [Disable Web Results in Windows 11 Start or Search Menu](#disable-web-results-in-windows-11-start-or-search-menu)
@@ -129,6 +130,18 @@ manage-bde.exe -lock e:
 
 The process will take a while: it takes 35 minutes on a beafy desktop computer with a 150 Mbps bandwidth. Once it's done, you'll find the ISO image (~6 GB)
 in the folder where you ran the script.
+
+## Get rid of US language in Windows 11
+
+In Windows 11 settings (`Win`+`i`), select _Time & language_ > _Language & region_:
+
+1. Open the Language options of any listed language, press _Add a keyboard_, select _US Qwerty_ to add it, then click on the triple dots next to _US Qwerty_ and select _Remove_ to remove it.
+
+1. _Related settings_ section, _Administrative language settings_ option, _Administrative_ tab, _Language for non-Unicode programs_ > press the _Change system locale..._ button, replace _US English_ with the layout of your main language.
+
+1. Reboot.
+
+[Source](https://superuser.com/questions/1680608/how-to-get-rid-of-us-language-in-windows-11/1749153)
 
 ## Automation and bloatware removal
 
