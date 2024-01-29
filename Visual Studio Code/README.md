@@ -44,6 +44,9 @@ _Table of Contents_
 | `Ctrl+Shift+N`            | New Window                        |
 | `Ctrl+R`                  | Open recent folder                |
 | `Ctrl+.`                  | Show the quickfix menu            |
+| `Ctrl+B`                  | Toggle Sidebar Visibility         |
+| `Ctrl+Shift+.`            | Focus and Select Breadcrumbs      |
+| `Ctrl+Shift+G G`          | Show Source Control               |
 
 [All shortcuts](https://code.visualstudio.com/docs/getstarted/keybindings)
 
