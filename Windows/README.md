@@ -6,6 +6,7 @@
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 <!-- generated with [DocToc](https://github.com/thlorenz/doctoc) -->
 
+- [Favorite shortcuts](#favorite-shortcuts)
 - [Know the version and build](#know-the-version-and-build)
 - [Know the domain](#know-the-domain)
 - [Know whether a service is running on a port number](#know-whether-a-service-is-running-on-a-port-number)
@@ -30,6 +31,21 @@
   - [Scripts for automation of routine tasks and bloatware removal](#scripts-for-automation-of-routine-tasks-and-bloatware-removal)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
+## Favorite shortcuts
+
+| Key                       | Command                                             |
+| ------------------------- | --------------------------------------------------- |
+| `Win+E`                   | Open File Explorer                                  |
+| `Win+X`                   | Open the Quick Link menu.                           |
+| `Win+R`                   | Open the Run dialog box.                            |
+| `Win+Tab`                 | Open Task view.                                     |
+| `Win+V`                   | Open the clipboard history.                         |
+| `Win+B`                   | Set focus to the first icon in the Taskbar corner.  |
+| `Win+number`              | Start/switch to the n-th app pinned to the taskbar. |
+| `Win+Ctrl+V`              | Open the sound output device selector               |
+
+[All shortcuts](https://support.microsoft.com/en-us/windows/keyboard-shortcuts-in-windows-dcc61a57-8ff0-cffe-9796-cb9706c75eec)
 
 ## Know the version and build
 
