@@ -24,6 +24,7 @@
   - [Disable Web Results in Windows 11 Start or Search Menu](#disable-web-results-in-windows-11-start-or-search-menu)
   - [Use classic context menu in File Explorer in Windows 11](#use-classic-context-menu-in-file-explorer-in-windows-11)
   - [Things to do right after a Windows 11 installation](#things-to-do-right-after-a-windows-11-installation)
+  - [Disable hyper key (Win+Alt+Ctrl+Shift) opening Microsoft Office](#disable-hyper-key-winaltctrlshift-opening-microsoft-office)
   - [Customize File Explorer (permanently disable files grouping)](#customize-file-explorer-permanently-disable-files-grouping)
   - [Disable magnifier](#disable-magnifier)
   - [Disable computer wake up on key press or mouse movement](#disable-computer-wake-up-on-key-press-or-mouse-movement)
@@ -201,6 +202,14 @@ reg add "HKCU\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}\Inpr
 1. File Explorer > View:
    - Options > View: select _Expand to open folder_ and _Show all folders_
 1. Apply all the changes described in the following sections.
+
+### Disable hyper key (Win+Alt+Ctrl+Shift) opening Microsoft Office
+
+```powershell
+REG ADD HKCU\Software\Classes\ms-officeapp\Shell\Open\Command /t REG_SZ /d rundll32
+```
+
+[Source](https://superuser.com/a/1794781/54747)
 
 ### Customize File Explorer (permanently disable files grouping)
 
