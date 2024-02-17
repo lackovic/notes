@@ -4,11 +4,14 @@
 ; Hotkey Modifier Symbols
 ; https://www.autohotkey.com/docs/Hotkeys.htm#Symbols
 ;
-; 1. Install it with Chocolatey: cinst autohotkey -y
-; 2. Copy this file (AutoHotkey.ahk) to %UserProfile%\Documents
-; 3. Create a shortcut to AutoHotkey in shell:startup
-; 4. Run AutoHotkey
-;
+; 1. Install it with winget: winget install -e --id AutoHotkey.AutoHotkey
+; 2. Copy this file to shell:startup
+; 3. Run AutoHotkey
+; --------------------------------------------------------------
+; ^ = ctrl
+; ! = alt
+; + = shift
+; # = lwin|rwin
 ; --- Web pages ---------------------------------------------------------------
 
 ; Ctrl+Alt+C = opens Google Calendar in a new window of Chrome
