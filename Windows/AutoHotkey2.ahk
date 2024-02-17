@@ -1,4 +1,4 @@
-﻿; AutoHotkey is a scripting language for Microsoft Windows which provides
+; AutoHotkey is a scripting language for Microsoft Windows which provides
 ; keyboard shortcuts that allows users to automate repetitive tasks.
 ;
 ; Hotkey Modifier Symbols
@@ -77,15 +77,15 @@ F4::
 ; --- Typography ------------------------------------------------------------------
 
 ; Associates Alt Gr + , with ~ (, VK=BC SC=033 ~={U+223C})
-<^>!,::Send("{Text}~")
+;<^>!,::Send("{Text}~")
 
 ; Associates Alt Gr + . with ` (. VK=BE SC=034 `={U+0060})
-<^>!.::Send("{Text}``")
+;<^>!.::Send("{Text}``")
 
 ; Associates Alt Gr + - with — (- VK=BD SC=035 —={U+2014})
-<^>!-::Send("{Text}—")
+;<^>!-::Send("{Text}—")
 
 ; Replaces § with ~
-+SC02B::~
+;+SC02B::~
 ; Replaces ç with `
-+SC027::`
+;+SC027::`
