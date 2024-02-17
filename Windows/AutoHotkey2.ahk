@@ -1,4 +1,4 @@
-; AutoHotkey is a scripting language for Microsoft Windows which provides
+﻿; AutoHotkey is a scripting language for Microsoft Windows which provides
 ; keyboard shortcuts that allows users to automate repetitive tasks.
 ;
 ; Hotkey Modifier Symbols
@@ -20,17 +20,24 @@
 ; Ctrl+Alt+M = opens Google Maps in a new window of Chrome
 ; Ctrl+Alt+T = opens Google Translate in a new window of Chrome
 
-^!c::Run("Chrome.exe `"https://calendar.google.com/`" `" --new-window `"")
-^!d::Run("Chrome.exe `"https://drive.google.com/`" `" --new-window `"")
-^!g::Run("Chrome.exe `"https://mail.google.com/`" `" --new-window   `"")
-^!m::Run("Chrome.exe `"https://www.google.ee/maps/`" `" --new-window `"")
-^!j::Run("Chrome.exe `"https://keep.google.com/`" `" --new-window `"")
-^!t::Run("Chrome.exe `"https://translate.google.com/`" `" --new-window `"")
+^!+#c::Run("Chrome.exe `"https://calendar.google.com/`" `" --new-window `"")
+^!+#g::Run("Chrome.exe `"https://mail.google.com/`" `" --new-window   `"")
+^!+#m::Run("Chrome.exe `"https://www.google.ee/maps/`" `" --new-window `"")
+^!+#j::Run("Chrome.exe `"https://keep.google.com/`" `" --new-window `"")
+^!+#t::Run("Chrome.exe `"https://translate.google.com/`" `" --new-window `"")
+^!+#x::
+{
+    if WinExist("Telegram")
+        WinActivate()
+    else
+        Run("`"C:\Users\marco\AppData\Roaming\Telegram Desktop\Telegram.exe`"")
+    return
+}
 
 ; --- Local apps --------------------------------------------------------------
 
 ; Ctrl+Alt+K = launches or brings to front KeePass
-^!k::
+^+#!k::
 {
     if WinExist("KeePass")
         WinActivate()
