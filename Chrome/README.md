@@ -101,3 +101,5 @@ See also:
 - [Save to Pocket](https://chrome.google.com/webstore/detail/save-to-pocket/niloccemoadcdkdjlinkgdfekeahmflj?hl=en)
 
 - [Google Translate](https://chrome.google.com/webstore/detail/google-translate/aapbdbdomjkkjkaonfhkkikfgjllcleb)
+
+- [Disable keyboard shortcuts](https://chromewebstore.google.com/detail/disable-keyboard-shortcut/aidbmcboeighgdnilpdljbedbbiocphj)
