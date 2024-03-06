@@ -110,14 +110,13 @@ When you open a shell you get the following error:
 error: Can't create the symlink for multishells at "/run/user/1000/fnm_multishells/2354_1691420468557". Maybe there are some issues with permissions for the directory? Permission denied (os error 13)
 ```
 
-As a workaround, until the issue will be fixed by fnm developers, add to your `~/.bashrc` the following lines:
+As a workaround, until the issue will be fixed by fnm developers, add to your `~/.bashrc` the following line just before the eval for fnm:
 
 ```sh
-sudo mkdir -p /run/user/1000
-sudo chown -R $(whoami) /run/user/1000/
+export XDG_RUNTIME_DIR="$HOME/.cache/xdgr"
 ```
 
-Thumb up https://github.com/Schniz/fnm/issues/938 to raise the priority of the issue. 
+Thumb up https://github.com/Schniz/fnm/issues/938 to raise the visibility of the issue. 
 
 #### Node Version Manager (nvm)
 
