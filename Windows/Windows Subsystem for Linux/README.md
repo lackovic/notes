@@ -18,10 +18,7 @@ WSL2 compared to WSL1 brings increased file system performance, full system call
   - [On ArchWSL](#on-archwsl)
 - [Backup - export/import distributions](#backup---exportimport-distributions)
 - [Manage multiple distributions](#manage-multiple-distributions)
-- [Use ChromeDriver/Chrome in WSL](#use-chromedriverchrome-in-wsl)
-  - [Option 1: run Chrome as GUI applicationi in WSL2](#option-1-run-chrome-as-gui-applicationi-in-wsl2)
-  - [Option 2: use chromedriver from Windows](#option-2-use-chromedriver-from-windows)
-  - [Option 3: use an alias in WSL to reference to Chrome in Windows](#option-3-use-an-alias-in-wsl-to-reference-to-chrome-in-windows)
+- [Use your Windows browser from WSL](#use-your-windows-browser-from-wsl)
 - [Useful links](#useful-links)
 - [Troubleshooting](#troubleshooting)
   - [Time not synced](#time-not-synced)
@@ -253,47 +250,15 @@ This allows, among other things, to install, uninstall, move, duplicate a distri
 
 Type `lxrunoffline` to see the list of supported actions.
 
-## Use ChromeDriver/Chrome in WSL
+## Use your Windows browser from WSL
 
-### Option 1: run Chrome as GUI applicationi in WSL2
-
-Install Chrome in WSL2 and [run it as Linux GUI application](#run-linux-gui-applications), as explained above. See the [Chrome README](../../Chrome/README.md) for how to install Chrome in Ubuntu WSL2.
-
-### Option 2: use chromedriver from Windows
-
-Another solution is to install ChromeDriver in Windows and run it from WSL:
-
-1. Download the latest [chromedriver_win32.zip](https://sites.google.com/a/chromium.org/chromedriver/) (make sure your Chrome browser version is compatible with the downloaded chromedriver)
-1. Extract it in a folder (e.g. - `%USERPROFILE%/bin` in Command Prompt, or `~/bin` in PowerShell)
-1. Add the folder path to your System Environment `PATH` variable
-1. Rename `chromedriver.exe` to `chromedriver`
-1. Relaunch your terminal to pick up the new environment variables
-1. Run `echo $PATH` to ensure the new path is there
-1. In Windows, create a user environment variable named `WSLENV`, with the the value `TMP/p:TEMP/p` (see [this comment](https://gist.github.com/danwhitston/5cea26ae0861ce1520695cff3c2c3315#gistcomment-3764225))
-1. Run `chromedriver` in WSL, you should see something like this:
+Run:
 
 ```sh
-Starting ChromeDriver 79.0.3945.36 on port 9515
-Only local connections are allowed.
-Please protect ports used by ChromeDriver and related test frameworks to prevent access by malicious code.
+sudo apt install wslu
 ```
 
-If you still can't access chromedriver and Chrome in WSL, you can try to make them accessible from WSL through symlinks:
-
-```sh
-ln -s '/mnt/c/<YourChromePathInWindows>/chrome.exe' /usr/bin/google-chrome
-ln -s '/mnt/c/<YourChromedriverPathInWindows>' /usr/bin/chromedriver
-```
-
-Replace the placeholders with the correct paths in your system.
-
-### Option 3: use an alias in WSL to reference to Chrome in Windows
-
-Add the following alias to your `~/.profile` (or `~/.bash_aliases` or `~/.bash_rc`):
-
-```sh
-alias chrome="powershell.exe -Command start chrome"
-```
+This solves the issue `/usr/bin/xdg-open: 882: www-browser: not found`. See https://github.com/microsoft/WSL/issues/8892
 
 ## Useful links
 
