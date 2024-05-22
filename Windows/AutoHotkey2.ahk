@@ -72,17 +72,34 @@ F4::
 :o:mkc::````{Left 1}
 :o:mkbc::```````n`n`````` {Up 1}
 
+; --- Disable Windows hotkeys -----------------------------------------------------
+
+#w::return ; pen settings
+#c::return ; cortana/copilot
+#i::return ; system settings
+#g::return ; Game Bar Xbox
+#+::return ; zoom
+#k::return ; Connect
+#f::return ; feedback hub
+#,::return ; show open windows transparent
+; #v::return ; Clipboard history
+; #p::return ; monitor settings
+; #a::return ; notification sidebar
+; #r::return ; run dialog
+; #l::return ; sign out
+; #.::return ; Emojis
+
 ; --- System ------------------------------------------------------------------
 
 ; Win+F12 = Puts the computer to sleep
-^#F12::
-{ 
-    ; Sleep/Suspend:
-    DllCall("PowrProf\SetSuspendState", "int", 0, "int", 0, "int", 0)
-    ; Hibernate:
-    ;DllCall("PowrProf\SetSuspendState", "int", 1, "int", 0, "int", 0)
-    return
-}
+; ^#F12::
+; { 
+;     ; Sleep/Suspend:
+;     DllCall("PowrProf\SetSuspendState", "int", 0, "int", 0, "int", 0)
+;     ; Hibernate:
+;     ;DllCall("PowrProf\SetSuspendState", "int", 1, "int", 0, "int", 0)
+;     return
+; }
 
 ; --- Typography ------------------------------------------------------------------
 
