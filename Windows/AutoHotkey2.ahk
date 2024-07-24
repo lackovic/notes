@@ -7,24 +7,46 @@
 ; 1. Install it with winget: winget install -e --id AutoHotkey.AutoHotkey
 ; 2. Copy this file to shell:startup
 ; 3. Run AutoHotkey
-; --------------------------------------------------------------
+
+; --- Legendd -----------------------------------------------------------------
+
 ; ^ = ctrl
 ; ! = alt
 ; + = shift
 ; # = lwin|rwin
+; ^!+# = Hyper = (lwin|rwin)+ctrl+alt+shift
+
+; --- Disable Windows hotkeys -------------------------------------------------
+
+^!+#i::return ; system settings
+^!+#+::return ; zoom
+^!+#f::return ; feedback hub
+^!+#,::return ; show open windows transparent
+; ^!+#w::return ; pen settings (commented because reassigned below)
+; ^!+#c::return ; cortana/copilot (commented because reassigned below)
+; ^!+#g::return ; Game Bar Xbox (commented because reassigned below)
+; ^!+#k::return ; Connect (commented because reassigned below)
+; #v::return ; Clipboard history
+; #p::return ; monitor settings
+; #a::return ; notification sidebar
+; #r::return ; run dialog
+; #l::return ; sign out
+; #.::return ; Emojis
+
 ; --- Web pages ---------------------------------------------------------------
 
-; Ctrl+Alt+C = opens Google Calendar in a new window of Chrome
-; Ctrl+Alt+D = opens Google Drive in a new window of Chrome
-; Ctrl+Alt+G = opens Gmail in a new window of Chrome
-; Ctrl+Alt+M = opens Google Maps in a new window of Chrome
-; Ctrl+Alt+T = opens Google Translate in a new window of Chrome
+; Hyper+C = opens Google Calendar in a new window of Chrome
+; Hyper+D = opens Google Drive in a new window of Chrome
+; Hyper+G = opens Gmail in a new window of Chrome
+; Hyper+M = opens Google Maps in a new window of Chrome
+; Hyper+T = opens Google Translate in a new window of Chrome
 
 ^!+#c::Run("Chrome.exe `"https://calendar.google.com/`" `" --new-window `"")
 ^!+#g::Run("Chrome.exe `"https://mail.google.com/`" `" --new-window   `"")
 ^!+#m::Run("Chrome.exe `"https://www.google.ee/maps/`" `" --new-window `"")
 ^!+#j::Run("Chrome.exe `"https://keep.google.com/`" `" --new-window `"")
 ^!+#t::Run("Chrome.exe `"https://translate.google.com/`" `" --new-window `"")
+^!+#w::Run("Chrome.exe `"https://web.whatsapp.com/`" `" --new-window `"")
 ^!+#x::
 {
     if WinExist("Telegram")
@@ -36,7 +58,7 @@
 
 ; --- Local apps --------------------------------------------------------------
 
-; Ctrl+Alt+K = launches or brings to front KeePass
+; Hyper+K = launches or brings to front KeePass
 ^+#!k::
 {
     if WinExist("KeePass")
@@ -67,27 +89,10 @@ F4::
 ::sfr::SELECT * FROM
 :o:slk::LIKE '%%'{Left 2}
 
-; --- Markdown --------------------------------------------------------------------
+; --- Markdown ----------------------------------------------------------------
 
 :o:mkc::````{Left 1}
 :o:mkbc::```````n`n`````` {Up 1}
-
-; --- Disable Windows hotkeys -----------------------------------------------------
-
-#w::return ; pen settings
-#c::return ; cortana/copilot
-#i::return ; system settings
-#g::return ; Game Bar Xbox
-#+::return ; zoom
-#k::return ; Connect
-#f::return ; feedback hub
-#,::return ; show open windows transparent
-; #v::return ; Clipboard history
-; #p::return ; monitor settings
-; #a::return ; notification sidebar
-; #r::return ; run dialog
-; #l::return ; sign out
-; #.::return ; Emojis
 
 ; --- System ------------------------------------------------------------------
 
@@ -101,7 +106,7 @@ F4::
 ;     return
 ; }
 
-; --- Typography ------------------------------------------------------------------
+; --- Typography --------------------------------------------------------------
 
 ; Associates Alt Gr + , with ~ (, VK=BC SC=033 ~={U+223C})
 ;<^>!,::Send("{Text}~")
