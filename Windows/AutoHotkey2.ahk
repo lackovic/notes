@@ -18,6 +18,7 @@
 
 ; --- Disable Windows hotkeys -------------------------------------------------
 
+#w::return ; news feed
 ^!+#i::return ; system settings
 ^!+#+::return ; zoom
 ^!+#f::return ; feedback hub
