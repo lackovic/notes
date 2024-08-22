@@ -27,6 +27,7 @@ _Table of Contents_
 - [Neovim](#neovim)
   - [Install the latest version on Ubuntu](#install-the-latest-version-on-ubuntu)
   - [Setup](#setup)
+    - [LazyVim](#lazyvim)
     - [Using NvChad](#using-nvchad)
       - [NvChad useful commands](#nvchad-useful-commands)
     - [Using kickstart](#using-kickstart)
@@ -210,6 +211,26 @@ source ~/.bashrc
 ```
 
 ### Setup
+
+#### LazyVim
+
+LazyVim is a popular Neovim configuration framework designed to provide users with a pre-configured, feature-rich setup for Neovim. It offers a curated set of plugins (for syntax highlighting, code completion, file navigation, git integration, etc.), sensible defaults, and optimized settings to enhance productivity and ease of use. At its core, LazyVim leverages the `lazy.nvim` plugin manager, which allows for efficient and lazy-loading of plugins, resulting in faster startup times and improved performance.
+
+1. Install a [Nerd font](https://www.nerdfonts.com/font-downloads) of your choice (e.g. Inconsolata):
+   ```sh
+   wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/Inconsolata.zip
+   unzip Inconsolata.zip -d ~/.local/share/fonts
+   fc-cache -fv
+   ```
+   If you are using WSL, you need to install the font on Windows and set it in the terminal settings.
+
+1. Install LazyVim prerequisites: `sudo apt install luarocks ripgrep`
+
+1. Install LazyVim following [these instructions](https://www.lazyvim.org/installation)
+
+1. Start Neovim and wait for the plugins to be installed
+
+1. Inside Neovim run `:checkhealth` and fix any issues.
 
 #### Using NvChad
 
