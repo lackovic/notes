@@ -224,11 +224,18 @@ LazyVim is a popular Neovim configuration framework designed to provide users wi
    ```
    If you are using WSL, you need to install the font on Windows and set it in the terminal settings.
 
-1. Install LazyVim prerequisites: `sudo apt install luarocks ripgrep`
+1. Install LazyVim prerequisites: `sudo apt install luarocks ripgrep xclip`
 
 1. Install LazyVim following [these instructions](https://www.lazyvim.org/installation)
 
 1. Start Neovim and wait for the plugins to be installed
+
+1. Append the following lines to `~/.config/nvim/init.lua`:
+
+   ```lua
+   -- place yanked text into the global clipboard
+   vim.opt.clipboard = "unnamedplus"
+   ```
 
 1. Inside Neovim run `:checkhealth` and fix any issues.
 
