@@ -287,6 +287,8 @@ nvim
 - Format current selected text `gq` (comes from plugin?)
 - Change current word `cw`
 - Copy the entire file to the clipboard `ggyG`
+- Search for a word `/<word>`
+- Search for the next/previous word `n`/`N`
 
 ### Learning resources
 
