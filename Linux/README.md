@@ -258,7 +258,7 @@ git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1 && nvim
 - Create, rename, copy and paste a file with `a`, `r`, `c` and `p` (creating a folder is done by following the name with the slash `/`)
 - Open the find file meny with `space f f`
 - Search in the opened files names with `space f b`
-- Search in the current file with `spaf s`
+- Search in the current file with `space s`
 - Toggle the line numbers with `space n`
 - Toggle the relative line numbers with `space r n`
 - Cycle through the tabs (aka buffers) with `tab` and `shift tab`
