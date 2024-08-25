@@ -20,6 +20,10 @@ _Table of Contents_
   - [Set up a specific Java version for a project](#set-up-a-specific-java-version-for-a-project)
   - [Switch Java version automatically when you cd into a directory](#switch-java-version-automatically-when-you-cd-into-a-directory)
 - [Flyway](#flyway)
+- [NeoVim for Java](#neovim-for-java)
+  - [Groovy](#groovy)
+  - [Google Java Format](#google-java-format)
+  - [Lombok](#lombok-1)
 - [IntelliJ IDEA](#intellij-idea)
   - [Install on Linux](#install-on-linux)
   - [Find in files regexes](#find-in-files-regexes)
@@ -180,6 +184,60 @@ Rolling back/undo migrations is availble only for _Flyway Pro_ or _Enterprise Ed
    1. commit, push and deploy the migrations
 
 For furthern info check the [Flyway documentation](https://flywaydb.org/documentation/).
+
+## NeoVim for Java
+
+The following steps outline a basic setup for working with Java in NeoVim, enabling these key features: syntax highlighting, code navigation, code refactoring, code completion, formatting, debugging, diagnostics (errors, warnings, etc.), hover information, auto imports.
+
+1. Install SDKMAN with `curl -s "https://get.sdkman.io" | bash`
+
+1. Install the latest stable version of Java with `sdk install java`
+
+1. Install [NeoVim](../Linux/README.md#install-the-latest-version-on-ubuntu)
+
+1. Install [LazyVim](../Linux/README.md#lazyvim)
+
+1. Create `~/.config/nvim/lua/plugins/treesitter.lua` and paste in the following:
+
+   ```lua
+   return {
+     "nvim-treesitter/nvim-treesitter",
+     opts = {
+       ensure_installed = {
+         "java",
+       },
+     },
+   }
+   ```
+
+1. Run `:Mason`, select `jdtls` and press `i` to install it, go up to the top and wait until you see it is installed.
+
+1. Create `~/.config/nvim/lua/plugins/jdtls.lua` and paste in the following:
+
+   ```lua
+   return {
+     {
+       "mfussenegger/nvim-jdtls",
+       ft = "java",
+     }
+   }
+   ```
+
+### Groovy
+
+Support to _Groovy_ might be needed for example if you are using the [Spock](https://github.com/spockframework/spock) test framework.
+
+1. Append `"groovy",` to the `ensure_installed` object in the `treesitter.lua` file mentioned above.
+
+1. To be continued...
+
+### Google Java Format
+
+[google-java-format](https://github.com/google/google-java-format) is not supported by [eclipse.jdt.ls](https://github.com/eclipse-jdtls/eclipse.jdt.ls) (see [redhat-developer/vscode-java#663](https://github.com/redhat-developer/vscode-java/issues/663) & [redhat-developer/vscode-java#419](https://github.com/redhat-developer/vscode-java/issues/419)) but given that it's an executable you should be able to use it with formatprg, see `:help formatprg`.
+
+### Lombok
+
+To be continued...
 
 ## IntelliJ IDEA
 
