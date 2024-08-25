@@ -204,7 +204,7 @@ wget https://github.com/MordechaiHadad/bob/releases/download/<latest_version>/bo
 unzip bob-linux-x86_64.zip
 cd bob-linux-x86_64/
 chmod +x bob
-echo "export PATH=\"/home/<username>/.local/share/bob/nvim-bin:\$PATH\"" >> ~/.bashrc
+echo "export PATH=\"~/.local/share/bob/nvim-bin:\$PATH\"" >> ~/.bashrc
 source ~/.bashrc
 ./bob install stable
 ./bob use stable
