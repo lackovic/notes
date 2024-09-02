@@ -46,8 +46,8 @@ unset color_prompt force_color_prompt
 # source /etc/bash_completion.d/git
 # source /usr/share/bash-completion/completions/git
 
-# Update system time (replace the server address with one close to you), install updates, set Docker containers to not autorestart
-alias update='sudo ntpdate ee.pool.ntp.org; sudo apt update; sudo apt upgrade -y; sudo apt autoremove -y; sdk update; docker update --restart=no $(docker container ls -a -q)'
+# Keep system time in sync, install updates, set Docker containers to not autorestart
+alias update='sudo timedatectl set-ntp true; sudo apt update; sudo apt upgrade -y; sudo apt autoremove -y; sdk update; sudo snap refresh; docker update --restart=no $(docker container ls -a -q)'
 
 # Colorize ip output
 alias ip='ip -c'
