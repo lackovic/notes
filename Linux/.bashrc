@@ -14,18 +14,12 @@ alias grep="grep --ignore-case --color"
 # Identify a zombie process
 alias zombie="ps axo stat,ppid,pid,comm | grep -w defunct"
 
-# Run IntelliJ IDEA in a detached background process
-alias idea="setsid /home/marco/intellij/bin/idea.sh . &>/dev/null"
-
 # Avoid duplicates
 HISTCONTROL=ignoredups:erasedups
 # When the shell exits, append to the history file instead of overwriting it
 shopt -s histappend
 # After each command, append to the history file and reread it
 PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND$'\n'}history -a; history -c; history -r"
-
-# Begin in your home directory
-cd ~
 
 # Show the git branch name in terminal (like posh-git)
 # https://askubuntu.com/questions/730754/how-do-i-show-the-git-branch-with-colours-in-bash-prompt
