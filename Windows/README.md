@@ -6,30 +6,31 @@
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 <!-- generated with [DocToc](https://github.com/thlorenz/doctoc) -->
 
-- [Favorite shortcuts](#favorite-shortcuts)
-- [Know the version and build](#know-the-version-and-build)
-- [Know the domain](#know-the-domain)
-- [Know whether a service is running on a port number](#know-whether-a-service-is-running-on-a-port-number)
-- [Create a EXT4 partition](#create-a-ext4-partition)
-- [Change the screenshots default save location](#change-the-screenshots-default-save-location)
-- [Create your own custom keyboard layout](#create-your-own-custom-keyboard-layout)
-- [Wipe all the deleted data / free space on a drive](#wipe-all-the-deleted-data--free-space-on-a-drive)
-- [See the command history across all PowerShell sessions](#see-the-command-history-across-all-powershell-sessions)
-- [Lock a BitLocker encrypted drive from the command line](#lock-a-bitlocker-encrypted-drive-from-the-command-line)
-- [Autostarting programs locations](#autostarting-programs-locations)
-- [Install the latest Windows release with all the latest updates included](#install-the-latest-windows-release-with-all-the-latest-updates-included)
-- [Get rid of US language in Windows 11](#get-rid-of-us-language-in-windows-11)
-- [Automation and bloatware removal](#automation-and-bloatware-removal)
-  - [Install Windows without 3rd party bloatware](#install-windows-without-3rd-party-bloatware)
-  - [Disable Web Results in Windows 11 Start or Search Menu](#disable-web-results-in-windows-11-start-or-search-menu)
-  - [Use classic context menu in File Explorer in Windows 11](#use-classic-context-menu-in-file-explorer-in-windows-11)
-  - [Things to do right after a Windows 11 installation](#things-to-do-right-after-a-windows-11-installation)
-  - [Disable hyper key (Win+Alt+Ctrl+Shift) opening Microsoft Office](#disable-hyper-key-winaltctrlshift-opening-microsoft-office)
-  - [Customize File Explorer (permanently disable files grouping)](#customize-file-explorer-permanently-disable-files-grouping)
-  - [Disable magnifier](#disable-magnifier)
-  - [Disable computer wake up on key press or mouse movement](#disable-computer-wake-up-on-key-press-or-mouse-movement)
-  - [Uninstall Xbox apps](#uninstall-xbox-apps)
-  - [Scripts for automation of routine tasks and bloatware removal](#scripts-for-automation-of-routine-tasks-and-bloatware-removal)
+- [Windows](#windows)
+  - [Favorite shortcuts](#favorite-shortcuts)
+  - [Know the version and build](#know-the-version-and-build)
+  - [Know the domain](#know-the-domain)
+  - [Know whether a service is running on a port number](#know-whether-a-service-is-running-on-a-port-number)
+  - [Create a EXT4 partition](#create-a-ext4-partition)
+  - [Change the screenshots default save location](#change-the-screenshots-default-save-location)
+  - [Create your own custom keyboard layout](#create-your-own-custom-keyboard-layout)
+  - [Wipe all the deleted data / free space on a drive](#wipe-all-the-deleted-data--free-space-on-a-drive)
+  - [See the command history across all PowerShell sessions](#see-the-command-history-across-all-powershell-sessions)
+  - [Lock a BitLocker encrypted drive from the command line](#lock-a-bitlocker-encrypted-drive-from-the-command-line)
+  - [Autostarting programs locations](#autostarting-programs-locations)
+  - [Install the latest Windows release with all the latest updates included](#install-the-latest-windows-release-with-all-the-latest-updates-included)
+  - [Get rid of US language in Windows 11](#get-rid-of-us-language-in-windows-11)
+  - [Automation and bloatware removal](#automation-and-bloatware-removal)
+    - [Install Windows without 3rd party bloatware](#install-windows-without-3rd-party-bloatware)
+    - [Disable Web Results in Windows 11 Start or Search Menu](#disable-web-results-in-windows-11-start-or-search-menu)
+    - [Use classic context menu in File Explorer in Windows 11](#use-classic-context-menu-in-file-explorer-in-windows-11)
+    - [Things to do right after a Windows 11 installation](#things-to-do-right-after-a-windows-11-installation)
+    - [Disable hyper key (Win+Alt+Ctrl+Shift) opening Microsoft Office](#disable-hyper-key-winaltctrlshift-opening-microsoft-office)
+    - [Customize File Explorer (permanently disable files grouping)](#customize-file-explorer-permanently-disable-files-grouping)
+    - [Disable magnifier](#disable-magnifier)
+    - [Disable computer wake up on key press or mouse movement](#disable-computer-wake-up-on-key-press-or-mouse-movement)
+    - [Uninstall Xbox apps](#uninstall-xbox-apps)
+    - [Scripts for automation of routine tasks and bloatware removal](#scripts-for-automation-of-routine-tasks-and-bloatware-removal)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -233,10 +234,12 @@ Global (details) columns:
 
 ### Disable magnifier
 
+(The following steps are currently not working and are left here for reference until a working solution is found).
+
 In an elevated PowerShell console run the following command:
 
 ```powershell
-takeown /f C: \Windows\System32\Magnify.exe
+takeown /f C:\Windows\System32\Magnify.exe
 ```
 - type Y and press Enter
 - Right-click on `C:\Windows\System32\Magnify.exe` and rename it to `Magnify.exe.bak`
