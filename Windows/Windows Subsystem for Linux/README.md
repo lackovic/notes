@@ -142,16 +142,6 @@ Setup:
          - Start no client
          - Disable access control
 
-1. On WSL:
-
-   1. Append to your `~/.profile` (in Ubuntu):
-
-      ```sh
-      export DISPLAY=${DISPLAY:-$(grep -Po '(?<=nameserver ).*' /etc/resolv.conf):0}
-      ```
-
-      and then close and open another terminal window or run `source ~/.profile` (only needed once).
-
 When you want to run a GUI application in WSL2 you need to:
 
 1. On Windows: run _XLaunch_ with the shortcut created above

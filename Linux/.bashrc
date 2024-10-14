@@ -14,18 +14,12 @@ alias grep="grep --ignore-case --color"
 # Identify a zombie process
 alias zombie="ps axo stat,ppid,pid,comm | grep -w defunct"
 
-# Run IntelliJ IDEA in a detached background process
-alias idea="setsid /home/marco/intellij/bin/idea.sh . &>/dev/null"
-
 # Avoid duplicates
 HISTCONTROL=ignoredups:erasedups
 # When the shell exits, append to the history file instead of overwriting it
 shopt -s histappend
 # After each command, append to the history file and reread it
 PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND$'\n'}history -a; history -c; history -r"
-
-# Begin in your home directory
-cd ~
 
 # Show the git branch name in terminal (like posh-git)
 # https://askubuntu.com/questions/730754/how-do-i-show-the-git-branch-with-colours-in-bash-prompt
@@ -46,8 +40,8 @@ unset color_prompt force_color_prompt
 # source /etc/bash_completion.d/git
 # source /usr/share/bash-completion/completions/git
 
-# Update system time (replace the server address with one close to you), install updates, set Docker containers to not autorestart
-alias update='sudo ntpdate ee.pool.ntp.org; sudo apt update; sudo apt upgrade -y; sudo apt autoremove -y; sdk update; docker update --restart=no $(docker container ls -a -q)'
+# Keep system time in sync, install updates, set Docker containers to not autorestart
+alias update='sudo timedatectl set-ntp true; sudo apt update; sudo apt upgrade -y; sudo apt autoremove -y; sdk update; sudo snap refresh; docker update --restart=no $(docker container ls -a -q)'
 
 # Colorize ip output
 alias ip='ip -c'
