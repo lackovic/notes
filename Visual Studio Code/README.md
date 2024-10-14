@@ -34,19 +34,25 @@ _Table of Contents_
 
 | Key                       | Command                           |
 | ------------------------- | --------------------------------- |
-| `Ctrl+Shift+P`            | Show All Commands                 |
-| `Ctrl+P`                  | Go to File..., Quick Open         |
-| `Ctrl+Shift+O`            | Go to Symbol...                   |
-| `Ctrl+K M`                | Change Language Mode              |
-| `Ctrl+K O`                | Show Opened File in New Window    |
-| `Ctrl+Shift+P dupl Enter` | Duplicate workspace in New Window |
-| `Shift+Alt+Down`          | Copy Line Down                    |
-| `Ctrl+Shift+N`            | New Window                        |
+| `Ctrl+Shift+P`            | Show all commands                 |
+| `Ctrl+P`                  | Go to file..., quick open         |
+| `Ctrl+Shift+O`            | Go to symbol in the current file  |
+| `Ctrl+T`                  | Go to symbol in the whole project |
+| `Ctrl+K M`                | Change language mode              |
+| `Ctrl+K O`                | Show opened file in new window    |
+| `Ctrl+Shift+P dupl Enter` | Duplicate workspace in new window |
+| `Shift+Alt+Down`          | Copy line down / Duplicate line   |
+| `Ctrl+Shift+N`            | New window                        |
 | `Ctrl+R`                  | Open recent folder                |
 | `Ctrl+.`                  | Show the quickfix menu            |
-| `Ctrl+B`                  | Toggle Sidebar Visibility         |
-| `Ctrl+Shift+.`            | Focus and Select Breadcrumbs      |
-| `Ctrl+Shift+G G`          | Show Source Control               |
+| `Ctrl+,`                  | Open settings                     |
+| `Ctrl+Shift+.`            | Focus and select breadcrumbs      |
+| `Ctrl+Shift+G G`          | Show source control               |
+| `Ctrl+Shift+E`            | Show and focus explorer           |
+| `Ctrl+B`                  | Toggle sidebar visibility         |
+| `Ctrl+0`                  | Focus into sidebar                |
+| `Ctrl+1`                  | Focus into editor                 |
+| `Ctrl+/`                  | Toggle comment on selected lines  |
 
 [All shortcuts](https://code.visualstudio.com/docs/getstarted/keybindings)
 
