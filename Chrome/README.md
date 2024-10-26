@@ -104,4 +104,4 @@ See also:
 
 - [Google Translate](https://chrome.google.com/webstore/detail/google-translate/aapbdbdomjkkjkaonfhkkikfgjllcleb)
 
-- [Disable keyboard shortcuts](https://chromewebstore.google.com/detail/disable-keyboard-shortcut/aidbmcboeighgdnilpdljbedbbiocphj)
+- [Disable keyboard shortcuts](https://chromewebstore.google.com/detail/disable-keyboard-shortcut/aidbmcboeighgdnilpdljbedbbiocphj) (used to disable `Ctrl+D` to bookmark the current page, which is often pressed accidentally)
