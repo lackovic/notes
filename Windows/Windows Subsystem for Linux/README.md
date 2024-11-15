@@ -12,6 +12,7 @@ WSL2 compared to WSL1 brings increased file system performance, full system call
 - [Basic Commands](#basic-commands)
 - [Docker](#docker)
 - [Run Linux GUI applications](#run-linux-gui-applications)
+  - [Setup XLaunch (legacy)](#setup-xlaunch-legacy)
 - [Install IntelliJ IDEA](#install-intellij-idea)
   - [Windows 11](#windows-11)
   - [Windows 10](#windows-10)
@@ -102,6 +103,9 @@ wsl --set-version <distro> <version>
 
 # List your distributions and their WSL versions
 wsl --list -v
+
+# Update WSL to its latest version (https://github.com/microsoft/WSL/releases)
+wsl --update
 ```
 
 ## Docker
@@ -112,20 +116,26 @@ wsl --list -v
 
 ## Run Linux GUI applications
 
+The newest versions of WSL2 have built-in support for GUI applications through the [WSLg](https://github.com/microsoft/wslg): it can run Linux GUI applications directly on Windows, without the need for a third-party X server. It comes enabled by default in Windows 11 and works out of the box. Linux GUI applications get automatically integrated into the Windows Start menu.
+
+### Setup XLaunch (legacy)
+
+The following steps are kept for legacy purposes and for those who prefer to use XLaunch instead of WSLg.
+
 Setup:
 
 1. On Windows:
 
    1. [Install _VcXsrv_ with winget](https://winget.run/pkg/marha/VcXsrv)
 
-   1. In the folder `%PROGRAMFILES%\VcXsrv`:
+   2. In the folder `%PROGRAMFILES%\VcXsrv`:
       
       - right click on `vcxsrv.exe`
       - Properties > Compatibility > Change high DPI settings
       - Check _Override high DPI scaling behavior_
       - Select _Application_
 
-   1. Control Panel\System and Security\Windows Defender Firewall\Allowed apps
+   3. Control Panel\System and Security\Windows Defender Firewall\Allowed apps
 
       - Select _VcXsrv windows xserver_
 
@@ -133,7 +143,7 @@ Setup:
 
       - Press _OK_ at the bottom of the window
 
-   1. Download [`config.xlaunch`](./config.xlaunch) to your file system (save it in `%AppData%\Microsoft\Windows\Start Menu\Programs\Startup` if you want to make XLaunch automatically run at startup) and double click on it to run XLaunch
+   4. Download [`config.xlaunch`](./config.xlaunch) to your file system (save it in `%AppData%\Microsoft\Windows\Start Menu\Programs\Startup` if you want to make XLaunch automatically run at startup) and double click on it to run XLaunch
 
       The _XLaunch_ configuration should be:
 
@@ -162,24 +172,15 @@ Sources:
 
 ### Windows 11
 
-1. Install [Windows Subsystem for Linux Preview](https://apps.microsoft.com/store/detail/windows-subsystem-for-linux-preview/9P9TQF7MRM4R)
-
-1. Append the following lines to you `/etc/wsl.conf`
+1. install the latest Java LTS version with [SDKMAN](https://sdkman.io/
 
    ```sh
-   [boot]
-   systemd=true 
-   ```
-
-1. In PowerShell run `wsl --shutdown`
-
-1. In WSL run `snap list` and `snap services` to verify snap works
-
-1. install the latest Java version with [SDKMAN](https://sdkman.io/) (e.g. `sdk install java 17.0.4.1-sem`)
+   sdk install java
+   ``` 
 
 1. Install IntelliJ IDEA with `sudo snap install intellij-idea-ultimate --classic`
 
-1. Run IntelliJ IDEA with `intellij-idea-ultimate`
+1. Run IntelliJ IDEA from the Windows Start menu or with `intellij-idea-ultimate`
 
 ### Windows 10
 
