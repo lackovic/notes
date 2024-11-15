@@ -11,7 +11,8 @@ _Table of Contents_
 - [Install Chrome in Ubuntu](#install-chrome-in-ubuntu)
 - [Set the Material You theme](#set-the-material-you-theme)
 - [Must have extensions](#must-have-extensions)
-- [Useful extensions](#useful-extensions)
+- [YouTube extensions](#youtube-extensions)
+- [Other useful extensions](#other-useful-extensions)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -90,11 +91,17 @@ See also:
 
 - [Ghostery – Privacy Ad Blocker](https://chrome.google.com/webstore/detail/ghostery-%E2%80%93-privacy-ad-blo/mlomiejdfkolichcflejclcbmpeaniij)
 
-## Useful extensions
+## YouTube extensions
 
 - [Return YouTube Dislike](https://chromewebstore.google.com/detail/return-youtube-dislike/gebbhagfogifgggkldgodflihgfeippi)
 
-- [Improve YouTube! (Open-Source for YouTube)](https://chrome.google.com/webstore/detail/improve-youtube-open-sour/bnomihfieiccainjcjblhegjgglakjdd/related)
+- [SponsorBlock](https://chromewebstore.google.com/detail/sponsorblock-for-youtube/mnjggcdmjocbbbhaepdhchncahnbgone): skips sponsorships, intros, and reminders.
+
+- [PocketTube](https://chromewebstore.google.com/detail/pockettube-youtube-subscr/kdmnjgijlmjgmimahnillepgcgeemffb): groups subscriptions into collections.
+
+- [Ad Auto-skipper](https://chromewebstore.google.com/detail/youtube-ad-auto-skipper/lokpenepehfdekijkebhpnpcjjpngpnd)
+
+## Other useful extensions
 
 - [Privacy Badger](https://chrome.google.com/webstore/detail/privacy-badger/pkehgijcmpdhfbdbbnkijodmdjhbjlgp)
 
@@ -102,6 +109,6 @@ See also:
 
 - [Save to Pocket](https://chrome.google.com/webstore/detail/save-to-pocket/niloccemoadcdkdjlinkgdfekeahmflj?hl=en)
 
-- [Google Translate](https://chrome.google.com/webstore/detail/google-translate/aapbdbdomjkkjkaonfhkkikfgjllcleb)
+- [Rememberry](https://chromewebstore.google.com/detail/rememberry-translate-and/dipiagiiohfljcicegpgffpbnjmgjcnf): translates selected text to any language.
 
 - [Disable keyboard shortcuts](https://chromewebstore.google.com/detail/disable-keyboard-shortcut/aidbmcboeighgdnilpdljbedbbiocphj) (used to disable `Ctrl+D` to bookmark the current page, which is often pressed accidentally)
