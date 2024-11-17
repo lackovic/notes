@@ -2,9 +2,6 @@
 # 2. Run as admin "Set-ExecutionPolicy Bypass" to enable running scripts in your system
 # More info https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_profiles?view=powershell-5.1
 
-# Allow to quit the current terminal with Ctrl+D
-Set-PSReadlineKeyHandler -Key ctrl+d -Function ViExit
-
 # Provide color highlighting for some basic PowerShell output
 # Run as admin "Install-Module PSColor"
 # More info https://github.com/Davlind/PSColor
