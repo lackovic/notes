@@ -13,18 +13,9 @@ $global:PSColor.File.Code.Pattern = '\.(java|c|cpp|cs|js|jsx|ts|tsx|css|html)$'
 $global:PSColor.File.Text.Pattern = '\.(txt|cfg|conf|ini|csv|log|config|xml|yml|md|markdown|json)$'
 
 # Integrate Git and PowerShell
-# Run as admin "PowerShellGet\Install-Module posh-git -Scope CurrentUser -Force"
-# More info https://github.com/dahlbyk/posh-git
-Import-Module posh-git
-
-# Prefix each prompt with date and time with posh-git
-$GitPromptSettings.DefaultPromptPrefix.Text = '$(Get-Date -f "HH:mm:ss") '
-$GitPromptSettings.DefaultPromptPrefix.ForegroundColor = [ConsoleColor]::Magenta
-
-# Prefix each prompt with date and time without posh-git
-# function prompt {            
-#     "$(Get-Date -Format "yyyy/MM/dd HH:mm.ss") $(get-location) > "
-# }
+# Run as admin "winget install --id JanDeDobbeleer.OhMyPosh"
+# More info https://github.com/JanDeDobbeleer/oh-my-posh
+oh-my-posh --init --shell pwsh --config ~/AppData/Local/Programs/oh-my-posh/themes/jandedobbeleer.omp.json | Invoke-Expression
 
 # Set default folder
 Set-Location C:\src
