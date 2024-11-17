@@ -15,7 +15,7 @@ $global:PSColor.File.Text.Pattern = '\.(txt|cfg|conf|ini|csv|log|config|xml|yml|
 # Integrate Git and PowerShell
 # Run as admin "winget install --id JanDeDobbeleer.OhMyPosh"
 # More info https://github.com/JanDeDobbeleer/oh-my-posh
-oh-my-posh --init --shell pwsh --config ~/AppData/Local/Programs/oh-my-posh/themes/jandedobbeleer.omp.json | Invoke-Expression
+oh-my-posh --init --shell pwsh --config ~/AppData/Local/Programs/oh-my-posh/themes/powerlevel10k_rainbow.omp.json | Invoke-Expression
 
 # Set default folder
 Set-Location C:\src
