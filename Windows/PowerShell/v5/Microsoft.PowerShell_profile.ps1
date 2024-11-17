@@ -17,6 +17,10 @@ $global:PSColor.File.Text.Pattern = '\.(txt|cfg|conf|ini|csv|log|config|xml|yml|
 # More info https://github.com/JanDeDobbeleer/oh-my-posh
 oh-my-posh --init --shell pwsh --config ~/AppData/Local/Programs/oh-my-posh/themes/powerlevel10k_rainbow.omp.json | Invoke-Expression
 
+# See system information win Winfetch
+# Run as admin "Install-Script -Name pwshfetch-test-1"
+Set-Alias winfetch pwshfetch-test-1
+
 # Set default folder
 Set-Location C:\src
 
