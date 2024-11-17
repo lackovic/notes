@@ -12,6 +12,7 @@ $global:PSColor.File.Text.Pattern = '\.(txt|cfg|conf|ini|csv|log|config|xml|yml|
 # Integrate Git and PowerShell
 # Run as admin "winget install --id JanDeDobbeleer.OhMyPosh"
 # More info https://github.com/JanDeDobbeleer/oh-my-posh
+# For enabling language versions display in your theme see https://github.com/JanDeDobbeleer/oh-my-posh/discussions/5902#discussioncomment-11284862
 oh-my-posh --init --shell pwsh --config ~/AppData/Local/Programs/oh-my-posh/themes/powerlevel10k_rainbow.omp.json | Invoke-Expression
 
 # See system information win Winfetch

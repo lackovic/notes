@@ -26,6 +26,7 @@ PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND$'\n'}history -a; history -c; h
 # 2. oh-my-posh font install Inconsolata
 # 3. wget https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/refs/heads/main/themes/powerlevel10k_rainbow.omp.json -P .config/
 # 4. echo 'eval "$(oh-my-posh init bash --config ~/.config/powerlevel10k_rainbow.omp.json)"' >> ~/.profile
+# For enabling language versions display in your theme see https://github.com/JanDeDobbeleer/oh-my-posh/discussions/5902#discussioncomment-11284862
 
 # Uncomment one of the following lines to enable git aliases auto completion
 # source /etc/bash_completion.d/git
