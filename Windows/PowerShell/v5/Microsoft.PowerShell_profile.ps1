@@ -9,10 +9,10 @@ Import-Module PSColor
 $global:PSColor.File.Code.Pattern = '\.(java|c|cpp|cs|js|jsx|ts|tsx|css|html)$'
 $global:PSColor.File.Text.Pattern = '\.(txt|cfg|conf|ini|csv|log|config|xml|yml|md|markdown|json)$'
 
-# Integrate Git and PowerShell
-# Run as admin "winget install --id JanDeDobbeleer.OhMyPosh"
-# More info https://github.com/JanDeDobbeleer/oh-my-posh
-# For enabling language versions display in your theme see https://github.com/JanDeDobbeleer/oh-my-posh/discussions/5902#discussioncomment-11284862
+# Use Oh My Posh as prompt renderer https://github.com/JanDeDobbeleer/oh-my-posh
+# 1. winget install --id JanDeDobbeleer.OhMyPosh
+# 2. oh-my-posh font install Inconsolata
+# 3. To enable language versions in your theme see https://github.com/JanDeDobbeleer/oh-my-posh/discussions/5902#discussioncomment-11284862
 oh-my-posh --init --shell pwsh --config ~/AppData/Local/Programs/oh-my-posh/themes/powerlevel10k_rainbow.omp.json | Invoke-Expression
 
 # See system information win Winfetch
