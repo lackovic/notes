@@ -9,6 +9,7 @@ _Table of Contents_
 - [Useful workspace settings](#useful-workspace-settings)
 - [Favorite shortcuts](#favorite-shortcuts)
 - [Favorite user settings](#favorite-user-settings)
+- [Prevent the Java Platform extension from creating files in the bin directory](#prevent-the-java-platform-extension-from-creating-files-in-the-bin-directory)
 - [Top Extensions](#top-extensions)
 - [Useful Extensions](#useful-extensions)
 
@@ -75,9 +76,16 @@ _Table of Contents_
   "window.zoomLevel": 0,
   "workbench.editor.wrapTabs": true,
   "workbench.settings.useSplitJSON": true,
-  "workbench.settings.editor": "json"
+  "workbench.settings.editor": "json",
+  "java.autobuild.enabled": false,
 }
 ```
+
+## Prevent the Java Platform extension from creating files in the bin directory
+
+Set `java.autobuild.enabled` to false in your settings.
+
+[Source](https://github.com/redhat-developer/vscode-java/issues/634#issuecomment-2485241295)
 
 ## Top Extensions
 
