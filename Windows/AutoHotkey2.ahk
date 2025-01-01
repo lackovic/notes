@@ -48,6 +48,7 @@
 ^!+#j::Run("Chrome.exe `"https://keep.google.com/`" `" --new-window `"")
 ^!+#t::Run("Chrome.exe `"https://translate.google.com/`" `" --new-window `"")
 ^!+#w::Run("Chrome.exe `"https://web.whatsapp.com/`" `" --new-window `"")
+^!+#s::Run("ms-settings:sound")
 ^!+#x::
 {
     if WinExist("Telegram")
