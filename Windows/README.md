@@ -171,13 +171,27 @@ In Windows 11 settings (`Win`+`i`), select _Time & language_ > _Language & regio
 
 ### Disable Web Results in Windows 11 Start or Search Menu
 
-- Run `gpedit.msc`
+Option 1:
 
-- User Configuration > Administrative Templates > Windows Components > File Explorer
+1. Run in PowerShell:
 
-- Enable `Turn off display of recent search entries in the File Explorer search box`
+   ```powershell
+   reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Search" /v BingSearchEnabled /t REG_DWORD /d 00000000 /f
+   reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Search" /v AllowSearchToUseLocation /t REG_DWORD /d 00000000 /f
+   reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Search" /v CortanaConsent /t REG_DWORD /d 00000000 /f
+   ```
 
-- Reboot
+1. Reboot
+
+Option 2:
+
+1. Run `gpedit.msc`
+
+1. User Configuration > Administrative Templates > Windows Components > File Explorer
+
+1. Enable `Turn off display of recent search entries in the File Explorer search box`
+
+1. Reboot
 
 ### Use classic context menu in File Explorer in Windows 11
 

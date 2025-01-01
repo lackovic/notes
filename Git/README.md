@@ -17,6 +17,7 @@ Table of Contents
   - [Find who added and subtracted the most lines in a repository](#find-who-added-and-subtracted-the-most-lines-in-a-repository)
   - [Display the history of changes of the lines containing a specific string](#display-the-history-of-changes-of-the-lines-containing-a-specific-string)
   - [Display a compact list of commits](#display-a-compact-list-of-commits)
+- [Search for a term in the commit history](#search-for-a-term-in-the-commit-history)
 - [Enable git bash aliases auto completion](#enable-git-bash-aliases-auto-completion)
 - [Persist the passphrase through restarts](#persist-the-passphrase-through-restarts)
   - [On *nix systems](#on-nix-systems)
@@ -222,6 +223,18 @@ Or add it as `lg` alias:
 ```
 git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 ```
+
+## Search for a term in the commit history
+
+```sh
+git log -G"search term" 
+```
+
+To see the changes in the commits:
+
+```sh
+git log -G"search term" --patch  
+``` 
 
 ## Enable git bash aliases auto completion
 
