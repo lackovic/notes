@@ -146,8 +146,7 @@ manage-bde.exe -lock e:
 
 1. Run `uup_download_windows.cmd`
 
-The process will take a while: it takes 35 minutes on a beafy desktop computer with a 150 Mbps bandwidth. Once it's done, you'll find the ISO image (~6 GB)
-in the folder where you ran the script.
+The process will take a while: it takes 35 minutes on a beafy desktop computer with a 150 Mbps bandwidth. Once it's done, you'll find the ISO image (~6 GB) in the folder where you ran the script. You can use it to create a bootable USB drive with [Rufus](https://rufus.ie/).
 
 ## Get rid of US language in Windows 11
 
