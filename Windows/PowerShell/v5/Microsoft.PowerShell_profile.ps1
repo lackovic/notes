@@ -3,7 +3,8 @@
 # More info https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_profiles?view=powershell-5.1
 
 # Provide color highlighting for some basic PowerShell output
-# Run as admin "Install-Module PSColor"
+# 1. Download https://github.com/Davlind/PSColor/raw/master/release/PSColor.zip
+# 2. Extract it to a folder named PSColor in any of your PowerShell module paths (run $env:PSModulePath to see your paths)
 # More info https://github.com/Davlind/PSColor
 Import-Module PSColor
 $global:PSColor.File.Code.Pattern = '\.(java|c|cpp|cs|js|jsx|ts|tsx|css|html)$'
