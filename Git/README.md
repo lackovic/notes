@@ -5,6 +5,7 @@ Table of Contents
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 <!-- Generated with [DocToc](https://github.com/thlorenz/doctoc) -->
 
+- [First setup](#first-setup)
 - [Branch operations](#branch-operations)
   - [Merge remote changes to your local changes](#merge-remote-changes-to-your-local-changes)
 - [Commits operations](#commits-operations)
@@ -35,6 +36,28 @@ Table of Contents
   - [GitHub Learning Lab](#github-learning-lab)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
+## First setup
+
+```powershell
+git config --global user.name "Your name here"
+git config --global user.email "your_email@example.com"
+git config --global core.editor code
+ssh-keygen -t rsa -C "your_email@example.com"
+# Copy the content of the public key to your clipboard, for example in PowerShell:
+Get-Content C:\Users\user\.ssh\id_rsa.pub | Set-Clipboard
+```
+
+1. [GitHub Account Settings > SSH Keys](https://github.com/settings/ssh)
+1. Press `New SSH Key`
+1. Title = your computer name
+1. Key = paste the clipboard content
+
+Test the connection with:
+
+```sh
+ssh -T git@github.com
+```
 
 ## Branch operations
 
