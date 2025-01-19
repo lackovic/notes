@@ -66,7 +66,7 @@
     if WinExist("KeePass")
         WinActivate()
     else
-        Run("`"C:\Program Files (x86)\KeePass2x\KeePass.exe`"")
+        Run("`"C:\Program Files\KeePass Password Safe 2\KeePass.exe`"")
     return
 }
 
