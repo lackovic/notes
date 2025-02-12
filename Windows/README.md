@@ -215,6 +215,7 @@ reg add "HKCU\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}\Inpr
 1. Install your GPU drivers
 1. File Explorer > View:
    - Options > View: select _Expand to open folder_ and _Show all folders_
+1. Settings > Personalization > Start: Disable _Show recommended files in Start, recent files in File Explorer, and items in Jump Lists_   
 1. Apply all the changes described in the following sections.
 
 ### Turn on fast startup
