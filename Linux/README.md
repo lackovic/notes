@@ -13,6 +13,7 @@ _Table of Contents_
 - [Print a file from line to line](#print-a-file-from-line-to-line)
 - [Copy files from Linux to Windows](#copy-files-from-linux-to-windows)
 - [Find files by name and show all their properties](#find-files-by-name-and-show-all-their-properties)
+- [Find the differences between two files](#find-the-differences-between-two-files)
 - [Find all files containing a string](#find-all-files-containing-a-string)
 - [List running processes](#list-running-processes)
 - [Set an empty password for a user](#set-an-empty-password-for-a-user)
@@ -99,6 +100,12 @@ pscp user@192.168.10.12:/source/path/on/linux/* c:\Destination\Path\On\Windows
 
 ```sh
 find . -name <file_name_or_pattern> | xargs ls -lhpa --color --group-directories-first
+```
+
+## Find the differences between two files
+
+```sh
+diff --suppress-common-lines --side-by-side old.csv new.csv
 ```
 
 ## Find all files containing a string
