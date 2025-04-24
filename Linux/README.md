@@ -105,6 +105,8 @@ find . -name <file_name_or_pattern> | xargs ls -lhpa --color --group-directories
 ## Find the differences between two files
 
 ```sh
+comm -3 old.csv new.csv
+# or
 diff --suppress-common-lines --side-by-side old.csv new.csv
 ```
 
