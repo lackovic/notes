@@ -25,6 +25,7 @@ _Table of Contents_
 - [Presentations from command line](#presentations-from-command-line)
 - [Set your terminal default editor](#set-your-terminal-default-editor)
 - [cd to the previous directory](#cd-to-the-previous-directory)
+- [Troubleshoot network issues](#troubleshoot-network-issues)
 - [Neovim](#neovim)
   - [Install the latest version on Ubuntu](#install-the-latest-version-on-ubuntu)
   - [Setup](#setup)
@@ -198,6 +199,12 @@ sudo update-alternatives --config editor
 
 ```sh
 cd -
+```
+
+## Troubleshoot network issues
+
+```sh
+openssl s_client -connect <host>:443 -servername <host>
 ```
 
 ## Neovim
