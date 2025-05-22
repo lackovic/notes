@@ -24,6 +24,7 @@
 ^!+#f::return ; feedback hub
 ^!+#,::return ; show open windows transparent
 ^!+#o::return ; outlook
+^!+#d::return ; OneDrive
 ; ^!+#w::return ; pen settings (commented because reassigned below)
 ; ^!+#c::return ; cortana/copilot (commented because reassigned below)
 ; ^!+#g::return ; Game Bar Xbox (commented because reassigned below)
