@@ -6,6 +6,7 @@ Table of Contents
 <!-- generated with [DocToc](https://github.com/thlorenz/doctoc) -->
 
 - [Know the version](#know-the-version)
+- [Run Windows Update from PowerShell](#run-windows-update-from-powershell)
 - [Get the Windows Update log](#get-the-windows-update-log)
 - [Registry keys CRUD operations](#registry-keys-crud-operations)
 - [List local users, their home directory and occupied space](#list-local-users-their-home-directory-and-occupied-space)
@@ -30,6 +31,15 @@ Table of Contents
 $PSVersionTable
 ```
 
+## Run Windows Update from PowerShell
+
+To run Windows Update from PowerShell, you can use the `PSWindowsUpdate` module. If it's not installed, you can install it using the following command:
+
+```powershell
+Install-Module PSWindowsUpdate
+Get-WindowsUpdate
+Install-WindowsUpdate
+```
 ## Get the Windows Update log
 
 Running the following command will create a `WindowsUpdate.log` file in your Desktop folder:
