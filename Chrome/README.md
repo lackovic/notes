@@ -16,6 +16,10 @@ _Table of Contents_
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
+## Make a Chrome shortcut open the default profile in Windows
+
+Append `--profile-directory="Default"` to the target of the shortcut
+
 ## Export/import search engines
 
 1. Enter [`chrome://settings/searchEngines`](chrome://settings/searchEngines) in the address bar of Chrome to
