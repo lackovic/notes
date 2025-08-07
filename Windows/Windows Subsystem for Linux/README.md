@@ -8,6 +8,7 @@ WSL2 compared to WSL1 brings increased file system performance, full system call
 <!-- generated with [DocToc](https://github.com/thlorenz/doctoc) -->
 
 - [Installation](#installation)
+  - [How to Import a Docker Image as a WSL Distribution](#how-to-import-a-docker-image-as-a-wsl-distribution)
 - [Configuration](#configuration)
 - [Basic Commands](#basic-commands)
 - [Docker](#docker)
@@ -44,6 +45,73 @@ WSL2 compared to WSL1 brings increased file system performance, full system call
    - Virtual Machine Platform
 
 1. Install [Ubuntu 22.04.1 LTS](https://apps.microsoft.com/store/detail/ubuntu-22041-lts/9PN20MSR04DW)
+
+### How to Import a Docker Image as a WSL Distribution
+
+This guide shows how to replicate a Docker image as a WSL distribution. [amazoncorretto:21.0.8-al2023](https://hub.docker.com/layers/library/amazoncorretto/21.0.8-al2023/images/sha256-f3187c24c8a9e06d6cb49e378b397af4ff68e095588573e71aded97db0337249) is used as an example.
+
+Step 1: Pull the Docker Image
+```powershell
+docker pull amazoncorretto:21.0.8-al2023
+```
+
+Step 2: Verify Image Download
+```powershell
+docker images | findstr amazoncorretto
+```
+You should see the image with size around 730MB.
+
+Step 3: Create Container from Image
+```powershell
+docker create --name temp-corretto amazoncorretto:21.0.8-al2023
+```
+
+Step 4: Export Container to Tar File
+```powershell
+docker export temp-corretto -o corretto-al2023.tar
+```
+This will take several minutes and create a ~940MB tar file.
+
+Step 5: Verify Tar File Creation
+```powershell
+dir .\corretto-al2023.tar
+```
+Check that the file size is around 900MB+.
+
+Step 6: Create WSL Directory
+```powershell
+mkdir "$env:USERPROFILE\WSL\CorrettoAL2023"
+```
+
+Step 7: Import to WSL
+```powershell
+wsl --import CorrettoAL2023 "$env:USERPROFILE\WSL\CorrettoAL2023" ".\corretto-al2023.tar"
+```
+
+Step 8: Verify WSL Distribution
+```powershell
+wsl -l -v
+```
+You should see `CorrettoAL2023` in the list.
+
+Step 9: Clean Up
+```powershell
+docker rm temp-corretto
+del .\corretto-al2023.tar
+```
+
+Step 10: Launch Your New Environment
+```powershell
+wsl -d CorrettoAL2023
+```
+
+Key Notes:
+- **PowerShell Syntax:** Use `$env:USERPROFILE` in PowerShell, not `%USERPROFILE%`
+- **Export Method:** Always use `docker export -o filename.tar`, never `docker export > filename.tar`
+- **File Verification:** A proper tar file should show binary byte patterns, not UTF-16 encoding markers
+- **Naming:** You can replace `CorrettoAL2023` with any name you prefer for your WSL distribution
+
+Your new WSL distribution will have the exact same environment, packages, and Java version as the original Docker image.
 
 ## Configuration
 
