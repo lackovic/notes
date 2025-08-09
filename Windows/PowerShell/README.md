@@ -71,15 +71,23 @@ Remove-ItemProperty -Path Registry::HKEY_CLASSES_ROOT\Test\One\Two\Three -Recurs
 Run PowerShell version <= 5.x as *Administrator*:
 
 ```powershell
-Get-WmiObject win32_userprofile | % { 
+# SIDs:
+#  - Local/domain user accounts: S-1-5-21-...
+#  - Built-in service accounts:  S-1-5-18 (SYSTEM), S-1-5-19 (LOCAL SERVICE), S-1-5-20 (NETWORK SERVICE)
+Get-WmiObject Win32_UserProfile |
+  Where-Object {
+    $_.SID -match '^S-1-5-21-' -and           # real user accounts
+    -not $_.Special -and                      # skip special profiles
+    $_.LocalPath -and (Test-Path $_.LocalPath)
+  } | % {
     try {
-        $out = new-object psobject
-        $out | Add-Member noteproperty Name (New-Object System.Security.Principal.SecurityIdentifier($_.SID)).Translate([System.Security.Principal.NTAccount]).Value
-        $out | Add-Member noteproperty LocalPath $_.LocalPath
-        $out | Add-Member noteproperty FolderSize ("{0:N2}" -f ((Get-ChildItem -Recurse -Force -ErrorAction SilentlyContinue $_.LocalPath | Measure-Object -Property Length -Sum -ErrorAction SilentlyContinue).Sum / 1MB) + " MB")
-        $out
+      $out = New-Object psobject
+      $out | Add-Member noteproperty Name (New-Object System.Security.Principal.SecurityIdentifier($_.SID)).Translate([System.Security.Principal.NTAccount]).Value
+      $out | Add-Member noteproperty LocalPath $_.LocalPath
+      $out | Add-Member noteproperty FolderSize ("{0:N2}" -f ((Get-ChildItem -Recurse -Force -ErrorAction SilentlyContinue $_.LocalPath | Measure-Object -Property Length -Sum -ErrorAction SilentlyContinue).Sum / 1MB) + " MB")
+      $out
     } catch {}
-} | Format-Table
+  } | Format-Table
 ```
 
 ## Get hardware info
