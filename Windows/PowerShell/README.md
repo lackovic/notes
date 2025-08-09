@@ -76,7 +76,7 @@ Get-WmiObject win32_userprofile | % {
         $out = new-object psobject
         $out | Add-Member noteproperty Name (New-Object System.Security.Principal.SecurityIdentifier($_.SID)).Translate([System.Security.Principal.NTAccount]).Value
         $out | Add-Member noteproperty LocalPath $_.LocalPath
-        $out | Add-Member noteproperty FolderSize ("{0:N2}" -f ((Get-ChildItem -Recurse $_.LocalPath | Measure-Object -property length -sum -ErrorAction SilentlyContinue).sum / 1MB) + " MB")
+        $out | Add-Member noteproperty FolderSize ("{0:N2}" -f ((Get-ChildItem -Recurse -Force -ErrorAction SilentlyContinue $_.LocalPath | Measure-Object -Property Length -Sum -ErrorAction SilentlyContinue).Sum / 1MB) + " MB")
         $out
     } catch {}
 } | Format-Table
