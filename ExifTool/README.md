@@ -8,6 +8,18 @@
 exiftool "-DateTimeOriginal-=0:0:0 2:0:0" .
 ```
 
+## Set a specific date for all photos in the current folder, without changing the time
+
+In powershell:
+```powershell
+Get-ChildItem *.jpg | ForEach-Object {
+    $currentDateTime = exiftool -s -s -s -DateTimeOriginal $_.Name
+    $timePart = $currentDateTime.Split(' ')[1]
+    exiftool -DateTimeOriginal="2006:10:16 $timePart" $_.Name
+    Write-Host "Updated: $($_.Name)"
+}
+```
+
 ## Rename image and video files by date and time
 
 Rename image and video files according to their EXIF capture date, using `YYYY-MM-DD HH.MM.SS.ext` format. Files shot within the same second get copy number added (`-1`, `-2`, etc.). Some MOV files require a different date, so we run exiftool 3 times.
