@@ -2,6 +2,18 @@
 
 [ExifTool](https://exiftool.org/) is a library and a command-line application for reading, writing and editing meta information.
 
+_Table of Contents_
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+<!-- generated with [DocToc](https://github.com/thlorenz/doctoc) -->
+
+- [Shift 2 hours earlier the time of the photos in the current folder](#shift-2-hours-earlier-the-time-of-the-photos-in-the-current-folder)
+- [Set a specific date for all photos in the current folder, without changing the time](#set-a-specific-date-for-all-photos-in-the-current-folder-without-changing-the-time)
+- [Rename image and video files by date and time](#rename-image-and-video-files-by-date-and-time)
+- [Move or copy image files into folders by year and month](#move-or-copy-image-files-into-folders-by-year-and-month)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 ## Shift 2 hours earlier the time of the photos in the current folder
 
 ```powershell
