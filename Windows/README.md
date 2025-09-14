@@ -16,6 +16,7 @@
 - [Wipe all the deleted data / free space on a drive](#wipe-all-the-deleted-data--free-space-on-a-drive)
 - [See the command history across all PowerShell sessions](#see-the-command-history-across-all-powershell-sessions)
 - [Lock a BitLocker encrypted drive from the command line](#lock-a-bitlocker-encrypted-drive-from-the-command-line)
+- [Find a file or directory being used by another process](#find-a-file-or-directory-being-used-by-another-process)
 - [Autostarting programs locations](#autostarting-programs-locations)
 - [Install the latest Windows release with all the latest updates included](#install-the-latest-windows-release-with-all-the-latest-updates-included)
 - [Get rid of US language in Windows 11](#get-rid-of-us-language-in-windows-11)
@@ -125,6 +126,12 @@ cat (Get-PSReadlineOption).HistorySavePath
 ```powershell
 manage-bde.exe -lock e:
 ```
+
+## Find a file or directory being used by another process
+
+1. Open "Resource Monitor" (`resmon.exe`)
+1. Go to the "CPU" tab
+1. In the "Associated Handles" section, type part of the file or directory name in the search box
 
 ## Autostarting programs locations
 
