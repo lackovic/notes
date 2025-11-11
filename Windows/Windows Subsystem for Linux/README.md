@@ -8,10 +8,10 @@ WSL2 compared to WSL1 brings increased file system performance, full system call
 <!-- generated with [DocToc](https://github.com/thlorenz/doctoc) -->
 
 - [Installation](#installation)
-  - [How to Import a Docker Image as a WSL Distribution](#how-to-import-a-docker-image-as-a-wsl-distribution)
 - [Configuration](#configuration)
 - [Basic Commands](#basic-commands)
 - [Docker](#docker)
+    - [How to Import a Docker Image as a WSL Distribution](#how-to-import-a-docker-image-as-a-wsl-distribution)
 - [Run Linux GUI applications](#run-linux-gui-applications)
   - [Setup XLaunch (legacy)](#setup-xlaunch-legacy)
 - [Install IntelliJ IDEA](#install-intellij-idea)
@@ -34,19 +34,98 @@ WSL2 compared to WSL1 brings increased file system performance, full system call
 
 ## Installation
 
-1. In **Turn Windows features on or off** dialog, ensure the followings are enabled:
+1. Run:
 
-   - Hyper-V
+   ```powershell
+   wsl --install
+   ```
 
-   - Windows Hypervisor Platform
+1. Reboot
 
-   - Windows Subsystem for Linux
+1. Run:
 
-   - Virtual Machine Platform
+   ```powershell
+   # Get the list of available Linux distributions
+   wsl.exe --list --online
 
-1. Install [Ubuntu 22.04.1 LTS](https://apps.microsoft.com/store/detail/ubuntu-22041-lts/9PN20MSR04DW)
+   # Install your favorite Linux distribution, e.g. Ubuntu 24.04
+   wsl.exe --install Ubuntu-24.04
+   ```
 
-### How to Import a Docker Image as a WSL Distribution
+1. In **Turn Windows features on or off** ensure that the following are:
+
+   - enabled: Virtual Machine Platform, Windows Subsystem for Linux
+
+   - disabled: Hyper-V, Windows Hypervisor Platform
+
+## Configuration
+
+1. if Linux has been installed with only the `root` user then in WSL run:
+
+   ```sh
+   sudo adduser <username> 
+   ```
+
+1. set an empty password for your WSL user with the following command:
+
+   ```sh
+   sudo passwd -d <username>
+   ```
+   (secure access to your WSL shell is already protected by your Windows password)
+
+1. install all the updates:
+
+   ```sh
+   sudo apt update; sudo apt upgrade -y; sudo apt autoremove -y; sudo snap refresh
+   ```
+
+1. set your favorite editor as default editor:
+
+   ```sh
+   sudo update-alternatives --config editor
+   ```
+
+1. grant root privileges to your user:
+
+   ```sh
+   sudo visudo
+   ```
+
+   Append after `#User privilege specification`, right below `root`:
+
+   ```sh
+   <username> ALL=(ALL:ALL)ALL
+   ```
+
+1. if Linux was installed with only the `root` user then in PowerShell run:
+
+   ```powershell
+   ubuntu2204.exe config --default-user <username>
+   ```
+   (secure access to your WSL shell is already protected by your Windows password)
+
+## Basic Commands
+
+In PowerShell:
+
+```powershell
+# Switch WSL version
+wsl --set-version <distro> <version>
+
+# List your distributions and their WSL versions
+wsl --list -v
+
+# Update WSL to its latest version (https://github.com/microsoft/WSL/releases)
+wsl --update
+```
+
+## Docker
+
+- [Docker Desktop WSL 2 backend](https://docs.docker.com/docker-for-windows/wsl/)
+
+- [Using Remote Containers in WSL 2](https://code.visualstudio.com/blogs/2020/07/01/containers-wsl)
+
+#### How to Import a Docker Image as a WSL Distribution
 
 This guide shows how to replicate a Docker image as a WSL distribution. [amazoncorretto:21.0.8-al2023](https://hub.docker.com/layers/library/amazoncorretto/21.0.8-al2023/images/sha256-f3187c24c8a9e06d6cb49e378b397af4ff68e095588573e71aded97db0337249) is used as an example.
 
@@ -112,75 +191,6 @@ Key Notes:
 - **Naming:** You can replace `CorrettoAL2023` with any name you prefer for your WSL distribution
 
 Your new WSL distribution will have the exact same environment, packages, and Java version as the original Docker image.
-
-## Configuration
-
-1. if Linux has been installed with only the `root` user then in WSL run:
-
-   ```sh
-   sudo adduser <username> 
-   ```
-
-1. set an empty password for your WSL user with the following command:
-
-   ```sh
-   sudo passwd -d <username>
-   ```
-   (secure access to your WSL shell is already protected by your Windows password)
-
-1. install all the updates:
-
-   ```sh
-   sudo apt update; sudo apt upgrade -y; sudo apt autoremove -y; sudo snap refresh
-   ```
-
-1. set your favorite editor as default editor:
-
-   ```sh
-   sudo update-alternatives --config editor
-   ```
-
-1. grant root privileges to your user:
-
-   ```sh
-   sudo visudo
-   ```
-
-   Append after `#User privilege specification`, right below `root`:
-
-   ```sh
-   <username> ALL=(ALL:ALL)ALL
-   ```
-
-1. if Linux was installed with only the `root` user then in PowerShell run:
-
-   ```powershell
-   ubuntu2204.exe config --default-user <username>
-   ```
-   (secure access to your WSL shell is already protected by your Windows password)
-
-1. In Windows > _Virus and threat protection_ > _Manage settings_ > _Add or remove exclusions_: add an exclusion to the folder `\\wsl.localhost\Ubuntu`
-
-## Basic Commands
-
-In PowerShell:
-
-```powershell
-# Switch WSL version
-wsl --set-version <distro> <version>
-
-# List your distributions and their WSL versions
-wsl --list -v
-
-# Update WSL to its latest version (https://github.com/microsoft/WSL/releases)
-wsl --update
-```
-
-## Docker
-
-- [Docker Desktop WSL 2 backend](https://docs.docker.com/docker-for-windows/wsl/)
-
-- [Using Remote Containers in WSL 2](https://code.visualstudio.com/blogs/2020/07/01/containers-wsl)
 
 ## Run Linux GUI applications
 
