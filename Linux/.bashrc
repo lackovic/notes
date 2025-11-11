@@ -32,8 +32,8 @@ PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND$'\n'}history -a; history -c; h
 # source /etc/bash_completion.d/git
 # source /usr/share/bash-completion/completions/git
 
-# Keep system time in sync, install updates, set Docker containers to not autorestart
-alias update='sudo timedatectl set-ntp true; sudo apt update; sudo apt upgrade -y; sudo apt autoremove -y; sdk update; sudo snap refresh; docker update --restart=no $(docker container ls -a -q)'
+# Install updates, set Docker containers to not autorestart
+alias update='sudo apt update; sudo apt upgrade -y; sudo apt autoremove -y; sdk update; sudo snap refresh; docker update --restart=no $(docker container ls -a -q)'
 
 # Colorize ip output
 alias ip='ip -c'
