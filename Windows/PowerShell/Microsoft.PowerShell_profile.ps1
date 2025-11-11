@@ -10,7 +10,6 @@
 # Option 1: https://github.com/dahlbyk/posh-git
 # 1. Run as admin "PowerShellGet\Install-Module posh-git -Scope CurrentUser -Force"
 # 2. Uncomment the following lines to enable posh-git:
-# Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy Unrestricted
 # Import-Module posh-git
 # 3. Uncomment the following lines to prefix each prompt with date and time:
 # $GitPromptSettings.DefaultPromptPrefix.Text = '$(Get-Date -f "HH:mm:ss") '
