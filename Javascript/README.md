@@ -11,6 +11,7 @@ _Table of Contents_
 - [NodeJS](#nodejs)
   - [Installation](#installation)
     - [Fast Node Manager (fnm)](#fast-node-manager-fnm)
+      - [Windows setup](#windows-setup)
       - [Fix node version not being changed automatically on directory change](#fix-node-version-not-being-changed-automatically-on-directory-change)
       - [Fix the "Can't create the symlink for multishells" error](#fix-the-cant-create-the-symlink-for-multishells-error)
     - [Node Version Manager (nvm)](#node-version-manager-nvm)
@@ -87,6 +88,20 @@ The best way to install Node.js is through a node version manager: it is especia
 #### Fast Node Manager (fnm)
 
 The best node version manager is [fnm (Fast Node Manager)](https://github.com/Schniz/fnm). When compared to `nvm`, `fnm` is much faster, has a smaller footprint and it's cross-platform.
+
+##### Windows setup
+
+Run as Administrator:
+
+```powershell
+Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy Unrestricted
+``` 
+
+Add the following to the end of your profile file:
+
+```powershell
+fnm env --use-on-cd --shell powershell | Out-String | Invoke-Expression
+``` 
 
 ##### Fix node version not being changed automatically on directory change
 
