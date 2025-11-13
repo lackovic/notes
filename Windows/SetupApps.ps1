@@ -9,6 +9,7 @@ winget install -h --id FastStone.Viewer
 winget install -h --id AutoHotkey.AutoHotkey
 winget install -h --id Microsoft.PowerShell
 winget install -h --id LocalSend.LocalSend
+winget install -h --id Mega.MEGASync
 
 # Work Apps
 winget install -h --id JetBrains.IntelliJIDEA.Ultimate
@@ -18,6 +19,7 @@ winget install -h --id Docker.DockerDesktop
 winget install -h --id Schniz.fnm
 winget install -h --id Bruno.Bruno
 winget install -h --id Gravitational.Teleport
+winget install -h --id Google.GoogleDrive
 
 # Windows Subsystem for Linux
 wsl --install
