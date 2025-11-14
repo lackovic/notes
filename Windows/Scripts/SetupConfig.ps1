@@ -43,7 +43,7 @@ reg add "HKCU\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}\Inpr
 Set-ItemProperty -Path "HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" -Name "NavPaneExpandToCurrentFolder" -Value 1 -Type DWord
 
 # Restart Explorer to apply the above changes
-Stop-Process -Name explorer -Force; Start-Process explorer
+Stop-Process -Name explorer -Force
 
 # >>> Notification >>>
 
