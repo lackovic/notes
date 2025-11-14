@@ -13,7 +13,6 @@ Table of Contents
   - [Quickly open PowerShell as Administrator](#quickly-open-powershell-as-administrator)
   - [Use CTRL + D to exit PowerShell console](#use-ctrl--d-to-exit-powershell-console)
 - [List only file names in the current directory](#list-only-file-names-in-the-current-directory)
-- [List file system drives and disk space usage](#list-file-system-drives-and-disk-space-usage)
 - [PowerShell Core](#powershell-core)
   - [Install the latest version of PowerShell Core](#install-the-latest-version-of-powershell-core)
   - [Add git integration](#add-git-integration)
@@ -113,16 +112,6 @@ Set-PSReadlineKeyHandler -Key ctrl+d -Function ViExit
 ```powershell
 dir | Select-Object Name
 ``` 
-
-## List file system drives and disk space usage
-
-```powershell
-Get-PSDrive -PSProvider FileSystem |
-  Select-Object Root,
-    @{Name='Total(GB)';Expression={[math]::Round(($_.Used + $_.Free)/1GB,2)}},
-    @{Name='Used(GB)';Expression={[math]::Round($_.Used/1GB,2)}},
-    @{Name='Free(GB)';Expression={[math]::Round($_.Free/1GB,2)}}
-```
 
 ## PowerShell Core
 
