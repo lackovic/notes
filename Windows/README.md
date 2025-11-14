@@ -10,7 +10,6 @@
 - [Know the version and build](#know-the-version-and-build)
 - [Know the domain](#know-the-domain)
 - [Know whether a service is running on a port number](#know-whether-a-service-is-running-on-a-port-number)
-- [Create a EXT4 partition](#create-a-ext4-partition)
 - [Change the screenshots default save location](#change-the-screenshots-default-save-location)
 - [Create your own custom keyboard layout](#create-your-own-custom-keyboard-layout)
 - [Wipe all the deleted data / free space on a drive](#wipe-all-the-deleted-data--free-space-on-a-drive)
@@ -78,16 +77,6 @@ Run in PowerShell:
 ```powershell
 netstat -an -b | grep <port_number>
 ```
-
-## Create a EXT4 partition
-
-Run in PowerShell:
-```powershell
-choco install partitionwizard ext2fsd -y
-```
-
-Use MiniTool Partition Wizard to create a EXT4 partition.
-[Ext2Fsd](http://www.ext2fsd.com/) adds EXT4 support to Windows.
 
 ## Change the screenshots default save location
 
