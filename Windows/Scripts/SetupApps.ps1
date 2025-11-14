@@ -1,3 +1,12 @@
+<#
+.SYNOPSIS
+    Install commonly used applications via Winget.
+.NOTES
+    Comment out any applications you do not wish to install.
+#>
+
+#Requires -RunAsAdministrator
+
 winget source update
 
 # General Apps
