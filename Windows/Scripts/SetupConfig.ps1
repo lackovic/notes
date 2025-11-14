@@ -49,14 +49,14 @@ Set-ItemProperty -Path "HKCU:\Software\Microsoft\Windows\CurrentVersion\PushNoti
 # Enable Notifications > Do not disturb
 Write-Host "*** Warning *** Enabling Notifications > Do not disturb is not automated yet, please do it manually." -ForegroundColor Yellow
 
-# Disable Notifications > Additional settings > “Show the Windows welcome experience...”
+# Disable Notifications > Additional settings > "Show the Windows welcome experience..."
 Set-ItemProperty -Path "HKCU:\Software\Microsoft\Windows\CurrentVersion\ContentDeliveryManager" -Name "SubscribedContent-310093Enabled" -Value 0 -Type DWord
 
-# Disable Notifications > Additional settings > “Suggest ways to get the most out of Windows...”
+# Disable Notifications > Additional settings > "Suggest ways to get the most out of Windows..."
 New-Item -Path "HKCU:\Software\Microsoft\Windows\CurrentVersion\UserProfileEngagement" -Force | Out-Null
 Set-ItemProperty -Path "HKCU:\Software\Microsoft\Windows\CurrentVersion\UserProfileEngagement" -Name "ScoobeSystemSettingEnabled" -Type DWord -Value 0
 
-# Disable Notifications > Additional settings > “Get tips and suggestions when I use Windows”
+# Disable Notifications > Additional settings > "Get tips and suggestions when I use Windows"
 Set-ItemProperty -Path "HKCU:\Software\Microsoft\Windows\CurrentVersion\ContentDeliveryManager" -Name "SubscribedContent-338389Enabled" -Value 0 -Type DWord
 
 # >>> Power >>>
@@ -118,4 +118,4 @@ REG ADD HKCU\Software\Classes\ms-officeapp\Shell\Open\Command /t REG_SZ /d rundl
 # >>> Bloatware Removal >>>
 
 # Uninstall all Xbox apps
-Get-ProvisionedAppxPackage -Online | Where-Object { $_.PackageName -match “xbox” } | ForEach-Object { Remove-ProvisionedAppxPackage -Online -AllUsers -PackageName $_.PackageName }
+Get-ProvisionedAppxPackage -Online | Where-Object { $_.PackageName -match "xbox" } | ForEach-Object { Remove-ProvisionedAppxPackage -Online -AllUsers -PackageName $_.PackageName }
