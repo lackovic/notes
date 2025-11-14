@@ -1,6 +1,12 @@
-# Script to move and rename WhatsApp media files like follows:
-# IMG-20150527-WA0002.jpg -> .\2015\05\2015-05-27 WA0002.jpg
-# VID-20130509-WA0006.mp4 -> .\2013\05\2013-05-09 WA0006.mp4
+<#
+.SYNOPSIS
+    Move and rename WhatsApp media files into organized folders by date.
+.DESCRIPTION
+    Processes WhatsApp media files in the current directory, moving and renaming them into a structured folder hierarchy based on the date embedded in the filenames.
+.EXAMPLE
+    IMG-20150527-WA0002.jpg -> .\2015\05\2015-05-27 WA0002.jpg
+    VID-20130509-WA0006.mp4 -> .\2013\05\2013-05-09 WA0006.mp4
+#>
 
 function Test-IsWhatsAppImage($file) {
     return $file.BaseName.StartsWith("IMG-") -and $file.Extension.equals(".jpg")

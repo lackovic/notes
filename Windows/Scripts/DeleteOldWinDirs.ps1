@@ -1,21 +1,17 @@
-#Requires -RunAsAdministrator
-
 <#
 .SYNOPSIS
     Removes old Windows directories from a previous Windows installation.
-
 .DESCRIPTION
     Based on: https://superuser.com/a/1028115/54747
-
 .PARAMETER TargetDrive
     The drive letter where the old Windows installation is located
-
 .PARAMETER Force
     Skip confirmation prompts and proceed with deletion
-
 .EXAMPLE
     .\DeleteOldWinDirs.ps1 -TargetDrive "D:" -Force
 #>
+
+#Requires -RunAsAdministrator
 
 param(
     [Parameter(Mandatory = $true)]
