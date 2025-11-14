@@ -82,6 +82,9 @@ powercfg /DEVICEQUERY wake_programmable | Select-String -Pattern "mouse|keyboard
 
 # Set Sounds > More sounds settings > Sounds > Sound Scheme to "No Sounds"
 Set-ItemProperty -Path "HKCU:\AppEvents\Schemes" -Name "(Default)" -Value ".None" -Type String
+Get-ChildItem -Path "HKCU:\AppEvents\Schemes\Apps" -Recurse | 
+    Where-Object { $_.PSChildName -eq ".Current" } | 
+    ForEach-Object { Set-ItemProperty -Path $_.PSPath -Name "(Default)" -Value "" -Type String }
 
 # Disable Accessibility > Visual effects > Transparency effects
 Set-ItemProperty -Path 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize' -Name EnableTransparency -Type DWord -Value 0
