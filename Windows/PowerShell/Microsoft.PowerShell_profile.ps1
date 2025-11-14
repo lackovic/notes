@@ -49,6 +49,68 @@ Set-PSReadlineKeyHandler -Key ctrl+d -Function ViExit
 
 # >>> Functions
 
+function Get-Drives {
+    <#
+    .SYNOPSIS
+        Lists all drives with their total, used and free space.
+    .DESCRIPTION
+        Displays information about all fixed drives including total space, used space, free space, and recycle bin size.
+    .EXAMPLE
+        Get-DriveSpace
+    #>
+    
+    $shell = New-Object -ComObject Shell.Application
+
+    Get-PSDrive -PSProvider FileSystem |
+    Where-Object { $_.Root -match '^[A-Z]:\\$' } |
+    Select-Object Root,
+    @{Name = 'Total(GB)'; Expression = { [math]::Round(($_.Used + $_.Free) / 1GB, 2) } },
+    @{Name = 'Used(GB)'; Expression = { [math]::Round($_.Used / 1GB, 2) } },
+    @{Name = 'Free(GB)'; Expression = { [math]::Round($_.Free / 1GB, 2) } },
+    @{Name = 'RecycleBin(GB)'; Expression = {
+            $driveLetter = $_.Root.Substring(0, 2)
+            try {
+                $recycleBin = $shell.Namespace(0xA).Items() | Where-Object { $_.Path -like "$driveLetter*" }
+                $size = ($recycleBin | Measure-Object -Property Size -Sum).Sum
+                [math]::Round($size / 1GB, 2)
+            }
+            catch {
+                0
+            }
+        }
+    }
+}
+
+function Get-Users {
+    <#
+    .SYNOPSIS
+        List local users, their home directory and occupied space
+    .NOTES
+        SIDs:
+          - Local/domain user accounts: S-1-5-21-...
+          - Built-in service accounts:  S-1-5-18 (SYSTEM), S-1-5-19 (LOCAL SERVICE), S-1-5-20 (NETWORK SERVICE)
+    #>
+    
+    Write-Host "Collecting users profile information, please wait..." -ForegroundColor Yellow
+    Get-CimInstance Win32_UserProfile |
+    Where-Object {
+        # Filter for real user accounts (exclude system/service accounts)
+        $_.SID -match '^S-1-5-21-' -and
+        -not $_.Special -and 
+        $_.LocalPath -and
+        (Test-Path $_.LocalPath)
+    } | ForEach-Object {
+        try {
+            [PSCustomObject]@{
+                Name       = (New-Object System.Security.Principal.SecurityIdentifier($_.SID)).Translate([System.Security.Principal.NTAccount]).Value
+                LocalPath  = $_.LocalPath
+                FolderSize = "{0:N2} MB" -f ((Get-ChildItem -Recurse -Force -ErrorAction SilentlyContinue $_.LocalPath | Measure-Object -Property Length -Sum -ErrorAction SilentlyContinue).Sum / 1MB)
+            }
+        }
+        catch {}
+    } | Format-Table
+}
+
 function Disable-History {
     <#
     .SYNOPSIS
@@ -86,7 +148,6 @@ function Remove-KeywordFromHistory {
     else {
         Write-Host "PSReadLine history file not found at $historyPath." -ForegroundColor Yellow
     }
-    Write-Host "Persistent history cleanup completed." -ForegroundColor Green
 }
 
 function Remove-DuplicateHistory {
