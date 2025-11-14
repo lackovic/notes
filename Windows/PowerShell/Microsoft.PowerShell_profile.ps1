@@ -119,6 +119,29 @@ function Restart-Explorer {
     Stop-Process -Name explorer -Force
 }
 
+function findstr {
+    <#
+    .SYNOPSIS
+        Wrapper for findstr.exe that always performs case-insensitive searches with colored output.
+    #>
+    if ($input) {
+        # Handle piped input
+        $pattern = $args[0]
+        $input | & findstr.exe /I $args | ForEach-Object {
+            # Highlight matches in red (use case-insensitive regex)
+            $_ -replace "(?i)($pattern)", "$([char]27)[91m`$1$([char]27)[0m"
+        }
+    }
+    else {
+        # Handle direct arguments
+        $pattern = $args[0]
+        & findstr.exe /I $args | ForEach-Object {
+            # Highlight matches in red
+            $_ -replace "(?i)($pattern)", "$([char]27)[91m`$1$([char]27)[0m"
+        }
+    }
+}
+
 function Disable-History {
     <#
     .SYNOPSIS
