@@ -69,7 +69,8 @@ The process will take a while: it takes 35 minutes on a beafy desktop computer w
 1. Run . [SetupApps.ps1](./Scripts/SetupApps.ps1) to install commonly used applications via Winget
 1. Install your motherboard drivers (chipset, audio, LAN, etc.)
 1. Install your GPU drivers
-1. Download _Incosolata Nerd Font_ from [here](https://www.nerdfonts.com/font-downloads), right click on all TTF files, choose _Install_, set it as default font in Windows Terminal
+1. Download [Incosolata Nerd Font](https://www.nerdfonts.com/font-downloads), extract and install all TTF files
+1. Set it as default font in Windows Terminal
 
 ## Windows Update
 
