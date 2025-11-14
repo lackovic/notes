@@ -34,7 +34,7 @@
 
 # >>> Key bindings
 #
-# 1. Set Ctrl+D to exit Vi mode
+# 1. Set Ctrl+D to exit the shell
 Set-PSReadlineKeyHandler -Key ctrl+d -Function ViExit
 
 # >>> Winfetch
