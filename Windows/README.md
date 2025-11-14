@@ -155,7 +155,7 @@ netstat -an -b | grep <port_number>
 
 ## Create your own custom keyboard layout
 
-- [Microsoft Keyboard Layout Creator](https://www.microsoft.com/en-us/download/details.aspx?id=22339)
+- [Microsoft Keyboard Layout Creator](https://www.microsoft.com/en-us/download/details.aspx?id=102134)
 
 ## Wipe all the deleted data / free space on a drive
 
