@@ -5,9 +5,7 @@ Table of Contents
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 <!-- generated with [DocToc](https://github.com/thlorenz/doctoc) -->
 
-- [Know the version](#know-the-version)
-- [Run Windows Update from PowerShell](#run-windows-update-from-powershell)
-- [Get the Windows Update log](#get-the-windows-update-log)
+- [Know PowerShell version](#know-powershell-version)
 - [Registry keys CRUD operations](#registry-keys-crud-operations)
 - [Get hardware info](#get-hardware-info)
 - [Add a timestamp to your prompt](#add-a-timestamp-to-your-prompt)
@@ -25,27 +23,10 @@ Table of Contents
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
-## Know the version
+## Know PowerShell version
 
 ```powershell
 $PSVersionTable
-```
-
-## Run Windows Update from PowerShell
-
-To run Windows Update from PowerShell, you can use the `PSWindowsUpdate` module. If it's not installed, you can install it using the following command:
-
-```powershell
-Install-Module PSWindowsUpdate
-Get-WindowsUpdate
-Install-WindowsUpdate
-```
-## Get the Windows Update log
-
-Running the following command will create a `WindowsUpdate.log` file in your Desktop folder:
-
-```powershell
-Get-WindowsUpdateLog
 ```
 
 ## Registry keys CRUD operations

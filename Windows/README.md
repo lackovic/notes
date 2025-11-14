@@ -6,6 +6,9 @@
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 <!-- generated with [DocToc](https://github.com/thlorenz/doctoc) -->
 
+- [Windows Update](#windows-update)
+  - [Run Windows Update from terminal](#run-windows-update-from-terminal)
+  - [Get the Windows Update log](#get-the-windows-update-log)
 - [Favorite shortcuts](#favorite-shortcuts)
 - [Know the version and build](#know-the-version-and-build)
 - [Know the domain](#know-the-domain)
@@ -36,6 +39,24 @@
   - [Scripts for automation of routine tasks and bloatware removal](#scripts-for-automation-of-routine-tasks-and-bloatware-removal)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
+## Windows Update
+
+### Run Windows Update from terminal
+
+```powershell
+Install-Module PSWindowsUpdate
+Get-WindowsUpdate
+Install-WindowsUpdate
+```
+
+### Get the Windows Update log
+
+Running the following command will create a `WindowsUpdate.log` file in your Desktop folder:
+
+```powershell
+Get-WindowsUpdateLog
+```
 
 ## Favorite shortcuts
 
