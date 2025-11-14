@@ -15,7 +15,10 @@
 - [Create your own custom keyboard layout](#create-your-own-custom-keyboard-layout)
 - [Wipe all the deleted data / free space on a drive](#wipe-all-the-deleted-data--free-space-on-a-drive)
 - [See the command history across all PowerShell sessions](#see-the-command-history-across-all-powershell-sessions)
-- [Lock a BitLocker encrypted drive from the command line](#lock-a-bitlocker-encrypted-drive-from-the-command-line)
+- [BitLocker](#bitlocker)
+  - [Lock a BitLocker encrypted drive from the command line](#lock-a-bitlocker-encrypted-drive-from-the-command-line)
+  - [Find out if your drive is running BitLocker software based encryption](#find-out-if-your-drive-is-running-bitlocker-software-based-encryption)
+  - [Disable BitLocker encryption for a drive](#disable-bitlocker-encryption-for-a-drive)
 - [Find a file or directory being used by another process](#find-a-file-or-directory-being-used-by-another-process)
 - [Autostarting programs locations](#autostarting-programs-locations)
 - [Install the latest Windows release with all the latest updates included](#install-the-latest-windows-release-with-all-the-latest-updates-included)
@@ -121,11 +124,33 @@ Cipher goes through the following steps:
 cat (Get-PSReadlineOption).HistorySavePath
 ``` 
 
-## Lock a BitLocker encrypted drive from the command line
+## BitLocker
+
+### Lock a BitLocker encrypted drive from the command line
 
 ```powershell
 manage-bde.exe -lock e:
 ```
+
+### Find out if your drive is running BitLocker software based encryption
+
+```powershell
+manage-bde -status
+```
+
+### Disable BitLocker encryption for a drive
+
+```powershell
+manage-bde -off e:
+```
+
+This will take a while, depending on the size of the drive and the amount of data stored on it. You can monitor the decryption progress with:
+
+```powershell
+manage-bde -status
+```
+
+and then look at the _Conversion Status_ field and the _Percentage Encrypted_ field.
 
 ## Find a file or directory being used by another process
 
