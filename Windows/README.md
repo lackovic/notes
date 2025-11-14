@@ -71,8 +71,6 @@ The process will take a while: it takes 35 minutes on a beafy desktop computer w
    - disable widgets and Chat
 1. Install your motherboard drivers (chipset, audio, LAN, etc.)
 1. Install your GPU drivers
-1. File Explorer > View:
-   - Options > View: select _Expand to open folder_ and _Show all folders_
 1. Download _Incosolata Nerd Font_ from [here](https://www.nerdfonts.com/font-downloads), right click on all TTF files, choose _Install_, set it as default font in Windows Terminal
 
 ## Windows Update
