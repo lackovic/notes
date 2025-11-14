@@ -1,11 +1,15 @@
-# PowerShell script to reduce the hour of a date by one hour
-# of filenames in the format "YYYY-MM-DD HH.MM.SS". Examples:
-# - "2024-01-01 23.59.59.txt" -> "2024-01-01 22.59.59.txt"
-# - "2024-01-01 00.00.00.jpg" -> "2023-12-31 23.00.00.jpg"
-# - "2024-03-01 00.30.15.mp4" -> "2024-02-29 23.30.15.mp4"
+<#
+.SYNOPSIS
+    Reduce the hour of date-based filenames by one hour.
+.NOTES
+    Processes files in the current directory with filenames in the format "YYYY-MM-DD HH.MM.SS".
+    Pattern matches the date/time portion but allows any file extension.
+.EXAMPLE
+    "2024-01-01 23.59.59.txt" -> "2024-01-01 22.59.59.txt"
+    "2024-01-01 00.00.00.jpg" -> "2023-12-31 23.00.00.jpg"
+    "2024-03-01 00.30.15.mp4" -> "2024-02-29 23.30.15.mp4"
+#>
 
-# Get all files in the current directory with the date format pattern
-# Pattern matches the date/time portion but allows any extension
 $pattern = "^\d{4}-\d{2}-\d{2} \d{2}\.\d{2}\.\d{2}"
 $files = Get-ChildItem | Where-Object { $_.BaseName -match $pattern }
 
