@@ -6,6 +6,7 @@ _Table of Contents_
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 <!-- generated with [DocToc](https://github.com/thlorenz/doctoc) -->
 
+- [First things to do after installation](#first-things-to-do-after-installation)
 - [Get your operating system information](#get-your-operating-system-information)
 - [Get your hardware information](#get-your-hardware-information)
 - [Remove the green background color from the directory listing](#remove-the-green-background-color-from-the-directory-listing)
@@ -44,6 +45,15 @@ _Table of Contents_
   - [Install Java through SDKMAN](#install-java-through-sdkman)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
+## First things to do after installation 
+
+1. Update the system packages:
+   ```sh
+   sudo apt update; sudo apt upgrade -y; sudo apt autoremove -y
+   ```
+
+1. Copy the content of [`.bashrc`](.bashrc) to your `~/.bashrc`
 
 ## Get your operating system information
 
