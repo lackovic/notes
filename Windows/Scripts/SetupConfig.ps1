@@ -7,6 +7,8 @@
 
 #Requires -RunAsAdministrator
 
+# >>> Taskbar Settings >>>
+
 # Disable Search box on the taskbar
 Set-ItemProperty -Path "HKCU:\Software\Microsoft\Windows\CurrentVersion\Search" -Name "SearchboxTaskbarMode" -Type DWord -Value 0
 
@@ -15,6 +17,11 @@ Set-ItemProperty -Path "HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer
 
 # Disable Widgets (News and Interests) on the taskbar
 # ?
+
+# Set Taskbar alignment to Left (0 = Left, 1 = Center)
+Set-ItemProperty -Path "HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" -Name "TaskbarAl" -Type DWord -Value 0
+
+# <<< Taskbar Settings <<<
 
 # Enable System > Notifications > Do not disturb
 # ?
@@ -31,9 +38,6 @@ Set-ItemProperty -Path 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Themes\P
 
 # Hide desktop icons
 Set-ItemProperty -Path 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced' -Name HideIcons -Value 1
-
-# Set Taskbar alignment to Left (0 = Left, 1 = Center)
-Set-ItemProperty -Path "HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" -Name "TaskbarAl" -Type DWord -Value 0
 
 # Disable Cortana and web search integration in Windows Search
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Search" /v BingSearchEnabled /t REG_DWORD /d 00000000 /f
