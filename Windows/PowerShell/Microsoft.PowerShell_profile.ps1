@@ -46,3 +46,82 @@ Set-PSReadlineKeyHandler -Key ctrl+d -Function ViExit
 
 # Setup to use fnm https://github.com/Schniz/fnm#shell-setup
 #fnm env --use-on-cd | Out-String | Invoke-Expression
+
+# >>> Functions
+
+function Disable-History {
+    <#
+    .SYNOPSIS
+        Disables the persistent PSReadLine history for the current session.
+    #>
+    $global:PSReadLineOldHistorySaveStyle = (Get-PSReadLineOption).HistorySaveStyle
+    Set-PSReadLineOption -HistorySaveStyle SaveNothing
+    Write-Host "Persistent PSReadLine history disabled for this session." -ForegroundColor Yellow
+}
+
+function Remove-KeywordFromHistory {
+    <#
+    .SYNOPSIS
+        Removes from the persistent PSReadLine history file the commands containing a specified keyword.
+    .PARAMETER Keyword
+        The keyword to search for in the persistent history.
+    .EXAMPLE
+        Remove-PSReadLineHistoryByKeyword -Keyword "password"
+    .EXAMPLE
+        Remove-PSReadLineHistoryByKeyword secret
+    #>
+    param(
+        [Parameter(Mandatory = $true)]
+        [string]$Keyword
+    )
+
+    $historyPath = (Get-PSReadlineOption).HistorySavePath
+    if (Test-Path $historyPath) {
+        $lines = Get-Content $historyPath
+        $filtered = $lines | Where-Object { $_ -notlike "*$Keyword*" }
+        $removedCount = $lines.Count - $filtered.Count
+        $filtered | Set-Content $historyPath
+        Write-Host "Removed $removedCount entries from persistent PSReadLine history." -ForegroundColor Green
+    }
+    else {
+        Write-Host "PSReadLine history file not found at $historyPath." -ForegroundColor Yellow
+    }
+    Write-Host "Persistent history cleanup completed." -ForegroundColor Green
+}
+
+function Remove-DuplicateHistory {
+    <#
+    .SYNOPSIS
+        Removes duplicate entries from PSReadLine history, keeping only the last occurrence.
+    #>
+    $historyPath = (Get-PSReadlineOption).HistorySavePath
+    if (Test-Path $historyPath) {
+        $lines = Get-Content $historyPath
+        # Create a hashtable to track the last index of each command
+        $lastIndex = @{}
+        for ($i = 0; $i -lt $lines.Count; $i++) {
+            $lastIndex[$lines[$i]] = $i
+        }
+        # Keep only lines that are at their last occurrence index
+        $unique = for ($i = 0; $i -lt $lines.Count; $i++) {
+            if ($lastIndex[$lines[$i]] -eq $i) {
+                $lines[$i]
+            }
+        }
+        $unique | Set-Content $historyPath
+    }
+}
+
+# Set up a prompt command to remove duplicates after each command
+Set-PSReadLineOption -AddToHistoryHandler {
+    param($command)
+    # Remove duplicates from history file
+    Remove-DuplicateHistory
+    return $true
+}
+
+# Don't record space-prefixed commands
+Set-PSReadLineOption -AddToHistoryHandler {
+    param([string]$line)
+    return $line.Length -gt 3 -and $line[0] -ne ' ' -and $line[0] -ne ';'
+}
