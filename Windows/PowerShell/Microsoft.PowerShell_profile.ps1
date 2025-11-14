@@ -111,6 +111,14 @@ function Get-Users {
     } | Format-Table
 }
 
+function Restart-Explorer {
+    <#
+    .SYNOPSIS
+        Restarts Windows Explorer to resolve the taskbar disappearing issue.
+    #>
+    Stop-Process -Name explorer -Force
+}
+
 function Disable-History {
     <#
     .SYNOPSIS
