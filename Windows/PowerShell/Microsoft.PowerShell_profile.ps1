@@ -169,16 +169,23 @@ function Remove-DuplicateHistory {
                 $lines[$i]
             }
         }
-        $unique | Set-Content $historyPath
+        $removedCount = $lines.Count - $unique.Count
+        if ($removedCount -gt 0) {
+            $unique | Set-Content $historyPath
+        }
     }
 }
 
-# Set up a prompt command to remove duplicates after each command
-Set-PSReadLineOption -AddToHistoryHandler {
-    param($command)
-    # Remove duplicates from history file
+# Remove duplicates using prompt function (runs after command execution)
+function prompt {
     Remove-DuplicateHistory
-    return $true
+    # Call the original posh-git prompt if it's loaded
+    if (Get-Command Write-VcsStatus -ErrorAction SilentlyContinue) {
+        & $GitPromptScriptBlock
+    }
+    else {
+        "PS $($executionContext.SessionState.Path.CurrentLocation)$('>' * ($nestedPromptLevel + 1)) "
+    }
 }
 
 # Don't record space-prefixed commands
