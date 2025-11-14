@@ -1,6 +1,10 @@
 <#
 .SYNOPSIS
     Configure various Windows settings for improved usability and performance.
+.EXAMPLE
+    WARNING! This script must be executed in this specific way to avoid execution policy errors:
+    powershell.exe -ExecutionPolicy Bypass -File .\SetupConfig.ps1
+
 .NOTES
     Comment out any settings you do not wish to apply.
 #>
