@@ -13,6 +13,14 @@
 
 #Requires -RunAsAdministrator
 
+Write-Host "Warning: This script will permanently delete old Windows directories from the specified drive.`n         Ensure you have selected the correct drive and have backups if necessary.`n         Press c to continue or any other key to cancel." -ForegroundColor Red
+$key = [System.Console]::ReadKey($true)
+if ($key.Key -ne "C") {
+    Write-Host "Operation cancelled by user." -ForegroundColor Yellow
+    exit
+}
+Write-Host "Continuing with deletion..." -ForegroundColor Green
+
 param(
     [Parameter(Mandatory = $true)]
     [ValidatePattern("^[A-Za-z]:$")]
