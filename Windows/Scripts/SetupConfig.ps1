@@ -131,8 +131,14 @@ Get-AppxPackage -Name "Microsoft.Todos" | Remove-AppxPackage
 # Microsoft Clipchamp
 Get-AppxPackage -Name "Clipchamp.Clipchamp" | Remove-AppxPackage
 
+# Microsoft Copilot
+winget uninstall -h --id 9WZDNCRD29V9
+
 # News
 Get-AppxPackage -Name "Microsoft.BingNews" | Remove-AppxPackage
+
+# OneDrive
+winget uninstall -h --id Microsoft.OneDrive
 
 # Outlook (new)
 Get-AppxPackage -Name "Microsoft.OutlookForWindows" | Remove-AppxPackage
