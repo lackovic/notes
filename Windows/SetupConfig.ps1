@@ -10,6 +10,9 @@ Set-ItemProperty -Path "HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer
 # Enable System > Notifications > Do not disturb
 # ?
 
+# Enable System > Clipboard > Clipboard history
+Set-ItemProperty -Path "HKCU:\Software\Microsoft\Clipboard" -Name "EnableClipboardHistory" -Value 1 -Type DWORD -Force
+
 # Disable Accessibility > Visual effects > Transparency effects
 Set-ItemProperty -Path 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize' -Name EnableTransparency -Type DWord -Value 0
 
