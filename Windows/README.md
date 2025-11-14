@@ -67,15 +67,12 @@ The process will take a while: it takes 35 minutes on a beafy desktop computer w
 1. Run Windows Update and reboot until there are no more updates available
 1. Run . [SetupConfig.ps1](./Scripts/SetupConfig.ps1) to apply various configuration tweaks
 1. Run . [SetupApps.ps1](./Scripts/SetupApps.ps1) to install commonly used applications via Winget
-1. Windows Update: select _Get the latest updates as soon as they're available_
 1. Personalization > Taskbar:
    - disable widgets and Chat
-1. Change system sounds > Sounds > Sound Schemes: _No Sounds_
 1. Install your motherboard drivers (chipset, audio, LAN, etc.)
 1. Install your GPU drivers
 1. File Explorer > View:
    - Options > View: select _Expand to open folder_ and _Show all folders_
-1. Settings > Personalization > Start: Disable _Show recommended files in Start, recent files in File Explorer, and items in Jump Lists_   
 1. Download _Incosolata Nerd Font_ from [here](https://www.nerdfonts.com/font-downloads), right click on all TTF files, choose _Install_, set it as default font in Windows Terminal
 
 ## Windows Update
