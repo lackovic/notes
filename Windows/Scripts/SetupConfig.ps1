@@ -68,6 +68,10 @@ Set-ItemProperty -Path 'HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer
 # Control panel > Power options > Choose what the power buttons do > Turn on fast startup
 Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Control\Session Manager\Power" -Name "HiberbootEnabled" -Value 1 -Type DWord
 
+# Disable computer wake up on key press or mouse movement
+# You might have to run this command again after a plugging in a new mouse or keyboard, or after a major Windows update
+powercfg /DEVICEQUERY wake_programmable | Select-String -Pattern "mouse|keyboard" | ForEach-Object { $_.ToString() } | ForEach-Object { powercfg /DEVICEDISABLEWAKE $_ }
+
 # >>> Other Settings >>>
 
 # Enable System > Clipboard > Clipboard history
@@ -84,6 +88,11 @@ Set-ItemProperty -Path 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Themes\P
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Search" /v BingSearchEnabled /t REG_DWORD /d 00000000 /f
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Search" /v AllowSearchToUseLocation /t REG_DWORD /d 00000000 /f
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Search" /v CortanaConsent /t REG_DWORD /d 00000000 /f
+
+# Disable hyper key (Win+Alt+Ctrl+Shift) opening Microsoft Office
+REG ADD HKCU\Software\Classes\ms-officeapp\Shell\Open\Command /t REG_SZ /d rundll32
+
+# >>> Bloatware Removal >>>
 
 # Uninstall all Xbox apps
 Get-ProvisionedAppxPackage -Online | Where-Object { $_.PackageName -match “xbox” } | ForEach-Object { Remove-ProvisionedAppxPackage -Online -AllUsers -PackageName $_.PackageName }

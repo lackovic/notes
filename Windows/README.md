@@ -13,6 +13,7 @@
 - [Windows Update](#windows-update)
   - [Run Windows Update from terminal](#run-windows-update-from-terminal)
   - [Get the Windows Update log](#get-the-windows-update-log)
+- [Miscellaneous how-tos](#miscellaneous-how-tos)
 - [Favorite shortcuts](#favorite-shortcuts)
 - [Know the version and build](#know-the-version-and-build)
 - [Know the domain](#know-the-domain)
@@ -29,14 +30,8 @@
 - [Autostarting programs locations](#autostarting-programs-locations)
 - [Get rid of US language in Windows 11](#get-rid-of-us-language-in-windows-11)
 - [Automation and bloatware removal](#automation-and-bloatware-removal)
-  - [Disable Web Results in Windows 11 Start or Search Menu](#disable-web-results-in-windows-11-start-or-search-menu)
-  - [Use classic context menu in File Explorer in Windows 11](#use-classic-context-menu-in-file-explorer-in-windows-11)
-  - [Turn on fast startup](#turn-on-fast-startup)
-  - [Disable hyper key (Win+Alt+Ctrl+Shift) opening Microsoft Office](#disable-hyper-key-winaltctrlshift-opening-microsoft-office)
   - [Customize File Explorer (permanently disable files grouping)](#customize-file-explorer-permanently-disable-files-grouping)
   - [Disable magnifier](#disable-magnifier)
-  - [Disable computer wake up on key press or mouse movement](#disable-computer-wake-up-on-key-press-or-mouse-movement)
-  - [Uninstall Xbox apps](#uninstall-xbox-apps)
   - [Scripts for automation of routine tasks and bloatware removal](#scripts-for-automation-of-routine-tasks-and-bloatware-removal)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
@@ -70,15 +65,11 @@ The process will take a while: it takes 35 minutes on a beafy desktop computer w
 ### Things to do right after a Windows 11 installation
 
 1. Run Windows Update and reboot until there are no more updates available
-1. Run `winget source update` to update `winget` to its latest version (see https://github.com/microsoft/winget-cli/issues/3832)
+1. Run . [SetupConfig.ps1](./Scripts/SetupConfig.ps1) to apply various configuration tweaks
+1. Run . [SetupApps.ps1](./Scripts/SetupApps.ps1) to install commonly used applications via Winget
 1. Windows Update: select _Get the latest updates as soon as they're available_
-1. Notifications & actions:
-   - Notifications: off
-   - Additional settings: disable all
 1. Personalization > Taskbar:
-   - disable search, task view, widgets and Chat
-   - Taskbar behaviors > Taskbar alignment: Left
-1. Edit power plan > Power Options > Choose what the power buttons do > Change settings that are currently unavailable: select _Hibernate_
+   - disable widgets and Chat
 1. Change system sounds > Sounds > Sound Schemes: _No Sounds_
 1. Install your motherboard drivers (chipset, audio, LAN, etc.)
 1. Install your GPU drivers
@@ -86,7 +77,6 @@ The process will take a while: it takes 35 minutes on a beafy desktop computer w
    - Options > View: select _Expand to open folder_ and _Show all folders_
 1. Settings > Personalization > Start: Disable _Show recommended files in Start, recent files in File Explorer, and items in Jump Lists_   
 1. Download _Incosolata Nerd Font_ from [here](https://www.nerdfonts.com/font-downloads), right click on all TTF files, choose _Install_, set it as default font in Windows Terminal
-1. Apply all the changes described in the following sections.
 
 ## Windows Update
 
@@ -105,6 +95,10 @@ Running the following command will create a `WindowsUpdate.log` file in your Des
 ```powershell
 Get-WindowsUpdateLog
 ```
+
+## Miscellaneous how-tos
+
+See [SetupConfig.ps1](./Scripts/SetupConfig.ps1).
 
 ## Favorite shortcuts
 
@@ -242,48 +236,6 @@ In Windows 11 settings (`Win`+`i`), select _Time & language_ > _Language & regio
 
 ## Automation and bloatware removal
 
-### Disable Web Results in Windows 11 Start or Search Menu
-
-Option 1:
-
-1. Run in PowerShell:
-
-   ```powershell
-   reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Search" /v BingSearchEnabled /t REG_DWORD /d 00000000 /f
-   reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Search" /v AllowSearchToUseLocation /t REG_DWORD /d 00000000 /f
-   reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Search" /v CortanaConsent /t REG_DWORD /d 00000000 /f
-   ```
-
-1. Reboot
-
-Option 2:
-
-1. Run `gpedit.msc`
-
-1. User Configuration > Administrative Templates > Windows Components > File Explorer
-
-1. Enable `Turn off display of recent search entries in the File Explorer search box`
-
-1. Reboot
-
-### Use classic context menu in File Explorer in Windows 11
-
-```powershell
-reg add "HKCU\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}\InprocServer32" /f /ve
-```
-
-### Turn on fast startup
-
-Control panel > Power options > Choose what the power buttons do > Turn on fast startup
-
-### Disable hyper key (Win+Alt+Ctrl+Shift) opening Microsoft Office
-
-```powershell
-REG ADD HKCU\Software\Classes\ms-officeapp\Shell\Open\Command /t REG_SZ /d rundll32
-```
-
-[Source](https://superuser.com/a/1794781/54747)
-
 ### Customize File Explorer (permanently disable files grouping)
 
 Use [WinSetView](https://lesferch.github.io/WinSetView/) to apply the following changes:
@@ -315,28 +267,6 @@ takeown /f C:\Windows\System32\Magnify.exe
 ```
 - type Y and press Enter
 - Right-click on `C:\Windows\System32\Magnify.exe` and rename it to `Magnify.exe.bak`
-
-### Disable computer wake up on key press or mouse movement
-
-In an elevated PowerShell console run the following command:
-
-```powershell
-powercfg /DEVICEQUERY wake_programmable | Select-String -Pattern "mouse|keyboard" | ForEach-Object { $_.ToString() } | ForEach-Object { powercfg /DEVICEDISABLEWAKE $_ }
-```
-
-You might have to run the command again after a plugging in a new mouse or keyboard.
-
-### Uninstall Xbox apps
-
-To uninstall all Xbox apps (for example Xbox, XboxGameOverlay, XboxGamingOverlay, XboxIdentityProvider and XboxSpeechToTextOverlay) from the current user and from all users run the following commands in a powershell console as Administrator:
-
-```powershell
-# List all Xbox apps
-dism /Online /Get-ProvisionedAppxPackages | Select-String PackageName | Select-String xbox
-
-# Uninstall all Xbox apps
-Get-ProvisionedAppxPackage -Online | Where-Object { $_.PackageName -match “xbox”} | ForEach-Object { Remove-ProvisionedAppxPackage -Online -AllUsers -PackageName $_.PackageName }
-```
 
 ### Scripts for automation of routine tasks and bloatware removal
 
