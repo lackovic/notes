@@ -121,5 +121,43 @@ REG ADD HKCU\Software\Classes\ms-officeapp\Shell\Open\Command /t REG_SZ /d rundl
 
 # >>> Bloatware Removal >>>
 
-# Uninstall all Xbox apps
+# Microsoft Teams
+Get-AppxPackage -Name "MicrosoftTeams" | Remove-AppxPackage
+Get-AppxPackage -Name "MSTeams" | Remove-AppxPackage
+
+# Microsoft To Do
+Get-AppxPackage -Name "Microsoft.Todos" | Remove-AppxPackage
+
+# Microsoft Clipchamp
+Get-AppxPackage -Name "Clipchamp.Clipchamp" | Remove-AppxPackage
+
+# News
+Get-AppxPackage -Name "Microsoft.BingNews" | Remove-AppxPackage
+
+# Outlook (new)
+Get-AppxPackage -Name "Microsoft.OutlookForWindows" | Remove-AppxPackage
+
+# Paint
+Get-AppxPackage -Name "Microsoft.Paint" | Remove-AppxPackage
+
+# Phone Link
+Get-AppxPackage -Name "Microsoft.YourPhone" | Remove-AppxPackage
+
+# Photos
+Get-AppxPackage -Name "Microsoft.Windows.Photos" | Remove-AppxPackage
+
+# Solitaire & Casual Games
+Get-AppxPackage -Name "Microsoft.MicrosoftSolitaireCollection" | Remove-AppxPackage
+
+# Sticky Notes
+Get-AppxPackage -Name "Microsoft.MicrosoftStickyNotes" | Remove-AppxPackage
+
+# Xbox (multiple components)
+Get-AppxPackage -Name "Microsoft.GamingApp" | Remove-AppxPackage
+Get-AppxPackage -Name "Microsoft.Xbox.TCUI" | Remove-AppxPackage
+Get-AppxPackage -Name "Microsoft.XboxApp" | Remove-AppxPackage
+Get-AppxPackage -Name "Microsoft.XboxGameOverlay" | Remove-AppxPackage
+Get-AppxPackage -Name "Microsoft.XboxGamingOverlay" | Remove-AppxPackage
+Get-AppxPackage -Name "Microsoft.XboxIdentityProvider" | Remove-AppxPackage
+Get-AppxPackage -Name "Microsoft.XboxSpeechToTextOverlay" | Remove-AppxPackage
 Get-ProvisionedAppxPackage -Online | Where-Object { $_.PackageName -match "xbox" } | ForEach-Object { Remove-ProvisionedAppxPackage -Online -AllUsers -PackageName $_.PackageName }
