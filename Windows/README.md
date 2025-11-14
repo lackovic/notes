@@ -6,6 +6,10 @@
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 <!-- generated with [DocToc](https://github.com/thlorenz/doctoc) -->
 
+- [Installation](#installation)
+  - [Install the latest Windows release with all the latest updates included](#install-the-latest-windows-release-with-all-the-latest-updates-included)
+  - [Install Windows without 3rd party bloatware](#install-windows-without-3rd-party-bloatware)
+  - [Things to do right after a Windows 11 installation](#things-to-do-right-after-a-windows-11-installation)
 - [Windows Update](#windows-update)
   - [Run Windows Update from terminal](#run-windows-update-from-terminal)
   - [Get the Windows Update log](#get-the-windows-update-log)
@@ -23,13 +27,10 @@
   - [Disable BitLocker encryption for a drive](#disable-bitlocker-encryption-for-a-drive)
 - [Find a file or directory being used by another process](#find-a-file-or-directory-being-used-by-another-process)
 - [Autostarting programs locations](#autostarting-programs-locations)
-- [Install the latest Windows release with all the latest updates included](#install-the-latest-windows-release-with-all-the-latest-updates-included)
 - [Get rid of US language in Windows 11](#get-rid-of-us-language-in-windows-11)
 - [Automation and bloatware removal](#automation-and-bloatware-removal)
-  - [Install Windows without 3rd party bloatware](#install-windows-without-3rd-party-bloatware)
   - [Disable Web Results in Windows 11 Start or Search Menu](#disable-web-results-in-windows-11-start-or-search-menu)
   - [Use classic context menu in File Explorer in Windows 11](#use-classic-context-menu-in-file-explorer-in-windows-11)
-  - [Things to do right after a Windows 11 installation](#things-to-do-right-after-a-windows-11-installation)
   - [Turn on fast startup](#turn-on-fast-startup)
   - [Disable hyper key (Win+Alt+Ctrl+Shift) opening Microsoft Office](#disable-hyper-key-winaltctrlshift-opening-microsoft-office)
   - [Customize File Explorer (permanently disable files grouping)](#customize-file-explorer-permanently-disable-files-grouping)
@@ -39,6 +40,53 @@
   - [Scripts for automation of routine tasks and bloatware removal](#scripts-for-automation-of-routine-tasks-and-bloatware-removal)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
+
+## Installation
+
+1. Visit [Download Windows 11](https://www.microsoft.com/en-gb/software-download/windows11).
+1. **Create Windows 11 Installation Media** > Download now.
+1. Run the downloaded `MediaCreationToolW11.exe`.
+1. Follow the instructions to create a bootable USB drive.
+
+### Install the latest Windows release with all the latest updates included
+
+1. Download the image creation script from [UUP dump](https://uupdump.net/)
+
+1. Set `CustomList=1` in `ConvertConfig.ini` in order to avoid including Windows bloatware (like Outlook, Teams, Xbox, etc) in the installation image.
+
+1. Run `uup_download_windows.cmd`
+
+The process will take a while: it takes 35 minutes on a beafy desktop computer with a 150 Mbps bandwidth. Once it's done, you'll find the ISO image (~6 GB) in the folder where you ran the script. You can use it to create a bootable USB drive with [Rufus](https://rufus.ie/).
+
+### Install Windows without 3rd party bloatware
+
+1. At the initial install, select "_English (World)_" as the _Time & Currency format_.
+
+1. After installation, open Windows Settings > _Time & Language & Region_ > _Country or region_: set the country you actually are located in.
+
+[Source](https://twitter.com/thiojoe/status/1686565269907636224).
+
+### Things to do right after a Windows 11 installation
+
+1. Run Windows Update and reboot until there are no more updates available
+1. Run `winget source update` to update `winget` to its latest version (see https://github.com/microsoft/winget-cli/issues/3832)
+1. Windows Update: select _Get the latest updates as soon as they're available_
+1. Notifications & actions:
+   - Notifications: off
+   - Additional settings: disable all
+1. Personalization > Taskbar:
+   - disable search, task view, widgets and Chat
+   - Taskbar behaviors > Taskbar alignment: Left
+1. Edit power plan > Power Options > Choose what the power buttons do > Change settings that are currently unavailable: select _Hibernate_
+1. Change system sounds > Sounds > Sound Schemes: _No Sounds_
+1. Install your motherboard drivers (chipset, audio, LAN, etc.)
+1. Install your GPU drivers
+1. File Explorer > View:
+   - Options > View: select _Expand to open folder_ and _Show all folders_
+1. Settings > Personalization > Start: Disable _Show recommended files in Start, recent files in File Explorer, and items in Jump Lists_   
+1. Download _Incosolata Nerd Font_ from [here](https://www.nerdfonts.com/font-downloads), right click on all TTF files, choose _Install_, set it as default font in Windows Terminal
+1. Apply all the changes described in the following sections.
 
 ## Windows Update
 
@@ -180,16 +228,6 @@ and then look at the _Conversion Status_ field and the _Percentage Encrypted_ fi
 
 - Task Scheduler > Task Scheduler Library
 
-## Install the latest Windows release with all the latest updates included
-
-1. Download the image creation script from [UUP dump](https://uupdump.net/)
-
-1. Set `CustomList=1` in `ConvertConfig.ini` in order to avoid including Windows bloatware (like Outlook, Teams, Xbox, etc) in the installation image.
-
-1. Run `uup_download_windows.cmd`
-
-The process will take a while: it takes 35 minutes on a beafy desktop computer with a 150 Mbps bandwidth. Once it's done, you'll find the ISO image (~6 GB) in the folder where you ran the script. You can use it to create a bootable USB drive with [Rufus](https://rufus.ie/).
-
 ## Get rid of US language in Windows 11
 
 In Windows 11 settings (`Win`+`i`), select _Time & language_ > _Language & region_:
@@ -203,12 +241,6 @@ In Windows 11 settings (`Win`+`i`), select _Time & language_ > _Language & regio
 [Source](https://superuser.com/questions/1680608/how-to-get-rid-of-us-language-in-windows-11/1749153)
 
 ## Automation and bloatware removal
-
-### Install Windows without 3rd party bloatware
-
-1. At the initial install, select "_English (World)_" as the _Time & Currency format_ [Source](https://twitter.com/thiojoe/status/1686565269907636224)
-
-1. After installation, open Windows Settings > _Time & Language & Region_ > _Country or region_: set the country you actually are located in.
 
 ### Disable Web Results in Windows 11 Start or Search Menu
 
@@ -239,27 +271,6 @@ Option 2:
 ```powershell
 reg add "HKCU\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}\InprocServer32" /f /ve
 ```
-
-### Things to do right after a Windows 11 installation
-
-1. Run Windows Update and reboot until there are no more updates available
-1. Run `winget source update` to update `winget` to its latest version (see https://github.com/microsoft/winget-cli/issues/3832)
-1. Windows Update: select _Get the latest updates as soon as they're available_
-1. Notifications & actions:
-   - Notifications: off
-   - Additional settings: disable all
-1. Personalization > Taskbar:
-   - disable search, task view, widgets and Chat
-   - Taskbar behaviors > Taskbar alignment: Left
-1. Edit power plan > Power Options > Choose what the power buttons do > Change settings that are currently unavailable: select _Hibernate_
-1. Change system sounds > Sounds > Sound Schemes: _No Sounds_
-1. Install your motherboard drivers (chipset, audio, LAN, etc.)
-1. Install your GPU drivers
-1. File Explorer > View:
-   - Options > View: select _Expand to open folder_ and _Show all folders_
-1. Settings > Personalization > Start: Disable _Show recommended files in Start, recent files in File Explorer, and items in Jump Lists_   
-1. Download _Incosolata Nerd Font_ from [here](https://www.nerdfonts.com/font-downloads), right click on all TTF files, choose _Install_, set it as default font in Windows Terminal
-1. Apply all the changes described in the following sections.
 
 ### Turn on fast startup
 
