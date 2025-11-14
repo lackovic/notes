@@ -52,6 +52,7 @@
 ^!+#j::Run("Chrome.exe `"https://keep.google.com/`" `" --new-window `"")
 ^!+#t::Run("Chrome.exe `"https://translate.google.com/`" `" --new-window `"")
 ^!+#w::Run("Chrome.exe `"https://web.whatsapp.com/`" `" --new-window `"")
+^!+#b::Run("C:\Program Files\Bambu Studio\bambu-studio.exe")
 ^!+#s::Run("ms-settings:sound")
 ^!+#x::
 {
