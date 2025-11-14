@@ -9,14 +9,17 @@
 
 # >>> Taskbar >>>
 
-# Disable Search box on the taskbar
+# Disable Taskbar Search box
 Set-ItemProperty -Path "HKCU:\Software\Microsoft\Windows\CurrentVersion\Search" -Name "SearchboxTaskbarMode" -Type DWord -Value 0
 
-# Disable Task View button on the taskbar
+# Disable Taskbar Task View button
 Set-ItemProperty -Path "HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" -Name "ShowTaskViewButton" -Type DWord -Value 0
 
-# Disable Widgets (News and Interests) on the taskbar
-# ?
+# Disable Taskbar Widgets (News and Interests)
+Write-Host "Disabling Taskbar Widgets (News and Interests) is not automated yet, please do it manually." -ForegroundColor Yellow
+
+# Disable Taskbar Chat button
+Write-Host "Disabling Taskbar Chat button is not automated yet, please do it manually." -ForegroundColor Yellow
 
 # Set Taskbar alignment to Left (0 = Left, 1 = Center)
 Set-ItemProperty -Path "HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" -Name "TaskbarAl" -Type DWord -Value 0
@@ -44,7 +47,7 @@ Stop-Process -Name explorer -Force; Start-Process explorer
 Set-ItemProperty -Path "HKCU:\Software\Microsoft\Windows\CurrentVersion\PushNotifications" -Name "ToastEnabled" -Type DWord -Value 0 -Force
 
 # Enable Notifications > Do not disturb
-# ?
+Write-Host "Enabling Notifications > Do not disturb is not automated yet, please do it manually." -ForegroundColor Yellow
 
 # Disable Notifications > Additional settings > “Show the Windows welcome experience...”
 Set-ItemProperty -Path "HKCU:\Software\Microsoft\Windows\CurrentVersion\ContentDeliveryManager" -Name "SubscribedContent-310093Enabled" -Value 0 -Type DWord
@@ -85,7 +88,7 @@ Set-ItemProperty -Path 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Themes\P
 
 # Disable Accessibility > Visual effects > Animation effects
 # https://github.com/Raphire/Win11Debloat/issues/120
-# Set-ItemProperty -Path "HKCU:\Control Panel\Desktop" -Name "UserPreferencesMask" -Value ([byte[]](0x90,0x12,0x07,0x80,0x10,0x00,0x00,0x00)) -Type Binary
+Write-Host "Disabling Accessibility > Visual effects > Animation effects is not automated yet, please do it manually." -ForegroundColor Yellow
 
 # >>> Other Settings >>>
 
