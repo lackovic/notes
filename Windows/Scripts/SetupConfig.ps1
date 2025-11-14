@@ -117,7 +117,7 @@ reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Search" /v AllowSearchTo
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Search" /v CortanaConsent /t REG_DWORD /d 00000000 /f
 
 # Disable hyper key (Win+Alt+Ctrl+Shift) opening Microsoft Office
-REG ADD HKCU\Software\Classes\ms-officeapp\Shell\Open\Command /t REG_SZ /d rundll32
+REG ADD HKCU\Software\Classes\ms-officeapp\Shell\Open\Command /t REG_SZ /d rundll32 /f
 
 # >>> Bloatware Removal >>>
 
