@@ -14,10 +14,10 @@ Write-Host "Collecting users profile information, please wait..." -ForegroundCol
 Get-CimInstance Win32_UserProfile |
 Where-Object {
   # Filter for real user accounts (exclude system/service accounts)
-  $_.SID -match '^S-1-5-21-'
-  -and -not $_.Special 
-  -and $_.LocalPath 
-  -and (Test-Path $_.LocalPath)
+  $_.SID -match '^S-1-5-21-' -and
+  -not $_.Special -and 
+  $_.LocalPath -and
+  (Test-Path $_.LocalPath)
 } | ForEach-Object {
   try {
     $out = [PSCustomObject]@{
