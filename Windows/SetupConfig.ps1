@@ -68,3 +68,6 @@ Set-ItemProperty -Path 'HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer
 
 # Control panel > Power options > Choose what the power buttons do > Turn on fast startup
 Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Control\Session Manager\Power" -Name "HiberbootEnabled" -Value 1 -Type DWord
+
+# Uninstall all Xbox apps
+Get-ProvisionedAppxPackage -Online | Where-Object { $_.PackageName -match “xbox”} | ForEach-Object { Remove-ProvisionedAppxPackage -Online -AllUsers -PackageName $_.PackageName }
