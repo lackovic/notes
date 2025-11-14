@@ -119,6 +119,9 @@ reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Search" /v CortanaConsen
 # Disable hyper key (Win+Alt+Ctrl+Shift) opening Microsoft Office
 REG ADD HKCU\Software\Classes\ms-officeapp\Shell\Open\Command /t REG_SZ /d rundll32 /f
 
+# Enable Windows Security > App & browser control > Reputation-based protection
+Set-ItemProperty -Path "HKCU:\Software\Microsoft\Windows\CurrentVersion\AppHost" -Name "EnableWebContentEvaluation" -Type DWord -Value 1
+
 # >>> Bloatware Removal >>>
 
 # Microsoft Teams
