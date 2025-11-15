@@ -65,14 +65,14 @@ The process will take a while: it takes 35 minutes on a beafy desktop computer w
 ### Things to do right after a Windows 11 installation
 
 1. Run Windows Update and reboot until there are no more updates available
-1. Run . [SetupConfig.ps1](./Scripts/SetupConfig.ps1) to apply various configuration tweaks using the following command:
+1. Run [SetupConfig.ps1](./Scripts/SetupConfig.ps1) to apply various configuration tweaks using the following command:
    ```powershell
    powershell.exe -ExecutionPolicy Bypass -File .\SetupConfig.ps1
    ```
 1. Download [Incosolata Nerd Font](https://www.nerdfonts.com/font-downloads), extract and install all TTF files
 1. Set it as default font in Windows Terminal
 1. Install [PowerShell Toys](https://github.com/lackovic/PSToys) for a better PowerShell experience
-1. Run . [SetupApps.ps1](./Scripts/SetupApps.ps1) to install commonly used applications via Winget
+1. Run [SetupApps.ps1](./Scripts/SetupApps.ps1) to install commonly used applications via Winget
 1. Install your motherboard drivers (chipset, audio, LAN, etc.)
 1. Install your GPU drivers
 
