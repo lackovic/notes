@@ -31,6 +31,8 @@ To install it run:
 winget install -h --id Microsoft.PowerShell
 ```
 
+For a better experience, install also the [PowerShell Toys](https://github.com/lackovic/PSToys).
+
 ## Know PowerShell version
 
 ```powershell
