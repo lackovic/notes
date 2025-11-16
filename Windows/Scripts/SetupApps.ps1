@@ -29,6 +29,7 @@ winget install -h --id RIA.eIDsoftware
 winget install -h --id CodecGuide.K-LiteCodecPack.Mega
 winget install -h --id Avidemux.Avidemux
 winget install -h --id JAMSoftware.TreeSize.Frees
+winget install -h --id RIA.eIDsoftware
 
 # Gaming Apps
 winget install -h --id Discord.Discord
