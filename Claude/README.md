@@ -4,6 +4,8 @@ Claude is Anthropic's AI model. You'll run into it in two shapes: Claude Chat, a
 
 Claude Code counts as what's sometimes called a harness: the layer that wraps a model, decides how it reads your repo, and manages how it calls tools. The model matters, but the harness shapes how well that model performs on real work.
 
+Two harnesses running the identical model can differ wildly on pass rate, cost, and speed. [FrontierHarness](https://frontierharness.org/) benchmarks this directly. It runs nine harnesses (Codex, Claude Code, DSH Creator, Pi, and others) on the same model, same tasks, same fresh checkpoint, and measures pass rate, cost per task, and median runtime.
+
 <!-- Generated with [DocToc](https://github.com/thlorenz/doctoc) -->
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
