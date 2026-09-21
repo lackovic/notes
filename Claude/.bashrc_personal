@@ -1,0 +1,13 @@
+# Wraps `claude` to auto-name new sessions as <dir>-<monthdate>-<HHMM>
+# (e.g. partner-api-scripts-sep26-1349) and randomize the prompt bar color,
+# unless -n/--name is already given.
+claude() {
+  if [[ "$*" != *-n* && "$*" != *--name* ]]; then
+    local dir_name=$(basename "$PWD")
+    local date_part=$(date +%b%d | tr '[:upper:]' '[:lower:]')
+    local time_part=$(date +%H%M)
+    command claude -n "${dir_name}-${date_part}-${time_part}" '/color' "$@"
+  else
+    command claude "$@"
+  fi
+}
