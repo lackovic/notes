@@ -86,23 +86,19 @@ herdr integration install claude
 npx skills add herdrdev/herdr --skill herdr -g
 ```
 
-**herdr-session-titles** fixes Herdr's sidebar, which by default just shows a working directory for every pane. The plugin pulls in the actual session name or Claude's inferred topic instead, so you see something like "fixing auth bug" rather than a bare path. Install with:
+By default, Herdr's sidebar labels each agent pane with its working directory. That's fine with one or two panes, but once you've got five or ten running across different workspaces, every entry looks the same and you have to switch into each pane just to remember what it's doing. Showing the session name instead fixes that: you can tell one agent from another at a glance, without opening either pane. 
 
-```bash
-herdr plugin install wxomi/herdr-session-titles
-herdr integration install claude
-```
-
-Then add this to `~/.config/herdr/config.toml`:
+Set it up by adding the following to your `~/.config/herdr/config.toml`:
 
 ```toml
 [ui.sidebar.agents]
-row_gap = 0
+row_gap = 1
 rows = [
-  ["state_icon", { token = "$session", bold = true }],
-  [{ token = "$location", dim = true }],
+  ["state_icon", { token = "terminal_title_stripped", bold = true }],
 ]
 ```
+
+Apply it without restarting with `herdr server reload-config`.
 
 ### Hunk
 
