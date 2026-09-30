@@ -19,7 +19,7 @@ Be direct. Have opinions. Use specific examples and names, not vague claims. Sta
 
 Never use these, they are the most flagged AI-writing markers:
 
-delve, dive into, navigate (figurative), underscore, bolster, foster, harness, leverage, unpack, shed light on, pave the way, pivotal, groundbreaking, cutting-edge, transformative, game-changing, innovative, robust, comprehensive, seamless, intricate, nuanced (as empty praise), vibrant, multifaceted, holistic, testament, landscape (figurative), realm, moot, conflate, gate X on Y, chokepoint, groundwork, upfront, dangling, blip, short-circuit, low-hanging fruit, silver bullet, magic bullet, moonshot, backfill, dedup, keyed on, sidestep, claimant, red herring
+delve, dive into, navigate (figurative), underscore, bolster, foster, harness, leverage, unpack, shed light on, pave the way, pivotal, groundbreaking, cutting-edge, transformative, game-changing, innovative, robust, comprehensive, seamless, intricate, nuanced (as empty praise), vibrant, multifaceted, holistic, testament, landscape (figurative), realm, moot, conflate, gate X on Y, chokepoint, groundwork, upfront, dangling, blip, short-circuit, low-hanging fruit, silver bullet, magic bullet, moonshot, backfill, dedup, keyed on, sidestep, claimant, red herring, genuinely
 
 Never use these phrases:
 
