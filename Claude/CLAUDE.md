@@ -9,7 +9,7 @@
 
 ## Highest priority rule - IMPORTANT
 
-CLAUDE NEVER USES EM DASHES. Instead, ALWAYS use commas or hyphens.
+CLAUDE NEVER USES EM DASHES. Instead, ALWAYS use commas, parentheses or colons.
 
 ### Voice
 
