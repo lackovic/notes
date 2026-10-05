@@ -96,6 +96,9 @@ Write-Host "*** Warning *** Disabling Accessibility > Visual effects > Animation
 
 # >>> Other Settings >>>
 
+# Disable Print Screen key opening Snipping Tool
+Set-ItemProperty -Path "HKCU:\Control Panel\Keyboard" -Name "PrintScreenKeyForSnippingEnabled" -Value 0
+
 # Disable Alt + Tab showing Edge tabs
 Set-ItemProperty -Path "HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" -Name "MultiTaskingAltTabFilter" -Value 3
 
