@@ -60,6 +60,10 @@
       }
     ]
   },
+    "statusLine": {
+    "type": "command",
+    "command": "sh /home/marco/.claude/statusline-command.sh"
+  },
   "tui": "fullscreen",
   "theme": "dark",
   "defaultMode": "acceptEdits"
