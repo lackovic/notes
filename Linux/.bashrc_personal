@@ -51,3 +51,6 @@ alias update='sudo apt update; sudo apt upgrade -y; sudo apt autoremove -y; sdk 
 
 # Colorize ip output
 alias ip='ip -c'
+
+# Set default browser for WSL to Windows Explorer
+export BROWSER=$HOME/.local/bin/wsl-open
