@@ -41,6 +41,8 @@ Never use these structures:
 
 These mimic insight without providing any.
 
+Never use characters that can't be typed on a standard keyboard. E.g. instead of “ ” ‘ ’ — … use " " ' ' - ...
+
 ### Structure
 
 - Vary paragraph and sentence length. Don't write uniform blocks.
