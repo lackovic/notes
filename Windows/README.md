@@ -258,13 +258,13 @@ Global (details) columns:
 
 (The following steps are currently not working and are left here for reference until a working solution is found).
 
-In an elevated PowerShell console run the following command:
+In an elevated PowerShell console run the following commands:
 
 ```powershell
 takeown /f C:\Windows\System32\Magnify.exe
+icacls C:\Windows\System32\Magnify.exe /grant "$($env:USERNAME):F"
+Rename-Item C:\Windows\System32\Magnify.exe Magnify.exe.bak
 ```
-- type Y and press Enter
-- Right-click on `C:\Windows\System32\Magnify.exe` and rename it to `Magnify.exe.bak`
 
 ### Scripts for automation of routine tasks and bloatware removal
 
