@@ -47,7 +47,7 @@ source /usr/share/bash-completion/completions/git
 # For enabling language versions display in your theme see https://github.com/JanDeDobbeleer/oh-my-posh/discussions/5902#discussioncomment-11284862
 
 # Install updates, set Docker containers to not autorestart
-alias update='sudo apt update; sudo apt upgrade -y; sudo apt autoremove -y; sdk update; sudo snap refresh; docker update --restart=no $(docker container ls -a -q)'
+alias update='sudo apt update && sudo apt full-upgrade -y && sudo apt autoremove -y && sdk update; sudo snap refresh; docker update --restart=no $(docker container ls -a -q)'
 
 # Colorize ip output
 alias ip='ip -c'
