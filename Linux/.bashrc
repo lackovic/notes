@@ -1,2 +1,2 @@
 # Load personal custom configurations
-[ -f ~/.bash_personal ] && source ~/.bash_personal
+[ -f ~/.bashrc_personal ] && source ~/.bashrc_personal
